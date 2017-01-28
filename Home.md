@@ -1,1 +1,43 @@
-Welcome to the Sonoff-Tasmota wiki!
+## Sonoff-Tasmota
+<img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoffbasic.jpg" width="250" align="right" /> 
+Provide ESP8266 based Sonoff by [iTead Studio](https://www.itead.cc/) and ElectroDragon IoT Relay with Serial, Web and MQTT control allowing 'Over the Air' or OTA firmware updates using Arduino IDE.
+
+## Supported devices
+The following devices are supported with Serial, Web and MQTT control:
+- [iTead Sonoff Basic](http://sonoff.itead.cc/en/products/sonoff/sonoff-basic)
+<img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff_th.jpg" width="250" align="right" /> 
+- [iTead Sonoff RF](http://sonoff.itead.cc/en/products/sonoff/sonoff-rf)
+- [iTead Sonoff SV](https://www.itead.cc/sonoff-sv.html)
+- [iTead Sonoff TH10/TH16 with temperature sensor](http://sonoff.itead.cc/en/products/sonoff/sonoff-th)
+- [iTead Sonoff Dual](http://sonoff.itead.cc/en/products/sonoff/sonoff-dual)
+- [iTead Sonoff Pow](http://sonoff.itead.cc/en/products/sonoff/sonoff-pow)
+- [iTead Sonoff 4CH](http://sonoff.itead.cc/en/products/sonoff/sonoff-4ch)
+- [iTead S20 Smart Socket](http://sonoff.itead.cc/en/products/residential/s20-socket)
+- [iTead Slampher](http://sonoff.itead.cc/en/products/residential/slampher-rf)
+- [iTead Sonoff Touch](http://sonoff.itead.cc/en/products/residential/sonoff-touch)
+- [iTead Sonoff Led](http://sonoff.itead.cc/en/products/appliances/sonoff-led)
+- [iTead 1 Channel Switch 5V / 12V](https://www.itead.cc/smart-home/inching-self-locking-wifi-wireless-switch.html)
+- [iTead Motor Clockwise/Anticlockwise](https://www.itead.cc/smart-home/motor-reversing-wifi-wireless-switch.html)
+- [Electrodragon IoT Relay Board](http://www.electrodragon.com/product/wifi-iot-relay-board-based-esp8266/)
+
+## Planned support
+- [iTead Sonoff SC](http://sonoff.itead.cc/en/products/residential/sonoff-sc)
+
+## Features
+<img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff4ch.jpg" width="250" align="right" /> 
+The following features are available:
+- Multiple devices can be addressed by MQTT ```GroupTopic```
+- Firmware upload by OTA or via web page upload
+- Expanded Status messages
+- UDP syslog messages can be filtered on program name starting with ```ESP-```
+- The button can send a different MQTT message defined with ```ButtonTopic```
+- Initial Wifi setup by user_config.h, Serial, Smartconfig, Wifi manager or WPS config
+- A web server provides control of Sonoff and contains a firmware upload facility
+- Support for DHTxx, AM2301 or DS18B20 temperature sensors as used in Sonoff TH10/TH16
+- Support for I2C sensors like BH1750, BME280 and HTU21
+- Telemetry data can be send using optional different prefix from status messages
+- Native Domoticz MQTT support
+- Wemo and Hue emulation for Amazon Echo (Alexa) support
+
+## Community
+See [Community](https://groups.google.com/d/forum/sonoffusers) for forum and additional user experience
