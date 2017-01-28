@@ -13,8 +13,6 @@ In the Arduino IDE for sonoff select from ```Tools Board Generic ESP8266 Module`
 
 Load the file ```sonoff.ino``` into the IDE.
 
-Update ```user_config.h``` with your specific MODULE (SONOFF, SONOFF_2, SONOFF_POW, MOTOR_CAC or ELECTRO_DRAGON) until version 4, Wifi and MQTT parameters.
-
 Verify and/or compile the project and upload once to sonoff using the serial connection as shown in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff). See below for specific Sonoff Module information.
 <img alt="Connection diagram" src="https://github.com/arendst/arendst.github.io/blob/master/media/ProgramESP8266.jpg" height="260" /><br/> 
 
