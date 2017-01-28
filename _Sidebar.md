@@ -1,22 +1,22 @@
 [**Home**]() 
 
 **Getting Started**
-- [**Prerequisite**](wiki/Prerequisite)
-- [**Compile and Upload**](wiki/Compile-and-Upload)
+- [**Prerequisite**](Prerequisite)
+- [**Compile and Upload**](Compile-and-Upload)
 
 **Usage**
-- [**Button**](wiki/Button-usage)
-- [**MQTT Features**](wiki/MQTT-Features)
-- [**Commands**](wiki/Commands)
+- [**Button**](Button-usage)
+- [**MQTT Features**](MQTT-Features)
+- [**Commands**](Commands)
 
 **Tips**
-- [**MQTT for Newbies**](wiki/MQTT-for-Newbies)
-- [**General**](wiki/Tips)
-- [**Sonoff Dual**](wiki/Sonoff-Dual)
-- [**Sonoff Pow**](wiki/Sonoff-Pow)
-- [**Sonoff RF**](wiki/Sonoff-RF)
-- [**Domoticz**](wiki/Domoticz)
+- [**MQTT for Newbies**](MQTT-for-Newbies)
+- [**General**](Tips)
+- [**Sonoff Dual**](Sonoff-Dual)
+- [**Sonoff Pow**](Sonoff-Pow)
+- [**Sonoff RF**](Sonoff-RF)
+- [**Domoticz**](Domoticz)
 
 **User Experience**
-- [**Remote Button**](wiki/Control-a-Sonoff-using-a-remote-button)
-- [**Modified Kaku**](wiki/Modify-KaKu-to-WKaKu-Power-Socket)
+- [**Remote Button**](Control-a-Sonoff-using-a-remote-button)
+- [**Modified Kaku**](Modify-KaKu-to-WKaKu-Power-Socket)
