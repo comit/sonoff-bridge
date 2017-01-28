@@ -73,17 +73,17 @@ PulseTime 112 .. 64900 | | Set PulseTime with 1 seconds increment starting with 
 
 ### Management
 ```
-Command | Version | Description
-------- | ------- | -----------
-FriendlyName | | Show friendly name as used by emulation
-FriendlyName\<x\> | | Show friendly name as used by emulation
-FriendlyName\<x\> 1 | | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
-FriendlyName\<x\> \<your-name\> | | Set friendly name
-OtaUrl | | Show current otaurl
-OtaUrl 1 | | Reset otaurl to ```user_config.h``` value
-OtaUrl \<your-otaurl\> | | Set otaurl
-Reset 1 | | Reset sonoff parameters to ```user_config.h``` values and restart
-Reset 2 | | Erase flash, reset sonoff parameters to ```user_config.h``` values and restart
+Command         | Payload | Version | Description
+----------------|---------|---------|---------------------------------------
+FriendlyName    |         |         | Show friendly name as used by emulation
+FriendlyName<x> |         |         | Show friendly name as used by emulation
+FriendlyName<x> | 1       |         | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
+FriendlyName<x> | <name>  |         | Set friendly name
+OtaUrl          |         |         | Show current otaurl
+OtaUrl          | 1       |         | Reset otaurl to ```user_config.h``` value
+OtaUrl          | <url>   |         | Set otaurl
+Reset           | 1       |         | Reset sonoff parameters to ```user_config.h``` values and restart
+Reset           | 2       |         | Erase flash, reset sonoff parameters to ```user_config.h``` values and restart
 Restart 1 | | Restart sonoff
 Restart 99 | | Force restart sonoff without config save
 SaveData | | Save parameter changes and show current state as Manual, On or every x seconds
