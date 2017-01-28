@@ -1,8 +1,6 @@
 The firmware supports a **serial**, **MQTT** and **Web** Man Machine interface. The serial interface is set to 115200 bps except for Sonoff Dual where it is set to 19200 bps. The MQTT commands are constructed from MQTT Topic for ```cmnd/sonoff/<command>``` and MQTT Message for ```<parameter>``` and are NOT case sensitive. 
 
-Starting with version 2.0.0 UNTIL version 3.0.0 commands are allowed like ```cmnd/sonoff/1/<command>``` to address a specific relay where applicable.
-
-Starting with version 3.0.0 commands are allowed like ```cmnd/sonoff/<command><relay>``` to address a specific relay where applicable.
+Commands are allowed like ```cmnd/sonoff/<command><relay>``` to address a specific relay where applicable.
 
 Use [this link](https://docs.google.com/spreadsheets/d/1JZc5GuVlFEYafDTJu1cxwqsMlqyRxI81mXgOphHAScY/edit?usp=sharing) to show all commands in one document.
 
@@ -97,11 +95,8 @@ Light4 0 | 3.1.1 | (4CH) Turn relay4 power Off
 Light4 2 | 3.1.1 | (4CH) Toggle relay4 power
 Light4 3 | 3.1.6 | (4CH) Blink relay4 power
 Light4 4 | 3.1.6 | (4CH) Stop blinking relay4 power
-MessageFormat | 2.0.7 | (Until 4.0.0) Show current MQTT message format (0 = Legacy, 1 = JSON)
-MessageFormat 0 | 2.0.7 | (Until 4.0.0) (default) Send legacy messages
-MessageFormat 1 | 2.0.7 | (Until 4.0.0) Send JSON messages and Legacy power state message
 Power | | Show current power state as On or Off
-Power on | | Turn power On
+Power 1\|on | | Turn power On
 Power off | | Turn power Off
 Power toggle | | Toggle power
 Power blink | 3.1.6 | Blink power
@@ -111,50 +106,12 @@ Power 0 | | Turn power Off
 Power 2 | | Toggle power
 Power 3 | 3.1.6 | Blink power
 Power 4 | 3.1.6 | Stop blinking power
-Power1 | 3.0.0 | (Dual/Dragon/4CH) Show current power state of relay1
-Power1 on | 3.0.0 | (Dual/Dragon/4CH) Turn relay1 power On
-Power1 off | 3.0.0 | (Dual/Dragon/4CH) Turn relay1 power Off
-Power1 toggle | 3.0.0 | (Dual/Dragon/4CH) Toggle relay1 power
-Power1 blink | 3.1.6 | (Dual/Dragon/4CH) Blink relay1 power
-Power1 blinkoff | 3.1.6 | (Dual/Dragon/4CH) Stop blinking relay1 power
-Power1 1 | 3.0.0 | (Dual/Dragon/4CH) Turn relay1 power On
-Power1 0 | 3.0.0 | (Dual/Dragon/4CH) Turn relay1 power Off
-Power1 2 | 3.0.0 | (Dual/Dragon/4CH) Toggle relay1 power
-Power1 3 | 3.1.6 | (Dual/Dragon/4CH) Blink relay1 power
-Power1 4 | 3.1.6 | (Dual/Dragon/4CH) Stop blinking relay1 power
-Power2 | 3.0.0 | (Dual/Dragon/4CH) Show current power state of relay2
-Power2 on | 3.0.0 | (Dual/Dragon/4CH) Turn relay2 power On
-Power2 off | 3.0.0 | (Dual/Dragon/4CH) Turn relay2 power Off
-Power2 toggle | 3.0.0 | (Dual/Dragon/4CH) Toggle relay2 power
-Power2 blink | 3.1.6 | (Dual/Dragon/4CH) Blink relay2 power
-Power2 blinkoff | 3.1.6 | (Dual/Dragon/4CH) Stop blinking relay2 power
-Power2 1 | 3.0.0 | (Dual/Dragon/4CH) Turn relay2 power On
-Power2 0 | 3.0.0 | (Dual/Dragon/4CH) Turn relay2 power Off
-Power2 2 | 3.0.0 | (Dual/Dragon/4CH) Toggle relay2 power
-Power2 3 | 3.1.6 | (Dual/Dragon/4CH) Blink relay2 power
-Power2 4 | 3.1.6 | (Dual/Dragon/4CH) Stop blinking relay2 power
-Power3 | 3.1.1 | (4CH) Show current power state of relay3
-Power3 on | 3.1.1 | (4CH) Turn relay3 power On
-Power3 off | 3.1.1 | (4CH) Turn relay3 power Off
-Power3 toggle | 3.1.1 | (4CH) Toggle relay3 power
-Power3 blink | 3.1.6 | (4CH) Blink relay3 power
-Power3 blinkoff | 3.1.6 | (4CH) Stop blinking relay3 power
-Power3 1 | 3.1.1 | (4CH) Turn relay3 power On
-Power3 0 | 3.1.1 | (4CH) Turn relay3 power Off
-Power3 2 | 3.1.1 | (4CH) Toggle relay3 power
-Power3 3 | 3.1.6 | (4CH) Blink relay3 power
-Power3 4 | 3.1.6 | (4CH) Stop blinking relay3 power
-Power4 | 3.1.1 | (4CH) Show current power state of relay4
-Power4 on | 3.1.1 | (4CH) Turn relay4 power On
-Power4 off | 3.1.1 | (4CH) Turn relay4 power Off
-Power4 toggle | 3.1.1 | (4CH) Toggle relay4 power
-Power4 blink | 3.1.6 | (4CH) Blink relay4 power
-Power4 blinkoff | 3.1.6 | (4CH) Stop blinking relay4 power
-Power4 1 | 3.1.1 | (4CH) Turn relay4 power On
-Power4 0 | 3.1.1 | (4CH) Turn relay4 power Off
-Power4 2 | 3.1.1 | (4CH) Toggle relay4 power
-Power4 3 | 3.1.6 | (4CH) Blink relay4 power
-Power4 4 | 3.1.6 | (4CH) Stop blinking relay4 power
+Power\<x\> | 3.0.0 | Show current power state of relay\<x\>
+Power\<x\> 1\|on | 3.0.0 | Turn relay\<x\> power On
+Power\<x\> 0\|off | 3.0.0 | Turn relay\<x\> power Off
+Power\<x\> 2\|toggle | 3.0.0 | Toggle relay\<x\> power
+Power\<x\> 3\|blink | 3.1.6 | Blink relay\<x\> power
+Power\<x\> 4\|blinkoff | 3.1.6 | Stop blinking relay\<x\> power
 PowerOnState | 3.1.1 | Show current relay power on state
 PowerOnState 0 | 3.1.1 | Keep relay(s) off after power on
 PowerOnState 1 | 3.1.1 | Turn relay(s) on after power on
