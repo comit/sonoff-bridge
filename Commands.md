@@ -73,45 +73,45 @@ PulseTime 112 .. 64900 | | Set PulseTime with 1 seconds increment starting with 
 
 ### Management
 ```
-Command         | Payload | Version | Description
-----------------|---------|---------|---------------------------------------
-FriendlyName    |         |         | Show friendly name as used by emulation
-FriendlyName<x> |         |         | Show friendly name as used by emulation
-FriendlyName<x> | 1       |         | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
-FriendlyName<x> | <name>  |         | Set friendly name
-OtaUrl          |         |         | Show current otaurl
-OtaUrl          | 1       |         | Reset otaurl to ```user_config.h``` value
-OtaUrl          | <url>   |         | Set otaurl
-Reset           | 1       |         | Reset sonoff parameters to ```user_config.h``` values and restart
-Reset           | 2       |         | Erase flash, reset sonoff parameters to ```user_config.h``` values and restart
-Restart 1 | | Restart sonoff
-Restart 99 | | Force restart sonoff without config save
-SaveData | | Save parameter changes and show current state as Manual, On or every x seconds
-SaveData 0 \| off | | Save parameter changes only manually
-SaveData 1 \| on | | (default) Save parameter changes every second
-SaveData \<your-secs\> | 1.0.35 | Save parameter changes between every 2 and 3600 seconds
-SaveState | | Show current SaveState state
-SaveState 1 \| on | | (default) Save power changes and set relay after restart
-SaveState 0 \| off | | Do not save power changes and do not set relay after restart
-Sleep | | Show current sleep state as 0 (Off) or duration of up to 250 mSec
-Sleep 0 \| off | | (default) Turn sleep off
-Sleep 1 - 250 | | Set sleep duration from 1 to 250 mSec to enable energy saving
-Status | | Show abbreviated status information
-Status 0 | | Show all status information
-Status 1 | | Show more status information
-Status 2 | | Show firmware information
-Status 3 | | Show syslog information
-Status 4 | | Show memory information
-Status 5 | | Show network information
-Status 6 | | Show MQTT information
-Status 7 | | Show Real Time Clock information
-Status 8 | | (Sonoff Pow only) Show Power usage
-Status 9 | | (Sonoff Pow only) Show Power thresholds
-Timezone | | Show current timezone
-Timezone -12 .. 12 | | Set timezone
-Timezone 99 | | Use Daylight Saving parameters from ```user_config.h```
-Upgrade 1 | | Download ota firmware from your web server and restart
-Upload 1 | | Download ota firmware from your web server and restart
+Command         | Payload | Description
+----------------|---------|--------------------------------------------------------------------------------
+FriendlyName    |         | Show friendly name as used by emulation
+FriendlyName<x> |         | Show friendly name as used by emulation
+FriendlyName<x> | 1       | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
+FriendlyName<x> | <name>  | Set friendly name
+OtaUrl          |         | Show current otaurl
+OtaUrl          | 1       | Reset otaurl to ```user_config.h``` value
+OtaUrl          | <url>   | Set otaurl
+Reset           | 1       | Reset sonoff parameters to ```user_config.h``` values and restart
+Reset           | 2       | Erase flash, reset sonoff parameters to ```user_config.h``` values and restart
+Restart         | 1       | Restart sonoff
+Restart         | 99      | Force restart sonoff without config save
+SaveData        |         | Save parameter changes and show current state as Manual, On or every x seconds
+SaveData        | 0 | off | Save parameter changes only manually
+SaveData        | 1 | on  | (default) Save parameter changes every second
+SaveData        | <sec>   | Save parameter changes between every 2 and 3600 seconds
+SaveState       |         | Show current SaveState state
+SaveState       | 1 | on  | (default) Save power changes and set relay after restart
+SaveState       | 0 | off | Do not save power changes and do not set relay after restart
+Sleep           |         | Show current sleep state as 0 (Off) or duration of up to 250 mSec
+Sleep           | 0 | off | (default) Turn sleep off
+Sleep           | 1 - 250 | Set sleep duration from 1 to 250 mSec to enable energy saving
+Status          |         | Show abbreviated status information
+Status          | 0       | Show all status information
+Status          | 1       | Show more status information
+Status          | 2       | Show firmware information
+Status          | 3       | Show syslog information
+Status          | 4       | Show memory information
+Status          | 5       | Show network information
+Status          | 6       | Show MQTT information
+Status          | 7       | Show Real Time Clock information
+Status          | 8       | (Sonoff Pow only) Show Power usage
+Status          | 9       | (Sonoff Pow only) Show Power thresholds
+Timezone        |         | Show current timezone
+Timezone      | -12 .. 12 | Set timezone
+Timezone        | 99      | Use Daylight Saving parameters from ```user_config.h```
+Upgrade         | 1       | Download ota firmware from your web server and restart
+Upload          | 1       | Download ota firmware from your web server and restart
 ```
 
 ### Wifi
