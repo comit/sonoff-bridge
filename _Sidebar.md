@@ -1,4 +1,4 @@
-[**Home**](wiki) 
+[**Home**]() 
 
 **Getting Started**
 - [**Prerequisite**](wiki/Prerequisite)
