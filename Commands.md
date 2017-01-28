@@ -15,61 +15,44 @@ The following command tables are available:
 - [Optional](#optional)
 
 ### Main
-Command | Version | Description
-------- | ------- | -----------
-BlinkCount | | Show current BlinkCount
-BlinkCount 0 | | Blink many times before restoring power state
-BlinkCount 1 .. 32000 | | Set how many blinks before restoring power state
-BlinkTime | | Show current BlinkTime in 0.1 seconds
-BlinkTime 2 .. 3600 | | Set BlinkTime with 0.1 seconds increment
-LedPower | | Show current led power state as On or Off
-LedPower 0 \| off | | Turn led AND LedState Off
-LedPower 1 \| on | | Turn led On AND LedState Off
-LedState | | Show current led state as 0 to 7
-LedState 0 \| off | | Disable use of LED as much as possible
-LedState 1 \| on | | Show power state on led
-LedState 2 | | Show MQTT subscriptions as a led blink
-LedState 3 | | Show power state and MQTT subscriptions as a led blink
-LedState 4 | | Show MQTT publications as a led blink
-LedState 5 | | Show power state and MQTT publications as a led blink
-LedState 6 | | Show all MQTT messages as a led blink
-LedState 7 | | Show power state and MQTT messages as a led blink
-Light | | Show current power state as On or Off
-Light 0 \| off | | Turn power Off
-Light 1 \| on | | Turn power On
-Light 2 \| toggle | | Toggle power
-Light 3 \| blink | | Blink power
-Light 4 \| blinkoff | | Stop blinking power
-Light\<x\> | | Show current power state of relay\<x\>
-Light\<x\> 0 \| off | | Turn relay\<x\> power Off
-Light\<x\> 1 \| on | | Turn relay\<x\> power On
-Light\<x\> 2 \| toggle | | Toggle relay\<x\> power
-Light\<x\> 3 \| blink | | Blink relay\<x\> power
-Light\<x\> 4 \| blinkoff | | Stop blinking relay\<x\> power
-Power | | Show current power state as On or Off
-Power 0 \| off | | Turn power Off
-Power 1 \| on | | Turn power On
-Power 2 \| toggle | | Toggle power
-Power 3 \| blink | | Blink power
-Power 4 \| blinkoff | | Stop blinking power
-Power\<x\> | | Show current power state of relay\<x\>
-Power\<x\> 0 \| off | | Turn relay\<x\> power Off
-Power\<x\> 1 \| on | | Turn relay\<x\> power On
-Power\<x\> 2 \| toggle | | Toggle relay\<x\> power
-Power\<x\> 3 \| blink | | Blink relay\<x\> power
-Power\<x\> 4 \| blinkoff | | Stop blinking relay\<x\> power
-PowerOnState | | Show current relay power on state
-PowerOnState 0 | | Keep relay(s) off after power on
-PowerOnState 1 | | Turn relay(s) on after power on
-PowerOnState 2 | | Toggle relay(s) on from last saved
-PowerOnState 3 | | (default) Turn relay(s) on as last saved
-PowerRetain | | Show current MQTT power retain state
-PowerRetain 0 \| off | | (default) Disable MQTT power retain on status update
-PowerRetain 1 \| on | | Enable MQTT power retain on status update
-PulseTime | | Show current PulseTime in 0.1 seconds
-PulseTime 0 \| off | | (Default) Disable use of PulseTime
-PulseTime 1 .. 111 | | Set PulseTime with 0.1 seconds increment
-PulseTime 112 .. 64900 | | Set PulseTime with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
+```
+Command         | Payload | Description
+----------------|---------|--------------------------------------------------------------------------------
+BlinkCount      |         | Show current BlinkCount
+BlinkCount      | 0       | Blink many times before restoring power state
+BlinkCount   | 1 .. 32000 | Set how many blinks before restoring power state
+BlinkTime       |         | Show current BlinkTime in 0.1 seconds
+BlinkTime     | 2 .. 3600 | Set BlinkTime with 0.1 seconds increment
+LedPower        |         | Show current led power state as On or Off
+LedPower        | 0 | off | Turn led AND LedState Off
+LedPower        | 1 | on  | Turn led On AND LedState Off
+LedState        |         | Show current led state as 0 to 7
+LedState        | 0 | off | Disable use of LED as much as possible
+LedState        | 1 | on  | Show power state on led
+LedState        | 2       | Show MQTT subscriptions as a led blink
+LedState        | 3       | Show power state and MQTT subscriptions as a led blink
+LedState        | 4       | Show MQTT publications as a led blink
+LedState        | 5       | Show power state and MQTT publications as a led blink
+LedState        | 6       | Show all MQTT messages as a led blink
+LedState        | 7       | Show power state and MQTT messages as a led blink
+Light | Light<x> | Power | Power<x> |         | Show current power state of relay<x> as On or Off
+Light | Light<x> | Power | Power<x> | 0 | off | Turn power Off
+Light | Light<x> | Power | Power<x> | 1 | on  | Turn power On
+Light | Light<x> | Power | Power<x> | 2 | toggle | Toggle power
+Light | Light<x> | Power | Power<x> | 3 | blink | Blink power
+Light | Light<x> | Power | Power<x> | 4 | blinkoff | Stop blinking power
+PowerOnState    |         | Show current relay power on state
+PowerOnState    | 0 | off | Keep relay(s) off after power on
+PowerOnState    | 1 | on  | Turn relay(s) on after power on
+PowerOnState    | 2       | Toggle relay(s) on from last saved
+PowerOnState    | 3       | (default) Turn relay(s) on as last saved
+PowerRetain     |         | Show current MQTT power retain state
+PowerRetain     | 0 | off | (default) Disable MQTT power retain on status update
+PowerRetain     | 1 | on  | Enable MQTT power retain on status update
+PulseTime       |         | Show current PulseTime in 0.1 seconds
+PulseTime       | 0 | off | (Default) Disable use of PulseTime
+PulseTime      | 1 .. 111 | Set PulseTime with 0.1 seconds increment
+PulseTime  | 112 .. 64900 | Set PulseTime with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
 
 ### Management
 ```
