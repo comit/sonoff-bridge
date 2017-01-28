@@ -2,8 +2,6 @@ The firmware supports a **serial**, **MQTT** and **Web** Man Machine interface. 
 
 Commands are allowed like ```cmnd/sonoff/<command><relay>``` to address a specific relay where applicable.
 
-Use [this link](https://docs.google.com/spreadsheets/d/1JZc5GuVlFEYafDTJu1cxwqsMlqyRxI81mXgOphHAScY/edit?usp=sharing) to show all commands in one document.
-
 The following command tables are available:
 - Main
 - [Management](#management)
@@ -19,159 +17,100 @@ The following command tables are available:
 ### Main
 Command | Version | Description
 ------- | ------- | -----------
-BlinkCount | 3.1.6 | Show current BlinkCount
-BlinkCount 0 | 3.1.6 | Blink many times before restoring power state
-BlinkCount 1 .. 32000 | 3.1.6 | Set how many blinks before restoring power state
-BlinkTime | 3.1.6 | Show current BlinkTime in 0.1 seconds
-BlinkTime 2 .. 3600 | 3.1.6 | Set BlinkTime with 0.1 seconds increment
-LedPower | 3.2.9 | Show current led power state as On or Off
-LedPower off | 3.2.9 | Turn led AND LedState Off
-LedPower on | 3.2.9 | Turn led On AND LedState Off
-LedPower 0 | 3.2.9 | Turn led AND LedState Off
-LedPower 1 | 3.2.9 | Turn led On AND LedState Off
-LedState | 1.0.13 | Show current led state as 0 to 7
-LedState off | 3.0.5 | Disable use of LED as much as possible
-LedState on | 1.0.13 | Show power state on led
-LedState 0 | 3.0.5 | Disable use of LED as much as possible
-LedState 1 | 1.0.13 | Show power state on led
-LedState 2 | 3.0.5 | Show MQTT subscriptions as a led blink
-LedState 3 | 3.0.5 | Show power state and MQTT subscriptions as a led blink
-LedState 4 | 3.0.5 | Show MQTT publications as a led blink
-LedState 5 | 3.0.5 | Show power state and MQTT publications as a led blink
-LedState 6 | 3.0.5 | Show all MQTT messages as a led blink
-LedState 7 | 3.0.5 | Show power state and MQTT messages as a led blink
+BlinkCount | | Show current BlinkCount
+BlinkCount 0 | | Blink many times before restoring power state
+BlinkCount 1 .. 32000 | | Set how many blinks before restoring power state
+BlinkTime | | Show current BlinkTime in 0.1 seconds
+BlinkTime 2 .. 3600 | | Set BlinkTime with 0.1 seconds increment
+LedPower | | Show current led power state as On or Off
+LedPower 0 \| off | | Turn led AND LedState Off
+LedPower 1 \| on | | Turn led On AND LedState Off
+LedState | | Show current led state as 0 to 7
+LedState 0 \| off | | Disable use of LED as much as possible
+LedState 1 \| on | | Show power state on led
+LedState 2 | | Show MQTT subscriptions as a led blink
+LedState 3 | | Show power state and MQTT subscriptions as a led blink
+LedState 4 | | Show MQTT publications as a led blink
+LedState 5 | | Show power state and MQTT publications as a led blink
+LedState 6 | | Show all MQTT messages as a led blink
+LedState 7 | | Show power state and MQTT messages as a led blink
 Light | | Show current power state as On or Off
-Light on | | Turn power On
-Light off | | Turn power Off
-Light toggle | | Toggle power
-Light blink | 3.1.6 | Blink power
-Light blinkoff | 3.1.6 | Stop blinking power
-Light 1 | | Turn power On
-Light 0 | | Turn power Off
-Light 2 | | Toggle power
-Light 3 | 3.1.6 | Blink power
-Light 4 | 3.1.6 | Stop blinking power
-Light1 | 3.0.0 | (Dual/Dragon/4CH) Show current power state of relay1
-Light1 on | 3.0.0 | (Dual/Dragon/4CH) Turn relay1 power On
-Light1 off | 3.0.0 | (Dual/Dragon/4CH) Turn relay1 power Off
-Light1 toggle | 3.0.0 | (Dual/Dragon/4CH) Toggle relay1 power
-Light1 blink | 3.1.6 | (Dual/Dragon/4CH) Blink relay1 power
-Light1 blinkoff | 3.1.6 | (Dual/Dragon/4CH) Stop blinking relay1 power
-Light1 1 | 3.0.0 | (Dual/Dragon/4CH) Turn relay1 power On
-Light1 0 | 3.0.0 | (Dual/Dragon/4CH) Turn relay1 power Off
-Light1 2 | 3.0.0 | (Dual/Dragon/4CH) Toggle relay1 power
-Light1 3 | 3.1.6 | (Dual/Dragon/4CH) Blink relay1 power
-Light1 4 | 3.1.6 | (Dual/Dragon/4CH) Stop blinking relay1 power
-Light2 | 3.0.0 | (Dual/Dragon/4CH) Show current power state of relay2
-Light2 on | 3.0.0 | (Dual/Dragon/4CH) Turn relay2 power On
-Light2 off | 3.0.0 | (Dual/Dragon/4CH) Turn relay2 power Off
-Light2 toggle | 3.0.0 | (Dual/Dragon/4CH) Toggle relay2 power
-Light2 blink | 3.1.6 | (Dual/Dragon/4CH) Blink relay2 power
-Light2 blinkoff | 3.1.6 | (Dual/Dragon/4CH) Stop blinking relay2 power
-Light2 1 | 3.0.0 | (Dual/Dragon/4CH) Turn relay2 power On
-Light2 0 | 3.0.0 | (Dual/Dragon/4CH) Turn relay2 power Off
-Light2 2 | 3.0.0 | (Dual/Dragon/4CH) Toggle relay2 power
-Light2 3 | 3.1.6 | (Dual/Dragon/4CH) Blink relay2 power
-Light2 4 | 3.1.6 | (Dual/Dragon/4CH) Stop blinking relay2 power
-Light3 | 3.1.1 | (4CH) Show current power state of relay3
-Light3 on | 3.1.1 | (4CH) Turn relay3 power On
-Light3 off | 3.1.1 | (4CH) Turn relay3 power Off
-Light3 toggle | 3.1.1 | (4CH) Toggle relay3 power
-Light3 blink | 3.1.6 | (4CH) Blink relay3 power
-Light3 blinkoff | 3.1.6 | (4CH) Stop blinking relay3 power
-Light3 1 | 3.1.1 | (4CH) Turn relay3 power On
-Light3 0 | 3.1.1 | (4CH) Turn relay3 power Off
-Light3 2 | 3.1.1 | (4CH) Toggle relay3 power
-Light3 3 | 3.1.6 | (4CH) Blink relay3 power
-Light3 4 | 3.1.6 | (4CH) Stop blinking relay3 power
-Light4 | 3.1.1 | (4CH) Show current power state of relay4
-Light4 on | 3.1.1 | (4CH) Turn relay4 power On
-Light4 off | 3.1.1 | (4CH) Turn relay4 power Off
-Light4 toggle | 3.1.1 | (4CH) Toggle relay4 power
-Light4 blink | 3.1.6 | (4CH) Blink relay4 power
-Light4 blinkoff | 3.1.6 | (4CH) Stop blinking relay4 power
-Light4 1 | 3.1.1 | (4CH) Turn relay4 power On
-Light4 0 | 3.1.1 | (4CH) Turn relay4 power Off
-Light4 2 | 3.1.1 | (4CH) Toggle relay4 power
-Light4 3 | 3.1.6 | (4CH) Blink relay4 power
-Light4 4 | 3.1.6 | (4CH) Stop blinking relay4 power
+Light 0 \| off | | Turn power Off
+Light 1 \| on | | Turn power On
+Light 2 \| toggle | | Toggle power
+Light 3 \| blink | | Blink power
+Light 4 \| blinkoff | | Stop blinking power
+Light\<x\> | | Show current power state of relay\<x\>
+Light\<x\> 0 \| off | | Turn relay\<x\> power Off
+Light\<x\> 1 \| on | | Turn relay\<x\> power On
+Light\<x\> 2 \| toggle | | Toggle relay\<x\> power
+Light\<x\> 3 \| blink | | Blink relay\<x\> power
+Light\<x\> 4 \| blinkoff | | Stop blinking relay\<x\> power
 Power | | Show current power state as On or Off
-Power 1\|on | | Turn power On
-Power off | | Turn power Off
-Power toggle | | Toggle power
-Power blink | 3.1.6 | Blink power
-Power blinkoff | 3.1.6 | Stop blinking power
-Power 1 | | Turn power On
-Power 0 | | Turn power Off
-Power 2 | | Toggle power
-Power 3 | 3.1.6 | Blink power
-Power 4 | 3.1.6 | Stop blinking power
-Power\<x\> | 3.0.0 | Show current power state of relay\<x\>
-Power\<x\> 1\|on | 3.0.0 | Turn relay\<x\> power On
-Power\<x\> 0\|off | 3.0.0 | Turn relay\<x\> power Off
-Power\<x\> 2\|toggle | 3.0.0 | Toggle relay\<x\> power
-Power\<x\> 3\|blink | 3.1.6 | Blink relay\<x\> power
-Power\<x\> 4\|blinkoff | 3.1.6 | Stop blinking relay\<x\> power
-PowerOnState | 3.1.1 | Show current relay power on state
-PowerOnState 0 | 3.1.1 | Keep relay(s) off after power on
-PowerOnState 1 | 3.1.1 | Turn relay(s) on after power on
-PowerOnState 2 | 3.1.2 | Toggle relay(s) on from last saved
-PowerOnState 3 | 3.1.2 | (default) Turn relay(s) on as last saved
-PowerRetain | 3.0.0 | Show current MQTT power retain state
-PowerRetain on | 3.0.0 | Enable MQTT power retain on status update
-PowerRetain off | 3.0.0 | (default) Disable MQTT power retain on status update
-PowerRetain 1 | 3.0.0 | Enable MQTT power retain on status update
-PowerRetain 0 | 3.0.0 | (default) Disable MQTT power retain on status update
-PulseTime | 3.0.6 | Show current PulseTime in 0.1 seconds
-PulseTime off | 3.0.6 | (Default) Disable use of PulseTime
-PulseTime 0 | 3.0.6 | (Default) Disable use of PulseTime
-PulseTime 1 .. 111 | 3.0.6 | Set PulseTime with 0.1 seconds increment
-PulseTime 112 .. 64900 | 3.1.9 | Set PulseTime with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
+Power 0 \| off | | Turn power Off
+Power 1 \| on | | Turn power On
+Power 2 \| toggle | | Toggle power
+Power 3 \| blink | | Blink power
+Power 4 \| blinkoff | | Stop blinking power
+Power\<x\> | | Show current power state of relay\<x\>
+Power\<x\> 0 \| off | | Turn relay\<x\> power Off
+Power\<x\> 1 \| on | | Turn relay\<x\> power On
+Power\<x\> 2 \| toggle | | Toggle relay\<x\> power
+Power\<x\> 3 \| blink | | Blink relay\<x\> power
+Power\<x\> 4 \| blinkoff | | Stop blinking relay\<x\> power
+PowerOnState | | Show current relay power on state
+PowerOnState 0 | | Keep relay(s) off after power on
+PowerOnState 1 | | Turn relay(s) on after power on
+PowerOnState 2 | | Toggle relay(s) on from last saved
+PowerOnState 3 | | (default) Turn relay(s) on as last saved
+PowerRetain | | Show current MQTT power retain state
+PowerRetain 0 \| off | | (default) Disable MQTT power retain on status update
+PowerRetain 1 \| on | | Enable MQTT power retain on status update
+PulseTime | | Show current PulseTime in 0.1 seconds
+PulseTime 0 \| off | | (Default) Disable use of PulseTime
+PulseTime 1 .. 111 | | Set PulseTime with 0.1 seconds increment
+PulseTime 112 .. 64900 | | Set PulseTime with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
 
 ### Management
 Command | Version | Description
 ------- | ------- | -----------
-FriendlyName | 3.1.16 | Show friendly name as used by Alexa
-FriendlyName 1 | 3.1.16 | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
-FriendlyName \<your-name\> | 3.1.16 | Set friendly name
+FriendlyName | | Show friendly name as used by emulation
+FriendlyName\<x\> | | Show friendly name as used by emulation
+FriendlyName\<x\> 1 | | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
+FriendlyName\<x\> \<your-name\> | | Set friendly name
 OtaUrl | | Show current otaurl
 OtaUrl 1 | | Reset otaurl to ```user_config.h``` value
 OtaUrl \<your-otaurl\> | | Set otaurl
 Reset 1 | | Reset sonoff parameters to ```user_config.h``` values and restart
-Reset 2 | 1.0.9 | Erase flash, reset sonoff parameters to ```user_config.h``` values and restart
+Reset 2 | | Erase flash, reset sonoff parameters to ```user_config.h``` values and restart
 Restart 1 | | Restart sonoff
-Restart 99 | 1.0.23 | Force restart sonoff without config save
-SaveData | 1.0.35 | Save parameter changes and show current state as Manual, On or every x seconds
-SaveData on | 1.0.35 | (default) Save parameter changes every second
-SaveData off | 1.0.35 | Save parameter changes only manually
-SaveData 1 | 1.0.35 | (default) Save parameter changes every second
-SaveData 0 | 1.0.35 | Save parameter changes only manually
+Restart 99 | | Force restart sonoff without config save
+SaveData | | Save parameter changes and show current state as Manual, On or every x seconds
+SaveData 0 \| off | | Save parameter changes only manually
+SaveData 1 \| on | | (default) Save parameter changes every second
 SaveData \<your-secs\> | 1.0.35 | Save parameter changes between every 2 and 3600 seconds
-SaveState | 2.0.3 | Show current SaveState state
-SaveState on | 2.0.3 | (default) Save power changes and set relay after restart
-SaveState off | 2.0.3 | Do not save power changes and do not set relay after restart
-SaveState 1 | 2.0.3 | (default) Save power changes and set relay after restart
-SaveState 0 | 2.0.3 | Do not save power changes and do not set relay after restart
-Sleep | 3.2.12 | Show current sleep state as 0 (Off) or duration of up to 250 mSec
-Sleep off | 3.2.12 | (default) Turn sleep off
-Sleep 0 | 3.2.12 | (default) Turn sleep off
-Sleep 1 - 250 | 3.2.12 | Set sleep duration from 1 to 250 mSec to enable energy saving
+SaveState | | Show current SaveState state
+SaveState 1 \| on | | (default) Save power changes and set relay after restart
+SaveState 0 \| off | | Do not save power changes and do not set relay after restart
+Sleep | | Show current sleep state as 0 (Off) or duration of up to 250 mSec
+Sleep 0 \| off | | (default) Turn sleep off
+Sleep 1 - 250 | | Set sleep duration from 1 to 250 mSec to enable energy saving
 Status | | Show abbreviated status information
-Status 0 | 1.0.15 | Show all status information
+Status 0 | | Show all status information
 Status 1 | | Show more status information
 Status 2 | | Show firmware information
-Status 3 | 1.0.8 | Show syslog information
-Status 4 | 1.0.8 | Show memory information
-Status 5 | 1.0.9 | Show network information
-Status 6 | 1.0.14 | Show MQTT information
-Status 7 | 1.0.20 | Show Real Time Clock information
-Status 8 | 2.0.5 | (Sonoff Pow only) Show Power usage
-Status 9 | 2.0.6 | (Sonoff Pow only) Show Power thresholds
+Status 3 | | Show syslog information
+Status 4 | | Show memory information
+Status 5 | | Show network information
+Status 6 | | Show MQTT information
+Status 7 | | Show Real Time Clock information
+Status 8 | | (Sonoff Pow only) Show Power usage
+Status 9 | | (Sonoff Pow only) Show Power thresholds
 Timezone | | Show current timezone
 Timezone -12 .. 12 | | Set timezone
-Timezone 99 | 1.0.20 | Use Daylight Saving parameters from ```user_config.h```
+Timezone 99 | | Use Daylight Saving parameters from ```user_config.h```
 Upgrade 1 | | Download ota firmware from your web server and restart
-Upload 1 | 1.0.23 | Download ota firmware from your web server and restart
+Upload 1 | | Download ota firmware from your web server and restart
 
 ### Wifi
 Command | Version | Description
