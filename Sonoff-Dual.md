@@ -8,3 +8,5 @@ It is therefore important to disable any serial communication to and from the de
 To assist easy installation serial logging is enabled by default in user_config.h for all Sonoffs. Once in production it's wise to turn it off for all Sonoffs. For the Dual it is almost mandatory to turn it off.
 
 Execute command ```seriallog 0``` once to turn all communication on the serial port off.
+
+If within 10 minutes no input is received serial communication is turned off too. 
