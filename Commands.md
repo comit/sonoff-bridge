@@ -72,6 +72,7 @@ PulseTime 1 .. 111 | | Set PulseTime with 0.1 seconds increment
 PulseTime 112 .. 64900 | | Set PulseTime with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
 
 ### Management
+```
 Command | Version | Description
 ------- | ------- | -----------
 FriendlyName | | Show friendly name as used by emulation
@@ -111,6 +112,7 @@ Timezone -12 .. 12 | | Set timezone
 Timezone 99 | | Use Daylight Saving parameters from ```user_config.h```
 Upgrade 1 | | Download ota firmware from your web server and restart
 Upload 1 | | Download ota firmware from your web server and restart
+```
 
 ### Wifi
 Command | Version | Description
