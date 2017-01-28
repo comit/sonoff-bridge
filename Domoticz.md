@@ -26,10 +26,6 @@ Configure MQTT and Virtual Sensor hardware
 <img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/domoticz1.jpg" width="250" align="right" /> 
 Sonoff provides several ways of configuring Domoticz parameters.
 
-- Make updates to the Domoticz section of ```user_config.h``` but remember that these changes are only propagated if you also change the CFG_HOLDER define. This is NOT my preferred way of configuring.
-    1. Set ```DOMOTICZ_IN_TOPIC``` to ```domoticz/in``` as hardcoded in Domoticz
-    2. Set ```DOMOTICZ_OUT_TOPIC``` to ```domoticz/out``` as hardcoded in Domoticz
-    3. Configure ```DOMOTICZ_RELAY_IDX1``` to the value read in step 4.1
 - Use the webinterface and select ```Configuration - Configure Domoticz```
     1. Set ```In topic``` to ```domoticz/in``` as hardcoded in Domoticz
     2. Set ```Out topic``` to ```domoticz/out``` as hardcoded in Domoticz
