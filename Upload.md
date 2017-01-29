@@ -7,6 +7,8 @@
 
 ## Arduino IDE
 
+Make sure you configured the IDE as described in "Prerequisite"!
+
 Load the file `sonoff.ino` into the IDE.
 
 In the Arduino IDE for sonoff select from `Tools Board Generic ESP8266 Module` and set the following options:
