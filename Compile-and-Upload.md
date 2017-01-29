@@ -13,9 +13,14 @@ In the Arduino IDE for sonoff select from ```Tools Board Generic ESP8266 Module`
 
 Load the file ```sonoff.ino``` into the IDE.
 
-Verify and/or compile the project and upload once to sonoff using the serial connection as shown in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff). See below for specific Sonoff Module information.
-<img alt="Connection diagram" src="https://github.com/arendst/arendst.github.io/blob/master/media/ProgramESP8266.jpg" height="260" /><br/> 
+Verify and/or compile the project and upload once to your sonoff using the serial connection as shown in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff). See below for specific Sonoff Module information.
 
+### Sonoff Basic
+
+<img alt="Connection diagram" src="https://github.com/arendst/arendst.github.io/blob/master/media/ProgramESP8266.jpg" height="260" /><br/>
+
+*Note:* newer version of the Sonoff module consist of five pins below the button. Follow the image above and ignore the pin furthest to the Button.
+  
 **Do not connect AC power during the flash cable connection**. 
 
 ### Sonoff RF
@@ -40,7 +45,7 @@ The 4 pin header in the middle, which is normally not present, is not needed but
 
 ### S20 Smart Socket
 <img alt="S20 Smart Socket" src="https://github.com/arendst/arendst.github.io/blob/master/media/s20b.jpg" width="230" align="right" /> 
-The picture on the right, provided by ThomDietrich, shows how to program the S20 Smart Socket powered by the FTDI USB converter.
+The picture on the right shows how to program the S20 Smart Socket powered by the FTDI USB converter.
 
 Remember that during programming the Smart Socket is **NOT** connected to mains.
 
