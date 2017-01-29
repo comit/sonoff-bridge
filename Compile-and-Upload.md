@@ -45,9 +45,9 @@ I was unable to pair the Sonoff RF 434MHz receiver with any of my KaKu switches 
 
 ### Sonoff Dual
 <img alt="Dual GPIO0 grounded" src="https://github.com/arendst/arendst.github.io/blob/master/media/dual2a.jpg" width="230" align="right" /> 
-Programming the Sonoff Dual is also more difficult as the button is not connected to GPIO0 which is needed to put the ESP8266 in programming mode during power up.
+Programming the Sonoff Dual is more difficult as the on-board-button is not connected to GPIO0. Pulling GPIO0 to GND is needed to put the ESP8266 in programming mode during power up.
 
-I suggest to solder a 4 pin header for the serial interface as shown in the image on the right (the vertical connector) and use the small inter layer VIA to ground GPIO0 using the GND pin from the button 0 and button 1 header.
+As always, you need to solder a 4 pin header for the serial interface (connector on the short end of the PCB). GPIO0 can be found in the small inter layer [via](https://en.wikipedia.org/wiki/Via_(electronics)) shown in the image. Using the GND pin from the button 0 / button 1 header connect the via during power up. Attention: If the via is covered by silk screen (green) you need to expose the underlying conductive (copper) by careful scratching.
 
 The 4 pin header in the middle, which is normally not present, is not needed but might be used in programming the ESP8266 as there must be a better way for itead to get the initial code loaded ...
 
