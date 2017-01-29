@@ -85,3 +85,7 @@ Remember that during programming the Sonoff Touch is **NOT** connected to mains.
 This USB powered or external powered board provides one GPIO controlling two alternating relays with Normally Open (NO) and Normally Closed (NC) contacts. It can be used for changing directions of a connected motor.
 
 Programming the onboard 3.3V [PSA-B](https://www.itead.cc/psa-01.html) is possible when Rx (pin7), Tx (pin8) and Gnd (pin9) are connected to the FTDI interface, the button is pressed and (USB) power is provided.
+
+### Sonoff 4ch
+
+On the PCB the `TX` and `RX` pins are mislabeled. The `TX` of the programmer needs to connect to the `TX` on the 4ch PCB and the `RX` to the `RX`. Normally this is reversed.
