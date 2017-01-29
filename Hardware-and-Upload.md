@@ -14,7 +14,7 @@ The following table shows the connection for most Sonoff modules:
 
 **⚠️️⚠️️⚠️️ Do not connect AC power and serial connection at the same time ⚠️️⚠️️⚠️️** 
 
-Shorting your serial interface with AC will fry your Module, Programmer and even your PC.
+Shorting your serial interface with AC will fry your module, programmer and even your PC.
 
 ### Sonoff Basic
 
