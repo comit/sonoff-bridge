@@ -1,35 +1,30 @@
-In the Arduino IDE for sonoff select from ```Tools Board Generic ESP8266 Module``` and set the following options:
+## Hardware Preparation and Connections
 
-- Upload Using: Serial
-- Flash Mode: DIO
-- Flash Frequency: 40MHz
-- CPU Frequency: 80MHz
-- Flash Size: 1M (64K SPIFFS)
-- Debug Port: Disabled
-- Debug Level: None
-- Reset Method: ck
-- Upload Speed: 115200
-- Port: Your COM port connected to sonoff
+You need to make the serial programming interface of the Sonoff module / the ESP8266 microchip available. Examples are shown in in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff) or by [captain-slow.dk](http://captain-slow.dk/2016/05/22/replacing-the-itead-sonoff-firmware/). In most cases the pins are available on the PCB but connectors need to be soldered to allow interfacing. You'll furthermore need a **3.3V Serial Programmer**. See below for specific Sonoff Module information and examples.
 
-Load the file ```sonoff.ino``` into the IDE.
+The following table shows the connection for most Sonoff modules:
 
-Verify and/or compile the project and upload once to your sonoff using the serial connection as shown in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff). See below for specific Sonoff Module information.
+| Sonoff             | Programmer |
+|--------------------|------------|
+| 1 (VCC)            |        3V3 |
+| 2 (RX)             |         TX |
+| 3 (TX)             |         RX |
+| 4 (GND)            |        GND |
+| (5 - if available) |            |
+
+**⚠️️⚠️️⚠️️ Do not connect AC power and serial connection at the same time ⚠️️⚠️️⚠️️** 
+
+Shorting your serial interface with AC will fry your Module, Programmer and even your PC.
 
 ### Sonoff Basic
 
 <img alt="Connection diagram" src="https://github.com/arendst/arendst.github.io/blob/master/media/ProgramESP8266.jpg" height="260" /><br/>
 
-*Note:* newer version of the Sonoff module consist of five pins below the button. Follow the image above and ignore the pin furthest to the Button (pin 5) if available.
+*Note:* newer version of the Sonoff module hold five pins below the button. Follow the image above and ignore the pin furthest to the Button (pin 5) if available.
 
-| Sonoff (starting at button) | Programmer |
-|-----------------------------|------------|
-|                     1 (VCC) |        3V3 |
-|                      2 (RX) |         TX |
-|                      3 (TX) |         RX |
-|                     4 (GND) |        GND |
-|          (5 - if available) |            |
-
-**Do not connect AC power during the flash cable connection**. 
+### S20 Smart Socket
+<img alt="S20 Smart Socket" src="https://github.com/arendst/arendst.github.io/blob/master/media/s20b.jpg" width="230" align="right" /> 
+The picture shows how to program the S20 Smart Socket powered by the FTDI USB converter.
 
 ### Sonoff RF
 <img alt="S20 Smart Socket" src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoffrffix.jpg" width="230" align="right" /> 
@@ -51,13 +46,10 @@ As always, you need to solder a 4 pin header for the serial interface (connector
 
 The 4 pin header in the middle, which is normally not present, is not needed but might be used in programming the ESP8266 as there must be a better way for itead to get the initial code loaded ...
 
-### S20 Smart Socket
-<img alt="S20 Smart Socket" src="https://github.com/arendst/arendst.github.io/blob/master/media/s20b.jpg" width="230" align="right" /> 
-The picture on the right shows how to program the S20 Smart Socket powered by the FTDI USB converter.
+### Sonoff Pow
 
-Remember that during programming the Smart Socket is **NOT** connected to mains.
+<!-- this can be deleted. General warning now given above -->
 
-### Sonoff Pow - WARNING
 Trying to program the Sonoff Pow [comrade MySKU](http://mysku.ru/blog/china-stores/45762.html) learned the hard way how to brick it.
 
 <img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="230" align="right" /> 
@@ -81,13 +73,35 @@ The pictures show for both the EU version (top) and the US version (bottom) wher
 
 Remember that during programming the Sonoff Touch is **NOT** connected to mains.
 
-### iTead Motor Clockwise/Anticlockwise
+### ITEAD Motor Clockwise/Anticlockwise
 <img alt="MotorCAC" src="https://github.com/arendst/arendst.github.io/blob/master/media/motorcac1.jpg" width="230" align="right" /> 
 This USB powered or external powered board provides one GPIO controlling two alternating relays with Normally Open (NO) and Normally Closed (NC) contacts. It can be used for changing directions of a connected motor.
 
 Programming the onboard 3.3V [PSA-B](https://www.itead.cc/psa-01.html) is possible when Rx (pin7), Tx (pin8) and Gnd (pin9) are connected to the FTDI interface, the button is pressed and (USB) power is provided.
 
-### Upload image
+## Uploading via Serial Connection
+
+Load the file ```sonoff.ino``` into the IDE.
+
+In the Arduino IDE for sonoff select from ```Tools Board Generic ESP8266 Module``` and set the following options:
+
+- Upload Using: Serial
+- Flash Mode: DIO
+- Flash Frequency: 40MHz
+- CPU Frequency: 80MHz
+- Flash Size: 1M (64K SPIFFS)
+- Debug Port: Disabled
+- Debug Level: None
+- Reset Method: ck
+- Upload Speed: 115200
+- Port: Your COM port connected to sonoff
+
+Verify and/or compile the project and upload to your sonoff using the serial connection established above.
+
+## Uploading via OTA
+
+This method is only available after flashing Sonoff-Tasmota once.
+
 Verify and upload an OTA image to your web server with option ```Upload Using: OTA_upload```.
 
 Since version 1.0.26 you may also use sonoffs web server and upload the file directly.
