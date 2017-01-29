@@ -2,6 +2,7 @@
 
 * One of the [supported ESP8266 modules](https://github.com/arendst/Sonoff-Tasmota/blob/master/README.md)
 * 3.3V FTDI USB-to-Serial Converter/Programmer ([example](https://www.sparkfun.com/products/9873))
+* Soldering iron and header pins
 
 ## Needed Software
 
