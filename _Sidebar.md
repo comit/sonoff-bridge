@@ -2,7 +2,7 @@
 
 **Getting Started**
 - [**Prerequisite**](Prerequisite)
-- [**Compile and Upload**](Compile-and-Upload)
+- [**Hardware-and-Upload**](Hardware-and-Upload)
 
 **Usage**
 - [**Button**](Button-usage)
