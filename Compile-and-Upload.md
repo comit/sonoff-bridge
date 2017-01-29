@@ -1,8 +1,8 @@
 In the Arduino IDE for sonoff select from ```Tools Board Generic ESP8266 Module``` and set the following options:
 
+- Upload Using: Serial
 - Flash Mode: DIO
 - Flash Frequency: 40MHz
-- Upload Using: Serial
 - CPU Frequency: 80MHz
 - Flash Size: 1M (64K SPIFFS)
 - Debug Port: Disabled
