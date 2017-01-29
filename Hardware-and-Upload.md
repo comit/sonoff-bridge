@@ -1,6 +1,6 @@
 ## Hardware Preparation and Upload Instructions
 
-You need to make the serial programming interface of the Sonoff module / the ESP8266 microchip available. Examples are shown in in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff) or by [captain-slow.dk](http://captain-slow.dk/2016/05/22/replacing-the-itead-sonoff-firmware/). In most cases the pins are available on the PCB but connectors need to be soldered to allow interfacing. You'll furthermore need a **3.3V Serial Programmer**. See below for specific Sonoff Module information and examples.
+You need to make the serial programming interface of the Sonoff module / the ESP8266 microchip available. Examples are shown in in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff) or by [captain-slow.dk](http://captain-slow.dk/2016/05/22/replacing-the-itead-sonoff-firmware/). In most cases the pins are available on the PCB but connectors need to be soldered to allow interfacing. You'll furthermore need a **3.3V FTDI USB-to-Serial Converter/Programmer**. See below for specific Sonoff Module information and examples.
 
 The following table shows the connection for most Sonoff modules:
 
