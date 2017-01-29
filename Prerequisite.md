@@ -1,3 +1,26 @@
+## Needed Hardware
+
+* One of the [supported ESP8266 modules](https://github.com/arendst/Sonoff-Tasmota/blob/master/README.md)
+* 3.3V FTDI USB-to-Serial Converter/Programmer ([example](https://www.sparkfun.com/products/9873))
+
+## Needed Software
+
+Use either of the following:
+
+* Arduino IDE including the mentioned preparations below OR
+* Platform.IO (all needed libraries and settings are configured in [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini))
+
+## Other Requirements
+
+* The willingness to solder and tinker
+* The firmware source code found here
+* An MQTT broker
+* An MQTT client to interact with the Sonoff module (Desktop Client, Android App, Home Automation Software, ...)
+
+----
+
+### Arduino IDE Preparation
+
 Install the ESP8266 Arduino development environment from [esp8266 Arduino](https://github.com/esp8266/Arduino). The software is supported with Arduino IDE versions 1.6.10 until 1.8.1 and esp8266 Arduino stable version 2.3.0.
 
 - I prefer a standalone version of the IDE allowing easy ESP8266 file manipulation. This can be achieved by downloading the Arduino IDE ZIP file for non admin install. After unzipping and before executing ```arduino.exe``` add an empty directory called ```portable```
@@ -9,7 +32,7 @@ Download and unzip the [pubsubclient](https://github.com/knolleary/pubsubclient)
 
 Optionally install php and a local web server (ie apache) for OTA and copy directory ```api``` in webroot.
 
-### "Over The Air" updates
+#### "Over The Air" updates
 If you want to be able to upload the OTA file from the IDE to your web server perform the following changes to the Arduino IDE environment:
 
 - Copy file ```espupload.py``` to directory ```portable\packages\esp8266\hardware\esp8266\2.3.0\tools``` and change HOST_ADDR to refer to your web server
