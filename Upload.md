@@ -1,0 +1,28 @@
+## Uploading via Serial Connection
+
+Load the file ```sonoff.ino``` into the IDE.
+
+In the Arduino IDE for sonoff select from ```Tools Board Generic ESP8266 Module``` and set the following options:
+
+- Upload Using: Serial
+- Flash Mode: DIO
+- Flash Frequency: 40MHz
+- CPU Frequency: 80MHz
+- Flash Size: 1M (64K SPIFFS)
+- Debug Port: Disabled
+- Debug Level: None
+- Reset Method: ck
+- Upload Speed: 115200
+- Port: Your COM port connected to sonoff
+
+Verify and/or compile the project and upload to your sonoff using the serial connection established above.
+
+## Uploading via OTA
+
+This method is only available after flashing Sonoff-Tasmota once.
+
+Verify and upload an OTA image to your web server with option ```Upload Using: OTA_upload```.
+
+Since version 1.0.26 you may also use sonoffs web server and upload the file directly.
+
+Enable debug messages with command ```seriallog 3```.
