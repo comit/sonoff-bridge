@@ -2,7 +2,7 @@
 
 **Getting Started**
 - [**Prerequisite**](Prerequisite)
-- [**Hardware Prep and Upload**](Hardware-and-Upload)
+- [**Hardware and Upload**](Hardware-and-Upload)
 
 **Usage**
 - [**Button**](Button-usage)
