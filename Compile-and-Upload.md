@@ -19,8 +19,16 @@ Verify and/or compile the project and upload once to your sonoff using the seria
 
 <img alt="Connection diagram" src="https://github.com/arendst/arendst.github.io/blob/master/media/ProgramESP8266.jpg" height="260" /><br/>
 
-*Note:* newer version of the Sonoff module consist of five pins below the button. Follow the image above and ignore the pin furthest to the Button.
-  
+*Note:* newer version of the Sonoff module consist of five pins below the button. Follow the image above and ignore the pin furthest to the Button (pin 5) if available.
+
+| Sonoff (starting at button) | Programmer |
+|-----------------------------|------------|
+|                     1 (VCC) |        3V3 |
+|                      2 (RX) |         TX |
+|                      3 (TX) |         RX |
+|                     4 (GND) |        GND |
+|          (5 - if available) |            |
+
 **Do not connect AC power during the flash cable connection**. 
 
 ### Sonoff RF
