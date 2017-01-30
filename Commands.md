@@ -132,49 +132,38 @@ WifiConfig      | 4       | Disable wifi config but retry other AP without resta
 ```
 
 ### MQTT
-Command | Version | Description
-------- | ------- | -----------
-ButtonRetain | 2.0.3 | Show current button MQTT retain flag state
-ButtonRetain on | 2.0.3 | Set ButtonTopic to Topic and enable MQTT retain flag on button press
-ButtonRetain off | 2.0.3 | (default) Disable use of MQTT retain flag
-ButtonRetain 1 | 2.0.3 | Set ButtonTopic to Topic and enable MQTT retain flag on button press
-ButtonRetain 0 | 2.0.3 | (default) Disable use of MQTT retain flag
-ButtonTopic | 1.0.10 | Show current MQTT button topic
-ButtonTopic 0 | 1.0.10 | Disable use of MQTT button topic
-ButtonTopic 1 | 1.0.10 | Set MQTT button topic to Topic
-ButtonTopic \<your-topic\> | 1.0.10 | Set MQTT button topic
-GroupTopic | | Show current MQTT group topic
-GroupTopic 1 | | Reset MQTT group topic to ```user_config.h``` value and restart
-GroupTopic \<your-grouptopic\> | | Set MQTT group topic and restart
-MessageFormat | 2.0.7 | (Until 4.0.0) Show current MQTT message format (0 = Legacy, 1 = JSON)
-MessageFormat 0 | 2.0.7 | (Until 4.0.0) (default) Send legacy messages
-MessageFormat 1 | 2.0.7 | (Until 4.0.0) Send JSON messages and Legacy power state message
-MqttClient | 1.0.22 | Show current MQTT client
-MqttClient 1 | 1.0.22 | Reset MQTT client to ```user_config.h``` value and restart
-MqttClient \<your-client\> | 1.0.22 | Set MQTT client and restart. May use wildcard %06X to be replaced by last six characters of MAC address
-MqttHost | | Show current MQTT host
-MqttHost 1 | | Reset MQTT host to ```user_config.h``` value and restart
-MqttHost \<your-host\> | | Set MQTT host and restart
-MqttPassword | 1.0.22 | Show current MQTT password
-MqttPassword 1 | 1.0.22 | Reset MQTT password to ```user_config.h``` value and restart
-MqttPassword \<your-password\> | 1.0.22 | Set MQTT password and restart
-MqttPort | 1.0.22 | Show current MQTT port
-MqttPort 1 | 1.0.22 | Reset MQTT port to ```user_config.h``` value and restart
-MqttPort \<your-port\> | 1.0.22 | Set MQTT port between 2 and 32766 and restart
-MqttUser | 1.0.22 | (Until 4.0.0) Show current MQTT user name
-MqttUser 1 | 1.0.22 | (Until 4.0.0) Reset MQTT user name to ```user_config.h``` value and restart
-MqttUser \<your-user\> | 1.0.22 | (Until 4.0.0) Set MQTT user name and restart
-MqttUnits | 2.0.5 | (Until 4.0.0) Show current MqttUnits state
-MqttUnits on | 2.0.5 | (Until 4.0.0) Add units to MQTT messages
-MqttUnits off | 2.0.5 | (Until 4.0.0) (default) Do not show units to MQTT messages
-Units 1 | 4.0.0 | Add units to messages
-Units 0 | 4.0.0 | (default) Do not show units to messages
-Units | 4.0.0 | Show current Units state
-Units on | 4.0.0 | Add units to messages
-Units off | 4.0.0 | (default) Do not show units to messages
-Units 1 | 4.0.0 | Add units to messages
-Units 0 | 4.0.0 | (default) Do not show units to messages
-PowerRetain | 3.0.0 | Show current MQTT power retain state
+```
+Command         | Payload | Description
+----------------|---------|--------------------------------------------------------------------------------
+ButtonRetain    |         | Show current button MQTT retain flag state
+ButtonRetain    | 0 | off | (default) Disable use of MQTT retain flag
+ButtonRetain    | 1 | on  | Set ButtonTopic to Topic and enable MQTT retain flag on button press
+ButtonTopic     |         | Show current MQTT button topic
+ButtonTopic     | 0       | Disable use of MQTT button topic
+ButtonTopic     | 1       | Set MQTT button topic to Topic
+ButtonTopic     | <topic> | Set MQTT button topic
+GroupTopic      |         | Show current MQTT group topic
+GroupTopic      | 1       | Reset MQTT group topic to ```user_config.h``` value and restart
+GroupTopic      | <grouptopic> | Set MQTT group topic and restart
+MqttClient      |         | Show current MQTT client
+MqttClient      | 1       | Reset MQTT client to ```user_config.h``` value and restart
+MqttClient      | <client> | Set MQTT client and restart. May use wildcard %06X to be replaced by last six characters of MAC address
+MqttHost        |         | Show current MQTT host
+MqttHost        | 1       | Reset MQTT host to ```user_config.h``` value and restart
+MqttHost        | <host>  | Set MQTT host and restart
+MqttPassword    |         | Show current MQTT password
+MqttPassword    | 1       | Reset MQTT password to ```user_config.h``` value and restart
+MqttPassword    | <pswrd> | Set MQTT password and restart
+MqttPort        |         | Show current MQTT port
+MqttPort        | 1       | Reset MQTT port to ```user_config.h``` value and restart
+MqttPort        | <port>  | Set MQTT port between 2 and 32766 and restart
+MqttUser        |         | Show current MQTT user name
+MqttUser        | 1       | Reset MQTT user name to ```user_config.h``` value and restart
+MqttUser        | <user>  | Set MQTT user name and restart
+Units           |         | Show current Units state
+Units           | 1 | on  | Add units to messages
+Units           | 0 | off | (default) Do not show units to messages
+PowerRetain   | 3.0.0 | Show current MQTT power retain state
 PowerRetain on | 3.0.0 | Enable MQTT power retain on status update
 PowerRetain off | 3.0.0 | (default) Disable MQTT power retain on status update
 PowerRetain 1 | 3.0.0 | Enable MQTT power retain on status update
@@ -196,6 +185,7 @@ TelePeriod \<your-secs\> | 1.0.28 | Set telemetry period between 2 and 3600 seco
 Topic | | Show current MQTT topic
 Topic 1 | | Reset MQTT topic to ```user_config.h``` value and restart
 Topic \<your-topic\> | | Set MQTT topic  AND button topic and restart
+```
 
 ### Logging
 Command | Version | Description
