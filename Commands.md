@@ -91,6 +91,7 @@ Status          | 6       | Show MQTT information
 Status          | 7       | Show Real Time Clock information
 Status          | 8       | (Sonoff Pow only) Show Power usage
 Status          | 9       | (Sonoff Pow only) Show Power thresholds
+Status          | 10      | Show sensor information
 Timezone        |         | Show current timezone
 Timezone      | -12 .. 12 | Set timezone
 Timezone        | 99      | Use Daylight Saving parameters from ```user_config.h```
@@ -99,46 +100,36 @@ Upload          | 1       | Download ota firmware from your web server and resta
 ```
 
 ### Wifi
-Command | Version | Description
-------- | ------- | -----------
-AP | 2.1.2 | Show current selected Wifi Access Point (AP)
-AP 0 | 2.1.2 | Switch to other Wifi Access Point (AP)
-AP 1 | 2.1.2 | Select Wifi Access Point 1 (AP)
-AP 2 | 2.1.2 | Select Wifi Access Point 2 (AP)
-Hostname | 1.0.26 | Show current hostname
-Hostname 1 | 1.0.26 | Reset hostname to ```user_config.h``` value and restart
-Hostname \<your-host\> | 1.0.26 | Set hostname and restart
-Password | | Show AP1 current Wifi password
-Password 1 | | Reset AP1 Wifi password to ```user_config.h``` value and restart
-Password \<your-password\> | | Set AP1 Wifi password and restart
-Password1 | 2.1.2 | Show AP1 current Wifi password
-Password1 1 | 2.1.2 | Reset AP1 Wifi password to ```user_config.h``` value and restart
-Password1 \<your-password\> | 2.1.2 | Set AP1 Wifi password and restart
-Password2 | 2.1.2 | Show AP2 current Wifi password
-Password2 1 | 2.1.2 | Reset AP2 Wifi password to ```user_config.h``` value and restart
-Password2 \<your-password\> | 2.1.2 | Set AP2 Wifi password and restart
-SmartConfig 1 | | (Deprecated - use wificonfig) Start smart config for 1 minute
-SmartConfig 2 | 1.0.22 | (Deprecated - use wificonfig) Start wifi manager (web server at 192.168.4.1)
-SSId | | Show AP1 current Wifi SSId
-SSId 1 | | Reset AP1 Wifi SSId to ```user_config.h``` value and restart
-SSId \<your-ssid\> | | Set AP1 Wifi SSId and restart
-SSId1 | 2.1.2 | Show AP1 current Wifi SSId
-SSId1 1 | 2.1.2 | Reset AP1 Wifi SSId to ```user_config.h``` value and restart
-SSId1 \<your-ssid\> | 2.1.2 | Set AP1 Wifi SSId and restart
-SSId2 | 2.1.2 | Show AP2 current Wifi SSId
-SSId2 1 | 2.1.2 | Reset AP2 Wifi SSId to ```user_config.h``` value and restart
-SSId2 \<your-ssid\> | 2.1.2 | Set AP2 Wifi SSId and restart
-WebServer | 1.0.23 | Show current web server state
-WebServer 0 | 1.0.23 | Stop web server
-WebServer 1 | 1.0.23 | Start web server in user mode
-WebServer 2 | 1.0.23 | Start web server in admin mode
-WifiConfig | 1.0.32 | Show current config tool
-WifiConfig 0 | 1.0.32 | (Deprecated) Start current config tool
-WifiConfig 0 | 2.1.2 | Disable wifi config but restart (used with alternate AP)
-WifiConfig 1 | 1.0.32 | Start smart config for 1 minute and set as current config tool
-WifiConfig 2 | 1.0.32 | Start wifi manager (web server at 192.168.4.1) and set as current config tool
-WifiConfig 3 | 1.0.32 | Start WPS config for 1 minute and set as current config tool
-WifiConfig 4 | 3.0.5 | Disable wifi config but retry other AP without restart
+```
+Command         | Payload | Description
+----------------|---------|--------------------------------------------------------------------------------
+AP              |         | Show current selected Wifi Access Point (AP)
+AP              | 0       | Switch to other Wifi Access Point (AP)
+AP              | 1       | Select Wifi Access Point 1 (AP)
+AP              | 2       | Select Wifi Access Point 2 (AP)
+Hostname        |         | Show current hostname
+Hostname        | 1       | Reset hostname to ```user_config.h``` value and restart
+Hostname        | <host>  | Set hostname and restart
+Password        |         | Show AP1 current Wifi password
+Password        | 1       | Reset AP1 Wifi password to ```user_config.h``` value and restart
+Password        | <pswrd> | Set AP1 Wifi password and restart
+Password<x>     |         | Show APx current Wifi password
+Password<x>     | 1       | Reset APx Wifi password to ```user_config.h``` value and restart
+Password<x>     | <pswrd> | Set APx Wifi password and restart
+SSId | SSId<x>  |         | Show APx current Wifi SSId
+SSId | SSId<x>  | 1       | Reset APx Wifi SSId to ```user_config.h``` value and restart
+SSId | SSId<x>  | <ssid>  | Set APx Wifi SSId and restart
+WebServer       |         | Show current web server state
+WebServer       | 0       | Stop web server
+WebServer       | 1       | Start web server in user mode
+WebServer       | 2       | Start web server in admin mode
+WifiConfig      |         | Show current config tool
+WifiConfig      | 0       | Disable wifi config but restart (used with alternate AP)
+WifiConfig      | 1       | Start smart config for 1 minute and set as current config tool
+WifiConfig      | 2       | Start wifi manager (web server at 192.168.4.1) and set as current config tool
+WifiConfig      | 3       | Start WPS config for 1 minute and set as current config tool
+WifiConfig      | 4       | Disable wifi config but retry other AP without restart
+```
 
 ### MQTT
 Command | Version | Description
