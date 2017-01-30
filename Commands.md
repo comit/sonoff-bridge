@@ -259,44 +259,31 @@ VoltageLow      | <voltage> | Set voltage low threshold value
 ```
 
 ### Domoticz
-Command | Version | Description
-------- | ------- | -----------
-DomoticzIdx | 2.0.7 | Show current Domoticz relay1 index
-DomoticzIdx off | 2.0.7 | (default) Disable use of Domoticz
-DomoticzIdx 0 | 2.0.7 | (default) Disable use of Domoticz
-DomoticzIdx \<idx\> | 2.0.7 | Set Domoticz relay1 index
-DomoticzIdx\<index\> | 3.1.1 | Show current Domoticz relay1 to relay4 index
-DomoticzIdx\<index\> off | 3.1.1 | (default) Disable use of Domoticz
-DomoticzIdx\<index\> 0 | 3.1.1 | (default) Disable use of Domoticz
-DomoticzIdx\<index\> \<idx\> | 3.1.1 | Set Domoticz relay1 to relay4 index
-DomoticzInTopic | 2.0.7 | Show current Domoticz MQTT In Topic
-DomoticzInTopic 1 | 2.0.7 | Reset Domoticz MQTT In Topic to ```user_config.h``` value and restart
-DomoticzInTopic \<your-topic\> | 2.0.7 | Set Domoticz MQTT In Topic and restart
-DomoticzKeyIdx | 2.0.7 | Show current Domoticz key1 index
-DomoticzKeyIdx 0 | 2.0.7 | (default) Disable use of key1 index
-DomoticzKeyIdx \<idx\> | 2.0.7 | Set Domoticz key1 index. To use it you'll need to enable ButtonTopic too
-DomoticzKeyIdx\<index\> | 3.1.1 | Show current Domoticz key1 to key4 index
-DomoticzKeyIdx\<index\> 0 | 3.1.1 | (default) Disable use of key1 to key4 index
-DomoticzKeyIdx\<index\> \<idx\> | 3.1.1 | Set Domoticz key1 to key4 index. To use it you'll need to enable ButtonTopic too
-DomoticzOutTopic | 2.0.7 | Show current Domoticz MQTT Out Topic
-DomoticzOutTopic 1 | 2.0.7 | Reset Domoticz MQTT Out Topic to ```user_config.h``` value and restart
-DomoticzOutTopic \<your-topic\> | 2.0.7 | Set Domoticz MQTT Out Topic and restart
-DomoticzSensorIdx | 3.9.3 | Show current Domoticz sensor1 index
-DomoticzSensorIdx 0 | 3.9.3 | (default) Disable use of sensor1 index
-DomoticzSensorIdx \<idx\> | 3.9.3 | Set Domoticz sensor1 index.
-DomoticzSensorIdx\<index\> | 3.9.3 | Show current Domoticz sensor1 to sensor5 index
-DomoticzSensorIdx\<index\> 0 | 3.9.3 | (default) Disable use of sensor1 to sensor5 index
-DomoticzSensorIdx\<index\> \<idx\> | 3.9.3 | Set Domoticz sensor1 to sensor5 index.
-DomoticzSwitchIdx | 3.9.3 | Show current Domoticz switch1 index
-DomoticzSwitchIdx 0 | 3.9.3 | (default) Disable use of switch1 index
-DomoticzSwitchIdx \<idx\> | 3.9.3 | Set Domoticz switch1 index. To use it you'll need to enable SwitchTopic too
-DomoticzSwitchIdx\<index\> | 3.9.3 | Show current Domoticz switch1 to switch4 index
-DomoticzSwitchIdx\<index\> 0 | 3.9.3 | (default) Disable use of switch1 to switch4 index
-DomoticzSwitchIdx\<index\> \<idx\> | 3.9.3 | Set Domoticz switch1 to switch4 index. To use it you'll need to enable SwitchTopic too
-DomoticzUpdateTimer | 2.0.7 | Show current Domoticz update timer value in seconds
-DomoticzUpdateTimer off | 2.0.7 | (default) Disable sending interrim Domoticz status
-DomoticzUpdateTimer 0 | 2.0.7 | (default) Disable sending interrim Domoticz status
-DomoticzUpdateTimer \<your-secs\> | 2.0.7 | Send status to Domoticz between every 1 and 3600 seconds
+```
+Command         | Payload | Description
+----------------|---------|--------------------------------------------------------------------------------
+DomoticzIdx<x>  |         | Show current Domoticz relay1 to relay4 index
+DomoticzIdx<x>  | 0 | off | (default) Disable use of Domoticz
+DomoticzIdx<x>  | <idx>   | Set Domoticz relay1 to relay4 index
+DomoticzInTopic |         | Show current Domoticz MQTT In Topic
+DomoticzInTopic | 1       | Reset Domoticz MQTT In Topic to ```user_config.h``` value and restart
+DomoticzInTopic | <topic> | Set Domoticz MQTT In Topic and restart
+DomoticzKeyIdx<x> |       | Show current Domoticz key1 to key4 index
+DomoticzKeyIdx<x> | 0     | (default) Disable use of key1 to key4 index
+DomoticzKeyIdx<x> | <idx> | Set Domoticz key1 to key4 index. To use it you'll need to enable ButtonTopic too
+DomoticzOutTopic |        | Show current Domoticz MQTT Out Topic
+DomoticzOutTopic | 1      | Reset Domoticz MQTT Out Topic to ```user_config.h``` value and restart
+DomoticzOutTopic | <topic> | Set Domoticz MQTT Out Topic and restart
+DomoticzSensorIdx<x> |    | Show current Domoticz sensor1 to sensor5 index
+DomoticzSensorIdx<x> | 0  | (default) Disable use of sensor1 to sensor5 index
+DomoticzSensorIdx<x> | <idx> | Set Domoticz sensor1 to sensor5 index.
+DomoticzSwitchIdx<x> |    | Show current Domoticz switch1 to switch4 index
+DomoticzSwitchIdx<x> | 0  | (default) Disable use of switch1 to switch4 index
+DomoticzSwitchIdx<x> | <idx> | Set Domoticz switch1 to switch4 index. To use it you'll need to enable SwitchTopic too
+DomoticzUpdateTimer |     | Show current Domoticz update timer value in seconds
+DomoticzUpdateTimer | 0 | off | (default) Disable sending interrim Domoticz status
+DomoticzUpdateTimer | 1..3600 | Send status to Domoticz between every 1 and 3600 seconds
+```
 
 ### WS2812 Led string
 Command | Version | Description
