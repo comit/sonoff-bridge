@@ -66,7 +66,7 @@ Command         | Payload | Description
 Emulation       |         | Show current emulation state
 Emulation       | 0 | off | Disable emulation
 Emulation       | 1       | Enable Belkin WeMo emulation for Alexa
-Emulation       | 2       | Enable Hue Bridhe emulation for Alexa
+Emulation       | 2       | Enable Hue Bridge emulation for Alexa
 FriendlyName    |         | Show friendly name as used by emulation
 FriendlyName<x> |         | Show friendly name as used by emulation
 FriendlyName<x> | 1       | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
