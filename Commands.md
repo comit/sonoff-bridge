@@ -286,41 +286,38 @@ DomoticzUpdateTimer | 1..3600 | Send status to Domoticz between every 1 and 3600
 ```
 
 ### WS2812 Led string
-Command | Version | Description
-------- | ------- | -----------
-Color | 3.2.9 | Show current strip/ring color setting as RRGGBB
-Color \<RRGGBB\> | 3.2.9 | Set strip/ring color to RRGGBB hexadecimal value
-Dimmer | 3.2.9 | Show current dimmer setting from 0 to 100%
-Dimmer 0 - 100 | 3.2.9 | Set dimmer value from 0 to 100%
-Fade | 3.2.9 | Show current color fade state
-Fade Off | 3.2.9 | (default) Do not use fade while changing colors
-Fade On | 3.2.9 | Use fade while changing colors
-Fade 0 | 3.2.9 | (default) Do not use fade while changing colors
-Fade 1 | 3.2.9 | Use fade while changing colors
-Led1 - Led\<pixelcount\> | 3.2.9 | Show specific led current color as RRGGBB
-Led1 - Led\<pixelcount\> \<RRGGBB\> | 3.2.9 | Set specific led to desired color RRGGBB
-LedTable | 3.2.9 | Show current Led table color correction state
-LedTable Off | 3.2.9 | (default) Do not use Led table for color correction
-LedTable On | 3.2.9 | Use Led table for color correction
-LedTable 0 | 3.2.9 | (default) Do not use Led table for color correction
-LedTable 1 | 3.2.9 | Use Led table for color correction
-Pixels | 3.2.9 | Show current pixel count
-Pixels \<count\> | 3.2.9 | Set amount of pixels in strip or ring up to 256
-Scheme | 3.2.9 | Show current selected scheme
-Scheme 0 | 3.2.9 | (default) Use single color for all leds in strip/ring
-Scheme 1 | 3.2.10 | Start wakeup light
-Scheme 2 | 3.2.10 | Show clock
-Scheme 3 | 3.2.10 | Show incandescent pattern
-Scheme 4 | 3.2.10 | Show rgb pattern
-Scheme 5 | 3.2.10 | Show Christmas pattern
-Scheme 6 | 3.2.10 | Show Hanukkah pattern
-Scheme 7 | 3.2.10 | Show Kwanzaa pattern
-Scheme 8 | 3.2.10 | Show rainbow pattern
-Scheme 9 | 3.2.10 | Show fire pattern
-Speed | 3.2.9 | Show current fade speed selection
-Speed 1 - 5 | 3.2.9 | Select desired fade speed from 1 = fast to 5 = slow
-Wakeup | 3.2.10 | Show current wake up light duration in seconds
-Wakeup 1 - 3600 | 3.2.10 | Set wake up light duration in seconds
-Width | 3.2.10 | Show current led group width
-Width 0 - 4 | 3.2.10 | Set led group width used by Schemes 3 - 9
-
+```
+Command         | Payload | Description
+----------------|---------|--------------------------------------------------------------------------------
+Color           |         | Show current strip/ring color setting as RRGGBB
+Color           | <RRGGBB> | Set strip/ring color to RRGGBB hexadecimal value
+Dimmer          |         | Show current dimmer setting from 0 to 100%
+Dimmer          | 0..100  | Set dimmer value from 0 to 100%
+Fade            |         | Show current color fade state
+Fade            | 0 | Off | (default) Do not use fade while changing colors
+Fade            | 1 | on  | Use fade while changing colors
+Led1 - Led<pixelcount> |  | Show specific led current color as RRGGBB
+Led1 - Led<pixelcount> | <RRGGBB> | Set specific led to desired color RRGGBB
+LedTable        |         | Show current Led table color correction state
+LedTable        | 0 | off | (default) Do not use Led table for color correction
+LedTable        | 1 | on  | Use Led table for color correction
+Pixels          |         | Show current pixel count
+Pixels          | <count> | Set amount of pixels in strip or ring up to 256
+Scheme          |         | Show current selected scheme
+Scheme          | 0       | (default) Use single color for all leds in strip/ring
+Scheme          | 1       | Start wakeup light
+Scheme          | 2       | Show clock
+Scheme          | 3       | Show incandescent pattern
+Scheme          | 4       | Show rgb pattern
+Scheme          | 5       | Show Christmas pattern
+Scheme          | 6       | Show Hanukkah pattern
+Scheme          | 7       | Show Kwanzaa pattern
+Scheme          | 8       | Show rainbow pattern
+Scheme          | 9       | Show fire pattern
+Speed           |         | Show current fade speed selection
+Speed           | 1..5    | Select desired fade speed from 1 = fast to 5 = slow
+Wakeup          |         | Show current wake up light duration in seconds
+Wakeup          | 1..3600 | Set wake up light duration in seconds
+Width           |         | Show current led group width
+Width           | 0..4    | Set led group width used by Schemes 3 - 9
+```
