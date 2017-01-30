@@ -194,29 +194,34 @@ Topic           | <topic> | Set MQTT topic  AND button topic and restart
 ```
 
 ### Logging
-Command | Version | Description
-------- | ------- | -----------
-LogHost | 1.0.7 | Show current syslog host
-LogHost 1 | 1.0.7 | Reset syslog host to ```user_config.h``` value
-LogHost \<your-host\> | 1.0.7 | Set syslog host
-LogPort | 1.0.26 | Show current syslog port
-LogPort 1 | 1.0.26 | Reset syslog port to ```user_config.h``` value
-LogPort \<your-port\> | 1.0.26 | Set syslog port between 2 and 32766
-SerialLog 0 | 1.0.7 | Disable serial logging
-SerialLog 1 | 1.0.7 | Show only error messages
-SerialLog 2 | 1.0.7 | Show error and info messages
-SerialLog 3 | 1.0.7 | Show error, info and debug messages
-SerialLog 4 | 1.0.7 | Show all messages
-SysLog 0 | 1.0.7 | Disable syslog logging
-SysLog 1 | 1.0.7 | Show only error messages
-SysLog 2 | 1.0.7 | Show error and info messages
-SysLog 3 | 1.0.7 | Show error, info and debug messages
-SysLog 4 | 1.0.7 | Show all messages
-WebLog 0 | 1.0.27 | Disable web logging
-WebLog 1 | 1.0.27 | Show only error messages
-WebLog 2 | 1.0.27 | Show error and info messages
-WebLog 3 | 1.0.27 | Show error, info and debug messages
-WebLog 4 | 1.0.27 | Show all messages
+```
+Command         | Payload | Description
+----------------|---------|--------------------------------------------------------------------------------
+LogHost         |         | Show current syslog host
+LogHost         | 1       | Reset syslog host to ```user_config.h``` value
+LogHost         | <host>  | Set syslog host
+LogPort         |         | Show current syslog port
+LogPort         | 1       | Reset syslog port to ```user_config.h``` value
+LogPort         | <port>  | Set syslog port between 2 and 32766
+SerialLog       |         | Show current serial log level
+SerialLog       | 0 | off | Disable serial logging
+SerialLog       | 1       | Show only error messages
+SerialLog       | 2       | Show error and info messages
+SerialLog       | 3       | Show error, info and debug messages
+SerialLog       | 4       | Show all messages
+SysLog          |         | Show current syslog level
+SysLog          | 0 | off | Disable syslog logging
+SysLog          | 1       | Show only error messages
+SysLog          | 2       | Show error and info messages
+SysLog          | 3       | Show error, info and debug messages
+SysLog          | 4       | Show all messages
+WebLog          |         | Show current serial log level
+WebLog          | 0 | off | Disable serial logging
+WebLog          | 1       | Show only error messages
+WebLog          | 2       | Show error and info messages
+WebLog          | 3       | Show error, info and debug messages
+WebLog          | 4       | Show all messages
+```
 
 ### Sonoff Pow
 Command | Version | Description
