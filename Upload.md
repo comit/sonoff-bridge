@@ -1,6 +1,6 @@
-## Platformio
+## PlatformIO
 
-1. Load the Sonoff-Tasmota base folder, including [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini), in [Platformio](https://github.com/platformio).
+1. Load the Sonoff-Tasmota base folder, including [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini), in [PlatformIO](https://github.com/platformio).
 2. Connect the Sonoff module in Flash Mode (see Hardware section)
 2. Select "Upload"
 3. Finished
