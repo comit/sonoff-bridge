@@ -161,30 +161,25 @@ MqttUser        |         | Show current MQTT user name
 MqttUser        | 1       | Reset MQTT user name to ```user_config.h``` value and restart
 MqttUser        | <user>  | Set MQTT user name and restart
 Units           |         | Show current Units state
-Units           | 1 | on  | Add units to messages
 Units           | 0 | off | (default) Do not show units to messages
-PowerRetain   | 3.0.0 | Show current MQTT power retain state
-PowerRetain on | 3.0.0 | Enable MQTT power retain on status update
-PowerRetain off | 3.0.0 | (default) Disable MQTT power retain on status update
-PowerRetain 1 | 3.0.0 | Enable MQTT power retain on status update
-PowerRetain 0 | 3.0.0 | (default) Disable MQTT power retain on status update
-SwitchRetain | 3.2.9 | Show current button MQTT retain flag state
-SwitchRetain on | 3.2.9 | Set ButtonTopic to Topic and enable MQTT retain flag on button press
-SwitchRetain off | 3.2.9 | (default) Disable use of MQTT retain flag
-SwitchRetain 1 | 3.2.9 | Set ButtonTopic to Topic and enable MQTT retain flag on button press
-SwitchRetain 0 | 3.2.9 | (default) Disable use of MQTT retain flag
-SwitchTopic | 3.2.9 | Show current MQTT button topic
-SwitchTopic 0 | 3.2.9 | Disable use of MQTT button topic
-SwitchTopic 1 | 3.2.9 | Set MQTT button topic to Topic
-SwitchTopic \<your-topic\> | 3.2.9 | Set MQTT button topic
-TelePeriod | 1.0.28 | Show current telemetry period in seconds
-TelePeriod off | 1.0.28 | Disable telemetry messages
-TelePeriod 0 | 1.0.28 | Disable telemetry messages
-TelePeriod 1 | 1.0.28 | Reset telemetry period to ```user_config.h``` value
-TelePeriod \<your-secs\> | 1.0.28 | Set telemetry period between 2 and 3600 seconds
-Topic | | Show current MQTT topic
-Topic 1 | | Reset MQTT topic to ```user_config.h``` value and restart
-Topic \<your-topic\> | | Set MQTT topic  AND button topic and restart
+Units           | 1 | on  | Add units to messages
+PowerRetain     |         | Show current MQTT power retain state
+PowerRetain     | 0 | off | (default) Disable MQTT power retain on status update
+PowerRetain     | 1 |on   | Enable MQTT power retain on status update
+SwitchRetain    |         | Show current button MQTT retain flag state
+SwitchRetain    | 0 | off | (default) Disable use of MQTT retain flag
+SwitchRetain    | 1 | on  | Set ButtonTopic to Topic and enable MQTT retain flag on button press
+SwitchTopic     |         | Show current MQTT switch topic
+SwitchTopic     | 0       | Disable use of MQTT switch topic
+SwitchTopic     | 1       | Set MQTT switch topic to Topic
+SwitchTopic     | <topic> | Set MQTT switch topic
+TelePeriod      |         | Show current telemetry period in seconds
+TelePeriod      | 0 | off | Disable telemetry messages
+TelePeriod      | 1       | Reset telemetry period to ```user_config.h``` value
+TelePeriod      | <secs>  | Set telemetry period between 2 and 3600 seconds
+Topic           |         | Show current MQTT topic
+Topic           | 1       | Reset MQTT topic to ```user_config.h``` value and restart
+Topic           | <topic> | Set MQTT topic  AND button topic and restart
 ```
 
 ### Logging
