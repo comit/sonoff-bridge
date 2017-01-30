@@ -11,8 +11,6 @@ The following command tables are available:
 - [Sonoff Pow specific](#sonoff-pow)
 - [Domoticz](#domoticz)
 - [WS2812 led string](#ws2812-led-string)
-- [Next Generation specific](#next-generation)
-- [Optional](#optional)
 
 ### Main
 ```
@@ -20,9 +18,9 @@ Command         | Payload | Description
 ----------------|---------|--------------------------------------------------------------------------------
 BlinkCount      |         | Show current BlinkCount
 BlinkCount      | 0       | Blink many times before restoring power state
-BlinkCount   | 1 .. 32000 | Set how many blinks before restoring power state
+BlinkCount      | 1..32000 | Set how many blinks before restoring power state
 BlinkTime       |         | Show current BlinkTime in 0.1 seconds
-BlinkTime     | 2 .. 3600 | Set BlinkTime with 0.1 seconds increment
+BlinkTime       | 2..3600 | Set BlinkTime with 0.1 seconds increment
 LedPower        |         | Show current led power state as On or Off
 LedPower        | 0 | off | Turn led AND LedState Off
 LedPower        | 1 | on  | Turn led On AND LedState Off
@@ -44,15 +42,21 @@ Light | Power<x> | 4 | blinkoff | Stop blinking power
 PowerOnState    |         | Show current relay power on state
 PowerOnState    | 0 | off | Keep relay(s) off after power on
 PowerOnState    | 1 | on  | Turn relay(s) on after power on
-PowerOnState | 2 | toggle | Toggle relay(s) on from last saved
+PowerOnState    | 2 | toggle | Toggle relay(s) on from last saved
 PowerOnState    | 3       | (default) Turn relay(s) on as last saved
 PowerRetain     |         | Show current MQTT power retain state
 PowerRetain     | 0 | off | (default) Disable MQTT power retain on status update
 PowerRetain     | 1 | on  | Enable MQTT power retain on status update
 PulseTime       |         | Show current PulseTime in 0.1 seconds
 PulseTime       | 0 | off | (Default) Disable use of PulseTime
-PulseTime      | 1 .. 111 | Set PulseTime with 0.1 seconds increment
-PulseTime  | 112 .. 64900 | Set PulseTime with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
+PulseTime       | 1..111  | Set PulseTime with 0.1 seconds increment
+PulseTime       | 112..64900 | Set PulseTime with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
+SwitchMode      |         | Show current external switch mode
+SwitchMode      | 0       | (default) Set switch mode to TOGGLE
+SwitchMode      | 1       | Set switch mode to FOLLOW (0 = Off, 1 = On)
+SwitchMode      | 2       | Set switch mode to inverted FOLLOW (0 = On, 1 = Off)
+SwitchMode      | 3       | Set switch mode to PUSHBUTTON (Normally 1, 0 = toggle)
+SwitchMode      | 4       | Set switch mode to inverted PUSHBUTTON (Normally 0, 1 = toggle)
 ```
 
 ### Management
@@ -63,6 +67,13 @@ FriendlyName    |         | Show friendly name as used by emulation
 FriendlyName<x> |         | Show friendly name as used by emulation
 FriendlyName<x> | 1       | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
 FriendlyName<x> | <name>  | Set friendly name
+Gpios           |         | Show available sensors and devices by name and index for user selection
+Gpio            |         | Show current GPIO usage for current module
+Gpio<pin>       | <sensor> | Select sensor to be connected to <pin>
+I2Cscan         |         | Scan I2C bus and show device addresses found
+Modules         |         | Show available modules by name and index
+Module          |         | Show active module by name and index
+Module          | <index> | Switch to selected module and restart
 OtaUrl          |         | Show current otaurl
 OtaUrl          | 1       | Reset otaurl to ```user_config.h``` value
 OtaUrl          | <url>   | Set otaurl
@@ -93,7 +104,7 @@ Status          | 8       | (Sonoff Pow only) Show Power usage
 Status          | 9       | (Sonoff Pow only) Show Power thresholds
 Status          | 10      | Show sensor information
 Timezone        |         | Show current timezone
-Timezone      | -12 .. 12 | Set timezone
+Timezone        | -12 .. 12 | Set timezone
 Timezone        | 99      | Use Daylight Saving parameters from ```user_config.h```
 Upgrade         | 1       | Download ota firmware from your web server and restart
 Upload          | 1       | Download ota firmware from your web server and restart
@@ -316,23 +327,3 @@ Wakeup 1 - 3600 | 3.2.10 | Set wake up light duration in seconds
 Width | 3.2.10 | Show current led group width
 Width 0 - 4 | 3.2.10 | Set led group width used by Schemes 3 - 9
 
-### Next Generation
-Command | Version | Description
-------- | ------- | -----------
-Modules | 4.0.0 | Show available modules by name and index
-Module | 4.0.0 | Show active module by name and index
-Module \<index\> | 4.0.0 | Switch to selected module and restart
-Gpios | 4.0.0 | Show available sensors and devices by name and index for user selection
-Gpio | 4.0.0 | Show current GPIO usage for current module
-Gpio\<pin\> \<sensor\> | 4.0.0 | Select sensor to be connected to \<pin\>
-
-### Optional
-Command | Version | Description
-------- | ------- | -----------
-I2Cscan | 2.0.20 | Scan I2C bus and show device addresses found
-SwitchMode | 2.0.18 | Show current external switch mode
-SwitchMode 0 | 2.0.18 | (default) Set switch mode to TOGGLE
-SwitchMode 1 | 2.0.18 | Set switch mode to FOLLOW (0 = Off, 1 = On)
-SwitchMode 2 | 2.0.18 | Set switch mode to inverted FOLLOW (0 = On, 1 = Off)
-SwitchMode 3 | 3.0.2 | Set switch mode to PUSHBUTTON (Normally 1, 0 = toggle)
-SwitchMode 4 | 3.0.2 | Set switch mode to inverted PUSHBUTTON (Normally 0, 1 = toggle)
