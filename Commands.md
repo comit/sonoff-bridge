@@ -296,8 +296,8 @@ Dimmer          | 0..100  | Set dimmer value from 0 to 100%
 Fade            |         | Show current color fade state
 Fade            | 0 | Off | (default) Do not use fade while changing colors
 Fade            | 1 | on  | Use fade while changing colors
-Led1 - Led<pixelcount> |  | Show specific led current color as RRGGBB
-Led1 - Led<pixelcount> | <RRGGBB> | Set specific led to desired color RRGGBB
+Led1..Led<count> |        | Show specific led current color as RRGGBB
+Led1..Led<count> | <RRGGBB> | Set specific led to desired color RRGGBB
 LedTable        |         | Show current Led table color correction state
 LedTable        | 0 | off | (default) Do not use Led table for color correction
 LedTable        | 1 | on  | Use Led table for color correction
