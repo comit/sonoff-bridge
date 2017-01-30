@@ -224,34 +224,33 @@ WebLog          | 4       | Show all messages
 ```
 
 ### Sonoff Pow
-Command | Version | Description
-------- | ------- | -----------
-CurrentHigh | 2.0.6 | Show current current high threshold value
-CurrentHigh off | 2.0.6 | (default) Disable current high threshold
-CurrentHigh 0 | 2.0.6 | (default) Disable current high threshold
-CurrentHigh \<milliamps\> | 2.0.6 | Set current high threshold value
-CurrentLow | 2.0.6 | Show current current low threshold value
-CurrentLow off | 2.0.6 | (default) Disable current low threshold
-CurrentLow 0 | 2.0.6 | (default) Disable current low threshold
-CurrentLow \<milliamps\> | 2.0.6 | Set current low threshold value
-PowerHigh | 2.0.6 | Show current power high threshold value
-PowerHigh off | 2.0.6 | (default) Disable power high threshold
-PowerHigh 0 | 2.0.6 | (default) Disable power high threshold
-PowerHigh \<watt\> | 2.0.6 | Set power high threshold value
-PowerLow | 2.0.6 | Show current power low threshold value
-PowerLow off | 2.0.6 | (default) Disable power low threshold
-PowerLow 0 | 2.0.6 | (default) Disable power low threshold
-PowerLow \<watt\> | 2.0.6 | Set power low threshold value
-Status 8 | 2.0.5 | Show Power usage
-Status 9 | 2.0.6 | Show Power thresholds
-VoltageHigh | 2.0.6 | Show current voltage high threshold value
-VoltageHigh off | 2.0.6 | (default) Disable voltage high threshold
-VoltageHigh 0 | 2.0.6 | (default) Disable voltage high threshold
-VoltageHigh \<voltage\> | 2.0.6 | Set voltage high threshold value
-VoltageLow | 2.0.6 | Show current voltage low threshold value
-VoltageLow off | 2.0.6 | (default) Disable voltage low threshold
-VoltageLow 0 | 2.0.6 | (default) Disable voltage low threshold
-VoltageLow \<voltage\> | 2.0.6 | Set voltage low threshold value
+```
+Command         | Payload | Description
+----------------|---------|--------------------------------------------------------------------------------
+CurrentHigh     |         | Show current current high threshold value
+CurrentHigh     | 0 | off | (default) Disable current high threshold
+CurrentHigh     | <milliamps> | Set current high threshold value
+CurrentLow      |         | Show current current low threshold value
+CurrentLow      | 0 | off | (default) Disable current low threshold
+CurrentLow      | <milliamps> | Set current low threshold value
+HlwIcal         |         | Show current calibration value for Current
+HlwPcal         |         | Show current calibration value for Power
+HlwUcal         |         | Show current calibration value for Voltage
+PowerHigh       |         | Show current power high threshold value
+PowerHigh       | 0 | off | (default) Disable power high threshold
+PowerHigh       | <watt>  | Set power high threshold value
+PowerLow        |         | Show current power low threshold value
+PowerLow        | 0 | off | (default) Disable power low threshold
+PowerLow        | <watt>  | Set power low threshold value
+Status          | 8       | Show Power usage
+Status          | 9       | Show Power thresholds
+VoltageHigh     |         | Show current voltage high threshold value
+VoltageHigh     | 0 | off | (default) Disable voltage high threshold
+VoltageHigh     | <voltage> | Set voltage high threshold value
+VoltageLow      |         | Show current voltage low threshold value
+VoltageLow      | 0 | off | (default) Disable voltage low threshold
+VoltageLow      | <voltage> | Set voltage low threshold value
+```
 
 ### Domoticz
 Command | Version | Description
