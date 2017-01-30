@@ -63,6 +63,10 @@ SwitchMode      | 4       | Set switch mode to inverted PUSHBUTTON (Normally 0, 
 ```
 Command         | Payload | Description
 ----------------|---------|--------------------------------------------------------------------------------
+Emulation       |         | Show current emulation state
+Emulation       | 0 | off | Disable emulation
+Emulation       | 1       | Enable Belkin WeMo emulation for Alexa
+Emulation       | 2       | Enable Hue Bridhe emulation for Alexa
 FriendlyName    |         | Show friendly name as used by emulation
 FriendlyName<x> |         | Show friendly name as used by emulation
 FriendlyName<x> | 1       | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
@@ -74,6 +78,9 @@ I2Cscan         |         | Scan I2C bus and show device addresses found
 Modules         |         | Show available modules by name and index
 Module          |         | Show active module by name and index
 Module          | <index> | Switch to selected module and restart
+Mqtt            |         | Show current MQTT state
+Mqtt            | 0 | off | Disable MQTT
+Mqtt            | 1 | on  | Enable MQTT
 OtaUrl          |         | Show current otaurl
 OtaUrl          | 1       | Reset otaurl to ```user_config.h``` value
 OtaUrl          | <url>   | Set otaurl
