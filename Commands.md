@@ -233,9 +233,15 @@ CurrentHigh     | <milliamps> | Set current high threshold value
 CurrentLow      |         | Show current current low threshold value
 CurrentLow      | 0 | off | (default) Disable current low threshold
 CurrentLow      | <milliamps> | Set current low threshold value
-HlwIcal         |         | Show current calibration value for Current
-HlwPcal         |         | Show current calibration value for Power
-HlwUcal         |         | Show current calibration value for Voltage
+HlwIcal         |         | Show calibration value for Current
+HlwIcal         | 1       | Set program calibration value for Current
+HlwIcal         | <value> | Set user calibration value for Current
+HlwPcal         |         | Show calibration value for Power
+HlwPcal         | 1       | Set program calibration value for Power
+HlwIcal         | <value> | Set user calibration value for Power
+HlwUcal         |         | Show calibration value for Voltage
+HlwUcal         | 1       | Set program calibration value for Voltage
+HlwIcal         | <value> | Set user calibration value for Voltage
 PowerHigh       |         | Show current power high threshold value
 PowerHigh       | 0 | off | (default) Disable power high threshold
 PowerHigh       | <watt>  | Set power high threshold value
