@@ -90,7 +90,7 @@ SaveState       | 1 | on  | (default) Save power changes and set relay after res
 SaveState       | 0 | off | Do not save power changes and do not set relay after restart
 Sleep           |         | Show current sleep state as 0 (Off) or duration of up to 250 mSec
 Sleep           | 0 | off | (default) Turn sleep off
-Sleep           | 1 - 250 | Set sleep duration from 1 to 250 mSec to enable energy saving
+Sleep           | 1..250  | Set sleep duration from 1 to 250 mSec to enable energy saving
 Status          |         | Show abbreviated status information
 Status          | 0       | Show all status information
 Status          | 1       | Show more status information
@@ -104,7 +104,7 @@ Status          | 8       | (Sonoff Pow only) Show Power usage
 Status          | 9       | (Sonoff Pow only) Show Power thresholds
 Status          | 10      | Show sensor information
 Timezone        |         | Show current timezone
-Timezone        | -12 .. 12 | Set timezone
+Timezone        | -12..12 | Set timezone
 Timezone        | 99      | Use Daylight Saving parameters from ```user_config.h```
 Upgrade         | 1       | Download ota firmware from your web server and restart
 Upload          | 1       | Download ota firmware from your web server and restart
