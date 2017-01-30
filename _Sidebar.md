@@ -1,4 +1,4 @@
-[**Home**]() 
+[**Home**](https://github.com/arendst/Sonoff-Tasmota/wiki) 
 
 **Getting Started**
 - [**Prerequisite**](Prerequisite)
