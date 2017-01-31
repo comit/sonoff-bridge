@@ -2,7 +2,7 @@ The open Home Automation Bus (openHAB) is an open source, technology agnostic ho
 
 ## openHAB Integration
 
-After activating the MQTT binding, simply set up items for all Sonoff-Tasmota MQTT topics you are interested in. Examples are given below
+After activating the MQTT binding, simply set up items for all Sonoff-Tasmota MQTT topics you are interested in. Examples are given below. Most Sonoff-Tasmota topics are JSON encoded. The `JSONPATH` transformation can be used to extract data. See the RSSI item.
 
 **sonoff.items:**
 ```java
