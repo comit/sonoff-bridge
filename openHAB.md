@@ -10,7 +10,7 @@ After activating the MQTT binding, simply set up items for all Sonoff-Tasmota MQ
 Switch LivingRoom_Corner_Light "Indirect Corner Light" <light> (LR,gLight)
     { mqtt=">[broker:cmnd/sonoff_A00F9D/power:command:*:default],
             <[broker:stat/sonoff_A00F9D/POWER:state:default]" }
-Number LivingRoom_Corner_Light_RSSI "Indirect Corner Light RSSI [%d %%]" (LR,gRSSI)
+Number LivingRoom_Corner_Light_RSSI "Indirect Corner Light RSSI [%d %%]" (gRSSI)
     { mqtt="<[broker:tele/sonoff_A00F9D/TELEMETRY:state:JSONPATH($.Wifi.RSSI)]" }
 ```
 
