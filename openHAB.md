@@ -17,7 +17,7 @@ Number LivingRoom_Corner_Light_RSSI "Indirect Corner Light RSSI [%d %%]" (gRSSI)
 Switch BA_Washingmachine "Washingmachine" <washer> (BA)
     { mqtt=">[broker:cmnd/sonoff_E8A6E4/power:command:*:default],
             <[broker:stat/sonoff_E8A6E4/POWER:state:default]" }
-Number BA_Washingmachine_Power "Washingmachine Power [%d W]" (gRSSI)
+Number BA_Washingmachine_Power "Washingmachine Power [%.1f W]" (BA,gPower)
     { mqtt="<[broker:tele/sonoff_E8A6E4/TELEMETRY:state:JSONPATH($.Energy.Power)]" }
 Number BA_Washingmachine_RSSI "Washingmachine RSSI [%d %%]" (gRSSI)
     { mqtt="<[broker:tele/sonoff_E8A6E4/TELEMETRY:state:JSONPATH($.Wifi.RSSI)]" }
