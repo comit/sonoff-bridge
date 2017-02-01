@@ -40,7 +40,7 @@ Switch LivingRoom_Corner_Light_Unreach "Indirect Corner Light unreachable" (gUnr
 
 The "LWT" topic ("Last Will and Testament") will receive regular "Online" messages by the module and an "Offline" message a short time after the module is disconnected. These messages are transformed to a valid `ON`/`OFF` state by the MAP transformation. The following transformation file is needed:
 
-**unreach.map**
+**unreach.map:**
 ```java
 Online=OFF
 Offline=ON
