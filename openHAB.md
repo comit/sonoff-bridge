@@ -25,7 +25,7 @@ Number BA_Washingmachine_Power "Washingmachine Power [%.1f W]" (BA,gPower)
 
 ### Maintenance Topics / Items
 
-It is furthermore recommended, to add the following maintenance items for every Sonoff-Tasmota device:
+It is furthermore recommended, to add the following maintenance items for every Sonoff-Tasmota device.
 
 **sonoff.items:** 
 ```java
@@ -38,7 +38,7 @@ Switch LivingRoom_Corner_Light_Unreach "Indirect Corner Light unreachable" (gUnr
     { mqtt="<[broker:tele/sonoff_A00F9D/LWT:state:MAP(unreach.map)]" }
 ```
 
-The "LWT" topic ("Last Will and Testament") will receive regular "Online" messages by the module and an "Offline" message a short time after the module is disconnected. These messages are transformed to a valid `ON`/`OFF` state by the MAP transformation. The following transformation file is needed:
+The "LWT" topic ("Last Will and Testament") will receive regular "Online" messages by the module and an "Offline" message a short time after the module is disconnected. These messages are transformed to a valid `ON`/`OFF` state by the MAP transformation. The following transformation file is needed.
 
 **unreach.map:**
 ```java
