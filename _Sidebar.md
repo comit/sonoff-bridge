@@ -3,6 +3,7 @@
 **Getting Started**
 - [**Prerequisite**](Prerequisite)
 - [**Hardware Preparation**](Hardware-Preparation)
+- [**Hardware Modification**](Hardware-Modification)
 - [**Upload**](Upload)
 
 **Usage**
@@ -13,6 +14,9 @@
 **Home Automation Integration**
 - [**openHAB**](openHAB)
 - [**Domoticz**](Domoticz)
+
+**Enhanced**
+- [**Hardware Modification**](Hardware-Modification)
 
 **Tips**
 - [**MQTT for Newbies**](MQTT-for-Newbies)
