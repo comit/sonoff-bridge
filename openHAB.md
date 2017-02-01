@@ -4,7 +4,9 @@ The open Home Automation Bus (openHAB) is an open source, technology agnostic ho
 
 After activating the MQTT binding, simply set up items for all Sonoff-Tasmota MQTT topics you are interested in. Examples are given below. Some Sonoff-Tasmota topics are JSON encoded. The `JSONPATH` transformation can be used to extract data.
 
-#### Mandatory Topics / Items
+### Mandatory Topics / Items
+
+These are the minimal set of items for the basic functionality of different Sonoff modules.
 
 **sonoff.items:**
 ```java
@@ -21,7 +23,7 @@ Number BA_Washingmachine_Power "Washingmachine Power [%.1f W]" (BA,gPower)
     { mqtt="<[broker:tele/sonoff_E8A6E4/TELEMETRY:state:JSONPATH($.Energy.Power)]" }
 ```
 
-#### Maintenance Topics / Items
+### Maintenance Topics / Items
 
 It is furthermore recommended, to add the following maintenance items for every Sonoff-Tasmota device:
 
