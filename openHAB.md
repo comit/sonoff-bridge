@@ -6,7 +6,7 @@ After activating the MQTT binding, simply set up items for all Sonoff-Tasmota MQ
 
 ### Mandatory Topics / Items
 
-These are the minimal set of items for the basic functionality of different Sonoff modules.
+These are the minimal set of items for the basic functionality of different Sonoff modules. (*Note: Lines have been wrapped for better presentation*)
 
 **sonoff.items:**
 ```java
