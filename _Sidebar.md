@@ -3,7 +3,6 @@
 **Getting Started**
 - [**Prerequisite**](Prerequisite)
 - [**Hardware Preparation**](Hardware-Preparation)
-- [**Hardware Modification**](Hardware-Modification)
 - [**Upload**](Upload)
 
 **Usage**
