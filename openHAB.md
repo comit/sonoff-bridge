@@ -22,7 +22,7 @@ Switch BA_Washingmachine "Washingmachine" <washer> (BA)
     { mqtt=">[broker:cmnd/sonoff_E8A6E4/power:command:*:default],
             <[broker:stat/sonoff_E8A6E4/POWER:state:default]" }
 Number BA_Washingmachine_Power "Washingmachine Power [%.1f W]" (BA,gPower)
-    { mqtt="<[broker:tele/sonoff_E8A6E4/TELEMETRY:state:JSONPATH($.Energy.Power)]" }
+    { mqtt="<[broker:tele/sonoff_E8A6E4/ENERGY:state:JSONPATH($.Power)]" }
 ```
 
 ### Maintenance Topics / Items
@@ -33,7 +33,7 @@ It is furthermore recommended, to add the following maintenance items for every 
 ```java
 // Wifi Signal Strength in Percent
 Number LivingRoom_Corner_Light_RSSI "Indirect Corner Light RSSI [%d %%]" (gRSSI)
-    { mqtt="<[broker:tele/sonoff_A00F9D/TELEMETRY:state:JSONPATH($.Wifi.RSSI)]" }
+    { mqtt="<[broker:tele/sonoff_A00F9D/STATE:state:JSONPATH($.Wifi.RSSI)]" }
 
 // A switch turning ON if the device is unreachable
 Switch LivingRoom_Corner_Light_Unreach "Indirect Corner Light unreachable" (gUnreach)
