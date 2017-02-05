@@ -6,38 +6,48 @@ After activating the MQTT binding, simply set up items for all Sonoff-Tasmota MQ
 
 ![example openHAB sitemap](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/5/57750c6c7b6d9f18e75424fcb87ec093f70c6211.png)
 
+Before continuing, please make sure you assigned unique MQTT topics in the configuration interface of each Sonoff module. The default MQTT topic is "sonoff", in the examples below we will use names like "sonoff-A00F9D".
+ 
 ### Mandatory Topics / Items
 
-These are the minimal set of items for the basic functionality of different Sonoff modules. <br /> (*Note: Lines have been wrapped for better presentation*)
+These are the minimal set of items for the basic functionality of different Sonoff modules.
+<br /> (*Note: Lines have been wrapped for better presentation*)
 
 **sonoff.items:**
 ```java
 //Sonoff Basic / Sonoff S20 Smart Socket
-Switch LivingRoom_Corner_Light "Indirect Corner Light" <light> (LR,gLight)
-    { mqtt=">[broker:cmnd/sonoff_A00F9D/power:command:*:default],
-            <[broker:stat/sonoff_A00F9D/POWER:state:default]" }
+Switch LivingRoom_Light "Living Room Light" <light> (LR,gLight)
+    { mqtt=">[broker:cmnd/sonoff-A00F9D/power:command:*:default],
+            <[broker:stat/sonoff-A00F9D/POWER:state:default]" }
 
 // Sonoff Pow
 Switch BA_Washingmachine "Washingmachine" <washer> (BA)
-    { mqtt=">[broker:cmnd/sonoff_E8A6E4/power:command:*:default],
-            <[broker:stat/sonoff_E8A6E4/POWER:state:default]" }
+    { mqtt=">[broker:cmnd/sonoff-E8A6E4/power:command:*:default],
+            <[broker:stat/sonoff-E8A6E4/POWER:state:default]" }
 Number BA_Washingmachine_Power "Washingmachine Power [%.1f W]" (BA,gPower)
-    { mqtt="<[broker:tele/sonoff_E8A6E4/ENERGY:state:JSONPATH($.Power)]" }
+    { mqtt="<[broker:tele/sonoff-E8A6E4/ENERGY:state:JSONPATH($.Power)]" }
 ```
 
-### Maintenance Topics / Items
+### Status Topics / Items
 
 It is furthermore recommended, to add the following maintenance items for every Sonoff-Tasmota device.
 
 **sonoff.items:** 
 ```java
 // Wifi Signal Strength in Percent
-Number LivingRoom_Corner_Light_RSSI "Indirect Corner Light RSSI [%d %%]" (gRSSI)
-    { mqtt="<[broker:tele/sonoff_A00F9D/STATE:state:JSONPATH($.Wifi.RSSI)]" }
+Number LivingRoom_Light_RSSI "Living Room Light: RSSI [%d %%]" (gRSSI)
+    { mqtt="<[broker:tele/sonoff-A00F9D/STATE:state:JSONPATH($.Wifi.RSSI)]" }
 
 // A switch turning ON if the device is unreachable
-Switch LivingRoom_Corner_Light_Unreach "Indirect Corner Light unreachable" (gUnreach)
-    { mqtt="<[broker:tele/sonoff_A00F9D/LWT:state:MAP(unreach.map)]" }
+Switch LivingRoom_Light_Unreach "Living Room Light: unreachable" (gUnreach)
+    { mqtt="<[broker:tele/sonoff-A00F9D/LWT:state:MAP(unreach.map)]" }
+
+// Optional! A collection of return messages by the Sonoff module
+// Recommended: Define specific items for what you really need on a regular basis, use standalone MQTT client otherwise
+String LivingRoom_Light_Verbose "Living Room Light: MQTT return message [%s]"
+    { mqtt="<[broker:tele/sonoff-A00F9D/INFO1:state:default],
+            <[broker:stat/sonoff-A00F9D/STATUS2:state:default],
+            <[broker:stat/sonoff-A00F9D/RESULT:state:default]" }
 ```
 
 The "LWT" topic ("Last Will and Testament") will receive regular "Online" messages by the module and an "Offline" message a short time after the module is disconnected. These messages are transformed to a valid `ON`/`OFF` state by the MAP transformation. The following transformation file is needed.
@@ -49,6 +59,60 @@ Offline=ON
 ```
 
 Of course you can define `Reachable` instead of `Unreachable` if you prefer. 
+
+## Maintenance Actions
+
+A home automation system setup would not be complete without a certain maintenance automation.
+Add the following elements to your openHAB setup to be able to perform certain actions on your Sonoff modules by the press of a simple sitemap button.
+
+The example below includes upgrading the firmwares of all modules. A shoutout to @evilgreen for the idea and a big thanks to @smadds for [providing](https://github.com/arendst/Sonoff-Tasmota/issues/19) the public firmware server used. 
+
+![Sonoff Maintenance Actions](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/9/97f0bdf6a81ffe94068e596804adf94839a5580b.png)
+
+**sonoff.items:**
+```java
+//... all the above
+
+//Maintenance
+String	Sonoff_Action "Sonoff Action" <sonoff_basic>
+```
+
+**yourhome.sitemap:**
+```java
+//...
+Switch item=Sonoff_Action mappings=[restart="Restart", queryFW="Query FW", upgrade="Upgrade FW"]
+//...
+```
+
+**sonoff.rules:**
+```java
+val sonoff_device_ids = newArrayList(
+    "sonoff-A00F9D",
+    "sonoff-E8A6E4",
+    ...
+)
+
+rule "Sonoff Maintenance"
+when
+    Item Sonoff_Action received command
+then 
+    logInfo("sonoff.rules", "Sonoff Maintenance on all devices: " + receivedCommand)
+    for (String device_id : sonoff_device_ids) {
+        switch (receivedCommand) {
+            case "restart" :
+                publish("broker", "cmnd/" + device_id + "/restart", "1") 
+            case "queryFW" :
+                publish("broker", "cmnd/" + device_id + "/status", "2")
+            case "upgrade" : {
+                publish("broker", "cmnd/" + device_id + "/otaurl", "http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin")
+                publish("broker", "cmnd/" + device_id + "/upgrade", "1")
+            }
+        }
+    }
+    Sonoff_Action.postUpdate(NULL)
+end
+```
+
 
 ## Community Forum
 
