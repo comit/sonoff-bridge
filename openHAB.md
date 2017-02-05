@@ -88,8 +88,8 @@ Switch item=Sonoff_Action mappings=[restart="Restart", queryFW="Query FW", upgra
 ```java
 val sonoff_device_ids = newArrayList(
     "sonoff-A00F9D",
-    "sonoff-E8A6E4",
-    ...
+    //... add all your modules here!
+    "sonoff-E8A6E4"
 )
 
 rule "Sonoff Maintenance"
