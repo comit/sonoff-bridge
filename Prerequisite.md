@@ -28,9 +28,9 @@ Install the ESP8266 Arduino development environment from [esp8266 Arduino](https
 - I prefer a standalone version of the IDE allowing easy ESP8266 file manipulation. This can be achieved by downloading the Arduino IDE ZIP file for non admin install. After unzipping and before executing ```arduino.exe``` add an empty directory called ```portable```
 - Follow the procedure from the ESP8266 Arduino README.md to install the development environment using the Arduino IDE Board Manager
 - Copy the ```sonoff``` directory to your sketchfolder
-
-Download and unzip the [pubsubclient](https://github.com/knolleary/pubsubclient) MQTT library into directory ```portable\sketchbook\libraries``` and rename to pubsubclient. Update default value in file ```pubsubclient\src\PubSubClient.h```  
-- Change ```MQTT_MAX_PACKET_SIZE``` from 128 to at least 400  
+- Download and unzip the [NeoPixelBus](https://github.com/Makuna/NeoPixelBus) library into directory ```portable\sketchbook\libraries``` and rename to NeoPixelBus.
+- Download and unzip the [pubsubclient](https://github.com/knolleary/pubsubclient) MQTT library into directory ```portable\sketchbook\libraries``` and rename to pubsubclient. Update default value in file ```pubsubclient\src\PubSubClient.h```  
+  - Change ```MQTT_MAX_PACKET_SIZE``` from 128 to at least 400  
 
 Optionally install php and a local web server (ie apache) for OTA and copy directory ```api``` in webroot.
 
