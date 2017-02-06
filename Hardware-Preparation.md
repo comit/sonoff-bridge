@@ -89,3 +89,5 @@ Programming the on-board 3.3V [PSA-B](https://www.itead.cc/psa-01.html) is possi
 ### Sonoff 4ch
 
 On the PCB the `TX` and `RX` pins are mislabeled. The `TX` of the programmer needs to connect to the `TX` on the 4ch PCB and the `RX` to the `RX`. Normally this is reversed.
+
+Note to set the board to "Generic ESP8285 Module".
