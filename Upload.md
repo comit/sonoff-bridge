@@ -32,6 +32,6 @@ This method is only available after flashing Sonoff-Tasmota once.
 
 Verify and upload an OTA image to your web server with option `Upload Using: OTA_upload`.
 
-Since version 1.0.26 you may also use sonoffs web server and upload the file directly.
+You may also use sonoffs web server and upload the file directly.
 
 Enable debug messages with command `seriallog 3`.
