@@ -22,6 +22,7 @@ The software supports the following single wire sensors:
 - HC-SR501 PIR Motion Detection (configured as Switch)
 
 You can dynamically add a sensor using the following (MQTT) commands:
+
 1. ``modules`` - show supported modules
 2. ``module 4`` - select desired module functionality for a Sonoff TH (Wait for the restart)
 3. ``gpios`` - show supported sensor types. (DHT21 = AM2301, AM2302 = AM2321 = DHT22)
@@ -39,6 +40,7 @@ The software supports the following I2C sensors:
 - HTU21  Temperature and Humidity
 
 You can dynamically add I2C sensors using the following (MQTT) commands:
+
 1. ``modules`` - show supported modules
 2. ``module 1`` - select desired module functionality for a Sonoff Basic (Wait for the restart)
 3. ``gpios`` - show supported sensor types. We need two pins: I2C SCL (5) and I2C SDA (6)
@@ -53,6 +55,7 @@ The software supports the following additional device(s):
 - WS2812 led string using NeoPixelBus library and external 5V power supply
 
 You can dynamically add a device using the following (MQTT) commands:
+
 1. ``modules`` - show supported modules
 2. ``module 1`` - select desired module functionality for a Sonoff Basic (Wait for the restart)
 3. ``gpios`` - show supported sensor types. We need WS2812 (7)
