@@ -12,9 +12,25 @@ The following table shows the connection for most Sonoff modules:
 | 4 (GND)            |        GND |
 | (5 - if available) |            |
 
-**⚠️️⚠️️⚠️️ Do not connect AC power and serial connection at the same time ⚠️️⚠️️⚠️️** 
+### Attention
+
+**⚠️️⚠️️⚠️️ Do not connect AC power and the serial connection at the same time ⚠️️⚠️️⚠️️** 
 
 Shorting your serial interface with AC will fry your module, programmer and even your PC.
+If you are not careful, your own health might be in danger.
+
+### Bringing the Module in Flash Mode
+
+The "brain" of the Sonoff Module (normally the ESP8266) needs to be put into Flash Mode. This is done, by pulling the GPIO0 pin to GND while the chip is booting. On most modules the installed control button is connected to GPIO0 and GND, making entering Flash Mode very easy. On other modules you will need to connect pins on the PCB.
+
+To bring a Sonoff module into Flash Mode:
+
+1. Disconnect serial programmer and power)
+2. Connect GPIO0 and GND (e.g. Press the button)
+3. Connect serial programmer
+4. Release GPIO0 (after one-two seconds)
+
+## Sonoff Module Specifics
 
 See below for specific Sonoff Module information and examples.
 
