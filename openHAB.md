@@ -86,11 +86,15 @@ Switch item=Sonoff_Action mappings=[restart="Restart", queryFW="Query FW", upgra
 
 **sonoff.rules:**
 ```java
+// Work with a list of selected Sonoff modules
 val sonoff_device_ids = newArrayList(
     "sonoff-A00F9D",
     //... add all your modules here!
     "sonoff-E8A6E4"
 )
+// OR
+// Work with the grouptopic, addressing ALL modules at once
+//val sonoff_device_ids = newArrayList("sonoffs")
 
 rule "Sonoff Maintenance"
 when
