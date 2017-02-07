@@ -25,6 +25,7 @@ See below for specific Sonoff Module information and examples.
 *Note:* newer version of the Sonoff module hold five pins below the button. Follow the image above and ignore the pin furthest to the Button (pin 5) if available.
 
 ### S20 Smart Socket
+
 <img alt="S20 Smart Socket" src="https://github.com/arendst/arendst.github.io/blob/master/media/s20b.jpg" width="230" align="right" /> 
 The picture shows how to program the S20 Smart Socket powered by the FTDI USB converter.
 <br />
@@ -33,6 +34,7 @@ The picture shows how to program the S20 Smart Socket powered by the FTDI USB co
 <br />
 
 ### Sonoff RF
+
 The Sonoff RF needs some tweaking as the connection needed during programming between the button and GPIO0 might not be present.
 
 [Phalox](http://phalox.be/wp/electronics/itead-sonoff-slampher-custom-firmware-fix/) explains the case with a picture where you have to install a jumper wire for R21. I received the same result using a small screwdriver and shorting both solder pads of R21 while holding down the button during programming.
@@ -46,6 +48,7 @@ Pairing a RF remote is the same as with iTead software:
 I was unable to pair the Sonoff RF 434MHz receiver with any of my KaKu switches so to me the RF functionality is a bit disappointing.
 
 ### Sonoff Dual
+
 <img alt="Dual GPIO0 grounded" src="https://github.com/arendst/arendst.github.io/blob/master/media/dual2a.jpg" width="230" align="right" /> 
 Programming the Sonoff Dual is more difficult as the on-board-button is not connected to GPIO0. Pulling GPIO0 to GND is needed to put the ESP8266 in programming mode during power up.
 
@@ -65,6 +68,7 @@ As the Sonoff Pow power monitoring hardware connects AC power to the logic groun
 During both AC connection and Serial connection you may connect the life AC wire with your PC's DC ground leading to a power short, broken Sonoff Pow and laptop Power Supply as MySKU has experienced.
 
 ### Sonoff Touch
+
 <img alt="Sonoff Touch EU" src="https://github.com/arendst/arendst.github.io/blob/master/media/toucheu.jpg" width="230" align="right" /> 
 As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have to make some changes to the proposed Arduino IDE settings as follows:
 
@@ -78,9 +82,8 @@ Remove the top PCA containing the ESP8285 from the assembly as shown in the pict
 
 The pictures show for both the EU version (top) and the US version (bottom) where to connect your FTDI cable (Gnd, TxD, RxD and 3.3V). The GPIO0 pin needs to be connected to Ground to put the Sonoff Touch in programming mode.
 
-Remember that during programming the Sonoff Touch is **NOT** connected to mains.
-
 ### Motor Clockwise/Anticlockwise
+
 <img alt="MotorCAC" src="https://github.com/arendst/arendst.github.io/blob/master/media/motorcac1.jpg" width="230" align="right" /> 
 This USB powered or external powered board provides one GPIO controlling two alternating relays with Normally Open (NO) and Normally Closed (NC) contacts. It can be used for changing directions of a connected motor.
 
