@@ -7,20 +7,20 @@ The software supports:
 - [dual wire or I2C sensors](#i2c-sensor)
 - [single wire devices](#devices)
 
-Only one sensor type per module is allowed so you can only connect one DS18B20 (string) to the module.
+Only one sensor per group is allowed.
 
 ## Single wire sensor
 The following single wire sensors are supported:
-- DHT11 Temperature and Humidity - ``DHT11 (1)``
-- DHT21 Temperature and Humidity - ``AM2301 (2)``
-- AM2301 Temperature and Humidity - ``AM2301 (2)``
-- DHT22 Temperature and Humidity - ``DHT22 (3)``
-- AM2302 Temperature and Humidity - ``DHT22 (3)``
-- AM2321 Temperature and Humidity - ``DHT22 (3)``
-- DS18B20 Temperature - ``DS18x20 (4)``<br/>Enable option ``USE_DS18x20`` in ``user_config.h`` for multiple sensors using OneWire library
-- DS18S20 Temperature - ``DS18x20 (4)``<br/>Enable option ``USE_DS18x20`` in ``user_config.h`` using OneWire library
-- External switch - ``Switch (8)``<br/>Use ``SwitchMode`` to tune it's behaviour
-- HC-SR501 PIR Motion Detection - ``Switch (8)``<br/>Use ``SwitchMode`` to tune it's behaviour
+- DHT11 Temperature and Humidity - ``DHT11 (1)`` in group 1
+- DHT21 Temperature and Humidity - ``AM2301 (2)`` in group 1
+- AM2301 Temperature and Humidity - ``AM2301 (2)`` in group 1
+- DHT22 Temperature and Humidity - ``DHT22 (3)`` in group 1
+- AM2302 Temperature and Humidity - ``DHT22 (3)`` in group 1
+- AM2321 Temperature and Humidity - ``DHT22 (3)`` in group 1
+- DS18B20 Temperature - ``DS18x20 (4)`` in group 2<br/>Enable option ``USE_DS18x20`` in ``user_config.h`` for multiple sensors using OneWire library
+- DS18S20 Temperature - ``DS18x20 (4)`` in group 2<br/>Enable option ``USE_DS18x20`` in ``user_config.h`` using OneWire library
+- External switch - ``Switch (8)`` in group 3<br/>Use ``SwitchMode`` to tune it's behaviour
+- HC-SR501 PIR Motion Detection - ``Switch (8)`` in group 3<br/>Use ``SwitchMode`` to tune it's behaviour
 
 You can add a sensor using the following (MQTT) commands:
 
@@ -33,7 +33,7 @@ You can add a sensor using the following (MQTT) commands:
 For some sensors to show up a power cycle of Sonoff is needed to reset the devices just configured.
 
 ## I2C sensor
-The following I2C sensors are supported using ``I2C SCL (5)`` and ``I2C SDA (6)``:
+The following I2C sensors are supported using ``I2C SCL (5)`` and ``I2C SDA (6)`` in group 4:
 - BH1750 Ambient Light Intensity
 - BMP180 Pressure and Temperature
 - BMP280 Pressure and Temperature
@@ -53,7 +53,7 @@ The software will autodetect the connected I2C devices. For some sensors to show
 
 ## Device
 The following additional device(s) are supported:
-- WS2812 led string - ``WS2812 (7)``<br/>Using NeoPixelBus library and external 5V power supply
+- WS2812 led string - ``WS2812 (7)`` in group 5<br/>Using NeoPixelBus library and external 5V power supply
 
 You can add a device using the following (MQTT) commands:
 
