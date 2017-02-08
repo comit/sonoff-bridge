@@ -5,16 +5,16 @@ The software supports:
 
 ## Single wire sensor
 The following single wire sensors are supported:
-- ``DHT11 (1)`` - DHT11 Temperature and Humidity
-- ``AM2301 (2)`` - DHT21 Temperature and Humidity
-- ``AM2301 (2)`` - AM2301 Temperature and Humidity
-- ``DHT22 (3)`` - DHT22 Temperature and Humidity
-- ``DHT22 (3)`` - AM2302 Temperature and Humidity
-- ``DHT22 (3)`` - AM2321 Temperature and Humidity
-- ``DS18x20 (4)`` - DS18B20 Temperature (multiple sensors with optional OneWire library enabled in ``user_config.h``)
-- ``DS18x20 (4)`` - DS18S20 Temperature (with optional OneWire library enabled in ``user_config.h``)
-- ``Switch (8)`` - External switch
-- ``Switch (8)`` - HC-SR501 PIR Motion Detection (configured as Switch)
+- DHT11 Temperature and Humidity (``DHT11 (1)``)
+- DHT21 Temperature and Humidity (``AM2301 (2)``)
+- AM2301 Temperature and Humidity (``AM2301 (2)``)
+- DHT22 Temperature and Humidity (``DHT22 (3)``)
+- AM2302 Temperature and Humidity (``DHT22 (3)``)
+- AM2321 Temperature and Humidity (``DHT22 (3)``)
+- DS18B20 Temperature (``DS18x20 (4)``). Multiple sensors with optional OneWire library enabled in ``user_config.h``
+- DS18S20 Temperature (``DS18x20 (4)``). With optional OneWire library enabled in ``user_config.h``
+- External switch (``Switch (8)``). Use ``SwitchMode`` to tune it's behaviour
+- HC-SR501 PIR Motion Detection (``Switch (8)``). Use ``SwitchMode`` to tune it's behaviour
 
 You can dynamically add a sensor using the following (MQTT) commands:
 
