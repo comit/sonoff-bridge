@@ -1,3 +1,7 @@
+The software allows for dynamically configuration of sensors to selected GPIO pins. Depending on the type of (Sonoff) Module certain GPIO pins are easily accessable.
+
+Configuration can be done by either the web pages OR using the commands ``modules``, ``module``, ``gpios`` and ``gpio``.
+
 The software supports:
 - [single wire sensors](#single-wire-sensor)
 - [dual wire or I2C sensors](#i2c-sensor)
@@ -16,7 +20,7 @@ The following single wire sensors are supported:
 - External switch - ``Switch (8)``<br/>Use ``SwitchMode`` to tune it's behaviour
 - HC-SR501 PIR Motion Detection - ``Switch (8)``<br/>Use ``SwitchMode`` to tune it's behaviour
 
-You can dynamically add a sensor using the following (MQTT) commands:
+You can add a sensor using the following (MQTT) commands:
 
 1. ``modules`` - show supported modules
 2. ``module 4`` - select desired module functionality for a Sonoff TH (Wait for the restart)
@@ -34,7 +38,7 @@ The following I2C sensors are supported using ``I2C SCL (5)`` and ``I2C SDA (6)`
 - BME280 Pressure, Temperature and Humidity
 - HTU21  Temperature and Humidity
 
-You can dynamically add I2C sensors using the following (MQTT) commands:
+You can add I2C sensors using the following (MQTT) commands:
 
 1. ``modules`` - show supported modules
 2. ``module 1`` - select desired module functionality for a Sonoff Basic (Wait for the restart)
@@ -49,7 +53,7 @@ The software will autodetect the connected I2C devices. For some sensors to show
 The following additional device(s) are supported:
 - WS2812 led string - ``WS2812 (7)``<br/>Using NeoPixelBus library and external 5V power supply
 
-You can dynamically add a device using the following (MQTT) commands:
+You can add a device using the following (MQTT) commands:
 
 1. ``modules`` - show supported modules
 2. ``module 1`` - select desired module functionality for a Sonoff Basic (Wait for the restart)
