@@ -5,7 +5,7 @@ Sensor configuration is possible by either the web pages OR using the commands `
 The software supports:
 - [single wire sensors](#single-wire-sensor)
 - [dual wire or I2C sensors](#i2c-sensor)
-- [single wire devices](#devices)
+- [single wire devices](#device)
 
 Only one sensor per group is allowed.
 
