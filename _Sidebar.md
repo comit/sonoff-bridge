@@ -10,6 +10,7 @@
 - [**Button**](Button-usage)
 - [**MQTT Features**](MQTT-Features)
 - [**Commands**](Commands)
+- [**Sensor Configuration**](Sensor-Configuration)
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
