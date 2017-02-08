@@ -1,11 +1,13 @@
-The software allows for dynamically configuration of sensors to selected GPIO pins. Depending on the type of (Sonoff) Module certain GPIO pins are easily accessable.
+The software allows for dynamically configuration of sensors and devices to selected GPIO pins. Depending on the type of (Sonoff) Module certain GPIO pins are easily accessable.
 
-Configuration can be done by either the web pages OR using the commands ``modules``, ``module``, ``gpios`` and ``gpio``.
+Sensor configuration is possible by either the web pages OR using the commands ``modules``, ``module``, ``gpios`` and ``gpio``.
 
 The software supports:
 - [single wire sensors](#single-wire-sensor)
 - [dual wire or I2C sensors](#i2c-sensor)
 - [single wire devices](#devices)
+
+Only one sensor type per module is allowed so you can only connect one DS18B20 (string) to the module.
 
 ## Single wire sensor
 The following single wire sensors are supported:
