@@ -11,7 +11,7 @@ The following single wire sensors are supported:
 - DHT22 Temperature and Humidity (``DHT22 (3)``)
 - AM2302 Temperature and Humidity (``DHT22 (3)``)
 - AM2321 Temperature and Humidity (``DHT22 (3)``)
-- DS18B20 Temperature (``DS18x20 (4)``). Multiple sensors with optional OneWire library enabled in ``user_config.h``
+- DS18B20 Temperature (``DS18x20 (4)``). <br/>Multiple sensors with optional OneWire library enabled in ``user_config.h``
 - DS18S20 Temperature (``DS18x20 (4)``). With optional OneWire library enabled in ``user_config.h``
 - External switch (``Switch (8)``). Use ``SwitchMode`` to tune it's behaviour
 - HC-SR501 PIR Motion Detection (``Switch (8)``). Use ``SwitchMode`` to tune it's behaviour
@@ -47,7 +47,7 @@ The software will autodetect the connected I2C devices. For some sensors to show
 
 ## Device
 The following additional device(s) are supported:
-- ``WS2812 (7)`` - WS2812 led string using NeoPixelBus library and external 5V power supply
+- WS2812 led string (``WS2812 (7)``) using NeoPixelBus library and external 5V power supply
 
 You can dynamically add a device using the following (MQTT) commands:
 
