@@ -19,8 +19,8 @@ The following single wire sensors are supported:
 - AM2321 Temperature and Humidity - ``DHT22 (3)`` in group 1
 - DS18B20 Temperature - ``DS18x20 (4)`` in group 2<br/>Enable option ``USE_DS18x20`` in ``user_config.h`` for multiple sensors using OneWire library
 - DS18S20 Temperature - ``DS18x20 (4)`` in group 2<br/>Enable option ``USE_DS18x20`` in ``user_config.h`` using OneWire library
-- External switch - ``Switch (8)`` in group 3<br/>Use ``SwitchMode`` to tune it's behaviour
-- HC-SR501 PIR Motion Detection - ``Switch (8)`` in group 3<br/>Use ``SwitchMode`` to tune it's behaviour
+- External switch - ``Switch (8)``<br/>Use ``SwitchMode`` to tune it's behaviour
+- HC-SR501 PIR Motion Detection - ``Switch (8)``<br/>Use ``SwitchMode`` to tune it's behaviour
 
 You can add a sensor using the following (MQTT) commands:
 
@@ -33,7 +33,7 @@ You can add a sensor using the following (MQTT) commands:
 For some sensors to show up a power cycle of Sonoff is needed to reset the devices just configured.
 
 ## I2C sensor
-The following I2C sensors are supported using ``I2C SCL (5)`` and ``I2C SDA (6)`` in group 4:
+The following I2C sensors are supported using ``I2C SCL (5)`` and ``I2C SDA (6)`` in group 3:
 - BH1750 Ambient Light Intensity
 - BMP180 Pressure and Temperature
 - BMP280 Pressure and Temperature
@@ -53,7 +53,7 @@ The software will autodetect the connected I2C devices. For some sensors to show
 
 ## Device
 The following additional device(s) are supported:
-- WS2812 led string - ``WS2812 (7)`` in group 5<br/>Using NeoPixelBus library and external 5V power supply
+- WS2812 led string - ``WS2812 (7)`` in group 4<br/>Using NeoPixelBus library and external 5V power supply
 
 You can add a device using the following (MQTT) commands:
 
