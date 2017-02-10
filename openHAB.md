@@ -31,7 +31,7 @@ Number BA_Washingmachine_Power "Washingmachine Power [%.1f W]" (BA,gPower)
 
 ### Status Topics / Items
 
-It is furthermore recommended, to add the following maintenance items for every Sonoff-Tasmota device.
+It is furthermore recommended, to add the following status items for every Sonoff-Tasmota device.
 
 **sonoff.items:** 
 ```java
