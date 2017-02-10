@@ -16,9 +16,6 @@
 - [**openHAB**](openHAB)
 - [**Domoticz**](Domoticz)
 
-**Enhanced**
-- [**Hardware Modification**](Hardware-Modification)
-
 **Tips**
 - [**MQTT for Newbies**](MQTT-for-Newbies)
 - [**General**](Tips)
