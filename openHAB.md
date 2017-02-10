@@ -2,11 +2,12 @@ The open Home Automation Bus (openHAB) is an open source, technology agnostic ho
 
 ## openHAB Integration
 
-After activating the MQTT binding, simply set up items for all Sonoff-Tasmota MQTT topics you are interested in. Examples are given below. Some Sonoff-Tasmota topics are JSON encoded. The `JSONPATH` transformation can be used to extract data.
+After activating the MQTT binding, simply set up items for all Sonoff-Tasmota MQTT topics you are interested in. Examples are given below. Some Sonoff-Tasmota topics are JSON encoded. The `JSONPATH` transformation can be used to extract this data.
 
 ![example openHAB sitemap](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/5/57750c6c7b6d9f18e75424fcb87ec093f70c6211.png)
 
-Before continuing, please make sure you assigned unique MQTT topics in the configuration interface of each Sonoff module. The default MQTT topic is "sonoff", in the examples below we will use names like "sonoff-A00F9D".
+Before continuing, please make sure you assigned unique MQTT topics in the configuration interface of each Sonoff module. The default MQTT topic is "sonoff", in the examples below we will use names like "sonoff-A00F9D". To better understand what's going on behind the scene and to be able to troubleshoot, use an [MQTT client](http://www.hivemq.com/blog/seven-best-mqtt-client-tools) in parallel.
+
  
 ### Mandatory Topics / Items
 
