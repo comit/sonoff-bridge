@@ -1,9 +1,11 @@
 ## PlatformIO
 
-1. Load the Sonoff-Tasmota base folder, including [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini), in [PlatformIO](https://github.com/platformio).
-2. Connect the Sonoff module in Flash Mode (see Hardware section)
-2. Select "Upload"
-3. Finished
+1. Download the latest [Sonoff-Tasmota "Source code (zip)"](https://github.com/arendst/Sonoff-Tasmota/releases) and extract it
+2. Load the Sonoff-Tasmota base folder, including [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini), in [PlatformIO](https://github.com/platformio).
+3. Connect the Sonoff module in Flash Mode (see Hardware section)
+4. Select "Upload".
+
+Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initital-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration)
 
 ## Arduino IDE
 
@@ -25,13 +27,3 @@ In the Arduino IDE for sonoff select from `Tools Board Generic ESP8266 Module` (
 - Port: Your COM port connected to sonoff
 
 Verify and/or compile the project and upload to your sonoff using the serial connection established above.
-
-### Uploading via OTA
-
-This method is only available after flashing Sonoff-Tasmota once.
-
-Verify and upload an OTA image to your web server with option `Upload Using: OTA_upload`.
-
-You may also use sonoffs web server and upload the file directly.
-
-Enable debug messages with command `seriallog 3`.
