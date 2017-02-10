@@ -37,6 +37,7 @@ The following features are available:
 - Support for I2C sensors like BH1750, BME280 and HTU21
 - Telemetry data can be send using optional different prefix from status messages
 - Native Domoticz MQTT support
+- Easy integration in home automation solutions like openHAB, HomeAssistant, ...
 - Wemo and Hue emulation for Amazon Echo (Alexa) support
 
 ## Community
