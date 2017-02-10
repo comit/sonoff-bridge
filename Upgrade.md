@@ -1,6 +1,6 @@
 Follow the [Upload instructions](https://github.com/arendst/Sonoff-Tasmota/wiki/Upload) to flash a new firmware version to your Sonoff module, just as before. Upgrading Sonoff-Tasmota is easier by OTA update.
 
-### Updating via OTA
+### Upgrading via OTA
 
 It is recommended to upgrade the firmware [over-the-air](https://en.wikipedia.org/wiki/Over-the-air_programming), without a serial connection, even while being connected to AC and operational.
 This method is only available after the Sonoff-Tasmota firmware was flashed via serial connection once.
