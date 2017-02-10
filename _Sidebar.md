@@ -4,6 +4,7 @@
 - [**Prerequisite**](Prerequisite)
 - [**Hardware Preparation**](Hardware-Preparation)
 - [**Upload**](Upload)
+- [**Upgrade**](Upgrade)
 - [**First Steps**](Initital-Configuration)
 
 **Usage**
