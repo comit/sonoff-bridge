@@ -54,3 +54,6 @@ sensor:
     value_template: '{{ value_json.DHT.Temperature }}'
 
 ```
+The first two will pick up the temp and humidity on the DHT22 sensor output when there is a mqtt pub request like this ``mosquitto_pub -h localhost -t 'cmnd/sonoff/status' -m '10'``
+
+The last sensor picks up what the SONOFF and this software sends periodically and it done automatically at this point. This periodic interval can be changed using the ``TelePeriod`` command (see the wiki or the MQTT commands).
