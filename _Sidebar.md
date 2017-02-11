@@ -16,6 +16,7 @@
 **Home Automation Integration**
 - [**openHAB**](openHAB)
 - [**Domoticz**](Domoticz)
+- [**Home Assistant**](Home-Assistant)
 
 **Tips**
 - [**MQTT for Newbies**](MQTT-for-Newbies)
