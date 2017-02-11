@@ -2,6 +2,12 @@ The firmware supports a **serial**, **MQTT** and **Web** Man Machine interface. 
 
 Commands are allowed like ```cmnd/sonoff/<command><relay>``` to address a specific relay where applicable.
 
+The commands can also be executed via HTTP requests.
+```
+http://192.168.1.xx/cs?c1=Power%20Off
+http://192.168.1.xx/cs?c1=Power%20On
+```
+
 The following command tables are available:
 - Main
 - [Management](#management)
