@@ -2,7 +2,6 @@
 
 To configure your MQTT broker called ``domus1`` in Home Assistant you'll need to add the following lines to your ``configuration.yaml`` file:
 ```
-# MQTT server
 mqtt:
   broker: domus1
   port: 1883
@@ -32,7 +31,7 @@ The output from the Sonoff TH10 ``Status 10`` command looks like this:
 stat/sonoff/STATUS10 {"StatusSNS":{"Time":"2017-02-11T18:06:05", "DHT":{"Temperature":"21.8", "Humidity":"48.0"}}}
 ```
 
-The Home Assistant configuration could be as follows:
+The Home Assistant configuration addition would be as follows:
 ```
 sensor:
   - platform: mqtt
@@ -56,4 +55,4 @@ sensor:
 ```
 The first two will pick up the temp and humidity on the DHT22 sensor output when there is a mqtt pub request like this ``mosquitto_pub -h localhost -t 'cmnd/sonoff/status' -m '10'``
 
-The last sensor picks up what the SONOFF and this software sends periodically and it done automatically at this point. This periodic interval can be changed using the ``TelePeriod`` command (see the wiki or the MQTT commands).
+The last sensor picks up what the SONOFF and this software sends periodically and is done automatically at this point. This periodic interval can be changed using the ``TelePeriod`` command (see the wiki or the MQTT commands).
