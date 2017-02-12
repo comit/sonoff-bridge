@@ -17,6 +17,8 @@ In the examples shown the Sonoff-TASMOTA parameters are set:
 - ``PowerRetain`` = 1
 - ``TelePeriod`` = 300
 
+The messages shown are valid for Sonoff-TASMOTA version 3.9.15 and up. 
+
 ## Add MQTT broker
 
 As Sonoff-TASMOTA is MQTT based you will need to configure the MQTT Broker in HA. Update your HA configuration file with the local MQTT server ``domus1``.
