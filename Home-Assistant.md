@@ -1,4 +1,4 @@
-(This information is related to Sonoff-TASMOTA version 3.9.11 and up)
+(This information is related to Sonoff-Tasmota version 3.9.11 and up)
 
 [Home Assistant](https://home-assistant.io/) (HA) is an open-source home automation platform running on Python 3.
 
@@ -6,7 +6,7 @@ Configure HA by editing the file ``configuration.yaml`` to be found in folder ``
 
 After every change to the configuration file you'll need to restart HA to make it aware of the changes. On my Debian Linux system I perform the command ``systemctl restart home-assistant``.
 
-In the examples shown the Sonoff-TASMOTA parameters are set:
+In the examples shown the Sonoff-Tasmota parameters are set:
 - ``MQTT_STATUS_OFF`` in ``user_config.h`` = ``OFF``
 - ``MQTT_STATUS_ON`` in ``user_config.h`` = ``ON``
 - ``SUB_PREFIX`` in ``user_config.h`` = ``cmnd``
@@ -21,7 +21,7 @@ In the examples shown the Sonoff-TASMOTA parameters are set:
 
 ## MQTT broker
 
-As Sonoff-TASMOTA is MQTT based you will need to configure the MQTT Broker in HA. Update your HA configuration file with the local MQTT server ``domus1``.
+As Sonoff-Tasmota is MQTT based you will need to configure the MQTT Broker in HA. Update your HA configuration file with the local MQTT server ``domus1``.
 ```
 mqtt:
   broker: domus1
@@ -45,7 +45,7 @@ mqtt:
 
 ## Switch
 
-As HA is non persistent it is important to configure Sonoff-TASMOTA for sending retained power status messages to the broker. This is accomplished with the command ``PowerRetain On`` or ``cmnd/sonoff/PowerRetain On``.
+As HA is non persistent it is important to configure Sonoff-Tasmota for sending retained power status messages to the broker. This is accomplished with the command ``PowerRetain On`` or ``cmnd/sonoff/PowerRetain On``.
 
 Add the device as a switch to HA by updating the configuration file.
 ```
@@ -86,7 +86,7 @@ This periodic interval can be changed using the ``TelePeriod`` command (see the 
 
 ### Manual updates
 
-Another means of sensor information retrieval from Sonoff-TASMOTA is using the status command ``Status 10`` or ``cmnd/sonoff/status 10``. This would result in a message like:
+Another means of sensor information retrieval from Sonoff-Tasmota is using the status command ``Status 10`` or ``cmnd/sonoff/status 10``. This would result in a message like:
 ```
 stat/sonoff/STATUS10 {"StatusSNS":{"Time":"2017-02-11T18:06:05", "DHT":{"Temperature":"21.8", "Humidity":"48.0"}}}
 ```
@@ -104,7 +104,7 @@ sensor:
     value_template: "{{ value_json.StatusSNS.DHT.Humidity }}"
     unit_of_measurement: "%"
 ```
-The Sonoff-TASMOTA command could be initiated by a mosquitto mqtt pub command on ``mosquitto_pub -h localhost -t 'cmnd/sonoff/status' -m '10'``
+The Sonoff-Tasmota command could be initiated by a mosquitto mqtt pub command on ``mosquitto_pub -h localhost -t 'cmnd/sonoff/status' -m '10'``
 
 ## HTU and BMP I2C sensors
 
