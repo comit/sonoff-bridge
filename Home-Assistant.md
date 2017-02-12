@@ -1,6 +1,24 @@
-## Add MQTT broker used by Sonoff
+[Home Assistant](https://home-assistant.io/) (HA) is an open-source home automation platform running on Python 3. Track and control all devices at home and automate control. 
 
-To configure your MQTT broker called ``domus1`` in Home Assistant you'll need to add the following lines to your ``configuration.yaml`` file:
+Configure HA for Sonoff-TASMOTA by editing the file ``configuration.yaml`` to be found in folder ``.homeassistant`` after first installation.
+
+After every change to the configuration file you'll need to restart HA to make it aware of the changes. On my Debian Linux system I perform the command ``systemctl restart home-assistant``.
+
+In the examples shown the following Sonoff-TASMOTA parameters are set:
+- ``MQTT_STATUS_OFF`` in ``user_config.h`` = ``OFF``. This is the default state
+- ``MQTT_STATUS_ON`` in ``user_config.h`` = ``ON``. This is the default state
+- ``SUB_PREFIX`` in ``user_config.h`` = ``cmnd``
+- ``PUB_PREFIX`` in ``user_config.h`` = ``stat``
+- ``PUB_PREFIX2`` in ``user_config.h`` = ``tele``
+- ``Mqtt`` = 1
+- ``MqttHost`` = ``domus1``
+- ``MqttPort`` = 1883
+- ``Topic`` = ``sonoff``
+- ``PowerRetain`` = 1
+
+## Add MQTT broker
+
+As Sonoff-TASMOTA is MQTT based you will need to configure the MQTT Broker used by TASMOTA in HA. Update your HA configuration file with the local MQTT server ``domus1``.
 ```
 mqtt:
   broker: domus1
@@ -19,6 +37,23 @@ mqtt:
     topic: 'tele/hass1/LWT'
     payload: 'Offline'
     qos: 1
+    retain: true
+```
+
+## Basic functionality
+
+As HA is non persistent it is important to configure TASMOTA for sending retained power status messages to the broker. This is accomplished with the TASMOTA command ``PowerRetain On`` or ``cmnd/sonoff/PowerRetain On``.
+
+Add the device as a switch to HA by updating the configuration file.
+```
+switch:
+  - platform: mqtt
+    name: "Sonoff power"
+    state_topic: "stat/sonoff/POWER"
+    command_topic: "cmnd/sonoff/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
     retain: true
 ```
 
