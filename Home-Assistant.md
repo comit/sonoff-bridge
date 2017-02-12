@@ -130,9 +130,14 @@ A Sonoff Pow device called ``pow1`` will periodically send the following message
 ```
 tele/pow1/ENERGY = {"Time":"2017-02-12T16:35:00", "Yesterday":0.002, "Today":0.001, "Period":0, "Power":4, "Factor":0.32, "Voltage":215, "Current":0.060}
 ```
-The HA configuration for Power and Voltage would be:
+The HA configuration for Energy, Power and Voltage would be:
 ```
 sensor:
+  - platform: mqtt
+    name: "Energy"
+    state_topic: "tele/pow1/ENERGY"
+    value_template: "{{ value_json.Today }}"
+    unit_of_measurement: "kWh"
   - platform: mqtt
     name: "Power"
     state_topic: "tele/pow1/ENERGY"
