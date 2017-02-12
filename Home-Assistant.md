@@ -66,7 +66,7 @@ switch:
 
 A DHT22 Temperature and Humidity sensor connected to a Sonoff TH10 will send at ``TelePeriod`` intervals the following information to the MQTT broker:
 ```
-tele/sonoff/SENSOR = {"Time":"2017-02-12T16:11:12", "DHT":{"Temperature":23.9, "Humidity":34.1})
+tele/sonoff/SENSOR = {"Time":"2017-02-12T16:11:12", "DHT":{"Temperature":23.9, "Humidity":34.1}}
 ```
 To make the information visible in HA add the following lines to the configuration file.
 ```
