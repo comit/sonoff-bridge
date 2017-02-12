@@ -1,3 +1,5 @@
+(This information is related to Sonoff-TASMOTA version 3.9.11 and up)
+
 [Home Assistant](https://home-assistant.io/) (HA) is an open-source home automation platform running on Python 3.
 
 Configure HA by editing the file ``configuration.yaml`` to be found in folder ``.homeassistant`` at first installation.
