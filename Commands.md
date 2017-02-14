@@ -345,5 +345,5 @@ IRsend          | { "protocol": "<proto>", | Send IR remote controll as JSON enc
                 |   "data": 1..(2^32)-1 }  | DISH, JVC and SAMSUNG. Bits are the required
                 |                          | number of data bits, Data is the data frame
                 |                          | as 32bit unsigned integer. 
-                |                          | See: [LIRC Project](http://www.lirc.org/ "LIRC")
+                |                          | See: http://www.lirc.org/ for more info.
 ```
