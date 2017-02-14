@@ -9,8 +9,8 @@ Build the firmware binary from source or download the latest build from [the rel
 
 1. Use the "Upload Firmware" dialog on the Sonoff-Tasmota web Interface after you download the latest firmware.bin.
 2. Use the Service of @smadds, as he automatically uploads the binaries of the [firmware on his server](https://github.com/arendst/Sonoff-Tasmota/issues/19). Github only provides SSL-encrypted links and the Sonoff isn't capable of connecting via https protocol. You can use these URLs for automatic update:
-- http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin
-- http://sonoff.maddox.co.uk/tasmota/sonoff-nodemcu.ino.bin
-- http://sonoff.maddox.co.uk/tasmota/sonoff-8285.ino.bin
+ - http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin
+ - http://sonoff.maddox.co.uk/tasmota/sonoff-nodemcu.ino.bin
+ - http://sonoff.maddox.co.uk/tasmota/sonoff-8285.ino.bin
 3. Provide the binary on a web server and initiate the upgrade via the [`upgrade` command](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#management).
 4. If you're using [openHAB2](http://www.openhab.org/), you can use some rules for updating the Sonoff in openHAB-environment: [openHAB Maintenance](https://github.com/arendst/Sonoff-Tasmota/wiki/openHAB#maintenance-actions)
