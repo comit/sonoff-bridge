@@ -17,6 +17,7 @@ The following command tables are available:
 - [Sonoff Pow specific](#sonoff-pow)
 - [Domoticz](#domoticz)
 - [WS2812 led string](#ws2812-led-string)
+- [IR remote controll](#IRremote)
 
 ### Main
 ```
@@ -333,4 +334,14 @@ Wakeup          |         | Show current wake up light duration in seconds
 Wakeup          | 1..3600 | Set wake up light duration in seconds
 Width           |         | Show current led group width
 Width           | 0..4    | Set led group width used by Schemes 3 - 9
+```
+
+###IRremote
+```
+Command         | Payload | Description
+----------------|--------------------------|----------------------------------------------------------------
+IRsend          | { "protocol": "<proto>", | Send IR remote controll as JSON encapsulated command.
+                |   "bits": 1..32          | Protocols are: NEC, SONY, RC5, RC6, DISH, JVC, SAMSUNG
+                |   "data": 1..(2^32)-1 }  | Bits are the required number of data bits, Data is the data as 
+                |                          | 32bit unsigned integer. See [LIRC Project](http://www.lirc.org/ "LIRC")
 ```
