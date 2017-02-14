@@ -28,3 +28,4 @@
 **User Experience**
 - [**Remote Button**](Control-a-Sonoff-using-a-remote-button)
 - [**Modified Kaku**](Modify-KaKu-to-WKaKu-Power-Socket)
+- [**IR Extension**](https://github.com/altelch/SonoffIR "IR extension")
