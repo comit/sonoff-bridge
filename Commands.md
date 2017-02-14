@@ -17,7 +17,7 @@ The following command tables are available:
 - [Sonoff Pow specific](#sonoff-pow)
 - [Domoticz](#domoticz)
 - [WS2812 led string](#ws2812-led-string)
-- [IR remote controll](#IRremote)
+- [IR remote controll](#irremote)
 
 ### Main
 ```
