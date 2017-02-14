@@ -340,8 +340,10 @@ Width           | 0..4    | Set led group width used by Schemes 3 - 9
 ```
 Command         | Payload | Description
 ----------------|--------------------------|----------------------------------------------------------------
-IRsend          | { "protocol": "<proto>", | Send IR remote controll as JSON encapsulated command.
-                |   "bits": 1..32          | Protocols are: NEC, SONY, RC5, RC6, DISH, JVC, SAMSUNG
-                |   "data": 1..(2^32)-1 }  | Bits are the required number of data bits, Data is the data as 
-                |                          | 32bit unsigned integer. See [LIRC Project](http://www.lirc.org/ "LIRC")
+IRsend          | { "protocol": "<proto>", | Send IR remote controll as JSON encapsulated
+                |   "bits": 1..32          | command. Protocols are: NEC, SONY, RC5, RC6,
+                |   "data": 1..(2^32)-1 }  | DISH, JVC and SAMSUNG. Bits are the required
+                |                          | number of data bits, Data is the data frame
+                |                          | as 32bit unsigned integer. 
+                |                          | See: [LIRC Project](http://www.lirc.org/ "LIRC")
 ```
