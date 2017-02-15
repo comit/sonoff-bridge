@@ -83,7 +83,7 @@ As the Sonoff Pow power monitoring hardware connects AC power to the logic groun
 
 During both AC connection and Serial connection you may connect the life AC wire with your PC's DC ground leading to a power short, broken Sonoff Pow and laptop Power Supply as MySKU has experienced.
 
-A solution that works for me is shown in below schematic using two opto couplers seperating the AC connection on the **left** from the low voltage connection on the **right** allowing for serial control at 115200 baud and uploading of firmware up to 57600 baud while AC is connected.
+A solution that works for me is shown in the schematic below using two opto couplers seperating the AC connection on the **left** from the low voltage connection on the **right**. This allows for serial control at 115200 baud and uploading of firmware up to 57600 baud while AC is connected.
 <img alt="OptoSerial" src="https://github.com/arendst/arendst.github.io/blob/master/media/OptoSerial.jpg" /> 
 
 ### Sonoff Touch
