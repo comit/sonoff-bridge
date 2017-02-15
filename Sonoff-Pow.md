@@ -19,17 +19,15 @@ I used the following procedure to calibrate.
 The Sonoff Pow can provide Energy, Power, Voltage and Current information in different ways.
 
 ### Push result using Telemetry
-The preffered way is using the periodic telemetry data. Setting ```teleperiod 300``` will send telemetry data every 5 minutes. Depending on ```units``` the result would be:
-
+The preffered way is using the periodic telemetry data. Setting ```teleperiod 300``` will send telemetry data every 5 minutes.
 ```
-tele/pow1/TELEMETRY {"Time":"2017-01-01T13:50:17", "Energy":{"Yesterday":"0.234", "Today":"0.016", "Period":5, "Power":53, "Factor":"1.00", "Voltage":214, "Current":"0.247"}}
+tele/pow1/ENERGY = {"Time":"2017-02-15T11:16:20", "Yesterday":0.012, "Today":0.000, "Period":0, "Power":4, "Factor":0.35, "Voltage":230, "Current":0.050}
 ```
 
 ### Pull result using status message 8
-To request information you can use command ```status 8``` which results in the following messages:
-
+To request information you can use command ```status 8```.
 ```
-stat/pow1/RESULT {"StatusPWR":{"Voltage":214, "Current":"0.247", "Power":53, "Today":"0.016", "Factor":"1.00"}}
+stat/pow1/STATUS8 = {"StatusPWR":{"Yesterday":0.012, "Today":0.000, "Power":4, "Factor":0.36, "Voltage":228, "Current":0.054}}
 ```
 
 ### Meaning
@@ -41,8 +39,8 @@ Yesterday | kWh  | Total Energy usage between 00:00 and 24:00 yesterday
 Today     | kWh  | Total Energy usage today from 00:00 until now
 Period    | Wh   | Energy usage between previous message and now
 Power     | W    | Current power load
-Voltage   | V    | Current line voltage
-Current   | A    | Current line current
 Factor    |      | The ratio of the real power flowing to the load to
           |      |   the apparent power in the circuit 
+Voltage   | V    | Current line voltage
+Current   | A    | Current line current
 ```
