@@ -19,6 +19,10 @@ The following table shows the connection for most Sonoff modules:
 Shorting your serial interface with AC will fry your module, programmer and even your PC.
 If you are not careful, your own health might be in danger.
 
+### Optional Opto Couplers
+As some Sonoffs have a **direct connection to one of the AC power lines** I designed below schematic using two opto couplers seperating the AC connection on the **left** from the low voltage connection on the **right** allowing for serial control at 115200 baud and uploading of firmware up to 57600 baud while AC is connected.
+<img alt="OptoSerial" src="https://github.com/arendst/arendst.github.io/blob/master/media/OptoSerial.jpg" /> 
+
 ### Bringing the Module in Flash Mode
 
 The "brain" of the Sonoff Module (normally the ESP8266) needs to be put into Flash Mode. This is done, by pulling the GPIO0 pin to GND while the chip is booting. On most modules the installed control button is connected to GPIO0 and GND, making entering Flash Mode very easy. On other modules you will need to connect pins on the PCB.
