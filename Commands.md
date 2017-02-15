@@ -4,8 +4,8 @@ Commands are allowed like ```cmnd/sonoff/<command><relay>``` to address a specif
 
 The commands can also be executed via HTTP requests.
 ```
-http://192.168.1.xx/cs?c1=Power%20Off
-http://192.168.1.xx/cs?c1=Power%20On
+http://sonoff/cm?cmnd=Power%20Off
+http://sonoff/cm?cmnd=Power%20On
 ```
 
 The following command tables are available:
@@ -17,7 +17,7 @@ The following command tables are available:
 - [Sonoff Pow specific](#sonoff-pow)
 - [Domoticz](#domoticz)
 - [WS2812 led string](#ws2812-led-string)
-- [IR remote controll](#irremote)
+- [IR remote control](#irremote)
 
 ### Main
 ```
@@ -340,10 +340,9 @@ Width           | 0..4    | Set led group width used by Schemes 3 - 9
 ```
 Command         | Payload | Description
 ----------------|--------------------------|----------------------------------------------------------------
-IRsend          | { "protocol": "<proto>", | Send IR remote controll as JSON encapsulated
-                |   "bits": 1..32          | command. Protocols are: NEC, SONY, RC5, RC6,
-                |   "data": 1..(2^32)-1 }  | DISH, JVC and SAMSUNG. Bits are the required
-                |                          | number of data bits, Data is the data frame
-                |                          | as 32bit unsigned integer. 
-                |                          | See: http://www.lirc.org/ for more info.
+IRsend          | { "protocol": "<proto>", | Send IR remote control as JSON encapsulated command.
+                |   "bits": 1..32          | Protocols are: NEC, SONY, RC5, RC6, DISH, JVC and SAMSUNG
+                |   "data": 1..(2^32)-1 }  | Bits are the required number of data bits.
+                |                          | Data is the data frame as 32 bit unsigned integer.
+                |                          | See [http://www.lirc.org/](http://www.lirc.org/) for more info.
 ```
