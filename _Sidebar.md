@@ -24,6 +24,8 @@
 - [**Sonoff Dual**](Sonoff-Dual)
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff RF**](Sonoff-RF)
+- [**Sonoff Touch**](Sonoff-4CH)
+- [**Sonoff 4CH**](Sonoff-4CH)
 
 **User Experience**
 - [**Remote Button**](Control-a-Sonoff-using-a-remote-button)
