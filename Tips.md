@@ -20,6 +20,6 @@ BTW changing TOPIC can be done online using the fallback topic and is only neede
 - For debugging purposes you can use the serial interface with command ```SerialLog 4``` and the Arduino IDE set to 115200 baud (19200 for Sonoff Dual) and both NL & CR or the web console with command ```WebLog 4```.
 
 - Debugging the Sonoff Pow is a bit tricky as the serial interface has a direct connection to one of the AC power lines. Therefore I designed below schematic which allows for serial monitoring and uploading of firmware while AC is connected.
-<img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/optoserial.jpg" height="500" /> 
+<img alt="OptoSerial" src="https://github.com/arendst/arendst.github.io/blob/master/media/OptoSerial.jpg" height="500" /> 
 
 - To aid in finding the IP address of sonoff the network name will be ```<MQTT_TOPIC>-<last 4 decimal chars of MAC address>```. So the default name is ```sonoff-1234```. Another option is MQTT command ```Status 5```.
