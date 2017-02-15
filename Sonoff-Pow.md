@@ -44,3 +44,7 @@ Factor    |      | The ratio of the real power flowing to the load to
 Voltage   | V    | Current line voltage
 Current   | A    | Current line current
 ```
+
+## Debugging
+Debugging the Sonoff Pow is a bit tricky as the serial interface has a **direct connection to one of the AC power lines**. Therefore I designed below schematic which allows for serial monitoring at 115200 baud and uploading of firmware up to 57600 baud while AC is connected.
+<img alt="OptoSerial" src="https://github.com/arendst/arendst.github.io/blob/master/media/OptoSerial.jpg" /> 
