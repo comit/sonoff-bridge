@@ -10,7 +10,7 @@ The following servers should be made available:
 - You have installed Domoticz
 
 ### Domoticz MQTT and Virtual Sensor
-Configure Domoticz MQTT and Virtual Sensor hardware.
+If not already done configure Domoticz MQTT and Virtual Sensor hardware.
 
 - On the hardware page add Type ```MQTT Client Gateway with LAN interface```
     1. Give it a name
@@ -19,7 +19,7 @@ Configure Domoticz MQTT and Virtual Sensor hardware.
 - On the hardware page add Type ```Dummy (used for virtual switches)```
     1. Give it a name
 
-### Virtual switch
+### Domoticz virtual switch
 Make a new virtual switch and remeber its Idx number.
 
 1. Make a new virtual switch to be used with Sonoff by clicking ```Create Virtual Sensors```
@@ -35,15 +35,15 @@ Sonoff provides different ways to configure Domoticz parameters.
 - Use the webinterface and select ```Configuration - Configure Domoticz```
     1. Set ```In topic``` to ```domoticz/in``` as hardcoded in Domoticz
     2. Set ```Out topic``` to ```domoticz/out``` as hardcoded in Domoticz
-    3. Configure ```Idx 1``` to the value read in step 2.1
+    3. Configure ```Idx 1``` to the value read in step 2.i
 - Use MQTT and execute commands
     1. ```cmnd/sonoff/DomoticzInTopic``` with payload ```domoticz/in``` as hardcoded in Domoticz
     2. ```cmnd/sonoff/DomoticzOutTopic``` with payload ```domoticz/out``` as hardcoded in Domoticz
-    3. ```cmnd/sonoff/DomoticzIdx1``` with payload value read in step 2.1
+    3. ```cmnd/sonoff/DomoticzIdx1``` with payload value read in step 2.i
 - Use the serial interface and execute commands
     1. ```DomoticzInTopic``` with ```domoticz/in``` as hardcoded in Domoticz
     2. ```DomoticzOutTopic``` with ```domoticz/out``` as hardcoded in Domoticz
-    3. ```DomoticzIdx1``` with the value read in step 2.1
+    3. ```DomoticzIdx1``` with the value read in step 2.i
 
 ## Usage    
 That's it! You can now switch Sonoff from the Domoticz user interface.
