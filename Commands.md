@@ -9,7 +9,7 @@ http://sonoff/cm?cmnd=Power%20On
 ```
 
 The following command tables are available:
-- Main
+- [Main](#main)
 - [Management](#management)
 - [Wifi](#wifi)
 - [MQTT](#mqtt)
