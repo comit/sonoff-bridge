@@ -1,5 +1,5 @@
 <img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/domoticz2.jpg" width="250" align="right" /> 
-Sonoff supports Domoticz MQTT 'out of the box'. Find below the procedure to start using it.
+Sonoff supports [Domoticz](http://www.domoticz.com/) MQTT 'out of the box'. Find below the procedure to start using it.
 
 ## Assumptions
 The following servers should be made available:
