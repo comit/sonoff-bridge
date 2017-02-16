@@ -48,5 +48,5 @@ Sonoff provides different ways to configure Domoticz parameters.
 ## Usage    
 That's it! You can now switch Sonoff from the Domoticz user interface.
 
-- On the Switches page scroll down and find your Switch as configured in step 3
+- On the Switches page scroll down and find your Switch as configured in step 1
     - Toggle the light bulb; Sonoff should respond
