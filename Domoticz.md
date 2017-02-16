@@ -23,7 +23,7 @@ Configure MQTT and Virtual Sensor hardware
     1. Remember it's Idx number
 
 ## Sonoff
-<img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/domoticz1.jpg" width="250" align="right" /> 
+<img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/domoticz3.jpg" width="250" align="right" /> 
 Sonoff provides several ways of configuring Domoticz parameters.
 
 - Use the webinterface and select ```Configuration - Configure Domoticz```
