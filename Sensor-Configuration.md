@@ -19,8 +19,8 @@ The following single wire sensors are supported:
 - AM2321 Temperature and Humidity - ``DHT22 (3)`` in group 1
 - DS18B20 Temperature - ``DS18x20 (4)`` in group 2<br/>Enable option ``USE_DS18x20`` in ``user_config.h`` for multiple sensors using OneWire library
 - DS18S20 Temperature - ``DS18x20 (4)`` in group 2<br/>Enable option ``USE_DS18x20`` in ``user_config.h`` using OneWire library
-- External switch - ``Switch (8)``<br/>Use ``SwitchMode`` to tune it's behaviour
-- HC-SR501 PIR Motion Detection - ``Switch (8)``<br/>Use ``SwitchMode`` to tune it's behaviour
+- External switch - ``Switch (9)``<br/>Use ``SwitchMode`` to tune it's behaviour
+- HC-SR501 PIR Motion Detection - ``Switch (9)``<br/>Use ``SwitchMode`` to tune it's behaviour
 
 You can add a sensor using the following (MQTT) commands:
 
@@ -54,6 +54,7 @@ The software will autodetect the connected I2C devices. For some sensors to show
 ## Device
 The following additional device(s) are supported:
 - WS2812 led string - ``WS2812 (7)`` in group 4<br/>Using NeoPixelBus library and external 5V power supply
+- IR Remote - ``IRremote (8)`` in group 5<br/>Using IRremoteESP8266 library and additional IR led hardware as documented [here](https://github.com/altelch/SonoffIR)
 
 You can add a device using the following (MQTT) commands:
 
