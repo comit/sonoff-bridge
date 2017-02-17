@@ -1,4 +1,4 @@
-The open Home Automation Bus (openHAB) is an open source, technology agnostic home automation platform which runs as the center of your smart home. Besides 150 other add-ons for all kinds of technologies, openHAB provides an [MQTT add-on](http://docs.openhab.org/addons/bindings.html) ("binding") to interface with systems like Sonoff-Tasmota.
+The open Home Automation Bus (openHAB) is an open source, technology agnostic home automation platform which runs as the center of your smart home. Besides 150 other add-ons for all kinds of technologies, openHAB provides an [MQTT add-on](http://docs.openhab.org/addons/bindings/mqtt1/readme.html) ("binding") to interface with systems like Sonoff-Tasmota.
 
 ## openHAB Integration
 
