@@ -211,7 +211,7 @@ Topic           | <topic> | Set MQTT topic  AND button topic and restart
 ### Logging
 ```
 Command         | Payload | Description
-----------------|---------|--------------------------------------------------------------------------------
+----------------|---------|--------------------------------------------------------
 LogHost         |         | Show current syslog host
 LogHost         | 1       | Reset syslog host to ```user_config.h``` value
 LogHost         | <host>  | Set syslog host
@@ -241,7 +241,7 @@ WebLog          | 4       | Show all messages
 ### Sonoff Pow
 ```
 Command         | Payload | Description
-----------------|---------|--------------------------------------------------------------------------------
+----------------|---------|--------------------------------------------------------
 CurrentHigh     |         | Show current current high threshold value
 CurrentHigh     | 0 | off | (default) Disable current high threshold
 CurrentHigh     | <milliamps> | Set current high threshold value
@@ -276,7 +276,7 @@ VoltageLow      | <voltage> | Set voltage low threshold value
 ### Sonoff Led
 ```
 Command         | Payload | Description
-----------------|---------|--------------------------------------------------------------------------------
+----------------|---------|--------------------------------------------------------
 Color           |         | Show current color setting as CCWW
 Color           | <CCWW>  | Set color to CCWW hexadecimal value
 Dimmer          |         | Show current dimmer setting from 0 to 100%
@@ -324,7 +324,7 @@ DomoticzUpdateTimer | 1..3600 | Send status to Domoticz between every 1 and 3600
 ### WS2812 Led string
 ```
 Command         | Payload | Description
-----------------|---------|--------------------------------------------------------------------------------
+----------------|---------|--------------------------------------------------------
 Color           |         | Show current strip/ring color setting as RRGGBB
 Color           | <RRGGBB> | Set strip/ring color to RRGGBB hexadecimal value
 Dimmer          |         | Show current dimmer setting from 0 to 100%
