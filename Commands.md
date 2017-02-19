@@ -15,6 +15,7 @@ The following command tables are available:
 - [MQTT](#mqtt)
 - [Logging](#logging)
 - [Sonoff Pow specific](#sonoff-pow)
+- [Sonoff Led specific](#sonoff-led)
 - [Domoticz](#domoticz)
 - [WS2812 led string](#ws2812-led-string)
 - [IR remote control](#irremote)
@@ -270,6 +271,27 @@ VoltageHigh     | <voltage> | Set voltage high threshold value
 VoltageLow      |         | Show current voltage low threshold value
 VoltageLow      | 0 | off | (default) Disable voltage low threshold
 VoltageLow      | <voltage> | Set voltage low threshold value
+```
+
+### Sonoff Led
+```
+Command         | Payload | Description
+----------------|---------|--------------------------------------------------------------------------------
+Color           |         | Show current color setting as CCWW
+Color           | <CCWW>  | Set color to CCWW hexadecimal value
+Dimmer          |         | Show current dimmer setting from 0 to 100%
+Dimmer          | 0..100  | Set dimmer value from 0 to 100%
+Fade            |         | Show current fade state
+Fade            | 0 | Off | (default) Do not use fade
+Fade            | 1 | on  | Use fade
+LedTable        |         | Show current Led table intensity correction state
+LedTable        | 0 | off | (default) Do not use Led table for intensity correction
+LedTable        | 1 | on  | Use Led table for intensity correction
+Speed           |         | Show current fade speed selection
+Speed           | 1..8    | Select desired fade speed from 1 = fast to 8 = slow
+Wakeup          |         | Start wake up sequence from Off to Dimmer value
+WakeupDuration  |         | Show current wake up light duration in seconds
+WakeupDuration  | 1..3600 | Set wake up light duration in seconds
 ```
 
 ### Domoticz
