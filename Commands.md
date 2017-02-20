@@ -6,6 +6,7 @@ The commands can also be executed via HTTP requests.
 ```
 http://sonoff/cm?cmnd=Power%20Off
 http://sonoff/cm?cmnd=Power%20On
+http://sonoff/cm?user=admin&password=joker&cmnd=Power%20Toggle
 ```
 
 The following command tables are available:
@@ -127,34 +128,38 @@ Upload          | 1        | Download ota firmware from your web server and rest
 
 ### Wifi
 ```
-Command         | Payload | Description
-----------------|---------|--------------------------------------------------------------------------------
-AP              |         | Show current selected Wifi Access Point (AP)
-AP              | 0       | Switch to other Wifi Access Point (AP)
-AP              | 1       | Select Wifi Access Point 1 (AP)
-AP              | 2       | Select Wifi Access Point 2 (AP)
-Hostname        |         | Show current hostname
-Hostname        | 1       | Reset hostname to ```user_config.h``` value and restart
-Hostname        | <host>  | Set hostname and restart
-Password        |         | Show AP1 current Wifi password
-Password        | 1       | Reset AP1 Wifi password to ```user_config.h``` value and restart
-Password        | <pswrd> | Set AP1 Wifi password and restart
-Password<x>     |         | Show APx current Wifi password
-Password<x>     | 1       | Reset APx Wifi password to ```user_config.h``` value and restart
-Password<x>     | <pswrd> | Set APx Wifi password and restart
-SSId | SSId<x>  |         | Show APx current Wifi SSId
-SSId | SSId<x>  | 1       | Reset APx Wifi SSId to ```user_config.h``` value and restart
-SSId | SSId<x>  | <ssid>  | Set APx Wifi SSId and restart
-WebServer       |         | Show current web server state
-WebServer       | 0       | Stop web server
-WebServer       | 1       | Start web server in user mode
-WebServer       | 2       | Start web server in admin mode
-WifiConfig      |         | Show current config tool
-WifiConfig      | 0       | Disable wifi config but restart (used with alternate AP)
-WifiConfig      | 1       | Start smart config for 1 minute and set as current config tool
-WifiConfig      | 2       | Start wifi manager (web server at 192.168.4.1) and set as current config tool
-WifiConfig      | 3       | Start WPS config for 1 minute and set as current config tool
-WifiConfig      | 4       | Disable wifi config but retry other AP without restart
+Command        | Payload   | Description
+---------------|-----------|-------------------------------------------------------------------------------
+AP             |           | Show current selected Wifi Access Point (AP)
+AP             | 0         | Switch to other Wifi Access Point (AP)
+AP             | 1         | Select Wifi Access Point 1 (AP)
+AP             | 2         | Select Wifi Access Point 2 (AP)
+Hostname       |           | Show current hostname
+Hostname       | 1         | Reset hostname to ``user_config.h`` value and restart
+Hostname       | <host>    | Set hostname and restart
+Password       |           | Show AP1 current Wifi password
+Password       | 1         | Reset AP1 Wifi password to ``user_config.h`` value and restart
+Password       | <passwrd> | Set AP1 Wifi password and restart
+Password<x>    |           | Show APx current Wifi password
+Password<x>    | 1         | Reset APx Wifi password to ``user_config.h`` value and restart
+Password<x>    | <passwrd> | Set APx Wifi password and restart
+SSId | SSId<x> |           | Show APx current Wifi SSId
+SSId | SSId<x> | 1         | Reset APx Wifi SSId to ``user_config.h`` value and restart
+SSId | SSId<x> | <ssid>    | Set APx Wifi SSId and restart
+WebPassword    |           | Show current web server Admin password for user WEB_USERNAME
+WebPassword    | 0 | Off   | Disable use of password
+WebPassword    | 1         | Reset password to WEB_PASSWORD in ``user_config.h``
+WebPassword    | <passwrd> | Set web server Admin password for user WEB_USERNAME
+WebServer      |           | Show current web server state
+WebServer      | 0 | Off   | Stop web server
+WebServer      | 1 | User  | Start web server in user mode
+WebServer      | 2 | Admin | Start web server in admin mode
+WifiConfig     |           | Show current config tool
+WifiConfig     | 0         | Disable wifi config but restart (used with alternate AP)
+WifiConfig     | 1         | Start smart config for 1 minute and set as current config tool
+WifiConfig     | 2         | Start wifi manager (web server at 192.168.4.1) and set as current config tool
+WifiConfig     | 3         | Start WPS config for 1 minute and set as current config tool
+WifiConfig     | 4         | Disable wifi config but retry other AP without restart
 ```
 
 ### MQTT
