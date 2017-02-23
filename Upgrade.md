@@ -7,7 +7,7 @@ This method is only available after the Sonoff-Tasmota firmware was flashed via 
 
 Build the firmware binary from source or download the latest build from [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). There are a few ways to upgrade the firmware:
 
-1. Use the "Upload Firmware" dialog on the Sonoff-Tasmota Web Interface to flash the download or built `firmware.bin`.
-2. Use the URL from [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) build server, where he publicly provides an automatic build of the latest firmware: http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin (*Github only provides SSL-encrypted links and the Sonoff isn't capable of connecting via https protocol.*)
+1. Use the "Upload Firmware" dialog on the Sonoff-Tasmota Web Interface to flash the downloaded or built `firmware.bin`.
+2. [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) publicly provides an automatic build of the latest firmware on his webserver. Enter this URL on the Sonoff-Tasmota web interface: http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin <br>*(Github only provides SSL-encrypted links and the Sonoff isn't capable of connecting via https protocol.)*
 3. Provide the binary on a web server and initiate the upgrade via the [`upgrade` command](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#management).
-4. If you're using [openHAB2](http://www.openhab.org/), you can use some rules for updating the Sonoff in openHAB-environment: [openHAB Maintenance](https://github.com/arendst/Sonoff-Tasmota/wiki/openHAB#maintenance-actions)
+4. If you're using [openHAB2](http://www.openhab.org/), you can use an automation rule to upgrade your Sonoffs from within your home automation: [openHAB Maintenance](https://github.com/arendst/Sonoff-Tasmota/wiki/openHAB#maintenance-actions)
