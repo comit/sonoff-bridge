@@ -60,12 +60,12 @@ PulseTime        |              | Show current PulseTime in 0.1 seconds
 PulseTime        | 0 | off      | (Default) Disable use of PulseTime
 PulseTime        | 1..111       | Set PulseTime with 0.1 seconds increment
 PulseTime        | 112..64900   | Set PulseTime with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
-SwitchMode       |              | Show current external switch mode
-SwitchMode       | 0            | (default) Set switch mode to TOGGLE
-SwitchMode       | 1            | Set switch mode to FOLLOW (0 = Off, 1 = On)
-SwitchMode       | 2            | Set switch mode to inverted FOLLOW (0 = On, 1 = Off)
-SwitchMode       | 3            | Set switch mode to PUSHBUTTON (Normally 1, 0 = toggle)
-SwitchMode       | 4            | Set switch mode to inverted PUSHBUTTON (Normally 0, 1 = toggle)
+SwitchMode<x>    |              | Show current external switch mode
+SwitchMode<x>    | 0            | (default) Set switch mode to TOGGLE
+SwitchMode<x>    | 1            | Set switch mode to FOLLOW (0 = Off, 1 = On)
+SwitchMode<x>    | 2            | Set switch mode to inverted FOLLOW (0 = On, 1 = Off)
+SwitchMode<x>    | 3            | Set switch mode to PUSHBUTTON (Normally 1, 0 = toggle)
+SwitchMode<x>    | 4            | Set switch mode to inverted PUSHBUTTON (Normally 0, 1 = toggle)
 ```
 
 ### Management
