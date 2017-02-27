@@ -182,9 +182,10 @@ client.disconnect()
 Ref: [Python MQTT](https://pypi.python.org/pypi/paho-mqtt/1.1)
 
 ### JavaScript
-Using the node module MQTT.js you can connect to the MQTT broker, send messages and listen to topics.
+Using the node module MQTT.js you can connect to the MQTT broker, send messages and listen to topics. Example uses code compatible with Node v4 or later.
 
 ```
+'use strict';
 const mqtt   = require('mqtt');
 
 const broker = 'mqtt://192.168.0.13';	// MQTT Broker hostname/IP address
