@@ -182,7 +182,54 @@ client.disconnect()
 Ref: [Python MQTT](https://pypi.python.org/pypi/paho-mqtt/1.1)
 
 ### JavaScript
-...is anyone interested in writing this section?...
+Using the node module MQTT.js you can connect to the MQTT broker, send messages and listen to topics.
+
+```
+const mqtt   = require('mqtt');
+
+const broker = 'mqtt://192.168.0.13';	// MQTT Broker hostname/IP address
+const client = mqtt.connect(broker);	// MQTT Client
+const device = 'switch1';				// Sonoff device identifier
+
+let state = 'OFF';
+let timer;
+
+client.on('connect', function () {
+
+	console.log(`${Date.now()} Client connected to ${broker}`);
+
+	client.subscribe(`stat/${device}/+`);
+	client.subscribe(`tele/${device}/+`);
+
+	client.publish(`cmnd/${device}/status`);
+
+	timer = setInterval(loop, 2000);
+});
+
+client.on('message', function (topic, message) {
+
+	if (topic === `stat/${device}/POWER`) {
+		state = message.toString();
+	}
+
+	console.log(`${Date.now()} RX ${topic} ${message}`);
+});
+
+function loop() {
+
+	if (!client.connected) {
+		return timer && timer.clearInterval();
+	}
+
+	let newState = state === 'OFF' ? 'ON' : 'OFF';
+
+	client.publish(`cmnd/${device}/power`, newState);
+
+	console.log(`${Date.now()} TX cmnd/${device}/power ${newState}`);
+}
+```
+
+Ref: [Node MQTT.js](https://github.com/mqttjs/MQTT.js)
 
 ### Android phone MQTT Dashboard
 The [MQTT Dashboard](https://play.google.com/store/apps/details?id=com.thn.iotmqttdashboard)
