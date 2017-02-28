@@ -24,7 +24,7 @@ As said, mostly painless. There are some deviations to this rule as I rearranged
 2. Easy migration from **Sonoff-MQTT-OTA-Arduino 1.0.11** to **Sonoff-Tasmota 3.9.x**.<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
 3. Easy migration from **Sonoff-MQTT-OTA-Arduino 3.1.0** to **Sonoff-Tasmota 4.x**.<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
 
-So to migrate from **Sonoff-MQTT-OTA-Arduino** versions below 3.x to **Sonoff-Tasmota 4.x** you will need to take two steps:
+So to migrate from **Sonoff-MQTT-OTA-Arduino versions before 3.1.0** to **Sonoff-Tasmota 4.x** you will need to take two steps:
 
 1. Migrate to **Sonoff-Tasmota 3.9.x**
 2. Migrate to **Sonoff-Tasmota 4.x**
