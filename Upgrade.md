@@ -16,9 +16,9 @@ Build the firmware binary from source or download the latest build from [the rel
 
 Until now several versions of my Sonoff software have been released starting with the C version Sonoff-MQTT-OTA followed by Sonoff-MQTT-OTA-Arduino and Sonoff-Tasmota.
 
-Migrating from earlier versions to newer versions is mostly painless as the settings are saved in the same location in flash while newer settings are appended.
+Migrating from one version to the next versions is mostly painless as the settings are saved in the same location in flash and newer settings are appended.
 
-As said, mostly painless. There are some deviations to this rule. In the next list you'll find an overview of supported migrations paths.
+As said, mostly painless. There are some deviations to this rule as I rearranged the flash. In the next list you'll find an overview of supported migrations paths.
 
 1. No migration from Sonoff-MQTT-OTA to Sonoff-MQTT-OTA-Arduino or Sonoff-Tasmota
 2. Easy migration from Sonoff-MQTT-OTA-Arduino 1.0.11 to Sonoff-Tasmota 3.9.x
