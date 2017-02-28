@@ -20,9 +20,9 @@ Migrating from one version to the next versions is mostly painless as the settin
 
 As said, mostly painless. There are some deviations to this rule as I rearranged the flash. In the next list you'll find an overview of supported migrations paths.
 
-1. No migration from **Sonoff-MQTT-OTA** to **Sonoff-MQTT-OTA-Arduino** or **Sonoff-Tasmota**<br/>The settings flash lay-out and OTA image locations are different from the Arduino versions
-2. Easy migration from **Sonoff-MQTT-OTA-Arduino 1.0.11** to **Sonoff-Tasmota 3.9.x**<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
-3. Easy migration from **Sonoff-MQTT-OTA-Arduino 3.0.9** to **Sonoff-Tasmota 4.x**<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
+1. No migration from **Sonoff-MQTT-OTA** to **Sonoff-MQTT-OTA-Arduino** or **Sonoff-Tasmota**.<br/>The settings flash lay-out and OTA image locations are different from the Arduino versions
+2. Easy migration from **Sonoff-MQTT-OTA-Arduino 1.0.11** to **Sonoff-Tasmota 3.9.x**.<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
+3. Easy migration from **Sonoff-MQTT-OTA-Arduino 3.1.0** to **Sonoff-Tasmota 4.x**.<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
 
 So to migrate from **Sonoff-MQTT-OTA-Arduino** versions below 3.x to **Sonoff-Tasmota 4.x** you will need to take two steps:
 
