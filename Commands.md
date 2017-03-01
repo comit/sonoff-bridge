@@ -78,7 +78,7 @@ Emulation       | 1        | Enable Belkin WeMo emulation for Alexa
 Emulation       | 2        | Enable Hue Bridge emulation for Alexa
 FriendlyName    |          | Show friendly name as used by emulation
 FriendlyName<x> |          | Show friendly name as used by emulation
-FriendlyName<x> | 1        | Reset friendly name to ```user_config.h``` value (FRIENDLY_NAME)
+FriendlyName<x> | 1        | Reset friendly name to user_config.h value (FRIENDLY_NAME)
 FriendlyName<x> | <name>   | Set friendly name
 Gpios           |          | Show available sensors and devices by name and index for user selection
 Gpio            |          | Show current GPIO usage for current module
@@ -91,10 +91,10 @@ Mqtt            |          | Show current MQTT state
 Mqtt            | 0 | off  | Disable MQTT
 Mqtt            | 1 | on   | Enable MQTT
 OtaUrl          |          | Show current otaurl
-OtaUrl          | 1        | Reset otaurl to ```user_config.h``` value
+OtaUrl          | 1        | Reset otaurl to user_config.h value (OTA_URL)
 OtaUrl          | <url>    | Set otaurl
-Reset           | 1        | Reset sonoff parameters to ```user_config.h``` values and restart
-Reset           | 2        | Erase flash, reset sonoff parameters to ```user_config.h``` values and restart
+Reset           | 1        | Reset sonoff parameters to user_config.h values and restart
+Reset           | 2        | Erase flash, reset sonoff parameters to user_config.h values and restart
 Restart         | 1        | Restart sonoff
 Restart         | 99       | Force restart sonoff without config save
 SaveData        |          | Save parameter changes and show current state as Manual, On or every x seconds
@@ -121,7 +121,7 @@ Status          | 9        | (Sonoff Pow only) Show Power thresholds
 Status          | 10       | Show sensor information
 Timezone        |          | Show current timezone
 Timezone        | -12..12  | Set timezone
-Timezone        | 99       | Use Daylight Saving parameters from ```user_config.h```
+Timezone        | 99       | Use Daylight Saving parameters from user_config.h (TIME_DST and TIME_STD)
 Upgrade         | 1        | Download ota firmware from your web server and restart
 Upload          | 1        | Download ota firmware from your web server and restart
 ```
@@ -135,20 +135,20 @@ AP             | 0         | Switch to other Wifi Access Point (AP)
 AP             | 1         | Select Wifi Access Point 1 (AP)
 AP             | 2         | Select Wifi Access Point 2 (AP)
 Hostname       |           | Show current hostname
-Hostname       | 1         | Reset hostname to ``user_config.h`` value and restart
+Hostname       | 1         | Reset hostname to MQTT_TOPIC-<4digits> and restart
 Hostname       | <host>    | Set hostname and restart
 Password       |           | Show AP1 current Wifi password
-Password       | 1         | Reset AP1 Wifi password to ``user_config.h`` value and restart
+Password       | 1         | Reset AP1 Wifi password to user_config.h (STA_PASS1) and restart
 Password       | <passwrd> | Set AP1 Wifi password and restart
 Password<x>    |           | Show APx current Wifi password
-Password<x>    | 1         | Reset APx Wifi password to ``user_config.h`` value and restart
+Password<x>    | 1         | Reset APx Wifi password to user_config.h (STA_PASS1 or STA_PASS2) and restart
 Password<x>    | <passwrd> | Set APx Wifi password and restart
 SSId | SSId<x> |           | Show APx current Wifi SSId
-SSId | SSId<x> | 1         | Reset APx Wifi SSId to ``user_config.h`` value and restart
+SSId | SSId<x> | 1         | Reset APx Wifi SSId to user_config.h (STA_SSID1 or STA_SSID2) and restart
 SSId | SSId<x> | <ssid>    | Set APx Wifi SSId and restart
 WebPassword    |           | Show current web server Admin password for user WEB_USERNAME
 WebPassword    | 0 | Off   | Disable use of password
-WebPassword    | 1         | Reset password to WEB_PASSWORD in ``user_config.h``
+WebPassword    | 1         | Reset password to value in user_config.h (WEB_PASSWORD)
 WebPassword    | <passwrd> | Set web server Admin password for user WEB_USERNAME
 WebServer      |           | Show current web server state
 WebServer      | 0 | Off   | Stop web server
@@ -174,22 +174,22 @@ ButtonTopic  | 0            | Disable use of MQTT button topic
 ButtonTopic  | 1            | Set MQTT button topic to Topic
 ButtonTopic  | <topic>      | Set MQTT button topic
 GroupTopic   |              | Show current MQTT group topic
-GroupTopic   | 1            | Reset MQTT group topic to ```user_config.h``` value and restart
+GroupTopic   | 1            | Reset MQTT group topic to user_config.h (MQTT_GRPTOPIC) and restart
 GroupTopic   | <grouptopic> | Set MQTT group topic and restart
 MqttClient   |              | Show current MQTT client
-MqttClient   | 1            | Reset MQTT client to ```user_config.h``` value and restart
+MqttClient   | 1            | Reset MQTT client to user_config.h (MQTT_CLIENT_ID) and restart
 MqttClient   | <client>     | Set MQTT client and restart. May use wildcard %06X to be replaced by last six characters of MAC address
 MqttHost     |              | Show current MQTT host
-MqttHost     | 1            | Reset MQTT host to ```user_config.h``` value and restart
+MqttHost     | 1            | Reset MQTT host to user_config.h (MQTT_HOST) and restart
 MqttHost     | <host>       | Set MQTT host and restart
 MqttPassword |              | Show current MQTT password
-MqttPassword | 1            | Reset MQTT password to ```user_config.h``` value and restart
+MqttPassword | 1            | Reset MQTT password to user_config.h (MQTT_PASS) and restart
 MqttPassword | <pswrd>      | Set MQTT password and restart
 MqttPort     |              | Show current MQTT port
-MqttPort     | 1            | Reset MQTT port to ```user_config.h``` value and restart
+MqttPort     | 1            | Reset MQTT port to user_config.h (MQTT_PORT) and restart
 MqttPort     | <port>       | Set MQTT port between 2 and 32766 and restart
 MqttUser     |              | Show current MQTT user name
-MqttUser     | 1            | Reset MQTT user name to ```user_config.h``` value and restart
+MqttUser     | 1            | Reset MQTT user name to user_config.h (MQTT_USER) and restart
 MqttUser     | <user>       | Set MQTT user name and restart
 Units        |              | Show current Units state
 Units        | 0 | off      | (default) Do not show units to messages
@@ -206,10 +206,10 @@ SwitchTopic  | 1            | Set MQTT switch topic to Topic
 SwitchTopic  | <topic>      | Set MQTT switch topic
 TelePeriod   |              | Show current telemetry period in seconds
 TelePeriod   | 0 | off      | Disable telemetry messages
-TelePeriod   | 1            | Reset telemetry period to ```user_config.h``` value
+TelePeriod   | 1            | Reset telemetry period to user_config.h (TELE_PERIOD)
 TelePeriod   | <secs>       | Set telemetry period between 2 and 3600 seconds
 Topic        |              | Show current MQTT topic
-Topic        | 1            | Reset MQTT topic to ```user_config.h``` value and restart
+Topic        | 1            | Reset MQTT topic to user_config.h (MQTT_TOPIC) and restart
 Topic        | <topic>      | Set MQTT topic  AND button topic and restart
 ```
 
@@ -218,10 +218,10 @@ Topic        | <topic>      | Set MQTT topic  AND button topic and restart
 Command         | Payload | Description
 ----------------|---------|--------------------------------------------------------
 LogHost         |         | Show current syslog host
-LogHost         | 1       | Reset syslog host to ```user_config.h``` value
+LogHost         | 1       | Reset syslog host to user_config.h (SYS_LOG_HOST)
 LogHost         | <host>  | Set syslog host
 LogPort         |         | Show current syslog port
-LogPort         | 1       | Reset syslog port to ```user_config.h``` value
+LogPort         | 1       | Reset syslog port to user_config.h (SYS_LOG_PORT)
 LogPort         | <port>  | Set syslog port between 2 and 32766
 SerialLog       |         | Show current serial log level
 SerialLog       | 0 | off | Disable serial logging
@@ -307,13 +307,13 @@ DomoticzIdx<x>       |         | Show current Domoticz relay1 to relay4 index
 DomoticzIdx<x>       | 0 | off | (default) Disable use of Domoticz
 DomoticzIdx<x>       | <idx>   | Set Domoticz relay1 to relay4 index
 DomoticzInTopic      |         | Show current Domoticz MQTT In Topic
-DomoticzInTopic      | 1       | Reset Domoticz MQTT In Topic to ```user_config.h``` value and restart
+DomoticzInTopic      | 1       | Reset Domoticz MQTT In Topic to user_config.h (DOMOTICZ_IN_TOPIC) and restart
 DomoticzInTopic      | <topic> | Set Domoticz MQTT In Topic and restart
 DomoticzKeyIdx<x>    |         | Show current Domoticz key1 to key4 index
 DomoticzKeyIdx<x>    | 0       | (default) Disable use of key1 to key4 index
 DomoticzKeyIdx<x>    | <idx>   | Set Domoticz key1 to key4 index. To use it you'll need to enable ButtonTopic too
 DomoticzOutTopic     |         | Show current Domoticz MQTT Out Topic
-DomoticzOutTopic     | 1       | Reset Domoticz MQTT Out Topic to ```user_config.h``` value and restart
+DomoticzOutTopic     | 1       | Reset Domoticz MQTT Out Topic to user_config.h (DOMOTICZ_OUT_TOPIC) and restart
 DomoticzOutTopic     | <topic> | Set Domoticz MQTT Out Topic and restart
 DomoticzSensorIdx<x> |         | Show current Domoticz sensor1 to sensor5 index
 DomoticzSensorIdx<x> | 0       | (default) Disable use of sensor1 to sensor5 index
@@ -368,8 +368,8 @@ Width            | 0..4     | Set led group width used by Schemes 3 - 9
 Command   | Payload                 | Description
 ----------|-------------------------|------------------------------------------------------
 IRsend    | {"protocol": "<proto>", | Send IR remote control as JSON encapsulated command.
-          |   "bits": 1..32         | <proto> is NEC, SONY, RC5, RC6, DISH, JVC or SAMSUNG
-          |   "data": 1..(2^32)-1}  | bits are the required number of data bits.
+          |  "bits": 1..32          | <proto> is NEC, SONY, RC5, RC6, DISH, JVC or SAMSUNG
+          |  "data": 1..(2^32)-1}   | bits are the required number of data bits.
           |                         | data is the data frame as 32 bit unsigned integer.
           |                         | See http://www.lirc.org/ for more info.
 ```

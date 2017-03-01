@@ -29,7 +29,7 @@ Install the ESP8266 Arduino development environment from [esp8266 Arduino](https
 - Follow the procedure from the ESP8266 Arduino README.md to install the development environment using the Arduino IDE Board Manager
 - Copy the ``sonoff`` directory to your sketchfolder
 - Download and unzip the [pubsubclient](https://github.com/knolleary/pubsubclient/releases) MQTT library **version 2.6** into directory ``portable\sketchbook\libraries`` and rename to ``pubsubclient``. Update default value in file ``pubsubclient\src\PubSubClient.h``  
-  - Change ``MQTT_MAX_PACKET_SIZE`` from 128 to at least 400  
+  - Change ``MQTT_MAX_PACKET_SIZE`` from 128 to at least 512  
 - Install the ArduinoJson library **version 5.8.3** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries)
 - If option ``USE_DS18x20`` is enabled in ``user_config.h`` install the OneWire library **version 2.3.3** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries)
 - If option ``USE_IR_REMOTE`` is enabled in ``user_config.h`` download and unzip the [IRremoteESP8266](https://github.com/sebastienwarin/IRremoteESP8266) library **version fee16e880b** into directory ``portable\sketchbook\libraries`` and rename to ``IRremoteESP8266``
