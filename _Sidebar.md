@@ -17,6 +17,7 @@
 - [**openHAB**](openHAB)
 - [**Domoticz**](Domoticz)
 - [**Home Assistant**](Home-Assistant)
+- [**HomeBridge**](Homebridge)
 
 **Tips**
 - [**MQTT for Newbies**](MQTT-for-Newbies)
