@@ -6,6 +6,7 @@
 - [**Upload**](Upload)
 - [**Upgrade**](Upgrade)
 - [**First Steps**](Initital-Configuration)
+- [**Tutorials**](Tutorials)
 
 **Usage**
 - [**Button**](Button-usage)
