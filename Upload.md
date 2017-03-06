@@ -27,3 +27,12 @@ In the Arduino IDE for sonoff select from `Tools Board Generic ESP8266 Module` (
 - Port: Your COM port connected to sonoff
 
 Verify and/or compile the project and upload to your sonoff using the serial connection established above.
+
+## Hints
+
+Before compiling consider modification of `STA_SSID1` and `STA_PASS1` values inside of `user_config.h` to match your WiFi SSID and WiFi password.
+
+    #define STA_SSID1              "indebuurt1"      // [Ssid1] Wifi SSID 
+    #define STA_PASS1              "VnsqrtnrsddbrN"  // [Password1] Wifi password 
+
+This step simplifies further [first steps](Initital-Configuration), as Sonoff will automatically recognize and join your WiFi.
