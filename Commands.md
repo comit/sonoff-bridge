@@ -72,6 +72,9 @@ SwitchMode<x>    | 4            | Set switch mode to inverted PUSHBUTTON (Normal
 ```
 Command         | Payload  | Description
 ----------------|----------|-------------------------------------------------------------------------------
+ButtonRestrict  |          | Show current button multi press mode
+ButtonRestrict  | 0 | Off  | (default) Allow all button actions
+ButtonRestrict  | 1 | On   | Allow only single and double short press button actions
 Emulation       |          | Show current emulation state
 Emulation       | 0 | off  | Disable emulation
 Emulation       | 1        | Enable Belkin WeMo emulation for Alexa
