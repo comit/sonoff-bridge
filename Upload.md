@@ -35,4 +35,4 @@ Before compiling consider modification of `STA_SSID1` and `STA_PASS1` values ins
     #define STA_SSID1              "indebuurt1"      // [Ssid1] Wifi SSID 
     #define STA_PASS1              "VnsqrtnrsddbrN"  // [Password1] Wifi password 
 
-This step simplifies further [first steps](Initital-Configuration), as Sonoff will automatically recognize and join your WiFi.
+This operation simplifies further [first steps](Initital-Configuration), as Sonoff will automatically recognize and join your WiFi.
