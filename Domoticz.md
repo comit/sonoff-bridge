@@ -30,17 +30,17 @@ Make a new virtual switch and remeber its Idx number.
 
 ## Sonoff-Tasmota
 <img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/domoticz3.jpg" width="250" align="right" /> 
-Sonoff provides different ways to configure Domoticz parameters.
+Sonoff provides different ways to configure Domoticz parameters. Choose the method you prefer:
 
 - Use the webinterface and select ```Configuration - Configure Domoticz```
     1. Set ```In topic``` to ```domoticz/in``` as hardcoded in Domoticz
     2. Set ```Out topic``` to ```domoticz/out``` as hardcoded in Domoticz
     3. Configure ```Idx 1``` to the value read in step 2.i
-- Use MQTT and execute commands
+- Use MQTT and execute commands (if necessary, replace ```sonoff``` with unique topic you configured in Initital Configuration, see point 5 [there](Initital-Configuration)):
     1. ```cmnd/sonoff/DomoticzInTopic``` with payload ```domoticz/in``` as hardcoded in Domoticz
     2. ```cmnd/sonoff/DomoticzOutTopic``` with payload ```domoticz/out``` as hardcoded in Domoticz
     3. ```cmnd/sonoff/DomoticzIdx1``` with payload value read in step 2.i
-- Use the serial interface and execute commands
+- Use the serial interface and execute commands:
     1. ```DomoticzInTopic``` with ```domoticz/in``` as hardcoded in Domoticz
     2. ```DomoticzOutTopic``` with ```domoticz/out``` as hardcoded in Domoticz
     3. ```DomoticzIdx1``` with the value read in step 2.i
