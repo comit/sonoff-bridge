@@ -4,7 +4,7 @@ This includes a "User Test" module type that you can experiment with
 
 You can add an additional type by editing both the mytmplt and module_t arrays to add your own module type (make sure you keep the order of entries in the two arrays the same)
 
-The module definition is a list of what each of the 17 GPIO pins on the ESP-8266 are defined to be. Each item in the list can be either 0 (unused), or a pin definition from the list below.
+The module definition is a list that contains the module name, followed by a definition of what each of the 17 GPIO pins on the ESP-8266 are defined to be. Each item in the list can be either 0 (unused), or a pin definition from the list below.
 
 As of 3/9/17 (4.0.2) these functions are:
 
