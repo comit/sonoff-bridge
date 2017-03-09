@@ -1,6 +1,7 @@
 One capability of Tasmota is that you can connect additional things to available pins on the ESP8266 that controls these devices
 
 If a pin is defined as GPIO_USER in the module template, you can assign it one of the following functions:
+```
 * GPIO_NONE,           // Not used
 * GPIO_DHT11,          // DHT11
 * GPIO_DHT21,          // DHT21, AM2301
@@ -34,7 +35,7 @@ If a pin is defined as GPIO_USER in the module template, you can assign it one o
 * GPIO_LED2_INV,
 * GPIO_LED3_INV,
 * GPIO_LED4_INV
-
+```
 
 # Examples
 
