@@ -33,3 +33,5 @@
 - [**Remote Button**](Control-a-Sonoff-using-a-remote-button)
 - [**Modified Kaku**](Modify-KaKu-to-WKaKu-Power-Socket)
 - [**IR Extension**](https://github.com/altelch/SonoffIR "IR extension")
+- [**Wiring additional things to a module**](Expanding-Sonoffs)
+- [**Defining new module types**](Adding-new-Module-types)
