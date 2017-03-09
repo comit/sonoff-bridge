@@ -19,19 +19,19 @@ If a pin is defined as GPIO_USER in the module template, you can assign it one o
 * GPIO_KEY2,
 * GPIO_KEY3,
 * GPIO_KEY4,
-* GPIO_REL1,           // Relays
+* GPIO_REL1,           // Relays (0 = off, 1 = on)
 * GPIO_REL2,
 * GPIO_REL3,
 * GPIO_REL4,
-* GPIO_REL1_INV,
+* GPIO_REL1_INV,       // Relays with inverted signal control (0 = on, 1 = off)
 * GPIO_REL2_INV,
 * GPIO_REL3_INV,
 * GPIO_REL4_INV,
-* GPIO_LED1,           // Leds
+* GPIO_LED1,           // Leds (0 = off, 1 = on)
 * GPIO_LED2,
 * GPIO_LED3,
 * GPIO_LED4,
-* GPIO_LED1_INV,
+* GPIO_LED1_INV,       // Leds with inverted signal control (0 = on, 1 = off)
 * GPIO_LED2_INV,
 * GPIO_LED3_INV,
 * GPIO_LED4_INV
