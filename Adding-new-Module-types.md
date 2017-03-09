@@ -8,6 +8,14 @@ The module definition is a list that contains the module name, followed by a def
 
 As of 3/9/17 (4.0.3) these functions are:
 ```
+* GPIO_DHT11,          // DHT11
+* GPIO_DHT21,          // DHT21, AM2301
+* GPIO_DHT22,          // DHT22, AM2302, AM2321
+* GPIO_DSB,            // Single wire DS18B20 or DS18S20
+* GPIO_I2C_SCL,        // I2C SCL
+* GPIO_I2C_SDA,        // I2C SDA
+* GPIO_WS2812,         // WS2812 Led string
+* GPIO_IRSEND,         // IR remote
 * GPIO_SWT1,           // User connected external switches
 * GPIO_SWT2,
 * GPIO_SWT3,
