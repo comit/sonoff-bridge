@@ -14,7 +14,26 @@ If a pin is defined as GPIO_USER in the module template, you can assign it one o
 * GPIO_SWT2,
 * GPIO_SWT3,
 * GPIO_SWT4,
-* GPIO_SENSOR_END
+* GPIO_KEY1,           // Button usually connected to GPIO0
+* GPIO_KEY2,
+* GPIO_KEY3,
+* GPIO_KEY4,
+* GPIO_REL1,           // Relays
+* GPIO_REL2,
+* GPIO_REL3,
+* GPIO_REL4,
+* GPIO_REL1_INV,
+* GPIO_REL2_INV,
+* GPIO_REL3_INV,
+* GPIO_REL4_INV,
+* GPIO_LED1,           // Leds
+* GPIO_LED2,
+* GPIO_LED3,
+* GPIO_LED4,
+* GPIO_LED1_INV,
+* GPIO_LED2_INV,
+* GPIO_LED3_INV,
+* GPIO_LED4_INV
 
 
 # Examples
