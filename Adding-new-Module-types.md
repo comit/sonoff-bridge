@@ -51,3 +51,5 @@ As of 3/9/17 (4.0.3) these functions are:
 * GPIO_HLW_CF,         // HLW8012 CF power (Sonoff Pow)
 * GPIO_USER            // User configurable
 ```
+
+The user can only change GPIO functionality for pins that are defined as GPIO_USER in the module.
