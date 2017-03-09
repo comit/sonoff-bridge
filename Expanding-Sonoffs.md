@@ -22,7 +22,10 @@ If a pin is defined as GPIO_USER in the module template, you can assign it one o
 1.    If you take a Sonoff Basic and connect a switch between pin4 (ground) and pin5 (GPIO4) of the 5 pin programming header you now have a second switch connected to the device. You can set this through the module config page or from the command line with
     `gpio 4 switch1`
 
-    now when you hit the built-in switch you should get power1 instead of just power, and if you hit the second switch you will get power2
+    If you have fewer than two relays on the module, the additional switch(es) will not show up any different than the built-in switch and will control the single relay unless you set switchtopic to something other than 0 (either 1 or a custom topic). Once this is done the built-in switch will produce POWER1 while the new switch will produce POWER2
+
+    With more relays on the modules, the additional switch will create additional POWER\<n> events without the need to set switchtopic.
+
     you can set the mode of each switch individually with switchmode1 or switchmode2
 
 2.    Instead of connecting a switch, you could connect a 4-pin 2.5mm jack, with the pins wired:
