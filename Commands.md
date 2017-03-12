@@ -43,11 +43,11 @@ LedState         | 5            | Show power state and MQTT publications as a le
 LedState         | 6            | Show all MQTT messages as a led blink
 LedState         | 7            | Show power state and MQTT messages as a led blink
 Light | Power<x> |              | Show current power state of relay<x> as On or Off
-Light | Power<x> | 0 | off      | Turn power Off
-Light | Power<x> | 1 | on       | Turn power On
-Light | Power<x> | 2 | toggle   | Toggle power
-Light | Power<x> | 3 | blink    | Blink power
-Light | Power<x> | 4 | blinkoff | Stop blinking power
+Light | Power<x> | 0 | off      | Turn relay<x> power Off
+Light | Power<x> | 1 | on       | Turn relay<x> power On
+Light | Power<x> | 2 | toggle   | Toggle power of relay<x>
+Light | Power<x> | 3 | blink    | Blink power of relay<x>
+Light | Power<x> | 4 | blinkoff | Stop blinking power of relay<x>
 PowerOnState     |              | Show current relay power on state
 PowerOnState     | 0 | off      | Keep relay(s) off after power on
 PowerOnState     | 1 | on       | Turn relay(s) on after power on
@@ -56,10 +56,10 @@ PowerOnState     | 3            | (default) Turn relay(s) on as last saved
 PowerRetain      |              | Show current MQTT power retain state
 PowerRetain      | 0 | off      | (default) Disable MQTT power retain on status update
 PowerRetain      | 1 | on       | Enable MQTT power retain on status update
-PulseTime        |              | Show current PulseTime in 0.1 seconds
-PulseTime        | 0 | off      | (Default) Disable use of PulseTime
-PulseTime        | 1..111       | Set PulseTime with 0.1 seconds increment
-PulseTime        | 112..64900   | Set PulseTime with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
+PulseTime<x>     |              | Show current PulseTime of relay<x> in 0.1 seconds
+PulseTime<x>     | 0 | off      | (Default) Disable use of PulseTime for relay<x>
+PulseTime<x>     | 1..111       | Set PulseTime for relay<x> with 0.1 seconds increment
+PulseTime<x>     | 112..64900   | Set PulseTime for relay<x> with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
 SwitchMode<x>    |              | Show current external switch mode
 SwitchMode<x>    | 0            | (default) Set switch mode to TOGGLE
 SwitchMode<x>    | 1            | Set switch mode to FOLLOW (0 = Off, 1 = On)
