@@ -140,6 +140,8 @@ AP             | 2         | Select Wifi Access Point 2 (AP)
 Hostname       |           | Show current hostname
 Hostname       | 1         | Reset hostname to MQTT_TOPIC-<4digits> and restart
 Hostname       | <host>    | Set hostname and restart
+NtpServer<x>   |           | Show NTP server 1 to 3 name or ip address
+NtpServer<x>   | <ntphost  | Set NTP server 1 to 3 name or ip address
 Password       |           | Show AP1 current Wifi password
 Password       | 1         | Reset AP1 Wifi password to user_config.h (STA_PASS1) and restart
 Password       | <passwrd> | Set AP1 Wifi password and restart
