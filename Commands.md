@@ -82,7 +82,7 @@ Emulation       | 2        | Enable Hue Bridge emulation for Alexa
 FriendlyName    |          | Show friendly name as used by emulation
 FriendlyName<x> |          | Show friendly name as used by emulation
 FriendlyName<x> | 1        | Reset friendly name to user_config.h value (FRIENDLY_NAME)
-FriendlyName<x> | <name>   | Set friendly name
+FriendlyName<x> | <name>   | Set friendly name (32 chars max)
 Gpios           |          | Show available sensors and devices by name and index for user selection
 Gpio            |          | Show current GPIO usage for current module
 Gpio<pin>       | <sensor> | Select sensor to be connected to <pin>
@@ -95,7 +95,7 @@ Mqtt            | 0 | off  | Disable MQTT
 Mqtt            | 1 | on   | Enable MQTT
 OtaUrl          |          | Show current otaurl
 OtaUrl          | 1        | Reset otaurl to user_config.h value (OTA_URL)
-OtaUrl          | <url>    | Set otaurl
+OtaUrl          | <url>    | Set otaurl (100 chars max)
 Reset           | 1        | Reset sonoff parameters to user_config.h values and restart
 Reset           | 2        | Erase flash, reset sonoff parameters to user_config.h values and restart
 Restart         | 1        | Restart sonoff
@@ -139,22 +139,22 @@ AP             | 1         | Select Wifi Access Point 1 (AP)
 AP             | 2         | Select Wifi Access Point 2 (AP)
 Hostname       |           | Show current hostname
 Hostname       | 1         | Reset hostname to MQTT_TOPIC-<4digits> and restart
-Hostname       | <host>    | Set hostname and restart
+Hostname       | <host>    | Set hostname (32 chars max) and restart
 NtpServer<x>   |           | Show NTP server 1 to 3 name or ip address
-NtpServer<x>   | <ntphost  | Set NTP server 1 to 3 name or ip address
+NtpServer<x>   | <ntphost  | Set NTP server 1 to 3 name or ip address (32 chars max)
 Password       |           | Show AP1 current Wifi password
 Password       | 1         | Reset AP1 Wifi password to user_config.h (STA_PASS1) and restart
-Password       | <passwrd> | Set AP1 Wifi password and restart
+Password       | <passwrd> | Set AP1 Wifi password (64 chars max) and restart
 Password<x>    |           | Show APx current Wifi password
 Password<x>    | 1         | Reset APx Wifi password to user_config.h (STA_PASS1 or STA_PASS2) and restart
-Password<x>    | <passwrd> | Set APx Wifi password and restart
+Password<x>    | <passwrd> | Set APx Wifi password (64 chars max) and restart
 SSId | SSId<x> |           | Show APx current Wifi SSId
 SSId | SSId<x> | 1         | Reset APx Wifi SSId to user_config.h (STA_SSID1 or STA_SSID2) and restart
-SSId | SSId<x> | <ssid>    | Set APx Wifi SSId and restart
+SSId | SSId<x> | <ssid>    | Set APx Wifi SSId (32 chars max) and restart
 WebPassword    |           | Show current web server Admin password for user WEB_USERNAME
 WebPassword    | 0 | Off   | Disable use of password
 WebPassword    | 1         | Reset password to value in user_config.h (WEB_PASSWORD)
-WebPassword    | <passwrd> | Set web server Admin password for user WEB_USERNAME
+WebPassword    | <passwrd> | Set web server Admin password for user WEB_USERNAME (32 chars max)
 WebServer      |           | Show current web server state
 WebServer      | 0 | Off   | Stop web server
 WebServer      | 1 | User  | Start web server in user mode
@@ -170,32 +170,34 @@ WifiConfig     | 4         | Disable wifi config but retry other AP without rest
 ### MQTT
 ```
 Command      | Payload      | Description
--------------|--------------|------------------------------------------------------------------------------
+-------------|--------------|-----------------------------------------------------------------------------
 ButtonRetain |              | Show current button MQTT retain flag state
 ButtonRetain | 0 | off      | (default) Disable use of MQTT retain flag
 ButtonRetain | 1 | on       | Set ButtonTopic to Topic and enable MQTT retain flag on button press
 ButtonTopic  |              | Show current MQTT button topic
 ButtonTopic  | 0            | Disable use of MQTT button topic
 ButtonTopic  | 1            | Set MQTT button topic to Topic
-ButtonTopic  | <topic>      | Set MQTT button topic
+ButtonTopic  | <topic>      | Set MQTT button topic (32 chars max)
 GroupTopic   |              | Show current MQTT group topic
 GroupTopic   | 1            | Reset MQTT group topic to user_config.h (MQTT_GRPTOPIC) and restart
-GroupTopic   | <grouptopic> | Set MQTT group topic and restart
+GroupTopic   | <grouptopic> | Set MQTT group topic (32 chars max) and restart
 MqttClient   |              | Show current MQTT client
 MqttClient   | 1            | Reset MQTT client to user_config.h (MQTT_CLIENT_ID) and restart
-MqttClient   | <client>     | Set MQTT client and restart. May use wildcard %06X to be replaced by last six characters of MAC address
+MqttClient   | <client>     | Set MQTT client (32 chars max) and restart. May use wildcard %06X to be replaced by last six characters of MAC address
+MqttFingerprint |           | (TLS only) Show current fingerprint
+MqttFingerprint | <print>   | (TLS only) Set current fingerprint as 20 space separated bytes (59 chars max)
 MqttHost     |              | Show current MQTT host
 MqttHost     | 1            | Reset MQTT host to user_config.h (MQTT_HOST) and restart
-MqttHost     | <host>       | Set MQTT host and restart
+MqttHost     | <host>       | Set MQTT host (32 chars max) and restart
 MqttPassword |              | Show current MQTT password
 MqttPassword | 1            | Reset MQTT password to user_config.h (MQTT_PASS) and restart
-MqttPassword | <pswrd>      | Set MQTT password and restart
+MqttPassword | <pswrd>      | Set MQTT password (32 chars max) and restart
 MqttPort     |              | Show current MQTT port
 MqttPort     | 1            | Reset MQTT port to user_config.h (MQTT_PORT) and restart
 MqttPort     | <port>       | Set MQTT port between 2 and 32766 and restart
 MqttUser     |              | Show current MQTT user name
 MqttUser     | 1            | Reset MQTT user name to user_config.h (MQTT_USER) and restart
-MqttUser     | <user>       | Set MQTT user name and restart
+MqttUser     | <user>       | Set MQTT user name (32 chars max) and restart
 Units        |              | Show current Units state
 Units        | 0 | off      | (default) Do not show units to messages
 Units        | 1 | on       | Add units to messages
@@ -208,14 +210,14 @@ SwitchRetain | 1 | on       | Set ButtonTopic to Topic and enable MQTT retain fl
 SwitchTopic  |              | Show current MQTT switch topic
 SwitchTopic  | 0            | Disable use of MQTT switch topic
 SwitchTopic  | 1            | Set MQTT switch topic to Topic
-SwitchTopic  | <topic>      | Set MQTT switch topic
+SwitchTopic  | <topic>      | Set MQTT switch topic (32 chars max)
 TelePeriod   |              | Show current telemetry period in seconds
 TelePeriod   | 0 | off      | Disable telemetry messages
 TelePeriod   | 1            | Reset telemetry period to user_config.h (TELE_PERIOD)
 TelePeriod   | <secs>       | Set telemetry period between 2 and 3600 seconds
 Topic        |              | Show current MQTT topic
 Topic        | 1            | Reset MQTT topic to user_config.h (MQTT_TOPIC) and restart
-Topic        | <topic>      | Set MQTT topic  AND button topic and restart
+Topic        | <topic>      | Set MQTT topic (32 chars max) AND button topic and restart
 ```
 
 ### Logging
@@ -224,7 +226,7 @@ Command         | Payload | Description
 ----------------|---------|--------------------------------------------------------
 LogHost         |         | Show current syslog host
 LogHost         | 1       | Reset syslog host to user_config.h (SYS_LOG_HOST)
-LogHost         | <host>  | Set syslog host
+LogHost         | <host>  | Set syslog host (32 chars max)
 LogPort         |         | Show current syslog port
 LogPort         | 1       | Reset syslog port to user_config.h (SYS_LOG_PORT)
 LogPort         | <port>  | Set syslog port between 2 and 32766
@@ -313,13 +315,13 @@ DomoticzIdx<x>       | 0 | off | (default) Disable use of Domoticz
 DomoticzIdx<x>       | <idx>   | Set Domoticz relay1 to relay4 index
 DomoticzInTopic      |         | Show current Domoticz MQTT In Topic
 DomoticzInTopic      | 1       | Reset Domoticz MQTT In Topic to user_config.h (DOMOTICZ_IN_TOPIC) and restart
-DomoticzInTopic      | <topic> | Set Domoticz MQTT In Topic and restart
+DomoticzInTopic      | <topic> | Set Domoticz MQTT In Topic (32 chars max) and restart
 DomoticzKeyIdx<x>    |         | Show current Domoticz key1 to key4 index
 DomoticzKeyIdx<x>    | 0       | (default) Disable use of key1 to key4 index
 DomoticzKeyIdx<x>    | <idx>   | Set Domoticz key1 to key4 index. To use it you'll need to enable ButtonTopic too
 DomoticzOutTopic     |         | Show current Domoticz MQTT Out Topic
 DomoticzOutTopic     | 1       | Reset Domoticz MQTT Out Topic to user_config.h (DOMOTICZ_OUT_TOPIC) and restart
-DomoticzOutTopic     | <topic> | Set Domoticz MQTT Out Topic and restart
+DomoticzOutTopic     | <topic> | Set Domoticz MQTT Out Topic (32 chars max) and restart
 DomoticzSensorIdx<x> |         | Show current Domoticz sensor1 to sensor5 index
 DomoticzSensorIdx<x> | 0       | (default) Disable use of sensor1 to sensor5 index
 DomoticzSensorIdx<x> | <idx>   | Set Domoticz sensor1 to sensor5 index.
