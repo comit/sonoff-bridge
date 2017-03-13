@@ -1,4 +1,4 @@
-# Notes on MQTT for Newbies
+# MQTT Overview
 
 ## MQTT Message flow 
 
@@ -19,6 +19,23 @@ There are lots of ways to control your devices. One typically uses a laptop/desk
 |`tele`|some Sonoffs (like temperature measuring devices)|report unsolicited telemetry info at periodic intervals|
 
 <style type="text/css"> .codehilite {padding: 5px 15px;  background: #e0e0e0; } </style>
+
+## Configuring MQTT
+MQTT settings can be initally setup in the web interface and thereafter configured by commands
+### Enable MQTT
+Enable MQTT with the tickbox under Configuration -> Configuration Other
+
+### Configure MQTT Settings
+Once enabled MQTT can be configured at Configuration -> Configure MQTT. The following limits apply:
+
+|Field|Size|Notes
+|---|---|---
+|Host name |32|URL or ip address. Note that without a special firmware build SSL is NOT supported. 
+|Port|uint|0-65535
+|Client Id|32|Unique ID of this device, should be unique for every device - allows device to be individually addressed
+|Username|32|Username for MQTT server authentication
+|Password|32|Password for MQTT server authentication
+|Topic|32|Group topic - should be the same for all devices or all similar devices
 
 ## Programming examples for the Sonoff-MQTT-OTA-Arduino
 
@@ -251,3 +268,20 @@ user interface.
 Alternatively, if you're using a home automation system, there may be an Andriod/iOS app to link to your home automation.
 That's not covered in this how-to.
 
+## Troubleshooting
+
+### CONNECT FAILED
+    MQTT: CONNECT FAILED x.x.x.x:x, rc {code}. Retry in 10 seconds
+
+Status codes are mapped here http://pubsubclient.knolleary.net/api.html#state
+
+    -4: MQTT_CONNECTION_TIMEOUT - the server didn't respond within the keepalive time
+    -3: MQTT_CONNECTION_LOST - the network connection was broken
+    -2: MQTT_CONNECT_FAILED - the network connection failed
+    -1: MQTT_DISCONNECTED - the client is disconnected cleanly
+     0: MQTT_CONNECTED - the cient is connected
+     1: MQTT_CONNECT_BAD_PROTOCOL - the server doesn't support the requested version of MQTT
+     2: MQTT_CONNECT_BAD_CLIENT_ID - the server rejected the client identifier
+     3: MQTT_CONNECT_UNAVAILABLE - the server was unable to accept the connection
+     4: MQTT_CONNECT_BAD_CREDENTIALS - the username/password were rejected
+     5: MQTT_CONNECT_UNAUTHORIZED - the client was not authorized to connect
