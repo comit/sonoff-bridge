@@ -21,12 +21,12 @@ There are lots of ways to control your devices. One typically uses a laptop/desk
 <style type="text/css"> .codehilite {padding: 5px 15px;  background: #e0e0e0; } </style>
 
 ## Configuring MQTT
-MQTT settings can be initally setup in the web interface and thereafter configured by commands
+MQTT settings can be initially setup in the web interface and thereafter configured by commands.
 ### Enable MQTT
 Enable MQTT with the tickbox under Configuration -> Configuration Other
 
 ### Configure MQTT Settings
-Once enabled MQTT can be configured at Configuration -> Configure MQTT. The following limits apply:
+Once enabled MQTT can be configured at Configuration -> Configure MQTT. Note: that by default firmware will search for an MQTT broker using mDNS by searching for a tcp record mqtt.local.
 
 |Field|Size|Notes
 |---|---|---
