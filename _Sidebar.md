@@ -21,7 +21,7 @@
 - [**HomeBridge**](Homebridge)
 
 **Tips**
-- [**MQTT for Newbies**](MQTT-for-Newbies)
+- [**MQTT Overview**](MQTT-Overview)
 - [**General**](Tips)
 - [**Sonoff Dual**](Sonoff-Dual)
 - [**Sonoff Pow**](Sonoff-Pow)
