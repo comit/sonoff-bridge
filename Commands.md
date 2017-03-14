@@ -122,6 +122,7 @@ Status          | 7        | Show Real Time Clock information
 Status          | 8        | (Sonoff Pow only) Show Power usage
 Status          | 9        | (Sonoff Pow only) Show Power thresholds
 Status          | 10       | Show sensor information
+Status          | 11       | Show power information equal to teleperiod state message
 Timezone        |          | Show current timezone
 Timezone        | -12..12  | Set timezone
 Timezone        | 99       | Use Daylight Saving parameters from user_config.h (TIME_DST and TIME_STD)
