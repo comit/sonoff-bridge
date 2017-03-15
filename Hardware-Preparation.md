@@ -88,7 +88,7 @@ A solution that works for me is shown in the schematic below using two opto coup
 
 ### Sonoff Touch
 
-<img alt="Sonoff Touch EU" src="https://github.com/arendst/arendst.github.io/blob/master/media/toucheu.jpg" width="230" align="right" /> 
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/toucheu.jpg" width="230" align="right" /> 
 As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have to make some changes to the proposed Arduino IDE settings as follows:
 
 - Tools Board Generic ESP8285 Module
@@ -96,7 +96,7 @@ As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have 
 
 Programming the Sonoff touch is as easy as the Sonoff Basic.
 
-<img alt="Sonoff Touch US" src="https://github.com/arendst/arendst.github.io/blob/master/media/touchus.jpg" width="230" align="right" /> 
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/touchus.jpg" width="230" align="right" /> 
 Remove the top PCA containing the ESP8285 from the assembly as shown in the pictures on the right.
 
 The pictures show for both the EU version (top) and the US version (bottom) where to connect your FTDI cable (Gnd, TxD, RxD and 3.3V). The GPIO0 pin needs to be connected to Ground to put the Sonoff Touch in programming mode.
