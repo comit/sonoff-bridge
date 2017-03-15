@@ -1,11 +1,10 @@
 ## Sonoff-Tasmota
-<img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoffbasic.jpg" width="250" align="right" /> 
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoffbasic.jpg" width="250" align="right" /> 
 Provide ESP8266 based Sonoff by [iTead Studio](https://www.itead.cc/) and ElectroDragon IoT Relay with Serial, Web and MQTT control allowing 'Over the Air' or OTA firmware updates using Arduino IDE.
 
 ## Supported devices
 The following devices are supported with Serial, Web and MQTT control:
-- [iTead Sonoff Basic](http://sonoff.itead.cc/en/products/sonoff/sonoff-basic)
-<img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff_th.jpg" width="250" align="right" /> 
+- [iTead Sonoff Basic](http://sonoff.itead.cc/en/products/sonoff/sonoff-basic)<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff_th.jpg" width="250" align="right" /> 
 - [iTead Sonoff RF](http://sonoff.itead.cc/en/products/sonoff/sonoff-rf)
 - [iTead Sonoff SV](https://www.itead.cc/sonoff-sv.html)
 - [iTead Sonoff TH10/TH16 with temperature sensor](http://sonoff.itead.cc/en/products/sonoff/sonoff-th)
@@ -24,7 +23,7 @@ The following devices are supported with Serial, Web and MQTT control:
 - [iTead Sonoff SC](http://sonoff.itead.cc/en/products/residential/sonoff-sc)
 
 ## Features
-<img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff4ch.jpg" width="250" align="right" /> 
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff4ch.jpg" width="250" align="right" /> 
 The following features are available:
 - Multiple devices can be addressed by MQTT ```GroupTopic```
 - Firmware upload by OTA or via web page upload
