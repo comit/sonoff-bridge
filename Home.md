@@ -25,6 +25,7 @@ The following devices are supported with Serial, Web and MQTT control:
 ## Features
 <img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff4ch.jpg" width="250" align="right" /> 
 The following features are available:
+
 - Multiple devices can be addressed by MQTT `GroupTopic`
 - Firmware upload by OTA or via web page upload
 - Expanded Status messages
