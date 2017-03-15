@@ -96,8 +96,9 @@ As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have 
 
 Programming the Sonoff touch is as easy as the Sonoff Basic.
 
-<img src="https://github.com/arendst/arendst.github.io/blob/master/media/touchus.jpg" width="230" align="right" /> 
 Remove the top PCA containing the ESP8285 from the assembly as shown in the pictures on the right.
+
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/touchus.jpg" width="230" align="right" /> 
 
 The pictures show for both the EU version (top) and the US version (bottom) where to connect your FTDI cable (Gnd, TxD, RxD and 3.3V). The GPIO0 pin needs to be connected to Ground to put the Sonoff Touch in programming mode.
 
