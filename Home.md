@@ -25,11 +25,11 @@ The following devices are supported with Serial, Web and MQTT control:
 ## Features
 <img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff4ch.jpg" width="250" align="right" /> 
 The following features are available:
-- Multiple devices can be addressed by MQTT ```GroupTopic```
+- Multiple devices can be addressed by MQTT `GroupTopic`
 - Firmware upload by OTA or via web page upload
 - Expanded Status messages
-- UDP syslog messages can be filtered on program name starting with ```ESP-```
-- The button can send a different MQTT message defined with ```ButtonTopic```
+- UDP syslog messages can be filtered on program name starting with `ESP-`
+- The button can send a different MQTT message defined with `ButtonTopic`
 - Initial Wifi setup by user_config.h, Serial, Smartconfig, Wifi manager or WPS config
 - A web server provides control of Sonoff and contains a firmware upload facility
 - Support for DHTxx, AM2301 or DS18B20 temperature sensors as used in Sonoff TH10/TH16
