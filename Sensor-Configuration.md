@@ -38,7 +38,13 @@ The following I2C sensors are supported using ``I2C SCL (5)`` and ``I2C SDA (6)`
 - BMP180 Pressure and Temperature
 - BMP280 Pressure and Temperature
 - BME280 Pressure, Temperature and Humidity
-- HTU21  Temperature and Humidity
+- HTU21 Temperature and Humidity
+- SI7013 Temperature and Humidity
+- SI7020 Temperature and Humidity
+- SI7021 Temperature and Humidity
+- SHT10 Temperature and Humidity
+- SHT11 Temperature and Humidity
+- SHT15 Temperature and Humidity
 
 You can add I2C sensors using the following (MQTT) commands:
 
