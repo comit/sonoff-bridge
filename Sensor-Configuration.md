@@ -35,7 +35,7 @@ For some sensors to show up a power cycle of Sonoff is needed to reset the devic
 ## I2C sensor
 The following I2C sensors are supported using ``I2C SCL (5)`` and ``I2C SDA (6)`` in group 3:
 
-<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sensors1.jpg" width="220" align="right" />
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sensors1.jpg" width="230" align="right" />
 
 
 - BH1750 Ambient Light Intensity
