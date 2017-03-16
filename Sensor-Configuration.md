@@ -34,17 +34,21 @@ For some sensors to show up a power cycle of Sonoff is needed to reset the devic
 
 ## I2C sensor
 The following I2C sensors are supported using ``I2C SCL (5)`` and ``I2C SDA (6)`` in group 3:
+
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sensors1.jpg" width="250" align="right" />
+
+
 - BH1750 Ambient Light Intensity
-- BMP180 Pressure and Temperature
-- BMP280 Pressure and Temperature
-- BME280 Pressure, Temperature and Humidity
-- HTU21 Temperature and Humidity
-- SI7013 Temperature and Humidity
-- SI7020 Temperature and Humidity
-- SI7021 Temperature and Humidity
-- SHT10 Temperature and Humidity
-- SHT11 Temperature and Humidity
-- SHT15 Temperature and Humidity
+- BMP180 Pressure and Temperature in group 3a
+- BMP280 Pressure and Temperature in group 3a
+- BME280 Pressure, Temperature and Humidity in group 3a
+- HTU21 Temperature and Humidity in group 3b
+- SI7013 Temperature and Humidity in group 3b
+- SI7020 Temperature and Humidity in group 3b
+- SI7021 Temperature and Humidity in group 3b
+- SHT10 Temperature and Humidity in group 3c
+- SHT11 Temperature and Humidity in group 3c
+- SHT15 Temperature and Humidity in group 3c
 
 You can add I2C sensors using the following (MQTT) commands:
 
