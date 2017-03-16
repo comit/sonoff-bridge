@@ -1,5 +1,5 @@
 ## Sonoff-Tasmota
-<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoffbasic.jpg" width="250" align="right" /> 
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoffbasic.jpg" width="250" align="right" />
 Provide ESP8266 based Sonoff by [iTead Studio](https://www.itead.cc/) and ElectroDragon IoT Relay with Serial, Web and MQTT control allowing 'Over the Air' or OTA firmware updates using Arduino IDE.
 
 ## Supported devices
@@ -24,7 +24,7 @@ The following devices are supported with Serial, Web and MQTT control:
 - [iTead Sonoff SC](http://sonoff.itead.cc/en/products/residential/sonoff-sc)
 
 ## Features
-<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff4ch.jpg" width="250" align="right" /> 
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff4ch.jpg" width="250" align="right" />
 The following features are available:
 
 - Multiple devices can be addressed by MQTT `GroupTopic`
@@ -35,7 +35,7 @@ The following features are available:
 - Initial Wifi setup by user_config.h, Serial, Smartconfig, Wifi manager or WPS config
 - A web server provides control of Sonoff and contains a firmware upload facility
 - Support for DHTxx, AM2301 or DS18B20 temperature sensors as used in Sonoff TH10/TH16
-- Support for I2C sensors like BH1750, BME280 and HTU21
+- Support for I2C sensors BH1750, BME280, BMP280, HTU21, SI70xx and SHT1x
 - Telemetry data can be send using optional different prefix from status messages
 - Native Domoticz MQTT support
 - Easy integration in home automation solutions like openHAB, HomeAssistant, ...
