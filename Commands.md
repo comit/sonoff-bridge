@@ -254,7 +254,7 @@ WebLog          | 4       | Show all messages
 ### Sonoff Pow
 ```
 Command         | Payload     | Description
-----------------|-------------|----------------------------------------------------
+----------------|-------------|----------------------------------------------------------
 CurrentHigh     |             | Show current current high threshold value
 CurrentHigh     | 0 | off     | (default) Disable current high threshold
 CurrentHigh     | <milliamps> | Set current high threshold value
@@ -262,14 +262,14 @@ CurrentLow      |             | Show current current low threshold value
 CurrentLow      | 0 | off     | (default) Disable current low threshold
 CurrentLow      | <milliamps> | Set current low threshold value
 HlwIcal         |             | Show calibration value for Current
-HlwIcal         | 1           | Set program calibration value for Current
-HlwIcal         | <value>     | Set user calibration value for Current
+HlwIcal         | 1           | Set default calibration value for Current to 3500
+HlwIcal         | <value>     | Set user calibration value for Current starting from 2500
 HlwPcal         |             | Show calibration value for Power
-HlwPcal         | 1           | Set program calibration value for Power
-HlwIcal         | <value>     | Set user calibration value for Power
+HlwPcal         | 1           | Set default calibration value for Power to 12530
+HlwIcal         | <value>     | Set user calibration value for Power starting from 10000
 HlwUcal         |             | Show calibration value for Voltage
-HlwUcal         | 1           | Set program calibration value for Voltage
-HlwIcal         | <value>     | Set user calibration value for Voltage
+HlwUcal         | 1           | Set default calibration value for Voltage to 1950
+HlwIcal         | <value>     | Set user calibration value for Voltage starting from 1000
 PowerHigh       |             | Show current power high threshold value
 PowerHigh       | 0 | off     | (default) Disable power high threshold
 PowerHigh       | <watt>      | Set power high threshold value

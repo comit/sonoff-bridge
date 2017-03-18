@@ -11,9 +11,9 @@ I used the following procedure to calibrate.
 3. Connect the 60W light bulb
 4. Open a webbrowser to Pow showing the main page and another webbrowser showing the Console
 5. Turn power on and wait a few seconds for the pow to settle on a stable power reading
-6. Verify the power reading with the power meter or expected 60W and if needed change the power offset value with command ```HLWPcal```
-7. Verify the voltage reading with the multimeter and if needed change the voltage offset value with command ```HLWUcal```
-8. Verify the current reading with the calculated value of P (step 6) / U (step 7) and if needed change the current offset with command ```HLWIcal```
+6. Verify the power reading with the power meter or expected 60W and if needed change the power offset value with command `HLWPcal` starting from 10000. Default value is 12530
+7. Verify the voltage reading with the multimeter and if needed change the voltage offset value with command `HLWUcal` starting from 1000. Default value is 1950
+8. Verify the current reading with the calculated value of P (step 6) / U (step 7) and if needed change the current offset with command `HLWIcal` starting from 2500. Default value is 3500
 
 ## Result explanation
 The Sonoff Pow can provide Energy, Power, Voltage and Current information in different ways.
