@@ -96,6 +96,8 @@ Mqtt            | 1 | on   | Enable MQTT
 OtaUrl          |          | Show current otaurl
 OtaUrl          | 1        | Reset otaurl to user_config.h value (OTA_URL)
 OtaUrl          | <url>    | Set otaurl (100 chars max)
+Pwm             |          | Show current PWM setting for enabled channels
+Pwm<x>          | <value>  | Set Pwm channel x to value ranging from 0 to 1023
 Reset           | 1        | Reset sonoff parameters to user_config.h values and restart
 Reset           | 2        | Erase flash, reset sonoff parameters to user_config.h values and restart
 Restart         | 1        | Restart sonoff
