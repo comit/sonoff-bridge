@@ -48,3 +48,11 @@ Current   | A    | Current line current
 ## Debugging
 Debugging the Sonoff Pow is a bit tricky as the serial interface has a **direct connection to one of the AC power lines**. I designed below schematic using two opto couplers seperating the AC connection on the **left** from the low voltage connection on the **right** allowing for serial control at 115200 baud and uploading of firmware up to 57600 baud while AC is connected.
 <img alt="OptoSerial" src="https://github.com/arendst/arendst.github.io/blob/master/media/OptoSerial.jpg" /> 
+
+## Self Protection for Sonoff Pow
+
+ITEAD published a recall notice for the Sonoff Pow on march 1st 2017. Some units produced in december 2016 and january 2017 are not well suited for 16A. If you have one of these units you can decide to use them anyway by limiting the maximum current in software.
+It is, in fact,  possible to set a Maximum Power Threshold for the Sonoff Pow.
+ If the power measured by the device exceed the threshold set by the MQTT command MaxPower for a number of seconds set by the command MaxPowerHold the device will remain switched off for MaxPowerWindow seconds (to let it cool down, for example).
+
+See Issue #218
