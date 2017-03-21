@@ -386,7 +386,7 @@ Width            |          | Show current led group width
 Width            | 0..4     | Set led group width used by Schemes 3 - 9
 ```
 
-###IRremote
+### IRremote
 ```
 Command   | Payload                 | Description
 ----------|-------------------------|------------------------------------------------------
