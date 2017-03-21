@@ -144,6 +144,8 @@ Hostname       |           | Show current hostname
 Hostname       | 1         | Reset hostname to MQTT_TOPIC-<4digits> and restart
 Hostname       | <host>    | Set hostname (32 chars max) and restart
 NtpServer<x>   |           | Show NTP server 1 to 3 name or ip address
+NtpServer<x>   | 0         | Set NTP server 1 to 3 name to none and restart
+NtpServer<x>   | 1         | Reset NTP server 1 to 3 name to user_config.h (NTP_SERVERx) and restart
 NtpServer<x>   | <ntphost  | Set NTP server 1 to 3 name or ip address (32 chars max)
 Password       |           | Show AP1 current Wifi password
 Password       | 1         | Reset AP1 Wifi password to user_config.h (STA_PASS1) and restart
@@ -155,7 +157,7 @@ SSId | SSId<x> |           | Show APx current Wifi SSId
 SSId | SSId<x> | 1         | Reset APx Wifi SSId to user_config.h (STA_SSID1 or STA_SSID2) and restart
 SSId | SSId<x> | <ssid>    | Set APx Wifi SSId (32 chars max) and restart
 WebPassword    |           | Show current web server Admin password for user WEB_USERNAME
-WebPassword    | 0 | Off   | Disable use of password
+WebPassword    | 0         | Disable use of password
 WebPassword    | 1         | Reset password to value in user_config.h (WEB_PASSWORD)
 WebPassword    | <passwrd> | Set web server Admin password for user WEB_USERNAME (32 chars max)
 WebServer      |           | Show current web server state
@@ -178,7 +180,7 @@ ButtonRetain |              | Show current button MQTT retain flag state
 ButtonRetain | 0 | off      | (default) Disable use of MQTT retain flag
 ButtonRetain | 1 | on       | Set ButtonTopic to Topic and enable MQTT retain flag on button press
 ButtonTopic  |              | Show current MQTT button topic
-ButtonTopic  | 0            | Disable use of MQTT button topic
+ButtonTopic  | 0 | off      | Disable use of MQTT button topic
 ButtonTopic  | 1            | Set MQTT button topic to Topic
 ButtonTopic  | <topic>      | Set MQTT button topic (32 chars max)
 GroupTopic   |              | Show current MQTT group topic
@@ -193,12 +195,14 @@ MqttHost     |              | Show current MQTT host
 MqttHost     | 1            | Reset MQTT host to user_config.h (MQTT_HOST) and restart
 MqttHost     | <host>       | Set MQTT host (32 chars max) and restart
 MqttPassword |              | Show current MQTT password
+MqttPassword | 0            | Set MQTT password to none
 MqttPassword | 1            | Reset MQTT password to user_config.h (MQTT_PASS) and restart
 MqttPassword | <pswrd>      | Set MQTT password (32 chars max) and restart
 MqttPort     |              | Show current MQTT port
 MqttPort     | 1            | Reset MQTT port to user_config.h (MQTT_PORT) and restart
 MqttPort     | <port>       | Set MQTT port between 2 and 32766 and restart
 MqttUser     |              | Show current MQTT user name
+MqttUser     | 0            | Set MQTT user name to none
 MqttUser     | 1            | Reset MQTT user name to user_config.h (MQTT_USER) and restart
 MqttUser     | <user>       | Set MQTT user name (32 chars max) and restart
 Units        |              | Show current Units state
@@ -211,7 +215,7 @@ SwitchRetain |              | Show current button MQTT retain flag state
 SwitchRetain | 0 | off      | (default) Disable use of MQTT retain flag
 SwitchRetain | 1 | on       | Set ButtonTopic to Topic and enable MQTT retain flag on button press
 SwitchTopic  |              | Show current MQTT switch topic
-SwitchTopic  | 0            | Disable use of MQTT switch topic
+SwitchTopic  | 0 | off      | Disable use of MQTT switch topic
 SwitchTopic  | 1            | Set MQTT switch topic to Topic
 SwitchTopic  | <topic>      | Set MQTT switch topic (32 chars max)
 TelePeriod   |              | Show current telemetry period in seconds
@@ -272,6 +276,15 @@ HlwIcal         | <value>     | Set user calibration value for Power starting fr
 HlwUcal         |             | Show calibration value for Voltage
 HlwUcal         | 1           | Set default calibration value for Voltage to 1950
 HlwIcal         | <value>     | Set user calibration value for Voltage starting from 1000
+MaxPower        |             | Show current maximum power allowed setting
+MaxPower        | 0 | off     | Disable use maximum power monitoring
+MaxPower        | <watt>      | Set maximum allowed power
+MaxPowerHold    |             | Show current time in seconds to stay over MaxPower before power off
+MaxPowerHold    | 1           | Set default time to 10 seconds to stay over MaxPower before power off
+MaxPowerHold    | <seconds>   | Set time in seconds to stay over MaxPower before power off
+MaxPowerWindow  |             | Show current time in seconds to stay power off before re-applying power up to 5 times
+MaxPowerWindow  | 1           | Set default time to 30 seconds to stay power off before re-applying power up to 5 times
+MaxPowerWindow  | <seconds    | Set time in seconds to stay power off before re-applying power up to 5 times
 PowerHigh       |             | Show current power high threshold value
 PowerHigh       | 0 | off     | (default) Disable power high threshold
 PowerHigh       | <watt>      | Set power high threshold value
