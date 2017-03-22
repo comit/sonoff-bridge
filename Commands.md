@@ -205,6 +205,15 @@ MqttUser     |              | Show current MQTT user name
 MqttUser     | 0            | Set MQTT user name to none
 MqttUser     | 1            | Reset MQTT user name to user_config.h (MQTT_USER) and restart
 MqttUser     | <user>       | Set MQTT user name (32 chars max) and restart
+Prefix1      |              | Show current MQTT command subscription prefix
+Prefix1      | 1            | Reset MQTT command subscription prefix to user_config.h (SUB_PREFIX) and restart
+Prefix1      | <prefix>     | Set MQTT command subscription prefix (10 chars max) and restart
+Prefix2      |              | Show current MQTT status prefix
+Prefix2      | 1            | Reset MQTT status prefix to user_config.h (PUB_PREFIX) and restart
+Prefix2      | <prefix>     | Set MQTT status prefix (10 chars max) and restart
+Prefix3      |              | Show current MQTT telemetry prefix
+Prefix3      | 1            | Reset MQTT telemetry prefix to user_config.h (PUB_PREFIX2) and restart
+Prefix3      | <prefix>     | Set MQTT telemetry prefix (10 chars max) and restart
 Units        |              | Show current Units state
 Units        | 0 | off      | (default) Do not show units to messages
 Units        | 1 | on       | Add units to messages
