@@ -28,6 +28,7 @@
 - [**Sonoff RF**](Sonoff-RF)
 - [**Sonoff Touch**](Sonoff-4CH)
 - [**Sonoff 4CH**](Sonoff-4CH)
+- [**Troubleshooting**](Troubleshooting)
 
 **User Experience**
 - [**Remote Button**](Control-a-Sonoff-using-a-remote-button)
