@@ -140,9 +140,16 @@ AP             |           | Show current selected Wifi Access Point (AP)
 AP             | 0         | Switch to other Wifi Access Point (AP)
 AP             | 1         | Select Wifi Access Point 1 (AP)
 AP             | 2         | Select Wifi Access Point 2 (AP)
+DNSServer      |           | Show current IP address of DNS server
+DNSServer      | x.x.x.x   | Set (decimal) IP address of DNS server and restart
+Gateway        |           | Show current IP address of Gateway
+Gateway        | x.x.x.x   | Set (decimal) IP address of Gateway and restart
 Hostname       |           | Show current hostname
 Hostname       | 1         | Reset hostname to MQTT_TOPIC-<4digits> and restart
 Hostname       | <host>    | Set hostname (32 chars max) and restart
+IPAddress      |           | Show current IP address
+IPAddress      | 0.0.0.0   | Use dynamic IP addresses (DHCP) and restart
+IPAddress      | x.x.x.x   | Set (decimal) static IP address and restart
 NtpServer<x>   |           | Show NTP server 1 to 3 name or ip address
 NtpServer<x>   | 0         | Set NTP server 1 to 3 name to none and restart
 NtpServer<x>   | 1         | Reset NTP server 1 to 3 name to user_config.h (NTP_SERVERx) and restart
@@ -156,6 +163,8 @@ Password<x>    | <passwrd> | Set APx Wifi password (64 chars max) and restart
 SSId | SSId<x> |           | Show APx current Wifi SSId
 SSId | SSId<x> | 1         | Reset APx Wifi SSId to user_config.h (STA_SSID1 or STA_SSID2) and restart
 SSId | SSId<x> | <ssid>    | Set APx Wifi SSId (32 chars max) and restart
+SubnetMask     |           | Show current subnet mask
+SubnetMask     | x.x.x.x   | Set (decimal) subnet mask and restart
 WebPassword    |           | Show current web server Admin password for user WEB_USERNAME
 WebPassword    | 0         | Disable use of password
 WebPassword    | 1         | Reset password to value in user_config.h (WEB_PASSWORD)
