@@ -21,6 +21,13 @@ There are multiple ways to force the config to what's set in user_config to reco
 1. issue a reset command (reset 1 via the web console, /cmnd/sonoff/reset 1 via mqtt)
 1. change the value of CFG_HOLDER in user_config and re-flash the device
 
+## does not respond to button intermittently.
+The library that is being used to make the TCP connection to the MQTT server has a 5 second timeout, during which the firmware is stuck and can do nothing else (including switching the relay locally)
+
+When the connection fails, the firmware can then operate locally for a little bit until it attempts a new connection.
+
+Note that if it has no network connection at all, this problem doesn't happen, because it detects it doesn't have a network to try and connect over, and local operation can work without delays.
+
 # troubleshooting tools
 ## logs
 The logs are available via syslog, the web console, or the serial port.
