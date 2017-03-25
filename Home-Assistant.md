@@ -66,7 +66,7 @@ switch:
 
 A DHT22 Temperature and Humidity sensor connected to a Sonoff TH10 will send at ``TelePeriod`` intervals the following information to the MQTT broker:
 ```
-tele/sonoff/SENSOR = {"Time":"2017-02-12T16:11:12", "DHT":{"Temperature":23.9, "Humidity":34.1}}
+tele/sonoff/SENSOR = {"Time":"2017-02-12T16:11:12", "DHT22":{"Temperature":23.9, "Humidity":34.1}}
 ```
 To make the information visible in HA add the following lines to the configuration file.
 ```
@@ -74,12 +74,12 @@ sensor:
   - platform: mqtt
     name: "Tele Temperature"
     state_topic: "tele/sonoff/SENSOR"
-    value_template: "{{ value_json.DHT.Temperature }}"
-    unit_of_measurement: "°C"
+    value_template: "{{ value_json.DHT22.Temperature }}"
+    unit_of_measurement: "Â°C"
   - platform: mqtt
     name: "Tele Humidity"
     state_topic: "tele/sonoff/SENSOR"
-    value_template: "{{ value_json.HTU21.Humidity }}"
+    value_template: "{{ value_json.DHT22.Humidity }}"
     unit_of_measurement: "%"
 ```
 This periodic interval can be changed using the ``TelePeriod`` command (see the wiki for the MQTT commands).
@@ -88,7 +88,7 @@ This periodic interval can be changed using the ``TelePeriod`` command (see the 
 
 Another means of sensor information retrieval from Sonoff-Tasmota is using the status command ``Status 10`` or ``cmnd/sonoff/status 10``. This would result in a message like:
 ```
-stat/sonoff/STATUS10 {"StatusSNS":{"Time":"2017-02-11T18:06:05", "DHT":{"Temperature":"21.8", "Humidity":"48.0"}}}
+stat/sonoff/STATUS10 {"StatusSNS":{"Time":"2017-02-11T18:06:05", "DHT22":{"Temperature":"21.8", "Humidity":"48.0"}}}
 ```
 The HA configuration would then look like this:
 ```
@@ -96,12 +96,12 @@ sensor:
   - platform: mqtt
     name: "Stat Temperature"
     state_topic: "stat/sonoff/STATUS10"
-    value_template: "{{ value_json.StatusSNS.DHT.Temperature }}"
-    unit_of_measurement: "°C"
+    value_template: "{{ value_json.StatusSNS.DHT22.Temperature }}"
+    unit_of_measurement: "Â°C"
   - platform: mqtt
     name: "Stat Humidity"
     state_topic: "stat/sonoff/STATUS10"
-    value_template: "{{ value_json.StatusSNS.DHT.Humidity }}"
+    value_template: "{{ value_json.StatusSNS.DHT22.Humidity }}"
     unit_of_measurement: "%"
 ```
 The Sonoff-Tasmota command could be initiated by a mosquitto mqtt pub command on ``mosquitto_pub -h localhost -t 'cmnd/sonoff/status' -m '10'``
