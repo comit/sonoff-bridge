@@ -42,12 +42,12 @@ LedState         | 4            | Show MQTT publications as a led blink
 LedState         | 5            | Show power state and MQTT publications as a led blink
 LedState         | 6            | Show all MQTT messages as a led blink
 LedState         | 7            | Show power state and MQTT messages as a led blink
-Light | Power<x> |              | Show current power state of relay<x> as On or Off
-Light | Power<x> | 0 | off      | Turn relay<x> power Off
-Light | Power<x> | 1 | on       | Turn relay<x> power On
-Light | Power<x> | 2 | toggle   | Toggle power of relay<x>
-Light | Power<x> | 3 | blink    | Blink power of relay<x>
-Light | Power<x> | 4 | blinkoff | Stop blinking power of relay<x>
+Power<x>         |              | Show current power state of relay<x> as On or Off
+Power<x>         | 0 | off      | Turn relay<x> power Off
+Power<x>         | 1 | on       | Turn relay<x> power On
+Power<x>         | 2 | toggle   | Toggle power of relay<x>
+Power<x>         | 3 | blink    | Blink power of relay<x>
+Power<x>         | 4 | blinkoff | Stop blinking power of relay<x>
 PowerOnState     |              | Show current relay power on state
 PowerOnState     | 0 | off      | Keep relay(s) off after power on
 PowerOnState     | 1 | on       | Turn relay(s) on after power on
