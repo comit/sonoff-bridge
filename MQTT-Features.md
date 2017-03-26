@@ -1,6 +1,6 @@
 Sonoff responds to the following MQTT commands using MQTT Topic for ```cmnd/sonoff/<command>``` and MQTT Message/Payload for ```<parameter>```:
 
-- The relay can be controlled with ```cmnd/sonoff/power on```, ```cmnd/sonoff/power off``` or ```cmnd/sonoff/power toggle```. Sonoff will send a MQTT status message like ```stat/sonoff/POWER ON```. The same function can be initiated with ```cmnd/sonoff/light on```.
+- The relay can be controlled with ```cmnd/sonoff/power on```, ```cmnd/sonoff/power off``` or ```cmnd/sonoff/power toggle```. Sonoff will send a MQTT status message like ```stat/sonoff/POWER ON```.
 
 - The power state message can be sent with the retain flag set. Enable this with ```cmnd/sonoff/PowerRetain on```.
 
