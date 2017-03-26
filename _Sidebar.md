@@ -26,7 +26,7 @@
 - [**Sonoff Dual**](Sonoff-Dual)
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff RF**](Sonoff-RF)
-- [**Sonoff Touch**](Sonoff-4CH)
+- [**Sonoff Touch**](Sonoff-Touch)
 - [**Sonoff 4CH**](Sonoff-4CH)
 - [**Troubleshooting**](Troubleshooting)
 
