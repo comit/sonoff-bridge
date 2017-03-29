@@ -140,16 +140,18 @@ AP             |           | Show current selected Wifi Access Point (AP)
 AP             | 0         | Switch to other Wifi Access Point (AP)
 AP             | 1         | Select Wifi Access Point 1 (AP)
 AP             | 2         | Select Wifi Access Point 2 (AP)
-DNSServer      |           | Show current IP address of DNS server
-DNSServer      | x.x.x.x   | Set (decimal) IP address of DNS server and restart
-Gateway        |           | Show current IP address of Gateway
-Gateway        | x.x.x.x   | Set (decimal) IP address of Gateway and restart
 Hostname       |           | Show current hostname
 Hostname       | 1         | Reset hostname to MQTT_TOPIC-<4digits> and restart
 Hostname       | <host>    | Set hostname (32 chars max) and restart
-IPAddress      |           | Show current IP address
-IPAddress      | 0.0.0.0   | Use dynamic IP addresses (DHCP) and restart
-IPAddress      | x.x.x.x   | Set (decimal) static IP address and restart
+IPAddress1     |           | Show current IP address
+IPAddress1     | 0.0.0.0   | Use dynamic IP addresses (DHCP) and restart
+IPAddress1     | x.x.x.x   | Set (decimal) static IP address and restart
+IPAddress2     |           | Show current IP address of Gateway
+IPAddress2     | x.x.x.x   | Set (decimal) IP address of Gateway and restart
+IPAddress3     |           | Show current subnet mask
+IPAddress3     | x.x.x.x   | Set (decimal) subnet mask and restart
+IPAddress4     |           | Show current IP address of DNS server
+IPAddress4     | x.x.x.x   | Set (decimal) IP address of DNS server and restart
 NtpServer<x>   |           | Show NTP server 1 to 3 name or ip address
 NtpServer<x>   | 0         | Set NTP server 1 to 3 name to none and restart
 NtpServer<x>   | 1         | Reset NTP server 1 to 3 name to user_config.h (NTP_SERVERx) and restart
@@ -163,8 +165,6 @@ Password<x>    | <passwrd> | Set APx Wifi password (64 chars max) and restart
 SSId | SSId<x> |           | Show APx current Wifi SSId
 SSId | SSId<x> | 1         | Reset APx Wifi SSId to user_config.h (STA_SSID1 or STA_SSID2) and restart
 SSId | SSId<x> | <ssid>    | Set APx Wifi SSId (32 chars max) and restart
-SubnetMask     |           | Show current subnet mask
-SubnetMask     | x.x.x.x   | Set (decimal) subnet mask and restart
 WebPassword    |           | Show current web server Admin password for user WEB_USERNAME
 WebPassword    | 0         | Disable use of password
 WebPassword    | 1         | Reset password to value in user_config.h (WEB_PASSWORD)
@@ -210,10 +210,16 @@ MqttPassword | <pswrd>      | Set MQTT password (32 chars max) and restart
 MqttPort     |              | Show current MQTT port
 MqttPort     | 1            | Reset MQTT port to user_config.h (MQTT_PORT) and restart
 MqttPort     | <port>       | Set MQTT port between 2 and 32766 and restart
+MqttResponse |              | Show current MQTT response state
+MqttResponse | 0 | off      | Return response as RESULT topic
+MqttResponse | 1 | on       | Return response as Command topic
 MqttUser     |              | Show current MQTT user name
 MqttUser     | 0            | Set MQTT user name to none
 MqttUser     | 1            | Reset MQTT user name to user_config.h (MQTT_USER) and restart
 MqttUser     | <user>       | Set MQTT user name (32 chars max) and restart
+PowerRetain  |              | Show current MQTT power retain state
+PowerRetain  | 0 | off      | (default) Disable MQTT power retain on status update
+PowerRetain  | 1 |on        | Enable MQTT power retain on status update
 Prefix1      |              | Show current MQTT command subscription prefix
 Prefix1      | 1            | Reset MQTT command subscription prefix to user_config.h (SUB_PREFIX) and restart
 Prefix1      | <prefix>     | Set MQTT command subscription prefix (10 chars max) and restart
@@ -223,12 +229,15 @@ Prefix2      | <prefix>     | Set MQTT status prefix (10 chars max) and restart
 Prefix3      |              | Show current MQTT telemetry prefix
 Prefix3      | 1            | Reset MQTT telemetry prefix to user_config.h (PUB_PREFIX2) and restart
 Prefix3      | <prefix>     | Set MQTT telemetry prefix (10 chars max) and restart
-Units        |              | Show current Units state
-Units        | 0 | off      | (default) Do not show units to messages
-Units        | 1 | on       | Add units to messages
-PowerRetain  |              | Show current MQTT power retain state
-PowerRetain  | 0 | off      | (default) Disable MQTT power retain on status update
-PowerRetain  | 1 |on        | Enable MQTT power retain on status update
+StateText1   |              | Show current Off state text
+StateText1   | 1            | Reset Off state text to user_config.h (MQTT_STATUS_OFF)
+StateText1   | <text>       | Set Off state text (10 chars max)
+StateText2   |              | Show current On state text
+StateText2   | 1            | Reset On state text to user_config.h (MQTT_STATUS_ON)
+StateText2   | <text>       | Set On state text (10 chars max)
+StateText3   |              | Show current Toggle state text
+StateText3   | 1            | Reset Toggle state text to user_config.h (MQTT_CMND_TOGGLE)
+StateText3   | <text>       | Set Toggle state text (10 chars max)
 SwitchRetain |              | Show current button MQTT retain flag state
 SwitchRetain | 0 | off      | (default) Disable use of MQTT retain flag
 SwitchRetain | 1 | on       | Set ButtonTopic to Topic and enable MQTT retain flag on button press
@@ -243,6 +252,9 @@ TelePeriod   | <secs>       | Set telemetry period between 2 and 3600 seconds
 Topic        |              | Show current MQTT topic
 Topic        | 1            | Reset MQTT topic to user_config.h (MQTT_TOPIC) and restart
 Topic        | <topic>      | Set MQTT topic (32 chars max) AND button topic and restart
+Units        |              | Show current Units state
+Units        | 0 | off      | (default) Do not show units to messages
+Units        | 1 | on       | Add units to messages
 ```
 
 ### Logging
@@ -406,11 +418,17 @@ Width            | 0..4     | Set led group width used by Schemes 3 - 9
 
 ### IRremote
 ```
-Command   | Payload                 | Description
-----------|-------------------------|------------------------------------------------------
-IRsend    | {"protocol": "<proto>", | Send IR remote control as JSON encapsulated command.
-          |  "bits": 1..32          | <proto> is NEC, SONY, RC5, RC6, DISH, JVC or SAMSUNG
-          |  "data": 1..(2^32)-1}   | bits are the required number of data bits.
-          |                         | data is the data frame as 32 bit unsigned integer.
-          |                         | See http://www.lirc.org/ for more info.
+Command | Payload                 | Description
+--------|-------------------------|------------------------------------------------------
+IRsend  | {"Protocol": "<proto>", | Send IR remote control as JSON encapsulated command.
+        |  "Bits": 1..32          | <proto> is NEC, SONY, RC5, RC6, DISH, JVC or SAMSUNG
+        |  "Data": 1..(2^32)-1}   | bits are the required number of data bits.
+        |                         | data is the data frame as 32 bit unsigned integer.
+        |                         | See http://www.lirc.org/ for more info.
+        |                         |
+IRhvac  | {"Vendor": "<Toshiba|Mitsubishi>",       | Send IR remote control data to Toshiba
+        |  "Power": <0|1>,                         | or Mitsubishi HVAC
+        |  "Mode": "<Hot|Cold|Dry|Auto>",          |
+        |  "FanSpeed": "<1|2|3|4|5|Auto|Silence>", |
+        |  "Temp": <17..30>}                       |
 ```
