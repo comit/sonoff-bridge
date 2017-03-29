@@ -2,16 +2,18 @@ The open Home Automation Bus (openHAB) is an open source, technology agnostic ho
 
 ## openHAB Integration
 
-After activating the MQTT binding, simply set up items for all Sonoff-Tasmota MQTT topics you are interested in. Examples are given below. Some Sonoff-Tasmota topics are JSON encoded. The `JSONPATH` transformation can be used to extract this data.
+After activating the MQTT binding and MQTT action, simply set up items for all Sonoff-Tasmota MQTT topics you are interested in. Examples are given below. Some Sonoff-Tasmota topics are JSON encoded. The `JSONPATH` transformation can be used to extract this data.
 
 ![example openHAB sitemap](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/5/57750c6c7b6d9f18e75424fcb87ec093f70c6211.png)
+
+*Preparation:* Install the MQTT Binding and MQTT Action, e.g. through openHAB Paper UI.
 
 Before continuing, please make sure you assigned unique MQTT topics in the configuration interface of each Sonoff module. The default MQTT topic is "sonoff", in the examples below we will use names like "sonoff-A00F9D". To better understand what's going on behind the scene and to be able to troubleshoot, use an [MQTT client](http://www.hivemq.com/blog/seven-best-mqtt-client-tools) in parallel.
 
  
 ### Mandatory Topics / Items
 
-These are the minimal set of items for the basic functionality of different Sonoff modules.
+This it the minimal set of items for the basic functionality of different Sonoff modules.
 <br /> (*Note: Lines have been wrapped for better presentation*)
 
 **sonoff.items:**
@@ -32,6 +34,8 @@ Number BA_Washingmachine_Power "Washingmachine Power [%.1f W]" (BA,gPower)
 ### Status Topics / Items
 
 It is furthermore recommended, to add the following status items for every Sonoff-Tasmota device.
+
+Other Sonoff modules are configured similarly, additional items are easily identified by reading up on the Sonoff-Tasmota documentation and by subscribing to the modules topics. Subscribe to `+/sonoff-XYZ/#` to receive all related messages.
 
 **sonoff.items:** 
 ```java
