@@ -10,7 +10,7 @@ SwitchTopic=0 (Disable use of MQTT switch topic)
 `SwitchMode=0` means every time the button gets pressed the relay changes its state (on/off).
 
 `SwitchTopic=0` means the button press will not send a topic via MQTT.
-Instead the relay will be controlled directly. One the relay changes its state the firmware will send an MQTT message with the new state.  
+Instead the relay will be controlled directly. Once the relay changes its state the firmware will send an MQTT message with the new state.  
 e.g.: `stat/sonoff01/POWER ON`
 
 **Important**:  
