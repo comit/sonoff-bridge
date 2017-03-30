@@ -13,6 +13,7 @@
 - [**MQTT Features**](MQTT-Features)
 - [**Commands**](Commands)
 - [**Sensor Configuration**](Sensor-Configuration)
+- [**SwitchMode/SwitchTopic**](Understanding-SwitchMode-and-SwitchTopic)
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
