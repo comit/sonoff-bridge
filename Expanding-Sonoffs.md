@@ -47,6 +47,8 @@ With more relays on the modules, the additional switch will create additional PO
 
 You can set the mode of each switch individually with ``switchmode1`` or ``switchmode2``
 
+See [SwitchMode and SwitchTopic](Understanding-SwitchMode-and-SwitchTopic) for more information.
+
 ## Connect jack
 Instead of connecting a switch, you could connect a 4-pin 2.5mm jack, with the pins wired:
 * tip pin5 (GPIO4)
