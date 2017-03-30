@@ -1,6 +1,6 @@
 The standard Sonoff device has a relay to turn on/off an external device and a button to toggle the state of the relay.
 
-By default the confuguration for the button looks like this:
+By default the configuration for the button looks like this:
 
 ```
 SwitchMode=0 (Set switch mode to TOGGLE)
@@ -14,8 +14,8 @@ Instead the relay will be controlled directly. Once the relay changes its state 
 e.g.: `stat/sonoff01/POWER ON`
 
 **Important**:  
-The Sonoff-Tasmota firmware does not publich the state of the switch in any way!
-It only send commands (directly to the corrosponding relay or via MQTT to a topic).
+The Sonoff-Tasmota firmware does not publish the state of the switch in any way!
+It only send commands (directly to the corresponding relay or via MQTT to a topic).
 
 
 # SwitchMode
@@ -28,14 +28,14 @@ You can change the mode for a switch by executing a [command](Commands) in the w
 
 > Set switch mode to FOLLOW (0 = Off, 1 = On)
 
-While pressing the button/switch (closeing the circuit) the button will send `ON` (directly or via MQTT depending on SwitchTopic) and `OFF` wehen released (open circuit).
+While pressing the button/switch (closing the circuit) the button will send `ON` (directly or via MQTT depending on SwitchTopic) and `OFF` when released (open circuit).
 
 
 **SwitchMode 2**
 
 > Set switch mode to inverted FOLLOW (0 = On, 1 = Off)
 
-The opposit of Mode 1.
+The opposite of Mode 1.
 
 ### Conclusion
 
@@ -48,7 +48,7 @@ If the real switch is in the "on" position, the state of the software switch is 
 
 > Set switch mode to PUSHBUTTON (Normally 1, 0 = toggle)
 
-The switch will send a command (directly or via MQTT) when the switch openes the circuit (`OFF`). When the closing the circuit (`ON`), nothing will happen.
+The switch will send a command (directly or via MQTT) when the switch opens the circuit (`OFF`). When closing the circuit (`ON`), nothing will happen.
 
 **SwitchMode 4**
 
@@ -60,7 +60,7 @@ The switch will send a command when changing to `ON`. Nothing happens when chang
 ### Conclusion
 
 When connecting a [momentary switch](https://en.wikipedia.org/wiki/Switch#Biased_switches) (a push button) you want to use `SwitchMode=3` or `4`.  
-`SwitchMode=4` is the same as the default behaviour (`SwitchMode=0`) for Sonoff devices.
+`SwitchMode=4` is the same as the default behavior (`SwitchMode=0`) for Sonoff devices.
 
 # SwitchTopic
 
