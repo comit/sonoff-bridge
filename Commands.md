@@ -230,13 +230,10 @@ Prefix3      |              | Show current MQTT telemetry prefix
 Prefix3      | 1            | Reset MQTT telemetry prefix to user_config.h (PUB_PREFIX2) and restart
 Prefix3      | <prefix>     | Set MQTT telemetry prefix (10 chars max) and restart
 StateText1   |              | Show current Off state text
-StateText1   | 1            | Reset Off state text to user_config.h (MQTT_STATUS_OFF)
 StateText1   | <text>       | Set Off state text (10 chars max)
 StateText2   |              | Show current On state text
-StateText2   | 1            | Reset On state text to user_config.h (MQTT_STATUS_ON)
 StateText2   | <text>       | Set On state text (10 chars max)
 StateText3   |              | Show current Toggle state text
-StateText3   | 1            | Reset Toggle state text to user_config.h (MQTT_CMND_TOGGLE)
 StateText3   | <text>       | Set Toggle state text (10 chars max)
 SwitchRetain |              | Show current button MQTT retain flag state
 SwitchRetain | 0 | off      | (default) Disable use of MQTT retain flag
