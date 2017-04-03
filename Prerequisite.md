@@ -32,7 +32,7 @@ Install the ESP8266 Arduino development environment from [esp8266 Arduino](https
   - Change ``MQTT_MAX_PACKET_SIZE`` from 128 to at least 512  
 - Install the ArduinoJson library **version 5.8.3** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries)
 - If option ``USE_DS18x20`` is enabled in ``user_config.h`` install the OneWire library **version 2.3.3** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries)
-- If option ``USE_IR_REMOTE`` is enabled in ``user_config.h`` download and unzip the [IRremoteESP8266](https://github.com/sebastienwarin/IRremoteESP8266) library **version fee16e880b** into directory ``portable\sketchbook\libraries`` and rename to ``IRremoteESP8266``
+- If option ``USE_IR_REMOTE`` is enabled in ``user_config.h`` download and unzip the [IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266/releases/tag/v1.0.2) library **version 1.0.2** into directory ``portable\sketchbook\libraries`` and rename to ``IRremoteESP8266``
 - If option ``USE_WS2812`` is enabled in ``user_config.h`` download and unzip the [NeoPixelBus](https://github.com/Makuna/NeoPixelBus/releases) library **version 2.2.6** into directory ``portable\sketchbook\libraries`` and rename to ``NeoPixelBus``
 
 Optionally install php and a local web server (ie apache) for OTA and copy directory ``api`` in webroot.
