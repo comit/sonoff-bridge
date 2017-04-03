@@ -30,11 +30,11 @@ Install the ESP8266 Arduino development environment from [esp8266 Arduino](https
 - Copy the ``sonoff`` directory to your sketchfolder
 - Download and unzip the [pubsubclient](https://github.com/knolleary/pubsubclient/releases/tag/v2.6) MQTT library **version 2.6** into directory ``portable\sketchbook\libraries`` and rename to ``pubsubclient``. Update default value in file ``pubsubclient\src\PubSubClient.h``  
   - Change ``MQTT_MAX_PACKET_SIZE`` from 128 to at least 512  
-- Download and unzip the [ArduinoJson](https://github.com/bblanchon/ArduinoJson/releases/tag/v5.8.3
-) library **version 5.8.3** into directory ``portable\sketchbook\libraries`` and rename to ``ArduinoJson``
-- If option ``USE_DS18x20`` is enabled in ``user_config.h`` install the OneWire library **version 2.3.3** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries)
-- If option ``USE_IR_REMOTE`` is enabled in ``user_config.h`` download and unzip the [IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266/releases/tag/v1.0.2) library **version 1.0.2** into directory ``portable\sketchbook\libraries`` and rename to ``IRremoteESP8266``
-- If option ``USE_WS2812`` is enabled in ``user_config.h`` download and unzip the [NeoPixelBus](https://github.com/Makuna/NeoPixelBus/releases/tag/2.2.6) library **version 2.2.6** into directory ``portable\sketchbook\libraries`` and rename to ``NeoPixelBus``
+- Install the ArduinoJson library **version 5.8.3** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries) or download and unzip the [ArduinoJson](https://github.com/bblanchon/ArduinoJson/releases/tag/v5.8.3
+) library into directory ``portable\sketchbook\libraries`` and rename to ``ArduinoJson``
+- If option ``USE_DS18x20`` is enabled in ``user_config.h`` install the OneWire library **version 2.3.3** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries) or download and unzip the [OneWire](https://github.com/PaulStoffregen/OneWire/releases/tag/v2.3.3) library into directory ``portable\sketchbook\libraries`` and rename to ``OneWire``
+- If option ``USE_IR_REMOTE`` is enabled in ``user_config.h`` install the IRremoteESP8266 library **version 1.0.2** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries) or download and unzip the [IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266/releases/tag/v1.0.2) library into directory ``portable\sketchbook\libraries`` and rename to ``IRremoteESP8266``
+- If option ``USE_WS2812`` is enabled in ``user_config.h`` install the NeoPixelBus library **version 2.2.6** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries) or download and unzip the [NeoPixelBus](https://github.com/Makuna/NeoPixelBus/releases/tag/2.2.6) library  into directory ``portable\sketchbook\libraries`` and rename to ``NeoPixelBus``
 
 Optionally install php and a local web server (ie apache) for OTA and copy directory ``api`` in webroot.
 
