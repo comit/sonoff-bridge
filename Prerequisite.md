@@ -28,7 +28,7 @@ Install the ESP8266 Arduino development environment from [esp8266 Arduino](https
 - I prefer a **dedicated standalone version** of the IDE allowing easy ESP8266 file manipulation and library management. This can be achieved by downloading the Arduino IDE ZIP file for non admin install. After unzipping and before executing ``arduino.exe`` add an empty directory called ``portable``
 - Follow the procedure from the ESP8266 Arduino README.md to install the development environment using the Arduino IDE Board Manager
 - Copy the ``sonoff`` directory to your sketchfolder
-- Download and unzip the [pubsubclient](https://github.com/knolleary/pubsubclient/releases) MQTT library **version 2.6** into directory ``portable\sketchbook\libraries`` and rename to ``pubsubclient``. Update default value in file ``pubsubclient\src\PubSubClient.h``  
+- Download and unzip the [pubsubclient](https://github.com/knolleary/pubsubclient/releases/tag/v2.6) MQTT library **version 2.6** into directory ``portable\sketchbook\libraries`` and rename to ``pubsubclient``. Update default value in file ``pubsubclient\src\PubSubClient.h``  
   - Change ``MQTT_MAX_PACKET_SIZE`` from 128 to at least 512  
 - Download and unzip the [ArduinoJson](https://github.com/bblanchon/ArduinoJson/releases/tag/v5.8.3
 ) library **version 5.8.3** into directory ``portable\sketchbook\libraries`` and rename to ``ArduinoJson``
