@@ -142,7 +142,7 @@ AP             | 1         | Select Wifi Access Point 1 (AP)
 AP             | 2         | Select Wifi Access Point 2 (AP)
 Hostname       |           | Show current hostname
 Hostname       | 1         | Reset hostname to MQTT_TOPIC-<4digits> and restart
-Hostname       | <host>    | Set hostname (32 chars max) and restart
+Hostname       | <host>    | Set hostname (32 chars max) and restart. If <host> contains % the hostname will be reset to the default.
 IPAddress1     |           | Show current IP address
 IPAddress1     | 0.0.0.0   | Use dynamic IP addresses (DHCP) and restart
 IPAddress1     | x.x.x.x   | Set (decimal) static IP address and restart
