@@ -21,7 +21,7 @@ In the examples shown the Sonoff-Tasmota parameters are set:
 
 ## MQTT broker
 
-As Sonoff-Tasmota is MQTT based you will need to configure the MQTT Broker in HA. Update your HA configuration file with the local MQTT server ``domus1``.
+As Sonoff-Tasmota is MQTT based you will need to configure Home Assistant to [connect to an MQTT broker](https://home-assistant.io/components/mqtt/). You can use the following configuration to an MQTT server with the hostname ``domus1``.
 ```
 mqtt:
   broker: domus1
@@ -59,6 +59,13 @@ switch:
     payload_off: "OFF"
     retain: true
 ```
+If you are using your Sonoff to control a light, you may want to use the `light` component. Simply replace `switch` with `light` in the above configuration. All other settings remain the same.
+
+Further documentation on the Home Assistant `switch` and `light` components can be found here:
+
+https://home-assistant.io/components/switch.mqtt/
+
+https://home-assistant.io/components/light.mqtt/
 
 ## DHT22 sensor
 
