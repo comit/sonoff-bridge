@@ -57,11 +57,11 @@ The Sonoff RF needs some tweaking as the connection needed during programming be
 
 <img alt="S20 Smart Socket" src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoffrffix.jpg" width="230" align="right" />
 
-Pairing a RF remote is the same as with iTead software:
+Pairing the iTead RF remote controller is the same as with the original iTead software:
 - two short button presses will blink a red led shortly and start RF signal recognition. Three longer blinks signal RF reception.
 - three short button presses will keep the red led on for some seconds and erase the known RF code. 
 
-I was unable to pair the Sonoff RF 434MHz receiver with any of my KaKu switches so to me the RF functionality is a bit disappointing.
+I was unable to pair the Sonoff RF 434MHz receiver with my KaKu switches but the iTead provided remote control works just fine.
 
 ### Sonoff Dual
 
