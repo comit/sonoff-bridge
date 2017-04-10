@@ -1,5 +1,16 @@
 # Common issues (in no particular order):
 
+## Wifi stops working
+There have been many reports of wifi no longer working when it was working for a while.
+
+Every time this has been reported, it's ended up being a hardware or interference problem.
+
+On the hardware side, we've seen reports of bad solder joints on the board that when touched up seem to solve the problem (capacitors being loose can cause this)
+
+We've also seen reports then when a specific LED light bulb was hooked up near one, the signal quality dropped to unusable.
+
+All you can really do is check the solder joints, move them around (try hooking up different loads), and if all else fails, replace the units.
+
 ## Relay clicks/LED flashes at 1 sec interval
 This indicates that the ESP-8266 did not get flashed properly. In this case it will toggle all it's pins at 1 sec intervals
 
