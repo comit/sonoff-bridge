@@ -1,6 +1,6 @@
 For first-time flashers, please follow the [Upload instructions](https://github.com/arendst/Sonoff-Tasmota/wiki/Upload) to flash the latest firmware version to your Sonoff module. Upgrading existing Sonoff-Tasmota (at least since v3.9.12) is easier by OTA update.
 
-### Upgrading via OTA
+## Upgrading via OTA
 
 It is recommended to upgrade the firmware [over-the-air](https://en.wikipedia.org/wiki/Over-the-air_programming), without a serial connection, while being connected to AC and operational.
 This method is only available after the Sonoff-Tasmota firmware was flashed via serial connection once.
@@ -12,13 +12,13 @@ Build the firmware binary from source or download the latest build from [the rel
 3. Provide the binary on a web server and initiate the upgrade via the [`upgrade` command](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#management).
 4. If you're using [openHAB2](http://www.openhab.org/), you can use an automation rule to upgrade your Sonoffs from within your home automation: [openHAB Maintenance](https://github.com/arendst/Sonoff-Tasmota/wiki/openHAB#maintenance-actions)
 
-## Functionality vs Firmware size vs OTA
+### Functionality vs Firmware size vs OTA
 
 As more functionality is being added to the firmware at some time it reaches the point where OTA or web page upload will fail. Both upgrade features rely on the fact that there is enough free flash memory available to load both the current and the new firmware. With a 1MB flash as available on the Sonoffs a firmware file size of as much as 475k allows for an easy upgrade. Larger firmware can only be loaded when the current firmware is first reduced to accomodate more free flash to load the larger firmware. This is a two step approach:
 1. Upload firmware with define USE_MINIMAL **enabled** which will have a smaller footprint
 2. Upload the final firmware with define USE_MINIMAL **disabled** with the features you want to use.
 
-### Migration path
+## Migration path
 
 Until now several versions of my Sonoff software have been released starting with the C version Sonoff-MQTT-OTA followed by Sonoff-MQTT-OTA-Arduino and Sonoff-Tasmota.
 
