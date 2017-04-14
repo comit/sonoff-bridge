@@ -12,6 +12,12 @@ Build the firmware binary from source or download the latest build from [the rel
 3. Provide the binary on a web server and initiate the upgrade via the [`upgrade` command](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#management).
 4. If you're using [openHAB2](http://www.openhab.org/), you can use an automation rule to upgrade your Sonoffs from within your home automation: [openHAB Maintenance](https://github.com/arendst/Sonoff-Tasmota/wiki/openHAB#maintenance-actions)
 
+## Functionality vs Firmware size vs OTA
+
+As more functionality is being added to the firmware at some time it reaches the point where OTA or web page upload will fail. Both upgrade features rely on the fact that there is enough free flash memory available to load both the current and the new firmware. With a 1MB flash as available on the Sonoffs a firmware file size of as much as 475k allows for an easy upgrade. Larger firmware can only be loaded when the current firmware is first reduced to accomodate more free flash to load the larger firmware. This is a two step approach:
+1. Upload firmware with define USE_MINIMAL **enabled** which will have a smaller footprint
+2. Upload the final firmware with define USE_MINIMAL **disabled** with the features you want to use.
+
 ### Migration path
 
 Until now several versions of my Sonoff software have been released starting with the C version Sonoff-MQTT-OTA followed by Sonoff-MQTT-OTA-Arduino and Sonoff-Tasmota.
