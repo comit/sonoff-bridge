@@ -277,7 +277,7 @@ SysLog          | 2       | Show error and info messages
 SysLog          | 3       | Show error, info and debug messages
 SysLog          | 4       | Show all messages
 WebLog          |         | Show current serial log level
-WebLog          | 0 | off | Disable serial logging
+WebLog          | 0 | off | Disable Web logging
 WebLog          | 1       | Show only error messages
 WebLog          | 2       | Show error and info messages
 WebLog          | 3       | Show error, info and debug messages
