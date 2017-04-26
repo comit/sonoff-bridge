@@ -39,7 +39,7 @@ If a pin is defined as GPIO_USER in the module template, you can assign it one o
 
 # Examples
 ## Connect switch
-If you take a Sonoff Basic and connect a switch between pin4 (ground) and pin5 (GPIO4) of the 5 pin programming header you now have a second switch connected to the device. You can set this through the module config page as option ``09 Switch1`` or from the command line with ``gpio4 9``.
+If you take a Sonoff Basic and connect a switch between pin4 (ground) and pin5 (GPIO14) of the 5 pin programming header you now have a second switch connected to the device. You can set this through the module config page as option ``09 Switch1`` or from the command line with ``gpio14 9``.
 
 If you have fewer than two relays on the module, the additional switch(es) will not show up any different than the built-in switch and will control the single relay unless you set switchtopic to something other than 0 (either 1 or a custom topic). Once this is done the built-in switch will produce ``stat/<topic>/POWER1`` while the new switch will produce ``cmnd/<switchtopic>/POWER1``
 
@@ -51,9 +51,9 @@ See [SwitchMode and SwitchTopic](Understanding-SwitchMode-and-SwitchTopic) for m
 
 ## Connect jack
 Instead of connecting a switch, you could connect a 4-pin 2.5mm jack, with the pins wired:
-* tip pin5 (GPIO4)
+* tip pin5 (GPIO14)
 * r1 no connection
 * r2 pin1 (3.3v)
 * r3 pin4 (ground)
 
-You can then plug a sensor into the jack like you would to a Sonoff TH10/TH16 and define what sensor you have connected to GPIO4
+You can then plug a sensor into the jack like you would to a Sonoff TH10/TH16 and define what sensor you have connected to GPIO14
