@@ -29,7 +29,7 @@ Install the ESP8266 Arduino development environment from [esp8266 Arduino](https
 - Follow the procedure from the ESP8266 Arduino README.md to install the development environment using the Arduino IDE Board Manager
 - Copy the ``sonoff`` directory to your sketchfolder
 
-#### Installing updated linker file **for version 5.x and up**
+#### Installing updated linker file for version 5.0.0 and up
 
 To gain as much code space as possible from the available 1M flash memory I provide a linker file without SPIFFS area. Follow the steps below to install and use it in your IDE:
 - Copy file ``eagle.flash.1m0.ld`` to directory ``portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld``
