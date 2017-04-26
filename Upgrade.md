@@ -14,7 +14,7 @@ Build the firmware binary from source or download the latest build from [the rel
 
 ### Functionality vs Firmware size vs OTA
 
-As more functionality is being added to the firmware at some time it reaches the point where OTA or web page upload will fail. Both upgrade features rely on the fact that there is enough free flash memory available to load both the current and the new firmware. With a 1MB flash as available on the Sonoffs a firmware file size of as much as 475k allows for an easy upgrade. Larger firmware can only be loaded when the current firmware is first reduced to accomodate more free flash to load the larger firmware. This is a two step approach:
+As more functionality is being added to the firmware at some time it reaches the point where OTA or web page upload will fail. Both upgrade features rely on the fact that there is enough free flash memory available to load both the current and the new firmware. With a 1MB flash as available on the Sonoffs and the standard linker providing 950kB code space a firmware file size of as much as 475k allows for an easy upgrade. Larger firmware can only be loaded when the current firmware is first reduced to accomodate more free flash to load the larger firmware. This is a two step approach:
 1. Upload firmware with define USE_MINIMAL **enabled** which will have a smaller footprint
 2. Upload the final firmware with define USE_MINIMAL **disabled** with the features you want to use.
 
@@ -29,8 +29,10 @@ As said, mostly painless. There are some deviations to this rule as I rearranged
 1. No migration from **Sonoff-MQTT-OTA** to **Sonoff-MQTT-OTA-Arduino** or **Sonoff-Tasmota**.<br/>The settings flash lay-out and OTA image locations are different from the Arduino versions
 2. Easy migration from **Sonoff-MQTT-OTA-Arduino 1.0.11** to **Sonoff-Tasmota 3.9.x**.<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
 3. Easy migration from **Sonoff-MQTT-OTA-Arduino 3.1.0** to **Sonoff-Tasmota 4.x**.<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
+4. Easy migration from **Sonoff-Tasmota 4.x** to **Sonoff-Tasmota 5.x**.<br/>As a safeguard perform a Backup Configuration before installing the new version. If settings are lost after the upgrade perform a Restore Configuration.
 
-So to migrate from **Sonoff-MQTT-OTA-Arduino versions before 3.1.0** to **Sonoff-Tasmota 4.x** you will need to take two steps:
+So to migrate from **Sonoff-MQTT-OTA-Arduino versions before 3.1.0** to **Sonoff-Tasmota 5.x** you will need to take three steps:
 
 1. Migrate to **Sonoff-Tasmota 3.9.x**
 2. Migrate to **Sonoff-Tasmota 4.x**
+3. Migrate to **Sonoff-Tasmota 5.x**
