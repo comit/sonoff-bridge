@@ -28,6 +28,21 @@ Install the ESP8266 Arduino development environment from [esp8266 Arduino](https
 - I prefer a **dedicated standalone version** of the IDE allowing easy ESP8266 file manipulation and library management. This can be achieved by downloading the Arduino IDE ZIP file for non admin install. After unzipping and before executing ``arduino.exe`` add an empty directory called ``portable``
 - Follow the procedure from the ESP8266 Arduino README.md to install the development environment using the Arduino IDE Board Manager
 - Copy the ``sonoff`` directory to your sketchfolder
+
+#### Installing updated linker file
+
+To gain as much code space as possible from the available 1M flash memory I provide a linker file without SPIFFS area. Follow the steps below to install and use it in your IDE:
+- Copy file ``eagle.flash.1m0.ld`` to directory ``portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld``
+- Replace file ``boards.txt`` in directory ``portable\packages\esp8266\hardware\esp8266\2.3.0``
+- Restart you IDE
+
+This will provide an additional option ``Tools - Flash Size: "1M (no SPIFFS)"``.
+
+#### Installing external libraries
+
+Some features of this software use external libraries to be installed in you sketchfolder library directory. The easiest way to do this is copying all directories from the Sonoff-Tasmota/lib directory to your sketchfolder library directory and restart you IDE.
+
+If you want to install libraries yourself follow the steps below:
 - Download and unzip the [pubsubclient](https://github.com/knolleary/pubsubclient/releases/tag/v2.6) MQTT library **version 2.6** into directory ``portable\sketchbook\libraries`` and rename to ``pubsubclient``. Update default value in file ``pubsubclient\src\PubSubClient.h``  
   - Change ``MQTT_MAX_PACKET_SIZE`` from 128 to at least 512  
 - Install the ArduinoJson library **version 5.8.3** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries) or download and unzip the [ArduinoJson](https://github.com/bblanchon/ArduinoJson/releases/tag/v5.8.3
