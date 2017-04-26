@@ -14,7 +14,11 @@ Build the firmware binary from source or download the latest build from [the rel
 
 ### Functionality vs Firmware size vs OTA
 
-As more functionality is being added to the firmware at some time it reaches the point where OTA or web page upload will fail. Both upgrade features rely on the fact that there is enough free flash memory available to load both the current and the new firmware. With a 1MB flash as available on the Sonoffs and the standard linker providing 950kB code space a firmware file size of as much as 475k allows for an easy upgrade. Larger firmware can only be loaded when the current firmware is first reduced to accomodate more free flash to load the larger firmware. This is a two step approach:
+As more functionality is being added to the firmware at some time it reaches the point where OTA or web page upload will fail. Both upgrade features rely on the fact that there is enough free flash memory available to load both the current and the new firmware. With a 1MB flash as available on the Sonoffs and the standard linker script providing 950kB code space a firmware file size of as much as 475kB allows for an easy upgrade. 
+
+Starting with **version 5.x** I use an updated linker script extending the code space by 70kB allowing a firmware file size of as much as 510kB
+
+Larger firmware can only be loaded when the current firmware is first reduced to accomodate more free flash to load the larger firmware. This is a two step approach:
 1. Upload firmware with define USE_MINIMAL **enabled** which will have a smaller footprint
 2. Upload the final firmware with define USE_MINIMAL **disabled** with the features you want to use.
 
