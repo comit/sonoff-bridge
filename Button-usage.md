@@ -15,3 +15,5 @@ The main button on a Sonoff-Tasmota flashed module provides the following functi
 - **7 short presses:** Start OTA download of firmware. The green LED is lit during the update
 
 - **Pressing the button for over four seconds:** Reset settings to defaults as defined in ```user_config.h``` and restarts the device
+
+The button is connected to GPIO 0 (NodeMCU pin D3)
