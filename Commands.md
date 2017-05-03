@@ -72,7 +72,7 @@ SwitchMode<x>    | 4            | Set switch mode to inverted PUSHBUTTON (Normal
 ### Sensor
 ```
 Command     | Payload        | Description
-------------|----------------|--------------------------------------------------------------
+------------|----------------|---------------------------------------------------------
 EnergyRes   |                | Show current Energy Resolution
 EnergyRes   | 0..5           | Set Energy Resolution
 HumRes      |                | Show current Humidity Resolution
@@ -81,9 +81,9 @@ PressRes    |                | Show current Pressure Resolution
 PressRes    | 0..3           | Set Pressure Resolution
 TempRes     |                | Show current Temperature Resolution
 TempRes     | 0..3           | Set Temperature Resolution
-TempUnit    |                | Show current Temperature Unit as either Celsius or Fahrenheit
-TempUnit    | 0 | celsius    | Set Temperature Unit to Celsius
-TempUnit    | 1 | fahrenheit | Set Temperature Unit to Fahrenheit
+TempUnit    |                | Show current Temperature as either Celsius or Fahrenheit
+TempUnit    | 0 | celsius    | Set Temperature to Celsius
+TempUnit    | 1 | fahrenheit | Set Temperature to Fahrenheit
 ```
 
 ### Management
