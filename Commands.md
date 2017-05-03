@@ -91,8 +91,8 @@ TempUnit    | 1 | fahrenheit | Set Temperature to Fahrenheit
 Command         | Payload  | Description
 ----------------|----------|-------------------------------------------------------------------------------
 ButtonRestrict  |          | Show current button multi press mode
-ButtonRestrict  | 0 | Off  | (default) Allow all button actions
-ButtonRestrict  | 1 | On   | Allow only single and double short press button actions
+ButtonRestrict  | 0 | off  | (default) Allow all button actions
+ButtonRestrict  | 1 | on   | Allow only single and double short press button actions
 Emulation       |          | Show current emulation state
 Emulation       | 0 | off  | Disable emulation
 Emulation       | 1        | Enable Belkin WeMo emulation for Alexa
@@ -188,9 +188,9 @@ WebPassword    | 0         | Disable use of password
 WebPassword    | 1         | Reset password to value in user_config.h (WEB_PASSWORD)
 WebPassword    | <passwrd> | Set web server Admin password for user WEB_USERNAME (32 chars max)
 WebServer      |           | Show current web server state
-WebServer      | 0 | Off   | Stop web server
-WebServer      | 1 | User  | Start web server in user mode
-WebServer      | 2 | Admin | Start web server in admin mode
+WebServer      | 0 | off   | Stop web server
+WebServer      | 1 | user  | Start web server in user mode
+WebServer      | 2 | admin | Start web server in admin mode
 WifiConfig     |           | Show current config tool
 WifiConfig     | 0         | Disable wifi config but restart (used with alternate AP)
 WifiConfig     | 1         | Start smart config for 1 minute and set as current config tool
@@ -237,7 +237,7 @@ MqttUser     | 1            | Reset MQTT user name to user_config.h (MQTT_USER) 
 MqttUser     | <user>       | Set MQTT user name (32 chars max) and restart
 PowerRetain  |              | Show current MQTT power retain state
 PowerRetain  | 0 | off      | (default) Disable MQTT power retain on status update
-PowerRetain  | 1 |on        | Enable MQTT power retain on status update
+PowerRetain  | 1 | on       | Enable MQTT power retain on status update
 Prefix1      |              | Show current MQTT command subscription prefix
 Prefix1      | 1            | Reset MQTT command subscription prefix to user_config.h (SUB_PREFIX) and restart
 Prefix1      | <prefix>     | Set MQTT command subscription prefix (10 chars max) and restart
@@ -355,7 +355,7 @@ Color           | <CCWW>  | Set color to CCWW hexadecimal value
 Dimmer          |         | Show current dimmer setting from 0 to 100%
 Dimmer          | 0..100  | Set dimmer value from 0 to 100%
 Fade            |         | Show current fade state
-Fade            | 0 | Off | (default) Do not use fade
+Fade            | 0 | off | (default) Do not use fade
 Fade            | 1 | on  | Use fade
 LedTable        |         | Show current Led table intensity correction state
 LedTable        | 0 | off | (default) Do not use Led table for intensity correction
@@ -403,7 +403,7 @@ Color            | <RRGGBB> | Set strip/ring color to RRGGBB hexadecimal value
 Dimmer           |          | Show current dimmer setting from 0 to 100%
 Dimmer           | 0..100   | Set dimmer value from 0 to 100%
 Fade             |          | Show current color fade state
-Fade             | 0 | Off  | (default) Do not use fade while changing colors
+Fade             | 0 | off  | (default) Do not use fade while changing colors
 Fade             | 1 | on   | Use fade while changing colors
 Led1..Led<count> |          | Show specific led current color as RRGGBB
 Led1..Led<count> | <RRGGBB> | Set specific led to desired color RRGGBB
