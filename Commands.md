@@ -11,6 +11,7 @@ http://sonoff/cm?user=admin&password=joker&cmnd=Power%20Toggle
 
 The following command tables are available:
 - [Main](#main)
+- [Sensor](#sensor)
 - [Management](#management)
 - [Wifi](#wifi)
 - [MQTT](#mqtt)
@@ -66,6 +67,23 @@ SwitchMode<x>    | 1            | Set switch mode to FOLLOW (0 = Off, 1 = On)
 SwitchMode<x>    | 2            | Set switch mode to inverted FOLLOW (0 = On, 1 = Off)
 SwitchMode<x>    | 3            | Set switch mode to PUSHBUTTON (Normally 1, 0 = toggle)
 SwitchMode<x>    | 4            | Set switch mode to inverted PUSHBUTTON (Normally 0, 1 = toggle)
+```
+
+### Sensor
+```
+Command     | Payload        | Description
+------------|----------------|--------------------------------------------------------------
+EnergyRes   |                | Show current Energy Resolution
+EnergyRes   | 0..5           | Set Energy Resolution
+HumRes      |                | Show current Humidity Resolution
+HumRes      | 0..3           | Set Humidity Resolution
+PressRes    |                | Show current Pressure Resolution
+PressRes    | 0..3           | Set Pressure Resolution
+TempRes     |                | Show current Temperature Resolution
+TempRes     | 0..3           | Set Temperature Resolution
+TempUnit    |                | Show current Temperature Unit as either Celsius or Fahrenheit
+TempUnit    | 0 | celsius    | Set Temperature Unit to Celsius
+TempUnit    | 1 | fahrenheit | Set Temperature Unit to Fahrenheit
 ```
 
 ### Management
