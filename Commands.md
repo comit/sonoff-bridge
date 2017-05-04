@@ -36,7 +36,7 @@ LedPower         | 0 | off      | Turn led AND LedState Off
 LedPower         | 1 | on       | Turn led On AND LedState Off
 LedState         |              | Show current led state as 0 to 7
 LedState         | 0 | off      | Disable use of LED as much as possible
-LedState         | 1 | on       | Show power state on led
+LedState         | 1 | on       | Show power state on led (inverted for Sonoff Touch)
 LedState         | 2            | Show MQTT subscriptions as a led blink
 LedState         | 3            | Show power state and MQTT subscriptions as a led blink
 LedState         | 4            | Show MQTT publications as a led blink
