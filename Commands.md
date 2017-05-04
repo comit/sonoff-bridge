@@ -247,6 +247,9 @@ Prefix2      | <prefix>     | Set MQTT status prefix (10 chars max) and restart
 Prefix3      |              | Show current MQTT telemetry prefix
 Prefix3      | 1            | Reset MQTT telemetry prefix to user_config.h (PUB_PREFIX2) and restart
 Prefix3      | <prefix>     | Set MQTT telemetry prefix (10 chars max) and restart
+SensorRetain |              | Show current sensor MQTT retain flag state
+SensorRetain | 0 | off      | (default) Disable use of sensor MQTT retain flag
+SensorRetain | 1 | on       | Enable MQTT retain flag on message tele/sonoff/SENSOR
 StateText1   |              | Show current Off state text
 StateText1   | <text>       | Set Off state text (10 chars max)
 StateText2   |              | Show current On state text
