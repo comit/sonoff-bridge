@@ -315,6 +315,11 @@ CurrentHigh     | <milliamps> | Set current high threshold value
 CurrentLow      |             | Show current current low threshold value
 CurrentLow      | 0 | off     | (default) Disable current low threshold
 CurrentLow      | <milliamps> | Set current low threshold value
+EnergyReset     |             | Show Energy Total, Yesterday and Today
+EnergyReset     | 1           | Reset Energy Today
+EnergyReset     | 2           | Reset Energy Yesterday
+EnergyReset     | 3           | Reset Energy Total
+EnergyReset     | 4           | Reset Energy Total to Energy Today and Yesterday
 HlwIcal         |             | Show calibration value for Current
 HlwIcal         | 1           | Set default calibration value for Current to 3500
 HlwIcal         | <value>     | Set user calibration value for Current starting from 2500
