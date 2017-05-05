@@ -54,6 +54,7 @@ PowerOnState     | 0 | off      | Keep relay(s) off after power on
 PowerOnState     | 1 | on       | Turn relay(s) on after power on
 PowerOnState     | 2 | toggle   | Toggle relay(s) on from last saved
 PowerOnState     | 3            | (default) Turn relay(s) on as last saved
+PowerOnState     | 4            | Turn relay(s) on and disable further relay control
 PowerRetain      |              | Show current MQTT power retain state
 PowerRetain      | 0 | off      | (default) Disable MQTT power retain on status update
 PowerRetain      | 1 | on       | Enable MQTT power retain on status update
