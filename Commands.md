@@ -315,6 +315,8 @@ CurrentHigh     | <milliamps> | Set current high threshold value
 CurrentLow      |             | Show current current low threshold value
 CurrentLow      | 0 | off     | (default) Disable current low threshold
 CurrentLow      | <milliamps> | Set current low threshold value
+EnergyRes       |             | Show current Energy Resolution
+EnergyRes       | 0..5        | Set Energy Resolution
 EnergyReset     |             | Show Energy Total, Yesterday and Today
 EnergyReset     | 1           | Reset Energy Today
 EnergyReset     | 2           | Reset Energy Yesterday
