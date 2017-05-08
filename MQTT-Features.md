@@ -23,3 +23,18 @@ Sonoff responds to the following MQTT commands using MQTT Topic for ```cmnd/sono
 While most MQTT commands will result in a message in JSON format the power status feedback will always be returned like ```stat/sonoff/POWER ON``` too.
 
 Telemetry data will be sent by prefix ```tele``` like ```tele/sonoff/SENSOR {"Time":"2017-02-16T10:13:52", "DS18B20":{"Temperature":20.6}}```
+
+## MQTT Topic definition
+Until version 5.0.5 the MQTT topic was defined rigidly by using the commands ``Prefix<x>`` and ``Topic`` resulting in a command topic string like ``cmnd/sonoff/Power``.
+
+Starting with version 5.0.5 the MQTT topic is more flexible using command ``FullTopic`` and tokens to be placed within the user definable string up to 100 characters in size. The provided tokens are:
+- %prefix% to be dynamically substituted by one of three prefixes as defined by commands ``Prefix1``, ``Prefix2`` and ``Prefix3``.
+- %topic% to be dynamically substituted by one of the five topics as defined by commands ``Topic``, ``GroupTopic``, ``ButtonTopic``, ``SwitchTopic`` and ``MqttClient``. 
+
+Using the tokens the following example topics can be made:
+- ``FullTopic %prefix%/%topic%/`` being the legacy situation up to version 5.0.5
+- ``FullTopic tasmota/%topic%/%prefix%/``
+- ``FullTopic tasmota/bedroom/%topic%/%prefix%/``
+- ``FullTopic penthouse/bedroom1/bathroom2/%topic%/%prefix%/``
+
+To solve possible MQTT topic loops I strongly suggest to use the %prefix% token in all of your FullTopics. It may work without %prefix% as I implemented some validation by forcing the use of a prefix in commands send to the device but status and telemetry do not need a prefix. Just play with it and report strange problems I might solve in the future.

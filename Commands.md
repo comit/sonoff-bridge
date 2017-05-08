@@ -211,6 +211,9 @@ ButtonTopic  |              | Show current MQTT button topic
 ButtonTopic  | 0 | off      | Disable use of MQTT button topic
 ButtonTopic  | 1            | Set MQTT button topic to Topic
 ButtonTopic  | <topic>      | Set MQTT button topic (32 chars max)
+FullTopic    |              | Show current MQTT fulltopic string
+FullTopic    | 1            | Reset MQTT fulltopic to user_config.h (MQTT_FULLTOPIC) and restart
+FullTopic    | <fulltopic>  | Set MQTT fulltopic (100 chars max) using optional %topic% and %prefix% and restart
 GroupTopic   |              | Show current MQTT group topic
 GroupTopic   | 1            | Reset MQTT group topic to user_config.h (MQTT_GRPTOPIC) and restart
 GroupTopic   | <grouptopic> | Set MQTT group topic (32 chars max) and restart
