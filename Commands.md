@@ -235,6 +235,8 @@ MqttPort     | <port>       | Set MQTT port between 2 and 32766 and restart
 MqttResponse |              | Show current MQTT response state
 MqttResponse | 0 | off      | Return response as RESULT topic
 MqttResponse | 1 | on       | Return response as Command topic
+MqttRetry    |              | Show current MQTT connection retry timer in seconds
+MqttRetry    | 10..32000    | Set MQTT connection retry timer in seconds
 MqttUser     |              | Show current MQTT user name
 MqttUser     | 0            | Set MQTT user name to none
 MqttUser     | 1            | Reset MQTT user name to user_config.h (MQTT_USER) and restart
