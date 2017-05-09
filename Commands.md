@@ -236,6 +236,7 @@ MqttResponse |              | Show current MQTT response state
 MqttResponse | 0 | off      | Return response as RESULT topic
 MqttResponse | 1 | on       | Return response as Command topic
 MqttRetry    |              | Show current MQTT connection retry timer in seconds
+MqttRetry    | 10           | (default) Set MQTT connection retry timer in seconds
 MqttRetry    | 10..32000    | Set MQTT connection retry timer in seconds
 MqttUser     |              | Show current MQTT user name
 MqttUser     | 0            | Set MQTT user name to none
