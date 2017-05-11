@@ -80,6 +80,9 @@ HumRes      |                | Show current Humidity Resolution
 HumRes      | 0..3           | Set Humidity Resolution
 PressRes    |                | Show current Pressure Resolution
 PressRes    | 0..3           | Set Pressure Resolution
+SetOption8  |                | Show current Temperature as either Celsius or Fahrenheit
+SetOption8  | 0 | celsius    | Set Temperature to Celsius
+SetOption8  | 1 | fahrenheit | Set Temperature to Fahrenheit
 TempRes     |                | Show current Temperature Resolution
 TempRes     | 0..3           | Set Temperature Resolution
 TempUnit    |                | Show current Temperature as either Celsius or Fahrenheit
@@ -128,6 +131,12 @@ SaveData        | <sec>    | Save parameter changes between every 2 and 3600 sec
 SaveState       |          | Show current SaveState state
 SaveState       | 1 | on   | (default) Save power changes and set relay after restart
 SaveState       | 0 | off  | Do not save power changes and do not set relay after restart
+SetOption0      |          | Show current SaveState state
+SetOption0      | 1 | on   | (default) Save power changes and set relay after restart
+SetOption0      | 0 | off  | Do not save power changes and do not set relay after restart
+SetOption1      |          | Show current button multi press mode
+SetOption1      | 0 | off  | (default) Allow all button actions
+SetOption1      | 1 | on   | Allow only single and double short press button actions
 Sleep           |          | Show current sleep state as 0 (Off) or duration of up to 250 mSec
 Sleep           | 0 | off  | (default) Turn sleep off
 Sleep           | 1..250   | Set sleep duration from 1 to 250 mSec to enable energy saving
@@ -257,9 +266,15 @@ Prefix3      | <prefix>     | Set MQTT telemetry prefix (10 chars max) and resta
 SensorRetain |              | Show current sensor MQTT retain flag state
 SensorRetain | 0 | off      | (default) Disable use of sensor MQTT retain flag
 SensorRetain | 1 | on       | Enable MQTT retain flag on message tele/sonoff/SENSOR
-SetOption10  |              | Show current action when changing topic
-SetOption10  | 0 | off      | (default) When topic changes drop retained LWT
-SetOption10  | 1 | on       | When topic changes send retained LWT offline
+SetOption2   |              | Show current Units state
+SetOption2   | 0 | off      | (default) Do not show units to messages
+SetOption2   | 1 | on       | Add units to messages
+SetOption4   |              | Show current MQTT response state
+SetOption4   | 0 | off      | Return response as RESULT topic
+SetOption4   | 1 | on       | Return response as Command topic
+SetOption10  |              | Show current LWT action when changing topic
+SetOption10  | 0 | off      | (default) When topic changes drop retained old topic LWT
+SetOption10  | 1 | on       | When topic changes send old topic retained LWT offline
 StateText1   |              | Show current Off state text
 StateText1   | <text>       | Set Off state text (10 chars max)
 StateText2   |              | Show current On state text
