@@ -257,6 +257,9 @@ Prefix3      | <prefix>     | Set MQTT telemetry prefix (10 chars max) and resta
 SensorRetain |              | Show current sensor MQTT retain flag state
 SensorRetain | 0 | off      | (default) Disable use of sensor MQTT retain flag
 SensorRetain | 1 | on       | Enable MQTT retain flag on message tele/sonoff/SENSOR
+SetOption10  |              | Show current action when changing topic
+SetOption10  | 0 | off      | (default) When topic changes drop retained LWT
+SetOption10  | 1 | on       | When topic changes send retained LWT offline
 StateText1   |              | Show current Off state text
 StateText1   | <text>       | Set Off state text (10 chars max)
 StateText2   |              | Show current On state text
