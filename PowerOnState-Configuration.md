@@ -33,7 +33,7 @@ If there are retained messages there should be an output similar to: (the "r1" s
 `on`
 
 
-cmnd/+/power could also something different depending what you have defined as IN folder for commands. "power" needs to be replaced by power1,power2 and so on, if you have more relays or use "hm/cmnd/#". Be aware that MQTT does **NOT SUPPORT **wildcards "cmnd/+/Power?"
+cmnd/+/power could also something different depending what you have defined as IN folder for commands. "power" needs to be replaced by power1,power2 and so on, if you have more relays or use "cmnd/#". Be aware that MQTT does **NOT SUPPORT **wildcards "cmnd/+/Power?"
 
 `#define SUB_PREFIX             "cmnd" `
 
