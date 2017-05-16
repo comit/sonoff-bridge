@@ -13,7 +13,7 @@
 - [**MQTT Features**](MQTT-Features)
 - [**Commands**](Commands)
 - [**Sensor Configuration**](Sensor-Configuration)
-- [**Power Retain Configuration**](Power-Retain-Configuration)
+- [**PowerOnState Configuration**](PowerOnState-Configuration)
 - [**SwitchMode/SwitchTopic**](Understanding-SwitchMode-and-SwitchTopic)
 
 **Home Automation Integration**
