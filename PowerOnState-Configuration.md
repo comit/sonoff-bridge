@@ -21,15 +21,25 @@ The stored MQTT message will always **override the PowerOnState!!!**
 
 To check, if there is a value set for the power switch you can use mosquitto_sub
 
-`mosquitto_sub -p 1883 -u <username> -P <password> -t hm/cmnd/+/power`
+`mosquitto_sub -p 1883 -u <username> -P <password> -t cmnd/+/power`
 
-hm/cmd/+/power could also something different depending what you have defined as IN folder for commands. "power" needs to be replaced by power1,power2 and so on, if you have more relays or use "hm/cmnd/#". Be aware that MQTT does **NOT SUPPORT **wildcards "hm/cmnd/+/Power?"
+If there are retained messages there should be an output similar to: (the "r1" shows that this message was retained)
+
+`Client mosqsub/3795-raspberryp received PUBLISH (d0, q0, r1, m0, 'cmnd/setting/ESP_004554/power', ... (1 bytes))`  
+`on`  
+`Client mosqsub/3795-raspberryp received PUBLISH (d0, q0, r1, m0, 'cmnd/setting/ESP_267688/power', ... (1 bytes))`  
+`off`  
+`Client mosqsub/3795-raspberryp received PUBLISH (d0, q0, r1, m0, 'cmnd/setting/ESP_675667/power', ... (1 bytes))`  
+`on`
+
+
+cmnd/+/power could also something different depending what you have defined as IN folder for commands. "power" needs to be replaced by power1,power2 and so on, if you have more relays or use "hm/cmnd/#". Be aware that MQTT does **NOT SUPPORT **wildcards "cmnd/+/Power?"
 
 `#define SUB_PREFIX             "cmnd" `
 
 Now you can see, if there are messages stored that Power ON/OFF and need to be deleted. To delete use:
 
-`mosquitto_pub -p 1883 -u <username> -P <password> -d -n -r -t hm/cmnd/ESP_0C220C/power`
+`mosquitto_pub -p 1883 -u <username> -P <password> -d -n -r -t cmnd/ESP_0C220C/power`
 
 The -n sends an empty key and the -r store this change permanently
 
