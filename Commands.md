@@ -76,7 +76,7 @@ Command         | Payload        | Description
 ----------------|----------------|---------------------------------------------------------------
 Counter<x>      |                | Show current Counter 1..4 value
 Counter<x>      | 0              | Reset Counter 1..4
-Counter<x>      | 1..999999999   | Preset Counter 1..4
+Counter<x>      | 1..64900       | Preset Counter 1..4
 CounterDebounce |                | Show current global Counter debounce time in mSec
 CounterDebounce | 0 | off        | Turn global Counter debounce off
 CounterDebounce | 1..3200        | Set global Counter debounce in mSec
