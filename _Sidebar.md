@@ -5,7 +5,7 @@
 - [**Hardware Preparation**](Hardware-Preparation)
 - [**Upload**](Upload)
 - [**Upgrade**](Upgrade)
-- [**First Steps**](Initital-Configuration)
+- [**First Steps**](Initial-Configuration)
 - [**Tutorials**](Tutorials)
 
 **Usage**
