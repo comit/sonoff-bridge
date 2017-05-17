@@ -72,22 +72,31 @@ SwitchMode<x>    | 4            | Set switch mode to inverted PUSHBUTTON (Normal
 
 ### Sensor
 ```
-Command     | Payload        | Description
-------------|----------------|---------------------------------------------------------
-EnergyRes   |                | Show current Energy Resolution
-EnergyRes   | 0..5           | Set Energy Resolution
-HumRes      |                | Show current Humidity Resolution
-HumRes      | 0..3           | Set Humidity Resolution
-PressRes    |                | Show current Pressure Resolution
-PressRes    | 0..3           | Set Pressure Resolution
-SetOption8  |                | Show current Temperature as either Celsius or Fahrenheit
-SetOption8  | 0 | celsius    | Set Temperature to Celsius
-SetOption8  | 1 | fahrenheit | Set Temperature to Fahrenheit
-TempRes     |                | Show current Temperature Resolution
-TempRes     | 0..3           | Set Temperature Resolution
-TempUnit    |                | Show current Temperature as either Celsius or Fahrenheit
-TempUnit    | 0 | celsius    | Set Temperature to Celsius
-TempUnit    | 1 | fahrenheit | Set Temperature to Fahrenheit
+Command         | Payload        | Description
+----------------|----------------|---------------------------------------------------------------
+Counter<x>      |                | Show current Counter 1..4 value
+Counter<x>      | 0              | Reset Counter 1..4
+Counter<x>      | 1..999999999   | Preset Counter 1..4
+CounterDebounce |                | Show current global Counter debounce time in mSec
+CounterDebounce | 0 | off        | Turn global Counter debounce off
+CounterDebounce | 1..3200        | Set global Counter debounce in mSec
+CounterType<x>  |                | Show current Counter 1..4 type as pulse Counter or pulse Timer
+CounterType<x>  | 0 | off        | Set current Counter 1..4 type as pulse Counter
+CounterType<x>  | 1 | on         | Set current Counter 1..4 type as pulse Timer
+EnergyRes       |                | Show current Energy Resolution
+EnergyRes       | 0..5           | Set Energy Resolution
+HumRes          |                | Show current Humidity Resolution
+HumRes          | 0..3           | Set Humidity Resolution
+PressRes        |                | Show current Pressure Resolution
+PressRes        | 0..3           | Set Pressure Resolution
+SetOption8      |                | Show current Temperature as either Celsius or Fahrenheit
+SetOption8      | 0 | celsius    | Set Temperature to Celsius
+SetOption8      | 1 | fahrenheit | Set Temperature to Fahrenheit
+TempRes         |                | Show current Temperature Resolution
+TempRes         | 0..3           | Set Temperature Resolution
+TempUnit        |                | Show current Temperature as either Celsius or Fahrenheit
+TempUnit        | 0 | celsius    | Set Temperature to Celsius
+TempUnit        | 1 | fahrenheit | Set Temperature to Fahrenheit
 ```
 
 ### Management
