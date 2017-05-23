@@ -5,10 +5,14 @@ For first-time flashers, please follow the [Upload instructions](https://github.
 It is recommended to upgrade the firmware [over-the-air](https://en.wikipedia.org/wiki/Over-the-air_programming), without a serial connection, while being connected to AC and operational.
 This method is only available after the Sonoff-Tasmota firmware was flashed via serial connection once.
 
+**Attention:** Because of limited flash memory it might be needed to flash a *minimal* firmware version before flashing the actual *non-minimal* new firmware update. See below or more details.
+
 Build the firmware binary from source or download the latest build from [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). There are a few ways to upgrade the firmware:
 
-1. Use the "Upload Firmware" dialog on the Sonoff-Tasmota Web Interface to flash the downloaded or built `firmware.bin`.
-2. [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) publicly provides an automatic build of the latest firmware on his webserver. Enter this URL on the Sonoff-Tasmota web interface: http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin <br>*(Github only provides SSL-encrypted links and the Sonoff isn't capable of connecting via https protocol.)*
+1. Use the "Upload Firmware" dialog on the Sonoff-Tasmota web interface to flash the downloaded or built `firmware.bin`.
+2. [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) publicly provides an automatic build of the latest firmware on his web server. Enter the following URL on the Sonoff-Tasmota web interface *(An SSL/HTTPS connection to access the GitHub releases files directly is not supported)*:
+    * `http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin` (Latest firmware release, [Link](http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin))
+    * `http://sonoff.maddox.co.uk/tasmota/sonoff-minimal.ino.bin` (Minimal firmware, [Link](http://sonoff.maddox.co.uk/tasmota/sonoff-minimal.ino.bin))
 3. Provide the binary on a web server and initiate the upgrade via the [`upgrade` command](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#management).
 4. If you're using [openHAB2](http://www.openhab.org/), you can use an automation rule to upgrade your Sonoffs from within your home automation: [openHAB Maintenance](https://github.com/arendst/Sonoff-Tasmota/wiki/openHAB#maintenance-actions)
 
@@ -16,11 +20,11 @@ Build the firmware binary from source or download the latest build from [the rel
 
 As more functionality is being added to the firmware at some time it reaches the point where OTA or web page upload will fail. Both upgrade features rely on the fact that there is enough free flash memory available to load both the current and the new firmware. With a 1MB flash as available on the Sonoffs and the standard linker script providing 950kB code space a firmware file size of as much as 475kB allows for an easy upgrade. 
 
-Starting with **version 5.x** I use an updated linker script extending the code space by 70kB allowing a firmware file size of as much as 510kB
+Starting with **version 5.x** Sonoff-Tasmota uses an updated linker script, extending the code space by 70kB, allowing a firmware file size of as much as 510kB.
 
-Larger firmware can only be loaded when the current firmware is first reduced to accomodate more free flash to load the larger firmware. This is a two step approach:
-1. Upload firmware with define USE_MINIMAL **enabled** which will have a smaller footprint
-2. Upload the final firmware with define USE_MINIMAL **disabled** with the features you want to use.
+Larger firmware files can only be loaded when the current flash usage is first reduced to accommodate more free flash to load the new firmware. Hence you'll need to perform a two step process:
+1. Upload firmware with `#define USE_MINIMAL` **enabled** which will have a smaller footprint
+2. Upload the final firmware with `#define USE_MINIMAL` **disabled** with the features you want to use.
 
 ## Migration path
 
