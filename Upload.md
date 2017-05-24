@@ -19,7 +19,7 @@ In the Arduino IDE for sonoff select from `Tools Board Generic ESP8266 Module` (
 - Flash Mode: DIO
 - Flash Frequency: 40MHz
 - CPU Frequency: 80MHz
-- Flash Size: 1M (64K SPIFFS) **Version 5.x.x - Flash Size: "1M (no SPIFFS)"**
+- Flash Size: 1M (64K SPIFFS) ⚠️️**If Version 5.x.x -> Flash Size: "1M (no SPIFFS)"**⚠️️
 - Debug Port: Disabled
 - Debug Level: None
 - Reset Method: ck
