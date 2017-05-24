@@ -96,6 +96,9 @@ As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have 
 - Tools Board Generic ESP8285 Module
 - Flash Size: 1M (64K SPIFFS)
 
+***** As of version 5.x.x Flash Size should be set to -> **"1M (no SPIFFS)"** *****
+Procedure explained in [Prerequisite](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) section of wiki
+
 <br />
 Programming the Sonoff touch is as easy as the Sonoff Basic.
 
