@@ -117,3 +117,15 @@ Programming the on-board 3.3V [PSA-B](https://www.itead.cc/psa-01.html) is possi
 On the PCB the `TX` and `RX` pins are mislabeled. The `TX` of the programmer needs to connect to the `TX` on the 4ch PCB and the `RX` to the `RX`. Normally this is reversed.
 
 Note to set the board to "Generic ESP8285 Module".
+
+### Sonoff SC
+
+Flashing the ESP8266
+
+Remove the 4 screws on the bottom.
+<img alt="SonoffSC" src="https://puu.sh/vZZRI/ff36ff9244.jpg" width="230" align="right"/> The button is connected to GPIO0.
+
+You will have to remove the TX jumper in the board to avoid the ATMega328P to interfere in the upload process.
+<img alt="SonoffScRemoveTX" src="https://puu.sh/vZZSi/43244f3cc1.jpg" width="230" align="right"/> 
+Press and hold the button while powering the board to set the ESP8266 into flashing mode.
+Note! After flashing you need to set the baudrate to 19200
