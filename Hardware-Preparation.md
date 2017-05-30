@@ -36,6 +36,8 @@ For module specific instructions and restrictions, please see the respective art
 
 * [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
 
+----
+
 ### Sonoff Basic
 
 <img alt="Connection diagram" src="https://github.com/arendst/arendst.github.io/blob/master/media/ProgramESP8266.jpg" height="260" /><br/>
