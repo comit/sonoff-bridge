@@ -1,4 +1,30 @@
+
+* Itead Product Page: http://sonoff.itead.cc/en/products/sonoff/sonoff-dual
+* Itead Shop: https://www.itead.cc/sonoff-dual.html
+* Itead Wiki: https://www.itead.cc/wiki/Sonoff_Dual
+
+## Serial Connection
+
+Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
+
+As always, you need to access the serial interface. The four serial pins are available at the short end of the PCB and can be seen on the left side of the first image.
+
+<img alt="Sonoff Dual, GPIO0 grounded" src="https://github.com/arendst/arendst.github.io/blob/master/media/dual2a.jpg" width="48%" />
+<img alt="Alternate GPIO0 spot" src="http://tinkerman.cat/wp-content/uploads/2016/12/20161206_234331s.jpg" width="48%" align="right" />
+
+Programming the Sonoff Dual is more difficult because the on-board-button is not connected to GPIO0. As with all ESP8266 modules pulling GPIO0 to GND is needed to put the chip in programming mode during power up. GND can be found on the button 0 and button 1 headers.
+
+GPIO0 can be accessed two ways:
+1. Unscrew the Sonoff Dual from the housing and access the underside of the PCB You can find GPIO0 on one side of a resistor as shown in the second image.
+2. GPIO0 can be found on the small inter layer [via](https://en.wikipedia.org/wiki/Via_(electronics)) pointed at in the first image. Attention: If the via is covered by silk screen (green) you need to expose the underlying conductive (copper) by careful scratching it off.
+
+## Restricted Button Functionality
+
+Please be aware, that the button on the Sonoff Dual is not connected to the normal button pin (GPIO). After freshly flashing Sonoff-Tasmota (with the default module setting "Sonoff Basic"), the button will hence not act as described in [Button Usage](https://github.com/arendst/Sonoff-Tasmota/wiki/Button-usage) article. You will therefore not be able to switch or activate the special wifi modes.
+After configuring the device as a "Sonoff Dual", the button will regain normal functionality.
+
 ## Solving intermittent relay switch errors
+
 Where most Sonoff's use GPIO to control one or more relays the Sonoff Dual and 4 Channel Inching Relay Assy do use the standard SERIAL interface to control the relays.
 
 Commands are send from the ESP8266 via a 19200 baud serial connection to a dedicated chip that controls the relays.
