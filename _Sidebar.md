@@ -15,6 +15,7 @@
 - [**Sensor Configuration**](Sensor-Configuration)
 - [**PowerOnState Configuration**](PowerOnState-Configuration)
 - [**SwitchMode/SwitchTopic**](Understanding-SwitchMode-and-SwitchTopic)
+- [**Troubleshooting**](Troubleshooting)
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
@@ -22,17 +23,16 @@
 - [**Home Assistant**](Home-Assistant)
 - [**HomeBridge**](Homebridge)
 
-**Tips**
-- [**MQTT Overview**](MQTT-Overview)
-- [**General**](Tips)
+**Devices**
+- [**General Tips**](Tips)
 - [**Sonoff Dual**](Sonoff-Dual)
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff RF and Slampher**](Sonoff-RF)
 - [**Sonoff Touch**](Sonoff-Touch)
 - [**Sonoff 4CH**](Sonoff-4CH)
-- [**Troubleshooting**](Troubleshooting)
 
-**User Experience**
+**Misc**
+- [**MQTT Overview**](MQTT-Overview)
 - [**Remote Button**](Control-a-Sonoff-using-a-remote-button)
 - [**Modified Kaku**](Modify-KaKu-to-WKaKu-Power-Socket)
 - [**IR Extension**](https://github.com/altelch/SonoffIR "IR extension")
