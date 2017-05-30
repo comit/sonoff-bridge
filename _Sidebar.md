@@ -18,18 +18,18 @@
 - [**Tips**](Tips)
 - [**Troubleshooting**](Troubleshooting)
 
-**Home Automation Integration**
-- [**openHAB**](openHAB)
-- [**Domoticz**](Domoticz)
-- [**Home Assistant**](Home-Assistant)
-- [**HomeBridge**](Homebridge)
-
 **Devices**
 - [**Sonoff Dual**](Sonoff-Dual)
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff RF and Slampher**](Sonoff-RF)
 - [**Sonoff Touch**](Sonoff-Touch)
 - [**Sonoff 4CH**](Sonoff-4CH)
+
+**Home Automation Integration**
+- [**openHAB**](openHAB)
+- [**Domoticz**](Domoticz)
+- [**Home Assistant**](Home-Assistant)
+- [**HomeBridge**](Homebridge)
 
 **Misc**
 - [**MQTT Overview**](MQTT-Overview)
