@@ -27,8 +27,8 @@
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
-- [**Domoticz**](Domoticz)
 - [**Home Assistant**](Home-Assistant)
+- [**Domoticz**](Domoticz)
 - [**HomeBridge**](Homebridge)
 
 **Misc**
