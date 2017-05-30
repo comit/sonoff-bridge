@@ -32,7 +32,9 @@ To bring a Sonoff module into Flash Mode:
 
 ## Sonoff Module Specifics
 
-See below for specific Sonoff Module information and examples.
+For module specific instructions and restrictions, please see the respective articles:
+
+* [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
 
 ### Sonoff Basic
 
