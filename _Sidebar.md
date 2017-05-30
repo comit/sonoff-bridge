@@ -15,6 +15,7 @@
 - [**Sensor Configuration**](Sensor-Configuration)
 - [**PowerOnState Configuration**](PowerOnState-Configuration)
 - [**SwitchMode/SwitchTopic**](Understanding-SwitchMode-and-SwitchTopic)
+- [**Tips**](Tips)
 - [**Troubleshooting**](Troubleshooting)
 
 **Home Automation Integration**
@@ -24,7 +25,6 @@
 - [**HomeBridge**](Homebridge)
 
 **Devices**
-- [**General Tips**](Tips)
 - [**Sonoff Dual**](Sonoff-Dual)
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff RF and Slampher**](Sonoff-RF)
