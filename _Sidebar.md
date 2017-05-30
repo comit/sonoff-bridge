@@ -9,13 +9,13 @@
 - [**Tutorials**](Tutorials)
 
 **Usage**
-- [**Button**](Button-usage)
+- [**Button Functionality**](Button-usage)
 - [**MQTT Features**](MQTT-Features)
-- [**Commands**](Commands)
+- [**Supported Commands**](Commands)
 - [**Sensor Configuration**](Sensor-Configuration)
 - [**PowerOnState Configuration**](PowerOnState-Configuration)
 - [**SwitchMode/SwitchTopic**](Understanding-SwitchMode-and-SwitchTopic)
-- [**Tips**](Tips)
+- [**Misc. Tips**](Tips)
 - [**Troubleshooting**](Troubleshooting)
 
 **Devices**
@@ -31,7 +31,7 @@
 - [**Domoticz**](Domoticz)
 - [**HomeBridge**](Homebridge)
 
-**Misc**
+**Further Topics**
 - [**MQTT Overview**](MQTT-Overview)
 - [**Remote Button**](Control-a-Sonoff-using-a-remote-button)
 - [**Modified Kaku**](Modify-KaKu-to-WKaKu-Power-Socket)
