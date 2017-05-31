@@ -1,16 +1,15 @@
-### Sonoff Pow
 
-<!-- this can be deleted. General warning now given above -->
+* Itead Product Page: http://sonoff.itead.cc/en/products/sonoff/sonoff-pow
+* Itead Shop: https://www.itead.cc/sonoff-pow.html
+* Itead Wiki: https://www.itead.cc/wiki/Sonoff_Pow
 
-Trying to program the Sonoff Pow [comrade MySKU](http://mysku.ru/blog/china-stores/45762.html) learned the hard way how to brick it.
+## Serial Connection
 
-<img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="230" align="right" /> 
-As the Sonoff Pow power monitoring hardware connects AC power to the logic ground of the ESP8266 it is utterly mandatory to **NOT CONNECT AC POWER WHILE SERIAL CONNECTION IS BEING USED**.
+<img alt="picture of the Sonoff Pow PCB, the needed pin header can be seen on the top end" src="https://www.itead.cc/wiki/images/e/e3/Sonoff-Pow-00.JPG" width="40%" align="right" />
 
-During both AC connection and Serial connection you may connect the life AC wire with your PC's DC ground leading to a power short, broken Sonoff Pow and laptop Power Supply as MySKU has experienced.
+Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
 
-A solution that works for me is shown in the schematic below using two opto couplers seperating the AC connection on the **left** from the low voltage connection on the **right**. This allows for serial control at 115200 baud and uploading of firmware up to 57600 baud while AC is connected.
-<img alt="OptoSerial" src="https://github.com/arendst/arendst.github.io/blob/master/media/OptoSerial.jpg" /> 
+As always, you need to access the serial interface. The **four serial pins** (3V3, Rx, Tx, GND) are available at the rear/short end of the PCB as can be seen in the upper part of the image to the right.
 
 ## Calibration
 Sonoff Pow might need calibration as correct measurements are influenced by hardware and timing differences.
@@ -18,8 +17,8 @@ Sonoff Pow might need calibration as correct measurements are influenced by hard
 I used the following procedure to calibrate.
 
 1. Prerequisites
-    - Calibrated multimeter ;-)
-    - Optional calibrated power meter ;-)
+    - Calibrated multimeter :wink: 
+    - Optional calibrated power meter :wink: 
     - 60W light bulb
 2. Connect the Pow to the optional power meter.
 3. Connect the 60W light bulb
