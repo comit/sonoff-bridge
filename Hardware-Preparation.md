@@ -1,16 +1,21 @@
 ## Hardware Preparation
 
-You need to make the serial programming interface of the Sonoff module / the ESP8266 microchip available. Examples are shown in in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff) or by [captain-slow.dk](http://captain-slow.dk/2016/05/22/replacing-the-itead-sonoff-firmware/). In most cases the pins are available on the PCB but connectors need to be soldered to allow interfacing. You'll furthermore need a **3.3V FTDI USB-to-Serial Converter/Programmer**.
+You need to make the serial programming interface of the Sonoff module / the ESP8266 microchip available. In most cases the pins are available on the PCB but connectors need to be soldered to allow interfacing. You'll furthermore need a **3.3V FTDI USB-to-Serial Converter/Programmer**.
 
 The following table shows the connection for most Sonoff modules:
 
-| Sonoff             | Programmer |
-|--------------------|------------|
-| 1 (VCC)            |        3V3 |
-| 2 (RX)             |         TX |
-| 3 (TX)             |         RX |
-| 4 (GND)            |        GND |
-| (5 - if available) |            |
+|Programmer  | Sonoff Module      |
+|------------|--------------------|
+|        3V3 | 3V3 / VCC          |
+|         TX | RX                 |
+|         RX | TX                 |
+|        GND | GND                |
+
+Pay attention to the fact, that RX and TX are crossed.
+
+Some Sonoff modules expose a five pin header. The fifth pin is irrelevant for the serial connection. Please check the specific modules pages to find out more.
+
+Examples of the above preparations are shown in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff) or by [captain-slow.dk](http://captain-slow.dk/2016/05/22/replacing-the-itead-sonoff-firmware/).
 
 ### Attention
 
@@ -34,7 +39,7 @@ To bring a Sonoff module into Flash Mode:
 
 ## Sonoff Module Specifics
 
-For module specific instructions and restrictions, please see the respective articles:
+For module specific instructions and restrictions of the individual devices, please see the respective articles:
 
 * [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
 * [Sonoff Pow](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Pow)
