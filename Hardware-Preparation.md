@@ -37,6 +37,7 @@ To bring a Sonoff module into Flash Mode:
 For module specific instructions and restrictions, please see the respective articles:
 
 * [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
+* [Sonoff Pow](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Pow)
 
 ----
 
