@@ -14,6 +14,8 @@ The following table shows the connection for most Sonoff modules:
 
 ### Attention
 
+<img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="20%" align="right" /> 
+
 **⚠️️⚠️️⚠️️ Do not connect AC power and the serial connection at the same time ⚠️️⚠️️⚠️️** 
 
 Shorting your serial interface with AC will fry your module, programmer and even your PC.
