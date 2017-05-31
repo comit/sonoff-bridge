@@ -67,20 +67,6 @@ Pairing the iTead RF remote controller is the same as with the original iTead so
 
 I was unable to pair the Sonoff RF 434MHz receiver with my KaKu switches but the iTead provided remote control works just fine.
 
-### Sonoff Pow
-
-<!-- this can be deleted. General warning now given above -->
-
-Trying to program the Sonoff Pow [comrade MySKU](http://mysku.ru/blog/china-stores/45762.html) learned the hard way how to brick it.
-
-<img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="230" align="right" /> 
-As the Sonoff Pow power monitoring hardware connects AC power to the logic ground of the ESP8266 it is utterly mandatory to **NOT CONNECT AC POWER WHILE SERIAL CONNECTION IS BEING USED**.
-
-During both AC connection and Serial connection you may connect the life AC wire with your PC's DC ground leading to a power short, broken Sonoff Pow and laptop Power Supply as MySKU has experienced.
-
-A solution that works for me is shown in the schematic below using two opto couplers seperating the AC connection on the **left** from the low voltage connection on the **right**. This allows for serial control at 115200 baud and uploading of firmware up to 57600 baud while AC is connected.
-<img alt="OptoSerial" src="https://github.com/arendst/arendst.github.io/blob/master/media/OptoSerial.jpg" /> 
-
 ### Sonoff Touch
 
 <img src="https://github.com/arendst/arendst.github.io/blob/master/media/toucheu.jpg" width="230" align="right" />
