@@ -3,31 +3,31 @@
 * Itead Shop: https://www.itead.cc/sonoff-touch.html
 * Itead Wiki: (na)
 
+Other than most Sonoff modules (ESP8266) the Sonoff Touch is based on the ESP8285.
+
 ## Serial Connection
 
 Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
 
-As always, you need to access the serial interface. The **four serial pins** (3V3, Rx, Tx, GND) are available at the short end of the PCB and can be seen on the left side of the first image and are labeled in red on the second image.
+As always, you need to access the serial interface. Remove the top PCA from the assembly containing the ESP8285 as shown in the pictures. The **four serial pins** (3V3, Rx, Tx, GND) can be seen in the pictures for the US version (left) and the EU version (right) of the module PCB.
 
-<img src="https://github.com/arendst/arendst.github.io/blob/master/media/toucheu.jpg" width="230" align="right" />
-As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have to make some changes to the proposed Arduino IDE settings as follows:
+<img title="Sonoff Touch US version" src="https://github.com/arendst/arendst.github.io/blob/master/media/touchus.jpg" width="44%" /> 
+<img title="Sonoff Touch EU version" src="https://github.com/arendst/arendst.github.io/blob/master/media/toucheu.jpg" width="48%" align="right" />
 
-- Tools Board Generic ESP8285 Module
-- Flash Size: 1M (64K SPIFFS)
+The Sonoff-Touch button is not connected to **GPIO0** and can hence not be used to bring the module into [Programming Mode](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation#bringing-the-module-in-flash-mode). A connection between GPIO0 and GND needs to be made manually. GPIO0 can be found on the right side of the ESP8285 and is the second pin from the bottom, as can be seen on the pictures.
 
-⚠️️ As of version 5.x.x Flash Size should be set to -> **"1M (no SPIFFS)"** ⚠️️
-Procedure explained in [Prerequisite](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) section of wiki
+### Arduino IDE Modifications
 
-<br />
-Programming the Sonoff touch is as easy as the Sonoff Basic.
+As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have to make some changes to the [proposed](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) Arduino IDE settings as follows:
 
-<img src="https://github.com/arendst/arendst.github.io/blob/master/media/touchus.jpg" width="230" align="right" /> 
+- Tools → Board → Generic ESP8285 Module
+- Flash Size: 1M (64K SPIFFS) - version 4.x.x and before 
+- Flash Size: 1M (no SPIFFS) - version 5.x.x and following
 
-Remove the top PCA containing the ESP8285 from the assembly as shown in the pictures on the right.
-
-The pictures show for both the EU version (top) and the US version (bottom) where to connect your FTDI cable (Gnd, TxD, RxD and 3.3V). The GPIO0 pin needs to be connected to Ground to put the Sonoff Touch in programming mode.
+Appropriate settings are available in the PlatformIO configuration file provided with this firmware.
 
 ----
+*The following can probably be deleted:*
 
 Where most Sonoff's are ESP8266 based the Sonoff Touch and Sonoff 4CH are based on the ESP8285.
 
