@@ -2,14 +2,14 @@
 
 You need to make the serial programming interface of the Sonoff module / the ESP8266 microchip available. In most cases the pins are available on the PCB but connectors need to be soldered to allow interfacing. You'll furthermore need a **3.3V FTDI USB-to-Serial Converter/Programmer**.
 
-### Attention ⚠️️⚠️️⚠️️
+<img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="40%" align="right" />
 
-<img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="40%" align="right" /> 
+### Attention ⚠️️⚠️️⚠️️
 
 **Do not connect AC power and the serial connection at the same time** 
 
-Shorting your serial interface with AC will fry your module, programmer and even your PC.
-If you are not careful, your own health might be in danger.
+Shorting your serial interface with AC will fry your module or programmer and may also harm or destroy your PC.
+If you are not careful, your own health might be in danger. Always make sure to have all high power cables disconnected from the Sonoff module while being connected via serial/USB or even while the case of the module is opened.
 
 ## Serial Connection
 
@@ -28,7 +28,7 @@ Some Sonoff modules expose a five pin header. The fifth pin is irrelevant for th
 
 Examples of the above preparations are shown in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff) or by [captain-slow.dk](http://captain-slow.dk/2016/05/22/replacing-the-itead-sonoff-firmware/).
 
-## Sonoff Module Specifics
+### Sonoff Module Specifics
 
 For module specific instructions and restrictions of the individual devices, please see the respective articles:
 
@@ -37,7 +37,7 @@ For module specific instructions and restrictions of the individual devices, ple
 
 ### Bringing the Module in Flash Mode
 
-The "brain" of the Sonoff Module (normally the ESP8266) needs to be put into Flash Mode. This is done, by pulling the GPIO0 pin to GND while the chip is booting. On most modules the installed control button is connected to GPIO0 and GND, making entering Flash Mode very easy. On other modules you will need to connect pins on the PCB.
+The "brain" of the Sonoff module (normally the ESP8266) needs to be put into Flash Mode. This is done, by pulling the GPIO0 pin to GND while the chip is booting. On most modules the installed control button is connected to GPIO0 and GND, making entering Flash Mode very easy. On other modules you will need to connect pins on the PCB.
 
 To bring a Sonoff module into Flash Mode:
 
