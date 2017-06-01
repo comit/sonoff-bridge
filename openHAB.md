@@ -21,6 +21,8 @@ If not done yet, you first need to **install and activate** the [MQTT binding](h
 
 Simply **set up items** for all Sonoff-Tasmota [MQTT topics](https://github.com/arendst/Sonoff-Tasmota/wiki/MQTT-Features) you are interested in. Examples for most needed topics are given below. Some Sonoff-Tasmota topics are JSON encoded, the `JSONPATH` transformation can be used to extract this data.
  
+Additional or further interesting topics are easily identified by reading up on the Sonoff-Tasmota wiki and by subscribing to the modules topics. Subscribe to all topics of one module with the MQTT wildcard topic string `+/sonoff-XYZ/#` (String might depend on your user-configured FullTopic). Configure items for the identified topics similar to the ones below.
+
 ### Mandatory Topics / Items
 
 This it the minimal set of items for the basic functionality of different Sonoff modules. You'll need to replace the given example dive name (e.g. "sonoff-A00F9D") by the one chosen for your module. 
@@ -80,10 +82,6 @@ Offline=OFF
 ```
 
 Of course you can implement `Unreachable` instead of `Reachable` if you prefer. 
-
-### Further Topics / Items, Special Functions
-
-Other Sonoff modules are configured similarly, additional items are easily identified by reading up on the Sonoff-Tasmota documentation and by subscribing to the modules topics. Subscribe to all topics of one module with the MQTT topic string `+/sonoff-XYZ/#`.
 
 ## Maintenance Actions
 
