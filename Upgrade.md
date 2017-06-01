@@ -44,7 +44,3 @@ So to migrate from **Sonoff-MQTT-OTA-Arduino versions before 3.1.0** to **Sonoff
 1. Migrate to **Sonoff-Tasmota 3.9.x**
 2. Migrate to **Sonoff-Tasmota 4.x**
 3. Migrate to **Sonoff-Tasmota 5.x**
-
-## Flashing Itead Sonoff devices via original OTA mechanism (for expert users only)
-
-There’s now a script with which you can flash your sonoff device via the original internal OTA upgrade mechanism, meaning, no need to open, solder, etc. the device to get your custom firmware onto it. `https://github.com/mirko/SonOTA`
