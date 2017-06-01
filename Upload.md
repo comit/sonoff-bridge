@@ -5,7 +5,7 @@
 3. Connect the Sonoff module in Flash Mode (see [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) section and device specific articles)
 4. Select "Upload".
 
-Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initital-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration)
+Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initital-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
 
 ## Arduino IDE
 
@@ -27,6 +27,8 @@ In the Arduino IDE for sonoff select from `Tools Board Generic ESP8266 Module` (
 - Port: Your COM port connected to sonoff
 
 Verify and/or compile the project and upload to your sonoff using the serial connection established above.
+
+Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initital-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
 
 ## Hints
 
