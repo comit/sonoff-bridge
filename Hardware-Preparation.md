@@ -17,11 +17,11 @@ Some Sonoff modules expose a five pin header. The fifth pin is irrelevant for th
 
 Examples of the above preparations are shown in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff) or by [captain-slow.dk](http://captain-slow.dk/2016/05/22/replacing-the-itead-sonoff-firmware/).
 
-### Attention
+### Attention ⚠️️⚠️️⚠️️
 
 <img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="40%" align="right" /> 
 
-**⚠️️⚠️️⚠️️ Do not connect AC power and the serial connection at the same time ⚠️️⚠️️⚠️️** 
+**Do not connect AC power and the serial connection at the same time** 
 
 Shorting your serial interface with AC will fry your module, programmer and even your PC.
 If you are not careful, your own health might be in danger.
