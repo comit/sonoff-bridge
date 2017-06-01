@@ -68,4 +68,4 @@ ITEAD published a recall notice for the Sonoff Pow on march 1st 2017. Some units
 It is, in fact,  possible to set a Maximum Power Threshold for the Sonoff Pow.
  If the power measured by the device exceed the threshold set by the MQTT command MaxPower for a number of seconds set by the command MaxPowerHold the device will remain switched off for MaxPowerWindow seconds (to let it cool down, for example).
 
-See Issue #218
+For all details see [Issue #218](https://github.com/arendst/Sonoff-Tasmota/issues/218)
