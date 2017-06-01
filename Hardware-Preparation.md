@@ -37,7 +37,7 @@ For module specific instructions and restrictions of the individual devices, ple
 
 ### Bringing the Module in Flash Mode
 
-The "brain" of the Sonoff module (normally the ESP8266) needs to be put into Flash Mode. This is done, by pulling the GPIO0 pin to GND while the chip is booting. On most modules the installed control button is connected to GPIO0 and GND, making entering Flash Mode very easy. On other modules you will need to connect pins on the PCB.
+The "brain" of the Sonoff module (normally the ESP8266) needs to be put into Flash Mode. This is done, by pulling the GPIO0 pin to GND while the chip is booting. On most modules the installed control button is connected to GPIO0 and GND, making entering Flash Mode very easy. On other modules you will need to connect pins on the PCB. See device specific articles for details.
 
 To bring a Sonoff module into Flash Mode:
 
