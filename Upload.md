@@ -9,7 +9,7 @@ Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initi
 
 ## Arduino IDE
 
-Make sure you configured the IDE as described in [**Prerequisite**](Prerequisite)!
+Make sure you configured the IDE as described in [Prerequisite](Prerequisite)!
 
 Load the file `sonoff.ino` into the IDE.
 
