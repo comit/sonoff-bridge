@@ -1,7 +1,7 @@
 
-* Itead Product Page: http://sonoff.itead.cc/en/products/sonoff/sonoff-touch
+* Itead Product Page: http://sonoff.itead.cc/en/products/residential/sonoff-touch
 * Itead Shop: https://www.itead.cc/sonoff-touch.html
-* Itead Wiki: https://www.itead.cc/wiki/Sonoff_Touch
+* Itead Wiki: (na)
 
 ## Serial Connection
 
