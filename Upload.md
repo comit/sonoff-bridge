@@ -2,7 +2,7 @@
 
 1. Download the latest [Sonoff-Tasmota "Source code (zip)"](https://github.com/arendst/Sonoff-Tasmota/releases) and extract it
 2. Load the Sonoff-Tasmota base folder, including [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini), in [PlatformIO](https://github.com/platformio).
-3. Connect the Sonoff module in Flash Mode (see Hardware section)
+3. Connect the Sonoff module in Flash Mode (see [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) section and device specific articles)
 4. Select "Upload".
 
 Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initital-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration)
