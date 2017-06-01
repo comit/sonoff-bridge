@@ -34,6 +34,7 @@ For module specific instructions and restrictions of the individual devices, ple
 
 * [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
 * [Sonoff Pow](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Pow)
+* [Sonoff Touch](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Touch)
 
 ### Bringing the Module in Flash Mode
 
@@ -78,26 +79,6 @@ Pairing the iTead RF remote controller is the same as with the original iTead so
 - three short button presses will keep the red led on for some seconds and erase the known RF code. 
 
 I was unable to pair the Sonoff RF 434MHz receiver with my KaKu switches but the iTead provided remote control works just fine.
-
-### Sonoff Touch
-
-<img src="https://github.com/arendst/arendst.github.io/blob/master/media/toucheu.jpg" width="230" align="right" />
-As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have to make some changes to the proposed Arduino IDE settings as follows:
-
-- Tools Board Generic ESP8285 Module
-- Flash Size: 1M (64K SPIFFS)
-
-⚠️️ As of version 5.x.x Flash Size should be set to -> **"1M (no SPIFFS)"** ⚠️️
-Procedure explained in [Prerequisite](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) section of wiki
-
-<br />
-Programming the Sonoff touch is as easy as the Sonoff Basic.
-
-<img src="https://github.com/arendst/arendst.github.io/blob/master/media/touchus.jpg" width="230" align="right" /> 
-
-Remove the top PCA containing the ESP8285 from the assembly as shown in the pictures on the right.
-
-The pictures show for both the EU version (top) and the US version (bottom) where to connect your FTDI cable (Gnd, TxD, RxD and 3.3V). The GPIO0 pin needs to be connected to Ground to put the Sonoff Touch in programming mode.
 
 ### Motor Clockwise/Anticlockwise
 
