@@ -30,6 +30,12 @@ Verify and/or compile the project and upload to your sonoff using the serial con
 
 Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initital-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
 
+## Sonoff factory OTA Mechanism (experimental)
+
+There's now also a script with which you can flash your freshly bought unmodified Sonoff device via the original internal OTA upgrade mechanism provided by the Itead firmware. No need to open and solder header pins, no need for a serial programmer.
+
+For further details see: https://github.com/mirko/SonOTA
+
 ## Hints
 
 Before compiling consider modification of `STA_SSID1` and `STA_PASS1` values inside of `user_config.h` to match your WiFi SSID and WiFi password.
