@@ -36,7 +36,7 @@ There's now also a script with which you can flash your freshly bought unmodifie
 
 For further details see: https://github.com/mirko/SonOTA
 
-## Hints
+# Preliminary Configuration
 
 Before compiling consider modification of `STA_SSID1` and `STA_PASS1` values inside of `user_config.h` to match your WiFi SSID and WiFi password.
 
