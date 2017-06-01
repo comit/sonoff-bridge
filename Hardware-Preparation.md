@@ -2,6 +2,17 @@
 
 You need to make the serial programming interface of the Sonoff module / the ESP8266 microchip available. In most cases the pins are available on the PCB but connectors need to be soldered to allow interfacing. You'll furthermore need a **3.3V FTDI USB-to-Serial Converter/Programmer**.
 
+### Attention ⚠️️⚠️️⚠️️
+
+<img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="40%" align="right" /> 
+
+**Do not connect AC power and the serial connection at the same time** 
+
+Shorting your serial interface with AC will fry your module, programmer and even your PC.
+If you are not careful, your own health might be in danger.
+
+## Serial Connection
+
 The following table shows the connection for most Sonoff modules:
 
 |Programmer  | Sonoff Module      |
@@ -13,18 +24,16 @@ The following table shows the connection for most Sonoff modules:
 
 Pay attention to the fact, that RX and TX are crossed.
 
-Some Sonoff modules expose a five pin header. The fifth pin is irrelevant for the serial connection. Please check the specific modules pages to find out more.
+Some Sonoff modules expose a five pin header. The fifth pin is irrelevant for the serial connection. Please check the specific module pages to find out more.
 
 Examples of the above preparations are shown in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff) or by [captain-slow.dk](http://captain-slow.dk/2016/05/22/replacing-the-itead-sonoff-firmware/).
 
-### Attention ⚠️️⚠️️⚠️️
+## Sonoff Module Specifics
 
-<img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="40%" align="right" /> 
+For module specific instructions and restrictions of the individual devices, please see the respective articles:
 
-**Do not connect AC power and the serial connection at the same time** 
-
-Shorting your serial interface with AC will fry your module, programmer and even your PC.
-If you are not careful, your own health might be in danger.
+* [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
+* [Sonoff Pow](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Pow)
 
 ### Bringing the Module in Flash Mode
 
@@ -37,12 +46,7 @@ To bring a Sonoff module into Flash Mode:
 3. Connect serial programmer
 4. Release GPIO0 (after one-two seconds)
 
-## Sonoff Module Specifics
-
-For module specific instructions and restrictions of the individual devices, please see the respective articles:
-
-* [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
-* [Sonoff Pow](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Pow)
+If everything went well, you are now in Flash Mode and ready to continue with the Sonoff-Tasmota firmware [Upload](https://github.com/arendst/Sonoff-Tasmota/wiki/Upload). If the upload is not able to start, disconnect the module and start the Hardware preaparations from the beginning.
 
 ----
 
