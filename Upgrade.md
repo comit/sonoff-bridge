@@ -12,7 +12,7 @@ Build the firmware binary from source or download the latest build from [the rel
 1. Use the "Upload Firmware" dialog on the Sonoff-Tasmota web interface to flash the downloaded or built `firmware.bin`.
 2. [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) publicly provides a copy of each of the builds provided as part of a release. The standard build is now (from 5.1.4): 
 
-    * `http://sonoff.maddox.co.uk/tasmota/sonoff.bin` ([Latest firmware release]
+    * `http://sonoff.maddox.co.uk/tasmota/sonoff.bin` (Latest firmware release)
 
 ⋅⋅⋅although he is also providing the same build as
 
