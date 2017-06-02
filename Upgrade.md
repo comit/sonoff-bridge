@@ -18,15 +18,15 @@ Build the firmware binary from source or download the latest build from [the rel
 
     * `http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin` 
 
-⋅⋅⋅for compatibility with existing Sonoffs that have this stored as their OTA URL. 
+   for compatibility with existing Sonoffs that have this stored as their OTA URL. 
 
-⋅⋅⋅A full list of available builds for the latest release can be found in [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). They are all available in the same folder in the format: 
+   A full list of available builds for the latest release can be found in [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). They are all available in the same folder in the format: 
 
     * `http://sonoff.maddox.co.uk/tasmota/BUILDNAME.bin` 
 
-⋅⋅⋅The reason for this secondary hosting of the files is because Github will only serve files over HTTPS, which is not supported by the standard Tasmota software.(An SSL/HTTPS connection to access the GitHub releases files directly is not supported 
+   The reason for this secondary hosting of the files is because Github will only serve files over HTTPS, which is not supported by the standard Tasmota software.(An SSL/HTTPS connection to access the GitHub releases files directly is not supported 
 
-⋅⋅⋅(@smadds also publishes the latest released version number to a publicly available MQTT server which may be subscribed to at sonoff.maddox.co.uk:1883 with the topic sonoff-version. No authentication needed.) 
+   (@smadds also publishes the latest released version number to a publicly available MQTT server which may be subscribed to at sonoff.maddox.co.uk:1883 with the topic sonoff-version. No authentication needed.) 
 
 3. Provide the binary on a web server and initiate the upgrade via the [`upgrade` command](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#management).
 4. If you're using [openHAB2](http://www.openhab.org/), you can use an automation rule to upgrade your Sonoffs from within your home automation: [openHAB Maintenance](https://github.com/arendst/Sonoff-Tasmota/wiki/openHAB#maintenance-actions)
