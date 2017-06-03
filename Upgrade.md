@@ -24,7 +24,7 @@ Build the firmware binary from source or download the latest build from [the rel
 
     * `http://sonoff.maddox.co.uk/tasmota/BUILDNAME.bin` 
 
-   The reason for this secondary hosting of the files is because Github will only serve files over HTTPS, which is not supported by the standard Tasmota software.(An SSL/HTTPS connection to access the GitHub releases files directly is not supported 
+   The reason for this secondary hosting of the files is because Github will only serve files over HTTPS, which is not supported by the standard Tasmota software.
 
    (@smadds also publishes the latest released version number to a publicly available MQTT server which may be subscribed to at sonoff.maddox.co.uk:1883 with the topic sonoff-version. No authentication needed.) 
 
