@@ -39,6 +39,29 @@ When the connection fails, the firmware can then operate locally for a little bi
 
 Note that if it has no network connection at all, this problem doesn't happen, because it detects it doesn't have a network to try and connect over, and local operation can work without delays.
 
+## Disconnects and Reconnects
+
+If the serial debugger shows repeated messages like this -
+
+02:32:54 MQTT: tele/MYSONOFF/LWT = Online (retained)
+02:32:54 MQTT: cmnd/MYSONOFF/POWER = 
+02:32:55 MQTT: Attempting connection...
+02:32:56 mDNS: Query done with 0 mqtt services found
+02:32:56 MQTT: Connected
+
+or your mosquitto log shows messages like this -
+
+1496455347: New client connected from IP_addr_1 as SONOFF (c1, k15, u'SONOFF_USER').
+1496455349: New connection from IP_addr_1 on port 1883.
+1496455349: Client SONOFF already connected, closing old connection.
+1496455349: Client SONOFF disconnected.
+1496455349: New client connected from IP_addr_2 as SONOFF (c1, k15, u'SONOFF_USER').
+1496455350: New connection from IP_addr_2 on port 1883.
+1496455350: Client SONOFF already connected, closing old connection.
+1496455350: Client SONOFF disconnected.
+
+Then you have more than one device connected with the same client_ID. Its important that each device has a unique client_ID, not just PROJECT
+
 # troubleshooting tools
 ## logs
 The logs are available via syslog, the web console, or the serial port.
