@@ -9,10 +9,12 @@ Other than most Sonoff modules (ESP8266) the Sonoff Touch is based on the ESP828
 
 Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
 
-As always, you need to access the serial interface. Remove the top PCA from the assembly containing the ESP8285 as shown in the pictures. The **four serial pins** (3V3, Rx, Tx, GND) can be seen in the pictures for the US version (left) and the EU version (right) of the module PCB.
+As always, you need to access the serial interface. Carefully remove the top PCA from the assembly. The hidden underside of the PCB contains the ESP8285 as shown in the pictures. The **four serial pins** (3V3, Rx, Tx, GND) can be seen in the pictures for the US version (left) and the EU version (right) of the module PCB.
 
 <img title="Sonoff Touch US version" src="https://github.com/arendst/arendst.github.io/blob/master/media/touchus.jpg" width="44%" /> 
 <img title="Sonoff Touch EU version" src="https://github.com/arendst/arendst.github.io/blob/master/media/toucheu.jpg" width="48%" align="right" />
+
+Be careful while removing and reassembling the top PCB. The touch sensor should be back in its intended place, be sure to not touch it directly during the modifications.
 
 The Sonoff-Touch button is not connected to **GPIO0** and can hence not be used to bring the module into [Programming Mode](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation#bringing-the-module-in-flash-mode). A connection between GPIO0 and GND needs to be made manually. GPIO0 can be found on the right side of the ESP8285 and is the second pin from the bottom, as can be seen on the pictures.
 
