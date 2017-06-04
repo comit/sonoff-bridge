@@ -14,9 +14,7 @@ As always, you need to access the serial interface. The **four serial pins** (3V
 
 Programming the Sonoff Dual is more difficult because the on-board-button is not connected to GPIO0. As with all ESP8266 modules pulling GPIO0 to GND is needed to put the chip in programming mode. You need to **connect GPIO0 and GND** during power up.
 
-**GND** can be found on the button 0 or button 1 headers.
-
-**GPIO0** can be accessed two ways:
+**GND** can be found on all three headers. **GPIO0** can be accessed two ways:
 1. Unscrew the Sonoff Dual from the housing and access the underside of the PCB You can find GPIO0 on one side of a resistor as shown in the second image.
 2. GPIO0 can be found on the small inter layer [via](https://en.wikipedia.org/wiki/Via_(electronics)) pointed at in the first image. Attention: If the via is covered by silk screen (green) you need to expose the underlying conductive (copper) by careful scratching it off.
 
