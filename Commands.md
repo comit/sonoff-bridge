@@ -1,11 +1,32 @@
-The firmware supports a **serial**, **MQTT** and **Web** Man Machine interface. The serial interface is set to 115200 bps except for Sonoff Dual where it is set to 19200 bps. The MQTT commands are constructed from MQTT Topic for ```cmnd/sonoff/<command>``` and MQTT Message for ```<parameter>``` and are NOT case sensitive. 
+The firmware supports a **serial**, **MQTT** and **Web** Man Machine interface. The serial interface is set to 115200 bps except for Sonoff Dual where it is set to 19200 bps. The MQTT commands are constructed from MQTT Topic for ```cmnd/sonoff/<command>``` and MQTT message for ```<parameter>``` and are NOT case sensitive. 
 
-Commands are allowed like ```cmnd/sonoff/<command><relay>``` to address a specific relay where applicable.
+Commands to address a specific relay are formed like ```cmnd/sonoff/<command><relay>``` where applicable.
 
-The commands can also be executed via HTTP requests.
-```
-http://sonoff/cm?cmnd=Power%20Off
+**Example:**
+
+For a Sonoff-Tasmota module with the FullTopic "tasmota/%topic%/%prefix%/", the topic "sonoff-mylight" and following the definition of the "Power" command below. "Power1" represents the first relay which every switching Sonoff module has.
+
+* Status query:
+  ```java
+  tasmota/sonoff-mylight/cmnd/Power1 ←      //empty string
+     ↳ tasmota/sonoff-mylight/stat/RESULT → {"POWER1":"OFF"}
+     ↳ tasmota/sonoff-mylight/stat/POWER1 → OFF
+  ```
+* Sending a command:
+  ```java
+  tasmota/sonoff-mylight/cmnd/Power1 ← "TOGGLE"
+     ↳ tasmota/sonoff-mylight/stat/RESULT → {"POWER1":"ON"}
+     ↳ tasmota/sonoff-mylight/stat/POWER1 → ON
+     ↳ Power on relay 1 is toggled
+  ```
+
+**HTTP:** 
+
+Commands can also be executed via HTTP requests, examples:
+```http
+http://sonoff/cm?cmnd=Power%20TOGGLE
 http://sonoff/cm?cmnd=Power%20On
+http://sonoff/cm?cmnd=Power%20off
 http://sonoff/cm?user=admin&password=joker&cmnd=Power%20Toggle
 ```
 
