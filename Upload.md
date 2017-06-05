@@ -5,6 +5,13 @@
 3. Connect the Sonoff module in Flash Mode (see [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) section and device specific articles)
 4. Select "Upload".
 
+If you want to flash a **Touch** or a **4CH** upload **sonoff-touch-4ch.bin**! You can accomplish this by commenting out other builds in _platformio.ini_ before uploading. The default _platformio.ini_ spits out four compiled versions meaning:
+
+* sonoff.bin = the default firmware for all but initial Sonoff-Touch and Sonoff-4CH devices
+* sonoff-touch-4ch.bin = the inital firmware for the Sonoff-Touch and Sonoff-4CH ONLY and is only used at initial serial upload to these devices. Future (OTA and web) uploads can use the sonoff.bin version as this version will be patched during (OTA and web) uploading to satisfy the esp8285 chip and flash layout.
+* sonoff-minimal.bin = is interim firmware to be used when the above firmware images become too big to fit as OTA or web upload; installing this one first and THEN uploading the desired sonoff.bin allows for future firmware size growth over the OTA file limit of 1/2 flash size.
+* sonoff-ds18x20.bin = is a version of sonoff.bin with the USE_DS18X20 define enabled and a larger MQTT buffer size to be used by people having more than 4 ds18x20 sensors connected.
+
 Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initital-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
 
 ## Arduino IDE
