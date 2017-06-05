@@ -5,7 +5,9 @@
 3. Connect the Sonoff module in Flash Mode (see [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) section and device specific articles)
 4. Select "Upload".
 
-If you want to flash a **Touch** or a **4CH** upload **sonoff-touch-4ch.bin**! You can accomplish this by commenting out other builds in _platformio.ini_ before uploading. The default _platformio.ini_ spits out four compiled versions meaning:
+If you want to flash a **Touch** or a **4CH** upload **sonoff-touch-4ch.bin**! You can accomplish this by commenting out other builds in _platformio.ini_ before uploading or by uncommenting ```env_default = sonoff-touch-4ch```.
+
+The default _platformio.ini_ spits out four compiled versions meaning:
 
 * sonoff.bin = the default firmware for all but initial Sonoff-Touch and Sonoff-4CH devices
 * sonoff-touch-4ch.bin = the inital firmware for the Sonoff-Touch and Sonoff-4CH ONLY and is only used at initial serial upload to these devices. Future (OTA and web) uploads can use the sonoff.bin version as this version will be patched during (OTA and web) uploading to satisfy the esp8285 chip and flash layout.
