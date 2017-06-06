@@ -83,12 +83,17 @@ PulseTime<x>     |              | Show current PulseTime of relay<x> in 0.1 seco
 PulseTime<x>     | 0 | off      | (Default) Disable use of PulseTime for relay<x>
 PulseTime<x>     | 1..111       | Set PulseTime for relay<x> with 0.1 seconds increment
 PulseTime<x>     | 112..64900   | Set PulseTime for relay<x> with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
+SetOption11      |              | Show current button swap state
+SetOption11      | 0 | off      | (default) Legacy button single and double press
+SetOption11      | 1 | on       | Button single and double press functionality swapped
 SwitchMode<x>    |              | Show current external switch mode
 SwitchMode<x>    | 0            | (default) Set switch mode to TOGGLE
 SwitchMode<x>    | 1            | Set switch mode to FOLLOW (0 = Off, 1 = On)
 SwitchMode<x>    | 2            | Set switch mode to inverted FOLLOW (0 = On, 1 = Off)
 SwitchMode<x>    | 3            | Set switch mode to PUSHBUTTON (Normally 1, 0 = toggle)
 SwitchMode<x>    | 4            | Set switch mode to inverted PUSHBUTTON (Normally 0, 1 = toggle)
+SwitchMode<x>    | 5            | Set switch mode to PUSHBUTTON (Normally 1, 0 = toggle, Hold = hold)
+SwitchMode<x>    | 6            | Set switch mode to inverted PUSHBUTTON (Normally 0, 1 = toggle, Hold = hold)
 ```
 
 ### Sensor
@@ -166,7 +171,7 @@ SetOption0      | 1 | on   | (default) Save power changes and set relay after re
 SetOption0      | 0 | off  | Do not save power changes and do not set relay after restart
 SetOption1      |          | Show current button multi press mode
 SetOption1      | 0 | off  | (default) Allow all button actions
-SetOption1      | 1 | on   | Allow only single and double short press button actions
+SetOption1      | 1 | on   | Allow only single, double short and hold press button actions
 Sleep           |          | Show current sleep state as 0 (Off) or duration of up to 250 mSec
 Sleep           | 0 | off  | (default) Turn sleep off
 Sleep           | 1..250   | Set sleep duration from 1 to 250 mSec to enable energy saving
