@@ -311,6 +311,8 @@ StateText2   |              | Show current On state text
 StateText2   | <text>       | Set On state text (10 chars max)
 StateText3   |              | Show current Toggle state text
 StateText3   | <text>       | Set Toggle state text (10 chars max)
+StateText4   |              | Show current button Hold state text
+StateText4   | <text>       | Set button Hold state text (10 chars max)
 SwitchRetain |              | Show current button MQTT retain flag state
 SwitchRetain | 0 | off      | (default) Disable use of MQTT retain flag
 SwitchRetain | 1 | on       | Set ButtonTopic to Topic and enable MQTT retain flag on button press
@@ -438,15 +440,9 @@ Command              | Payload | Description
 DomoticzIdx<x>       |         | Show current Domoticz relay1 to relay4 index
 DomoticzIdx<x>       | 0 | off | (default) Disable use of Domoticz
 DomoticzIdx<x>       | <idx>   | Set Domoticz relay1 to relay4 index
-DomoticzInTopic      |         | Show current Domoticz MQTT In Topic
-DomoticzInTopic      | 1       | Reset Domoticz MQTT In Topic to user_config.h (DOMOTICZ_IN_TOPIC) and restart
-DomoticzInTopic      | <topic> | Set Domoticz MQTT In Topic (32 chars max) and restart
 DomoticzKeyIdx<x>    |         | Show current Domoticz key1 to key4 index
 DomoticzKeyIdx<x>    | 0       | (default) Disable use of key1 to key4 index
 DomoticzKeyIdx<x>    | <idx>   | Set Domoticz key1 to key4 index. To use it you'll need to enable ButtonTopic too
-DomoticzOutTopic     |         | Show current Domoticz MQTT Out Topic
-DomoticzOutTopic     | 1       | Reset Domoticz MQTT Out Topic to user_config.h (DOMOTICZ_OUT_TOPIC) and restart
-DomoticzOutTopic     | <topic> | Set Domoticz MQTT Out Topic (32 chars max) and restart
 DomoticzSensorIdx<x> |         | Show current Domoticz sensor1 to sensor5 index
 DomoticzSensorIdx<x> | 0       | (default) Disable use of sensor1 to sensor5 index
 DomoticzSensorIdx<x> | <idx>   | Set Domoticz sensor1 to sensor5 index.
