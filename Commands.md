@@ -36,6 +36,7 @@ The following command tables are available:
 - [Management](#management)
 - [Wifi](#wifi)
 - [MQTT](#mqtt)
+- [SetOption Overview](#setoption-overview)
 - [Logging](#logging)
 - [Sonoff Pow specific](#sonoff-pow)
 - [Sonoff Led specific](#sonoff-led)
@@ -83,7 +84,7 @@ PulseTime<x>     |              | Show current PulseTime of relay<x> in 0.1 seco
 PulseTime<x>     | 0 | off      | (Default) Disable use of PulseTime for relay<x>
 PulseTime<x>     | 1..111       | Set PulseTime for relay<x> with 0.1 seconds increment
 PulseTime<x>     | 112..64900   | Set PulseTime for relay<x> with 1 seconds increment starting with 12 seconds (113 = 13 seconds etc.)
-SetOption11      |              | Show current button swap state
+SetOption11      |              | Show current button single and double press swap state
 SetOption11      | 0 | off      | (default) Legacy button single and double press
 SetOption11      | 1 | on       | Button single and double press functionality swapped
 SwitchMode<x>    |              | Show current external switch mode
@@ -120,18 +121,14 @@ SetOption8      | 0 | celsius    | Set Temperature to Celsius
 SetOption8      | 1 | fahrenheit | Set Temperature to Fahrenheit
 TempRes         |                | Show current Temperature Resolution
 TempRes         | 0..3           | Set Temperature Resolution
-TempUnit        |                | Show current Temperature as either Celsius or Fahrenheit
-TempUnit        | 0 | celsius    | Set Temperature to Celsius
-TempUnit        | 1 | fahrenheit | Set Temperature to Fahrenheit
+TempUnit        |                | Replaced by SetOption8
 ```
 
 ### Management
 ```
 Command         | Payload  | Description
 ----------------|----------|-------------------------------------------------------------------------------
-ButtonRestrict  |          | Show current button multi press mode
-ButtonRestrict  | 0 | off  | (default) Allow all button actions
-ButtonRestrict  | 1 | on   | Allow only single and double short press button actions
+ButtonRestrict  |          | Replaced by SetOption1
 Emulation       |          | Show current emulation state
 Emulation       | 0 | off  | Disable emulation
 Emulation       | 1        | Enable Belkin WeMo emulation for Alexa
@@ -163,15 +160,13 @@ SaveData        |          | Save parameter changes and show current state as Ma
 SaveData        | 0 | off  | Save parameter changes only manually
 SaveData        | 1 | on   | (default) Save parameter changes every second
 SaveData        | <sec>    | Save parameter changes between every 2 and 3600 seconds
-SaveState       |          | Show current SaveState state
-SaveState       | 1 | on   | (default) Save power changes and set relay after restart
-SaveState       | 0 | off  | Do not save power changes and do not set relay after restart
-SetOption0      |          | Show current SaveState state
+SaveState       |          | Replaced by SetOption0
+SetOption0      |          | Show current Save power changes state
 SetOption0      | 1 | on   | (default) Save power changes and set relay after restart
 SetOption0      | 0 | off  | Do not save power changes and do not set relay after restart
 SetOption1      |          | Show current button multi press mode
 SetOption1      | 0 | off  | (default) Allow all button actions
-SetOption1      | 1 | on   | Allow only single, double short and hold press button actions
+SetOption1      | 1 | on   | Allow only single, double and hold press button actions
 Sleep           |          | Show current sleep state as 0 (Off) or duration of up to 250 mSec
 Sleep           | 0 | off  | (default) Turn sleep off
 Sleep           | 1..250   | Set sleep duration from 1 to 250 mSec to enable energy saving
@@ -276,9 +271,7 @@ MqttPassword | <pswrd>      | Set MQTT password (32 chars max) and restart
 MqttPort     |              | Show current MQTT port
 MqttPort     | 1            | Reset MQTT port to user_config.h (MQTT_PORT) and restart
 MqttPort     | <port>       | Set MQTT port between 2 and 32766 and restart
-MqttResponse |              | Show current MQTT response state
-MqttResponse | 0 | off      | Return response as RESULT topic
-MqttResponse | 1 | on       | Return response as Command topic
+MqttResponse |              | Replaced by SetOption4
 MqttRetry    |              | Show current MQTT connection retry timer in seconds
 MqttRetry    | 10           | (default) Set MQTT connection retry timer in seconds
 MqttRetry    | 10..32000    | Set MQTT connection retry timer in seconds
@@ -332,9 +325,34 @@ TelePeriod   | <secs>       | Set telemetry period between 2 and 3600 seconds
 Topic        |              | Show current MQTT topic
 Topic        | 1            | Reset MQTT topic to user_config.h (MQTT_TOPIC) and restart
 Topic        | <topic>      | Set MQTT topic (32 chars max) AND button topic and restart
-Units        |              | Show current Units state
-Units        | 0 | off      | (default) Do not show units to messages
-Units        | 1 | on       | Add units to messages
+Units        |              | Replaced by SetOption2
+```
+
+### SetOption Overview
+```
+Command     | Payload        | Description
+------------|----------------|--------------------------------------------------------------
+SetOption0  |                | Show current Save power changes state
+SetOption0  | 1 | on         | (default) Save power changes and set relay after restart
+SetOption0  | 0 | off        | Do not save power changes and do not set relay after restart
+SetOption1  |                | Show current button multi press mode
+SetOption1  | 0 | off        | (default) Allow all button actions
+SetOption1  | 1 | on         | Allow only single, double and hold press button actions
+SetOption2  |                | Show current Units state
+SetOption2  | 0 | off        | (default) Do not show units to messages
+SetOption2  | 1 | on         | Add units to messages
+SetOption4  |                | Show current MQTT response state
+SetOption4  | 0 | off        | Return response as RESULT topic
+SetOption4  | 1 | on         | Return response as Command topic
+SetOption8  |                | Show current Temperature as either Celsius or Fahrenheit
+SetOption8  | 0 | celsius    | Set Temperature to Celsius
+SetOption8  | 1 | fahrenheit | Set Temperature to Fahrenheit
+SetOption10 |                | Show current LWT action when changing topic
+SetOption10 | 0 | off        | (default) When topic changes drop retained old topic LWT
+SetOption10 | 1 | on         | When topic changes send old topic retained LWT offline
+SetOption11 |                | Show current button single and double press swap state
+SetOption11 | 0 | off        | (default) Legacy button single and double press
+SetOption11 | 1 | on         | Button single and double press functionality swapped
 ```
 
 ### Logging
