@@ -14,7 +14,7 @@ The default _platformio.ini_ spits out four compiled versions meaning:
 * sonoff-minimal.bin = is interim firmware to be used when the above firmware images become too big to fit as OTA or web upload; installing this one first and THEN uploading the desired sonoff.bin allows for future firmware size growth over the OTA file limit of 1/2 flash size.
 * sonoff-ds18x20.bin = is a version of sonoff.bin with the USE_DS18X20 define enabled and a larger MQTT buffer size to be used by people having more than 4 ds18x20 sensors connected.
 
-Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initital-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
+Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initial-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
 
 ## Arduino IDE
 
