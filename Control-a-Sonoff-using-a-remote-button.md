@@ -21,3 +21,14 @@ Cost (2016-09-05) USB-5V-adapter: CAD$1 + DC5V->3.3V: CAD$1 + ESP01: CAD$2.62 + 
 This little device has two _inputs_ (DHT & button), and no _output_. You can use either the Sonoff or the ElectroDragon version of this project, but because this has no output, the following commands don't make any sense: `power, light, ledstate`. You may also want to change the `#define APP_NAME` and `#define PROJECT` to reflect that this isn't a real Sonoff.
 
 Pat B
+
+## Update
+#### 2017-06-10
+This design still works with version 5.1.5 of the firmware. There's no need anymore to create a special build; the new design allows you to customize the code at runtime.
+
+For the above schematic, go into the Config Module menu and set
+- Module: 18 WeMos D1 mini
+- GPIO0: 13 Button1
+- GPIO2: 03 DHT22
+
+That's all you need to do :)
