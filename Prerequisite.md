@@ -39,7 +39,7 @@ Starting from where you did extract or cloned the git Sonoff-Tasmota repository:
 - Restart you IDE
 
 This will provide an additional option ``Tools - Flash Size: "1M (no SPIFFS)"``.
-*** if you are getting error on no such file or directory ``eagle.flash.1m0.ld`` was becouse you copy to the wrong directory
+*** if you are getting error on no such file or directory ``eagle.flash.1m0.ld`` was because you copy to the wrong directory
 
 #### Installing external libraries
 
