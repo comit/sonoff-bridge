@@ -15,6 +15,7 @@
 - [**Sensor Configuration**](Sensor-Configuration)
 - [**PowerOnState Configuration**](PowerOnState-Configuration)
 - [**SwitchMode/SwitchTopic**](Understanding-SwitchMode-and-SwitchTopic)
+- [**Energy Saving**](Energy-Saving)
 - [**Misc. Tips**](Tips)
 - [**Troubleshooting**](Troubleshooting)
 
