@@ -42,12 +42,12 @@ The "brain" of the Sonoff module (normally the ESP8266) needs to be put into Fla
 
 To bring a Sonoff module into Flash Mode:
 
-1. Disconnect serial programmer and power)
-2. Connect GPIO0 and GND (e.g. Press the button)
-3. Connect serial programmer
-4. Release GPIO0 (after one-two seconds)
+1. Disconnect serial programmer and power
+2. Connect GPIO0 and GND (e.g., by pressing the on-board button or connection via cable)
+3. Connect the serial programmer (VCC, RX, TX, GND)
+4. Disconnect GPIO0 from GND (after one-two seconds)
 
-If everything went well, you are now in Flash Mode and ready to continue with the Sonoff-Tasmota firmware [Upload](https://github.com/arendst/Sonoff-Tasmota/wiki/Upload). If the upload is not able to start, disconnect the module and start the Hardware preaparations from the beginning.
+If everything went well, you are now in Flash Mode and ready to continue with the Sonoff-Tasmota firmware [Upload](https://github.com/arendst/Sonoff-Tasmota/wiki/Upload). If the upload is not able to start, disconnect the module and start the hardware preparations from the beginning.
 
 ----
 
