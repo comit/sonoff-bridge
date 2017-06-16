@@ -87,6 +87,8 @@ PulseTime<x>     | 112..64900   | Set PulseTime for relay<x> with 1 seconds incr
 SetOption11      |              | Show current button single and double press swap state
 SetOption11      | 0 | off      | (default) Legacy button single and double press
 SetOption11      | 1 | on       | Button single and double press functionality swapped
+SetOption32      |              | Show current key hold time in 0.1 seconds
+SetOption32      | 1..100       | Set key hold time from 0.1 to 10 seconds
 SwitchMode<x>    |              | Show current external switch mode
 SwitchMode<x>    | 0            | (default) Set switch mode to TOGGLE
 SwitchMode<x>    | 1            | Set switch mode to FOLLOW (0 = Off, 1 = On)
@@ -144,9 +146,7 @@ I2Cscan         |          | Scan I2C bus and show device addresses found
 Modules         |          | Show available modules by name and index
 Module          |          | Show active module by name and index
 Module          | <index>  | Switch to selected module and restart
-Mqtt            |          | Show current MQTT state
-Mqtt            | 0 | off  | Disable MQTT
-Mqtt            | 1 | on   | Enable MQTT
+Mqtt            |          | Replaced by SetOption3
 OtaUrl          |          | Show current otaurl
 OtaUrl          | 1        | Reset otaurl to user_config.h value (OTA_URL)
 OtaUrl          | <url>    | Set otaurl (100 chars max)
@@ -341,6 +341,9 @@ SetOption1  | 1 | on         | Allow only single, double and hold press button a
 SetOption2  |                | Show current Units state
 SetOption2  | 0 | off        | (default) Do not show units to messages
 SetOption2  | 1 | on         | Add units to messages
+SetOption3  |                | Show current MQTT state
+SetOption3  | 0 | off        | Disable MQTT
+SetOption3  | 1 | on         | Enable MQTT
 SetOption4  |                | Show current MQTT response state
 SetOption4  | 0 | off        | Return response as RESULT topic
 SetOption4  | 1 | on         | Return response as Command topic
@@ -353,6 +356,8 @@ SetOption10 | 1 | on         | When topic changes send old topic retained LWT of
 SetOption11 |                | Show current button single and double press swap state
 SetOption11 | 0 | off        | (default) Legacy button single and double press
 SetOption11 | 1 | on         | Button single and double press functionality swapped
+SetOption32 |                | Show current key hold time in 0.1 seconds
+SetOption32 | 1..100         | Set key hold time from 0.1 to 10 seconds
 ```
 
 ### Logging
