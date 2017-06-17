@@ -11,7 +11,7 @@ This method is only available after the Sonoff-Tasmota firmware was flashed via 
 
 There are a few ways to upgrade the firmware:
 
-1. Use the "Upgrade by file upload" dialog on the Sonoff-Tasmota web interface to flash an available firmware binary file (e.g., `firmware.bin`)
+1. Use the "Upgrade by file upload" dialog on the Sonoff-Tasmota web interface to flash an available firmware binary file (e.g. `firmware.bin`)
 2. Use the "Upgrade by web server" dialog on the Sonoff-Tasmota web interface to flash a firmware binary file provided on a web server
 3. Initiate the upgrade via the serial/MQTT/web command [`upgrade`](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#management)
 
@@ -24,7 +24,7 @@ Build the firmware binary from source or download the latest build.
 The latest build can be found in the [GitHub releases section](https://github.com/arendst/Sonoff-Tasmota/releases). 
 A secondary hosting of the files is provided by [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) because GitHub will only serve files over HTTPS, which is not supported by the Sonoff-Tasmota firmware.
 
-A full list of available builds for the latest release can be found in [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). They are all provided in the format: "`http://sonoff.maddox.co.uk/tasmota/BUILDNAME.bin`"
+A full list of available builds for the latest release can be found in [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). They are all provided in the format: `http://sonoff.maddox.co.uk/tasmota/BUILDNAME.bin`
 
 The URLs to the latest builds are (starting from 5.1.4): 
 
