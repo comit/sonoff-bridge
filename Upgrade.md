@@ -22,23 +22,19 @@ There are a few ways to upgrade the firmware:
 Build the firmware binary from source or download the latest build.
 
 The latest build can be found in the [GitHub releases section](https://github.com/arendst/Sonoff-Tasmota/releases). 
-A secondary hosting of the files is provided because GitHub will only serve files over HTTPS, which is not supported by the Sonoff-Tasmota firmware.
+A secondary hosting of the files is provided by [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) because GitHub will only serve files over HTTPS, which is not supported by the Sonoff-Tasmota firmware.
 
-[@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) publicly provides a copy of each of the builds provided as part of a release. The standard build is now (starting from 5.1.4): 
+A full list of available builds for the latest release can be found in [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). They are all provided in the format: "`http://sonoff.maddox.co.uk/tasmota/BUILDNAME.bin`"
 
-* `http://sonoff.maddox.co.uk/tasmota/sonoff.bin` (Latest firmware release) 
-although he is also providing the same build as 
-* `http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin` 
-for compatibility with existing Sonoffs that have this stored as their OTA URL. 
+The URLs to the latest builds are (starting from 5.1.4): 
 
-A full list of available builds for the latest release can be found in [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). They are all available in the same folder in the format: `http://sonoff.maddox.co.uk/tasmota/BUILDNAME.bin` 
+* http://sonoff.maddox.co.uk/tasmota/sonoff.bin (standard build)
+* http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin (identical, for compatibility with old default OTA URLs)
+* http://sonoff.maddox.co.uk/tasmota/sonoff-minimal.bin (see below)
+* http://sonoff.maddox.co.uk/tasmota/sonoff-ds18x20.bin (for use with multiple DS18x20 temperature sensors)
+* http://sonoff.maddox.co.uk/tasmota/sonoff-touch-4ch.bin (**initial** firmware for the Sonoff-Touch and Sonoff-4CH)
 
-* `http://sonoff.maddox.co.uk/tasmota/sonoff.bin`
-* `http://sonoff.maddox.co.uk/tasmota/sonoff-minimal.bin`
-* `http://sonoff.maddox.co.uk/tasmota/sonoff-ds18x20.bin`
-* `http://sonoff.maddox.co.uk/tasmota/sonoff-touch-4ch.bin`
-
-(@smadds also publishes the latest released version number to a publicly available MQTT server which may be subscribed to at sonoff.maddox.co.uk:1883 with the topic sonoff-version. No authentication needed.) 
+**Bonus - Update Notification:** [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) also publishes the latest released version number to a publicly available MQTT server which may be subscribed to at `sonoff.maddox.co.uk:1883` with the topic `sonoff-version`. No authentication needed.
 
 ### Functionality vs Firmware size vs OTA
 
