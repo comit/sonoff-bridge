@@ -29,9 +29,9 @@ A full list of available builds for the latest release can be found in [the rele
 The URLs to the latest builds are (starting from 5.1.4): 
 
 * http://sonoff.maddox.co.uk/tasmota/sonoff.bin (standard build)
-* http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin (identical, for compatibility with old default OTA URLs)
+* http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin (identical, for compatibility)
 * http://sonoff.maddox.co.uk/tasmota/sonoff-minimal.bin (see below)
-* http://sonoff.maddox.co.uk/tasmota/sonoff-ds18x20.bin (for use with multiple DS18x20 temperature sensors)
+* http://sonoff.maddox.co.uk/tasmota/sonoff-ds18x20.bin (for multiple DS18x20 sensors)
 * http://sonoff.maddox.co.uk/tasmota/sonoff-touch-4ch.bin (**initial** firmware for the Sonoff-Touch and Sonoff-4CH)
 
 **Bonus - Update Notification:** [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) also publishes the latest released version number to a publicly available MQTT server which may be subscribed to at `sonoff.maddox.co.uk:1883` with the topic `sonoff-version`. No authentication needed.
