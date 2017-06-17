@@ -26,23 +26,19 @@ A secondary hosting of the files is provided because GitHub will only serve file
 
 [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) publicly provides a copy of each of the builds provided as part of a release. The standard build is now (starting from 5.1.4): 
 
-     * `http://sonoff.maddox.co.uk/tasmota/sonoff.bin` (Latest firmware release) 
+* `http://sonoff.maddox.co.uk/tasmota/sonoff.bin` (Latest firmware release) 
+although he is also providing the same build as 
+* `http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin` 
+for compatibility with existing Sonoffs that have this stored as their OTA URL. 
 
-   although he is also providing the same build as 
+A full list of available builds for the latest release can be found in [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). They are all available in the same folder in the format: `http://sonoff.maddox.co.uk/tasmota/BUILDNAME.bin` 
 
-    * `http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin` 
+* `http://sonoff.maddox.co.uk/tasmota/sonoff.bin`
+* `http://sonoff.maddox.co.uk/tasmota/sonoff-minimal.bin`
+* `http://sonoff.maddox.co.uk/tasmota/sonoff-ds18x20.bin`
+* `http://sonoff.maddox.co.uk/tasmota/sonoff-touch-4ch.bin`
 
-   for compatibility with existing Sonoffs that have this stored as their OTA URL. 
-
-   A full list of available builds for the latest release can be found in [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). They are all available in the same folder in the format: 
-
-    * `http://sonoff.maddox.co.uk/tasmota/BUILDNAME.bin` 
-
-   
-
-   (@smadds also publishes the latest released version number to a publicly available MQTT server which may be subscribed to at sonoff.maddox.co.uk:1883 with the topic sonoff-version. No authentication needed.) 
-
-
+(@smadds also publishes the latest released version number to a publicly available MQTT server which may be subscribed to at sonoff.maddox.co.uk:1883 with the topic sonoff-version. No authentication needed.) 
 
 ### Functionality vs Firmware size vs OTA
 
