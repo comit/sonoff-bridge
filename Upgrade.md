@@ -2,15 +2,29 @@ For first-time flashers, please follow the [Upload instructions](https://github.
 
 ## Upgrading via OTA
 
-It is recommended to upgrade the firmware [over-the-air](https://en.wikipedia.org/wiki/Over-the-air_programming), without a serial connection, while being connected to AC and operational.
+It is recommended (and more convenient) to upgrade the firmware of a Sonoff module [over-the-air](https://en.wikipedia.org/wiki/Over-the-air_programming), without a serial connection, while being connected to AC and operational.
 This method is only available after the Sonoff-Tasmota firmware was flashed via serial connection once.
+
+### OTA Upgrade Methods
 
 **Attention:** Because of limited flash memory it might be needed to flash a *minimal* firmware version before flashing the actual *non-minimal* new firmware update. See below or more details.
 
-Build the firmware binary from source or download the latest build from [the releases section](https://github.com/arendst/Sonoff-Tasmota/releases). There are a few ways to upgrade the firmware:
+There are a few ways to upgrade the firmware:
 
-1. Use the "Upload Firmware" dialog on the Sonoff-Tasmota web interface to flash the downloaded or built `firmware.bin`.
-2. [@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) publicly provides a copy of each of the builds provided as part of a release. The standard build is now (from 5.1.4): 
+1. Use the "Upgrade by file upload" dialog on the Sonoff-Tasmota web interface to flash an available firmware binary file (e.g., `firmware.bin`)
+2. Use the "Upgrade by web server" dialog on the Sonoff-Tasmota web interface to flash a firmware binary file provided on a web server
+3. Initiate the upgrade via the serial/MQTT/web command [`upgrade`](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#management)
+
+*Bonus for openHAB users:* Implement an [automation rule](https://github.com/arendst/Sonoff-Tasmota/wiki/openHAB#maintenance-actions) to upgrade your Sonoffs from within openHAB.
+
+### Firmware Binary Sources
+
+Build the firmware binary from source or download the latest build.
+
+The latest build can be found in the [GitHub releases section](https://github.com/arendst/Sonoff-Tasmota/releases). 
+A secondary hosting of the files is provided because GitHub will only serve files over HTTPS, which is not supported by the Sonoff-Tasmota firmware.
+
+[@smadds](https://github.com/arendst/Sonoff-Tasmota/issues/19) publicly provides a copy of each of the builds provided as part of a release. The standard build is now (starting from 5.1.4): 
 
      * `http://sonoff.maddox.co.uk/tasmota/sonoff.bin` (Latest firmware release) 
 
@@ -24,12 +38,11 @@ Build the firmware binary from source or download the latest build from [the rel
 
     * `http://sonoff.maddox.co.uk/tasmota/BUILDNAME.bin` 
 
-   The reason for this secondary hosting of the files is because Github will only serve files over HTTPS, which is not supported by the standard Tasmota software.
+   
 
    (@smadds also publishes the latest released version number to a publicly available MQTT server which may be subscribed to at sonoff.maddox.co.uk:1883 with the topic sonoff-version. No authentication needed.) 
 
-3. Provide the binary on a web server and initiate the upgrade via the [`upgrade` command](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#management).
-4. If you're using [openHAB2](http://www.openhab.org/), you can use an automation rule to upgrade your Sonoffs from within your home automation: [openHAB Maintenance](https://github.com/arendst/Sonoff-Tasmota/wiki/openHAB#maintenance-actions)
+
 
 ### Functionality vs Firmware size vs OTA
 
