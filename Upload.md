@@ -54,6 +54,6 @@ Before compiling consider modification of `STA_SSID1` and `STA_PASS1` values ins
     #define STA_SSID1              "indebuurt1"      // [Ssid1] Wifi SSID 
     #define STA_PASS1              "VnsqrtnrsddbrN"  // [Password1] Wifi password 
 
-This operation simplifies further [first steps](Initital-Configuration), as Sonoff will automatically recognize and join your WiFi.
+This operation simplifies further [first steps], as Sonoff will automatically recognize and join your WiFi.
 
 Do not be tempted to use other board types within the Arduino IDE (e.g. if programming Wemos etc.) if you want to use Tasmota's OTA updating, as this can cause failure and require serial port reprogramming. Always use the Generic ESP board as stated above.
