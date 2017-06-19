@@ -167,6 +167,9 @@ SetOption0      | 0 | off  | Do not save power changes and do not set relay afte
 SetOption1      |          | Show current button multi press mode
 SetOption1      | 0 | off  | (default) Allow all button actions
 SetOption1      | 1 | on   | Allow only single, double and hold press button actions
+SetOption12     |          | Show current configuration flash usage option
+SetOption12     | 0 | off  | (default) Use dynamic flash to save configuration lowering flash wear
+SetOption12     | 1 | on   | Legacy save configuration in eeprom flash location only
 Sleep           |          | Show current sleep state as 0 (Off) or duration of up to 250 mSec
 Sleep           | 0 | off  | (default) Turn sleep off
 Sleep           | 1..250   | Set sleep duration from 1 to 250 mSec to enable energy saving
@@ -356,8 +359,13 @@ SetOption10 | 1 | on         | When topic changes send old topic retained LWT of
 SetOption11 |                | Show current button single and double press swap state
 SetOption11 | 0 | off        | (default) Legacy button single and double press
 SetOption11 | 1 | on         | Button single and double press functionality swapped
+SetOption12 |                | Show current configuration flash usage option
+SetOption12 | 0 | off        | (default) Use dynamic flash to save configuration lowering flash wear
+SetOption12 | 1 | on         | Legacy save configuration in eeprom flash location only
 SetOption32 |                | Show current key hold time in 0.1 seconds
 SetOption32 | 1..100         | Set key hold time from 0.1 to 10 seconds
+SetOption33 |                | Show Sonoff Pow Max_Power_Retry value
+SetOption33 | 1..250         | Set Sonoff Pow Max_Power_Retry from 1 to 250 
 ```
 
 ### Logging
@@ -430,6 +438,8 @@ PowerHigh       | <watt>      | Set power high threshold value
 PowerLow        |             | Show current power low threshold value
 PowerLow        | 0 | off     | (default) Disable power low threshold
 PowerLow        | <watt>      | Set power low threshold value
+SetOption33     |             | Show Sonoff Pow Max_Power_Retry value
+SetOption33     | 1..250      | Set Sonoff Pow Max_Power_Retry from 1 to 250 
 Status          | 8           | Show Power usage
 Status          | 9           | Show Power thresholds
 VoltageHigh     |             | Show current voltage high threshold value
