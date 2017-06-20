@@ -64,5 +64,5 @@ So to migrate from **Sonoff-MQTT-OTA-Arduino versions before 3.1.0** to **Sonoff
 
 1. Migrate to **Sonoff-Tasmota 3.9.x**
 2. Migrate to **Sonoff-Tasmota 4.x**
-3. Migrate to **Sonoff-Tasmota 5.1.x**
+3. Migrate to **Sonoff-Tasmota 5.0.x**
 4. Migrate to **Sonoff-Tasmota 5.2.x**
