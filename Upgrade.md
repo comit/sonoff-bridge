@@ -57,12 +57,10 @@ As said, mostly painless. There are some deviations to this rule as I rearranged
 1. No migration from **Sonoff-MQTT-OTA** to **Sonoff-MQTT-OTA-Arduino** or **Sonoff-Tasmota**.<br/>The settings flash lay-out and OTA image locations are different from the Arduino versions
 2. Easy migration from **Sonoff-MQTT-OTA-Arduino 1.0.11** to **Sonoff-Tasmota 3.9.x**.<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
 3. Easy migration from **Sonoff-MQTT-OTA-Arduino 3.1.0** to **Sonoff-Tasmota 4.x**.<br/>After installing Sonoff-Tasmota for the first time some settings need to be adjusted via web configuration or MQTT commands.
-4. Easy migration from **Sonoff-Tasmota 4.x** to **Sonoff-Tasmota 5.0.x**.<br/>As a safeguard perform a Backup Configuration before installing the new version. If settings are lost after the upgrade perform a Restore Configuration.
-5. Easy migration from **Sonoff-Tasmota 5.1.x** to **Sonoff-Tasmota 5.2.x**.<br/>As a safeguard perform a Backup Configuration before installing the new version. If settings are lost after the upgrade perform a Restore Configuration.
+4. Easy migration from **Sonoff-Tasmota 4.x** to **Sonoff-Tasmota 5.x**.<br/>As a safeguard perform a Backup Configuration before installing the new version. If settings are lost after the upgrade perform a Restore Configuration.
 
 So to migrate from **Sonoff-MQTT-OTA-Arduino versions before 3.1.0** to **Sonoff-Tasmota 5.x** you will need to take three steps:
 
 1. Migrate to **Sonoff-Tasmota 3.9.x**
 2. Migrate to **Sonoff-Tasmota 4.x**
-3. Migrate to **Sonoff-Tasmota 5.0.x**
-4. Migrate to **Sonoff-Tasmota 5.2.x**
+3. Migrate to **Sonoff-Tasmota 5.x**
