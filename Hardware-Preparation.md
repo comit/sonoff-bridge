@@ -35,6 +35,7 @@ For module specific instructions and restrictions of the individual devices, ple
 * [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
 * [Sonoff Pow](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Pow)
 * [Sonoff Touch](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Touch)
+* [Sonoff 4CH][https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-4CH]
 
 ### Bringing the Module in Flash Mode
 
@@ -86,12 +87,6 @@ I was unable to pair the Sonoff RF 434MHz receiver with my KaKu switches but the
 This USB powered or external powered board provides one GPIO controlling two alternating relays with Normally Open (NO) and Normally Closed (NC) contacts. It can be used for changing directions of a connected motor.
 
 Programming the on-board 3.3V [PSA-B](https://www.itead.cc/psa-01.html) is possible when Rx (Pin 7), Tx (Pin 8) and GND (Pin 9) are connected to the FTDI interface, the button is pressed and (USB) power is provided.
-
-### Sonoff 4ch
-
-On the PCB the `TX` and `RX` pins are mislabeled. The `TX` of the programmer needs to connect to the `TX` on the 4ch PCB and the `RX` to the `RX`. Normally this is reversed.
-
-Note to set the board to "Generic ESP8285 Module".
 
 ### Sonoff SC
 
