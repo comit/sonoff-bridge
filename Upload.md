@@ -1,20 +1,22 @@
 ## PlatformIO
 
-1. Download the latest [Sonoff-Tasmota "Source code (zip)"](https://github.com/arendst/Sonoff-Tasmota/releases) and extract it
-2. Load the Sonoff-Tasmota base folder, including [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini), in [PlatformIO](https://github.com/platformio).
+1. Download the latest [Sonoff-Tasmota "Source code (zip)"](https://github.com/arendst/Sonoff-Tasmota/releases) and extract it - you may also *git clone* the repository
+2. Load the Sonoff-Tasmota base folder in [PlatformIO](https://github.com/platformio)
 3. Connect the Sonoff module in Flash Mode (see [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) section and device specific articles)
-4. Select "Upload".
-
-If you want to flash a **Touch** or a **4CH** upload **sonoff-touch-4ch.bin**! You can accomplish this by commenting out other builds in _platformio.ini_ before uploading or by uncommenting ```env_default = sonoff-touch-4ch```.
-
-The default _platformio.ini_ spits out four compiled versions meaning:
-
-* sonoff.bin = the default firmware for all but initial Sonoff-Touch and Sonoff-4CH devices
-* sonoff-touch-4ch.bin = the inital firmware for the Sonoff-Touch and Sonoff-4CH ONLY and is only used at initial serial upload to these devices. Future (OTA and web) uploads can use the sonoff.bin version as this version will be patched during (OTA and web) uploading to satisfy the esp8285 chip and flash layout.
-* sonoff-minimal.bin = is interim firmware to be used when the above firmware images become too big to fit as OTA or web upload; installing this one first and THEN uploading the desired sonoff.bin allows for future firmware size growth over the OTA file limit of 1/2 flash size.
-* sonoff-ds18x20.bin = is a version of sonoff.bin with the USE_DS18X20 define enabled and a larger MQTT buffer size to be used by people having more than 4 ds18x20 sensors connected.
+4. Select a firmware variant to flash onto your module by uncommenting one of the `env_default` lines in [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini), see below for variant details
+5. Select "Upload" from the menu to flash the firmware 
+6. After successful transfer of the firmware disconnect the module
 
 Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initial-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
+
+#### Firmware Variants
+
+The default environment configuration generates multiple firmware variants. To build and/or flash exactly one of these, uncomment one of the `env_default` lines in [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini).
+
+* `sonoff.bin` - the default firmware for all but initial Sonoff-Touch and Sonoff-4CH devices
+* `sonoff-touch-4ch.bin` - the inital firmware for the Sonoff-Touch and Sonoff-4CH ONLY and is only used at initial serial upload to these devices. Future (OTA and web) uploads can use the sonoff.bin version as this version will be patched during (OTA and web) uploading to satisfy the esp8285 chip and flash layout.
+* `sonoff-minimal.bin` - is interim firmware to be used when the above firmware images become too big to fit as OTA or web upload; installing this one first and THEN uploading the desired sonoff.bin allows for future firmware size growth over the OTA file limit of 1/2 flash size.
+* `sonoff-ds18x20.bin` - is a version of sonoff.bin with the USE_DS18X20 define enabled and a larger MQTT buffer size to be used by people having more than 4 ds18x20 sensors connected.
 
 ## Arduino IDE
 
