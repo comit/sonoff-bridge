@@ -44,7 +44,9 @@ Clearing the configuration flash area can also solve unbootable systems. Using t
   - Hold the push button and apply 3V3 power to the device from the USB/serial connecting device (ie FTDI)
   - Open a command prompt and execute command ``esptool.py --port COM5 erase_region 0x0F4000 0x008000``
 3. Optional Clear the complete flash with command ``esptool.py --port COM5 erase_flash``
-4. Optional Load Tasmota with command ``esptool.py --port COM5 write_flash 0x0 sonoff.ino.bin``
+4. Optional Load Tasmota into a device
+  - All but Sonoff Touch and Sonoff 4ch with command ``esptool.py --port COM5 write_flash -fs 1MB 0x0 sonoff.ino.bin``
+  - Sonoff Touch and Sonoff 4ch with command ``esptool.py --port COM5 write_flash -fm dout -fs 1MB 0x0 sonoff.ino.bin``
 
 ## does not respond to button intermittently.
 The library that is being used to make the TCP connection to the MQTT server has a 5 second timeout, during which the firmware is stuck and can do nothing else (including switching the relay locally)
