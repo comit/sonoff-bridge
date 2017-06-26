@@ -29,7 +29,7 @@ By default, this firmware tries to preserve the existing config (to support auto
 There are multiple ways to force the config to what's set in user_config to recover a system.
 
 1. hold button1 down for 4 seconds
-1. issue a reset command (reset 1 via the web console, /cmnd/sonoff/reset 1 via mqtt)
+1. issue a reset command (``reset 1`` via the web console, ``/cmnd/sonoff/reset 1`` via mqtt)
 1. change the value of CFG_HOLDER in user_config and re-flash the device
 
 ### esptool usage
@@ -37,16 +37,16 @@ Clearing the configuration flash area can also solve unbootable systems. Using t
 
 1. Go to https://github.com/espressif/esptool and read the README.md regarding installing esptool which comes down to
   - Install python 2.7.x for your operating system from https://www.python.org/
-  - Open a command prompt and install pyserial with command ``pip install pyserial``
-  - Install esptool with command ``pip install esptool``
+  - Open a command prompt and install pyserial with command<br/> ``pip install pyserial``
+  - Install esptool with command<br/> ``pip install esptool``
 2. Clear the Tasmota configuration flash area
   - Connect your device to a known serial port (say COM5)
   - Hold the push button and apply 3V3 power to the device from the USB/serial connecting device (ie FTDI)
-  - Open a command prompt and execute command ``esptool.py --port COM5 erase_region 0x0F4000 0x008000``
-3. Optional Clear the complete flash with command ``esptool.py --port COM5 erase_flash``
+  - Open a command prompt and execute command<br/> ``esptool.py --port COM5 erase_region 0x0F4000 0x008000``
+3. Optional Clear the complete flash with command<br/> ``esptool.py --port COM5 erase_flash``
 4. Optional Load Tasmota into a device
-  - All but Sonoff Touch and Sonoff 4ch with command ``esptool.py --port COM5 write_flash -fs 1MB 0x0 sonoff.ino.bin``
-  - Sonoff Touch and Sonoff 4ch with command ``esptool.py --port COM5 write_flash -fm dout -fs 1MB 0x0 sonoff.ino.bin``
+  - All but Sonoff Touch and Sonoff 4ch with command<br/> ``esptool.py --port COM5 write_flash -fs 1MB 0x0 sonoff.bin``
+  - Sonoff Touch and Sonoff 4ch with command<br/> ``esptool.py --port COM5 write_flash -fs 1MB -fm dout 0x0 sonoff-touch-4ch.bin``
 
 ## does not respond to button intermittently.
 The library that is being used to make the TCP connection to the MQTT server has a 5 second timeout, during which the firmware is stuck and can do nothing else (including switching the relay locally)
