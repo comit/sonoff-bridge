@@ -32,6 +32,20 @@ There are multiple ways to force the config to what's set in user_config to reco
 1. issue a reset command (reset 1 via the web console, /cmnd/sonoff/reset 1 via mqtt)
 1. change the value of CFG_HOLDER in user_config and re-flash the device
 
+### esptool usage
+Clearing the configuration flash area can also solve unbootable systems. Using the latest esptool supported by espressif makes this process "rather" easy.
+
+1. Go to https://github.com/espressif/esptool and read the README.md regarding installing esptool which comes down to
+  - Install python 2.7.x for your operating system from https://www.python.org/
+  - Open a command prompt and install pyserial with command ``pip install pyserial``
+  - Install esptool with command ``pip install esptool``
+2. Clear the Tasmota configuration flash area
+  - Connect your device to a known serial port (say COM5)
+  - Hold the push button and apply 3V3 power to the device from the USB/serial connecting device (ie FTDI)
+  - Open a command prompt and execute command ``esptool.py --port COM5 erase_region 0x0F4000 0x008000``
+3. Optional Clear the complete flash with command ``esptool.py --port COM5 erase_flash``
+4. Optional Load Tasmota with command ``esptool.py --port COM5 write_flash 0x0 sonoff.ino.bin``
+
 ## does not respond to button intermittently.
 The library that is being used to make the TCP connection to the MQTT server has a 5 second timeout, during which the firmware is stuck and can do nothing else (including switching the relay locally)
 
@@ -42,15 +56,15 @@ Note that if it has no network connection at all, this problem doesn't happen, b
 ## Disconnects and Reconnects
 
 If the serial debugger shows repeated messages like this -
-
+```
 02:32:54 MQTT: tele/MYSONOFF/LWT = Online (retained)
 02:32:54 MQTT: cmnd/MYSONOFF/POWER = 
 02:32:55 MQTT: Attempting connection...
 02:32:56 mDNS: Query done with 0 mqtt services found
 02:32:56 MQTT: Connected
-
+```
 or your mosquitto log shows messages like this -
-
+```
 1496455347: New client connected from IP_addr_1 as SONOFF (c1, k15, u'SONOFF_USER').
 1496455349: New connection from IP_addr_1 on port 1883.
 1496455349: Client SONOFF already connected, closing old connection.
@@ -59,7 +73,7 @@ or your mosquitto log shows messages like this -
 1496455350: New connection from IP_addr_2 on port 1883.
 1496455350: Client SONOFF already connected, closing old connection.
 1496455350: Client SONOFF disconnected.
-
+```
 Then you have more than one device connected with the same client_ID. Its important that each device has a unique client_ID, not just PROJECT
 
 # troubleshooting tools
