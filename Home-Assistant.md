@@ -81,12 +81,12 @@ sensor:
   - platform: mqtt
     name: "Tele Temperature"
     state_topic: "tele/sonoff/SENSOR"
-    value_template: "{{ value_json['DHT22-14'].Temperature }}"
+    value_template: "{{ value_json['DHT22'].Temperature }}"
     unit_of_measurement: "°C"
   - platform: mqtt
     name: "Tele Humidity"
     state_topic: "tele/sonoff/SENSOR"
-    value_template: "{{ value_json['DHT22-14'].Humidity }}"
+    value_template: "{{ value_json['DHT22'].Humidity }}"
     unit_of_measurement: "%"
 ```
 This periodic interval can be changed using the ``TelePeriod`` command (see the wiki for the MQTT commands).
