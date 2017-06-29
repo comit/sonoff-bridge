@@ -2,7 +2,10 @@
 
 ## Uploading Sketch via FTDI/UART Not Working
 
-Testing with two different (fairly new) FTDI boards and two new (Purchased 28/07/2017) Sonoff 4CH v2.0 boards I found that I was getting errors uploading sketches i.e. "warning: espcomm_sync failed" basically a lack of communication between the two devices. I found that the problem in both Sonoff's was that instead of the FTDI Sonoff cross-over TX->RX and RX->TX I had to do TX->TX RX->RX this then allowed me to upload the sketch.
+Testing with two different (fairly new) FTDI boards and two new (Purchased 28/07/2017) Sonoff 4CH v2.0 boards I found that I was getting errors uploading sketches i.e. "warning: espcomm_sync failed" basically a lack of communication between the two devices.
+
+I found that the problem in both Sonoff's was that instead of the FTDI Sonoff cross-over TX->RX and RX->TX I had to do 
+TX->TX RX->RX this then allowed me to upload the sketch.
 
 ## Wifi stops working
 There have been many reports of wifi no longer working when it was working for a while.
