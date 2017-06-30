@@ -321,7 +321,7 @@ SwitchTopic     | \<topic\>      | Set MQTT switch topic (32 chars max)
 TelePeriod      |                | Show current telemetry period in seconds
 TelePeriod      | 0 / off        | Disable telemetry messages
 TelePeriod      | 1              | Reset telemetry period to `user_config.h` (`TELE_PERIOD`)
-TelePeriod      | \<secs\>       | Set telemetry period between 2 and 3600 seconds
+TelePeriod      | \<secs\>       | Set telemetry period between 10 and 3600 seconds
 Topic           |                | Show current MQTT topic
 Topic           | 1              | Reset MQTT topic to `user_config.h` (`MQTT_TOPIC`) and restart
 Topic           | \<topic\>      | Set MQTT topic (32 chars max) AND button topic and restart
