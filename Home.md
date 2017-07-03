@@ -17,6 +17,7 @@ The following devices are supported with Serial, Web and MQTT control:
 - [iTead Sonoff Touch](http://sonoff.itead.cc/en/products/residential/sonoff-touch)
 - [iTead Sonoff SC](http://sonoff.itead.cc/en/products/residential/sonoff-sc)
 - [iTead Sonoff Led](http://sonoff.itead.cc/en/products/appliances/sonoff-led)
+- [iTead Sonoff BN-SZ01 Ceiling Led](http://sonoff.itead.cc/en/products/appliances/bn-sz01)
 - [iTead Sonoff Dev](https://www.itead.cc/sonoff-dev.html)
 - [iTead 1 Channel Switch 5V / 12V](https://www.itead.cc/smart-home/inching-self-locking-wifi-wireless-switch.html)
 - [iTead Motor Clockwise/Anticlockwise](https://www.itead.cc/smart-home/motor-reversing-wifi-wireless-switch.html)
