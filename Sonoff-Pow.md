@@ -3,6 +3,11 @@
 * Itead Shop: https://www.itead.cc/sonoff-pow.html
 * Itead Wiki: https://www.itead.cc/wiki/Sonoff_Pow
 
+## Special Pow Attention ⚠️️⚠️️⚠️️
+
+**Do not connect AC power and the serial connection at the same time** 
+The Gnd connection of the Pow has a 50% chance of being connected to the life AC wire. Connecting serial with your PC will fry your PC.
+
 ## Serial Connection
 
 <img alt="picture of the Sonoff Pow PCB, the needed pin header can be seen on the top end" src="https://www.itead.cc/wiki/images/e/e3/Sonoff-Pow-00.JPG" width="40%" align="right" />
