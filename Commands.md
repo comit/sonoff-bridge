@@ -1,17 +1,17 @@
 
-The Sonoff-Tasmota firmware provides interfaces for control and status updates over **MQTT**, **web** and **serial**.
+The Sonoff-Tasmota firmware provides three powerful man machine interfaces: **MQTT**, **web** and **serial**.
 
 ### MQTT
 
-MQTT is the recommended interaction interface. You can find all relevant details regarding MQTT in the [MQTT Essentials](http://www.hivemq.com/mqtt-essentials/). You'll need an MQTT broker in place and should utilize an independent [MQTT client](http://www.hivemq.com/blog/seven-best-mqtt-client-tools) for troubleshooting. Setting up the basic MQTT environment is out of the scope of this article.
+MQTT is the recommended interaction interface. You can find all relevant details regarding MQTT in the [MQTT Essentials](http://www.hivemq.com/mqtt-essentials/) article series. You'll need an MQTT broker in place and should utilize an independent [MQTT client](http://www.hivemq.com/blog/seven-best-mqtt-client-tools) for troubleshooting. Setting up the basic MQTT environment is out of the scope of this article.
 
-The MQTT commands are constructed from MQTT Topic for ```cmnd/sonoff/<command>``` and MQTT message for ```<parameter>``` and are NOT case sensitive. 
-
-Commands to address a specific relay are formed like ```cmnd/sonoff/<command><relay>``` where applicable.
+Please check the specific [MQTT Features](https://github.com/arendst/Sonoff-Tasmota/wiki/MQTT-Features) wiki page to learn more.
 
 **Example:**
 
-For a Sonoff-Tasmota module with the FullTopic "tasmota/%topic%/%prefix%/", the topic "sonoff-mylight" and following the definition of the "Power" command below. "Power1" represents the first relay which every switching Sonoff module has.
+A Sonoff-Tasmota module was configured with the *FullTopic* `tasmota/%topic%/%prefix%/` and the topic setting "sonoff-mylight". We want to switch the light On and Off.
+
+By looking at the commands table below we can learn about the [Power](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#main) command and the TOGGLE command. "Power1" represents the first relay.
 
 * Status query:
   ```java
