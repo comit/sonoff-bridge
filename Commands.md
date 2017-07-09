@@ -1,4 +1,11 @@
-The firmware supports a **serial**, **MQTT** and **Web** Man Machine interface. The serial interface is set to 115200 bps except for Sonoff Dual where it is set to 19200 bps. The MQTT commands are constructed from MQTT Topic for ```cmnd/sonoff/<command>``` and MQTT message for ```<parameter>``` and are NOT case sensitive. 
+
+The Sonoff-Tasmota firmware provides interfaces for control and status updates over **MQTT**, **web** and **serial**.
+
+### MQTT
+
+MQTT is the recommended interaction interface. You can find all relevant details regarding MQTT in the [MQTT Essentials](http://www.hivemq.com/mqtt-essentials/). You'll need an MQTT broker in place and should utilize an independent [MQTT client](http://www.hivemq.com/blog/seven-best-mqtt-client-tools) for troubleshooting. Setting up the basic MQTT environment is out of the scope of this article.
+
+The MQTT commands are constructed from MQTT Topic for ```cmnd/sonoff/<command>``` and MQTT message for ```<parameter>``` and are NOT case sensitive. 
 
 Commands to address a specific relay are formed like ```cmnd/sonoff/<command><relay>``` where applicable.
 
@@ -20,9 +27,10 @@ For a Sonoff-Tasmota module with the FullTopic "tasmota/%topic%/%prefix%/", the 
      ↳ Power on relay 1 is toggled
   ```
 
-**HTTP:** 
+### Web 
 
-Commands can also be executed via HTTP requests, examples:
+Commands can be executed via HTTP requests, for example:
+
 ```http
 http://sonoff/cm?cmnd=Power%20TOGGLE
 http://sonoff/cm?cmnd=Power%20On
@@ -30,7 +38,14 @@ http://sonoff/cm?cmnd=Power%20off
 http://sonoff/cm?user=admin&password=joker&cmnd=Power%20Toggle
 ```
 
+### Serial
+
+The serial interface is set to 115200 bps except for Sonoff Dual where it is set to 19200 bps.
+
+## Command Overview
+
 The following command tables are available:
+
 - [Main](#main)
 - [Sensor](#sensor)
 - [Management](#management)
