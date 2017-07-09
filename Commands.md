@@ -408,6 +408,7 @@ WebLog          | 1         | Show only error messages
 WebLog          | 2         | Show error and info messages
 WebLog          | 3         | Show error, info and debug messages
 WebLog          | 4         | Show all messages
+CfgDump         |           | Dump all configuration to log file
 
 
 ### Sonoff Pow
