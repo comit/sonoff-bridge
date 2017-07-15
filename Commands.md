@@ -45,6 +45,9 @@ http://sonoff/cm?user=admin&password=joker&cmnd=Power%20Toggle
 
 The serial interface is set to 115200 bps except for Sonoff Dual where it is set to 19200 bps.
 
+## Using backlog
+Starting with version 5.3.0 a backlog feature is available allowing to execute several commands in sequence. The syntax of this command is ``Backlog status 1; power 2; delay 20; power 2; status ``. 
+
 ## Command Overview
 
 The following command tables are available:
