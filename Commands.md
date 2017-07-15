@@ -11,7 +11,7 @@ Please check the specific [MQTT Features](https://github.com/arendst/Sonoff-Tasm
 
 A Sonoff-Tasmota module was configured with the *FullTopic* `tasmota/%topic%/%prefix%/` and the topic setting "sonoff-mylight". We want to switch the light On and Off.
 
-By looking at the commands table below we can learn about the [Power](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#main) command and the TOGGLE command. "Power1" represents the first relay.
+By looking at the commands table below we can learn about the [Power](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#main) command and the TOGGLE option. "Power1" represents the first relay.
 
 * Status query:
   ```java
@@ -19,13 +19,16 @@ By looking at the commands table below we can learn about the [Power](https://gi
      ↳ tasmota/sonoff-mylight/stat/RESULT → {"POWER1":"OFF"}
      ↳ tasmota/sonoff-mylight/stat/POWER1 → OFF
   ```
+  We can see, that the module's first relay is currently turned off.
+
 * Sending a command:
   ```java
   tasmota/sonoff-mylight/cmnd/Power1 ← "TOGGLE"
+     ↳ // Power for relay 1 is toggled
      ↳ tasmota/sonoff-mylight/stat/RESULT → {"POWER1":"ON"}
      ↳ tasmota/sonoff-mylight/stat/POWER1 → ON
-     ↳ Power on relay 1 is toggled
   ```
+  We've send the toggle command and received the new state confirmation.
 
 ### Web 
 
