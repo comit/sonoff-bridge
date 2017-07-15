@@ -53,7 +53,7 @@ The following command tables are available:
 - [Sensor](#sensor)
 - [Management](#management)
 - [Wifi](#wifi)
-- [MQTT](#mqtt)
+- [MQTT](#mqtt-specific)
 - [SetOption Overview](#setoption-overview)
 - [Logging](#logging)
 - [Sonoff Pow specific](#sonoff-pow)
@@ -146,7 +146,11 @@ TempUnit          |                | Replaced by SetOption8
 
 Command           | Payload    | Description
 ------------------|------------|-------------------------------------------------------------------------------
+Backlog           |            | Abort backlog if active
+Backlog           | \<cmnds\>  | List of commands to be executed in sequence separated by a ;
 ButtonRestrict    |            | Replaced by SetOption1
+Delay             |            | Reset backlog delay to 0.2 seconds
+Delay             | 2..3600    | Set delay between two backlog commands with 0.1 seconds increment
 Emulation         |            | Show current emulation state
 Emulation         | 0 / off    | Disable emulation
 Emulation         | 1          | Enable Belkin WeMo emulation for Alexa
@@ -257,7 +261,7 @@ WifiConfig       | 3           | Start WPS config for 1 minute and set as curren
 WifiConfig       | 4           | Disable wifi config but retry other AP without restart
 
 
-### MQTT
+### MQTT Specific
 
 Command         | Payload        | Description
 ----------------|----------------|-----------------------------------------------------------------------------
