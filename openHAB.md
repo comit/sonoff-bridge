@@ -7,10 +7,17 @@ By following the guide below you'll be able to observe, control and manage your 
 ![example openHAB sitemap](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/5/57750c6c7b6d9f18e75424fcb87ec093f70c6211.png "openHAB example of the end result shown in BasicUI")
 
 ### Requirements
+
 * Working openHAB installation (http://docs.openhab.org)
-* Configured Sonoff-Tasmota module (i.e. Sonoff-Tasmota webpage accessible from your local network)
-* MQTT broker available (e.g. Eclipse Mosquitto via [openHABian](http://docs.openhab.org/installation/openhabian.html)), a [basic understanding of MQTT](http://www.hivemq.com/blog/mqtt-essentials) 
+
+* Configured Sonoff-Tasmota module (i.e. module accessible from your local network)
+
+* MQTT broker available (e.g. Eclipse Mosquitto via [openHABian](http://docs.openhab.org/installation/openhabian.html))
+
+* A [basic understanding of MQTT](http://www.hivemq.com/blog/mqtt-essentials) 
+
 * Working and tested connection between openHAB and the MQTT broker
+
 * (optional) Standalone [MQTT client](http://www.hivemq.com/blog/seven-best-mqtt-client-tools) (e.g. [mqtt-spy](https://kamilfb.github.io/mqtt-spy)) to observe and identify messages on the MQTT broker
 
 Before continuing, please make sure you assigned **unique MQTT "Topics"** in the Sonoff-Tasmota configuration interface of each Sonoff module. The default MQTT topic is "sonoff", in the examples below we will use names like "sonoff-A00F9D".
