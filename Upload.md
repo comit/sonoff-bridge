@@ -13,8 +13,7 @@ Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initi
 
 The default environment configuration generates multiple firmware variants. To build and/or flash exactly one of these, uncomment one of the `env_default` lines in [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini).
 
-* `sonoff.bin` - the default firmware for all but initial Sonoff-Touch and Sonoff-4CH devices
-* `sonoff-touch-4ch.bin` - the inital firmware for the Sonoff-Touch and Sonoff-4CH ONLY and is only used at initial serial upload to these devices. Future (OTA and web) uploads can use the sonoff.bin version as this version will be patched during (OTA and web) uploading to satisfy the esp8285 chip and flash layout.
+* `sonoff.bin` - the default firmware for all devices
 * `sonoff-minimal.bin` - is interim firmware to be used when the above firmware images become too big to fit as OTA or web upload; installing this one first and THEN uploading the desired sonoff.bin allows for future firmware size growth over the OTA file limit of 1/2 flash size.
 * `sonoff-ds18x20.bin` - is a version of sonoff.bin with the USE_DS18X20 define enabled and a larger MQTT buffer size to be used by people having more than 4 ds18x20 sensors connected.
 
@@ -27,7 +26,7 @@ Load the file `sonoff.ino` into the IDE.
 In the Arduino IDE for sonoff select from `Tools Board Generic ESP8266 Module` ( `Tools Board Generic ESP8285 Module` for CH4 version) and set the following options:
 
 - Upload Using: Serial
-- Flash Mode: DIO
+- Flash Mode: DOUT
 - Flash Frequency: 40MHz
 - CPU Frequency: 80MHz
 - Flash Size: 1M (64K SPIFFS) ⚠️️**If Version 5.x.x -> Flash Size: "1M (no SPIFFS)"**⚠️️
