@@ -20,11 +20,13 @@ By following the guide below you'll be able to observe, control and manage your 
 
 * (optional) Standalone [MQTT client](http://www.hivemq.com/blog/seven-best-mqtt-client-tools) (e.g. [mqtt-spy](https://kamilfb.github.io/mqtt-spy)) to observe and identify messages on the MQTT broker
 
+If not done yet, you first need to **install and activate** the [MQTT binding](http://docs.openhab.org/addons/bindings/mqtt1/readme.html), the [MQTT action](http://docs.openhab.org/addons/actions/mqtt/readme.html) and the [JsonPath transformation](http://docs.openhab.org/addons/transformations/jsonpath/readme.html), e.g. via the openHAB Paper UI Add-ons section.
+
 Before continuing, please make sure you assigned **unique MQTT "Topics"** in the Sonoff-Tasmota configuration interface of each Sonoff module. The default MQTT topic is "sonoff", in the examples below we will use names like "sonoff-A00EEA".
 
 ![Example Sonoff-Tasmota MQTT settings](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/8/8fe9008fb24b0b70e6eddf7cf0f0c70c8ac21b92.png "Example Sonoff-Tasmota MQTT settings")
 
-If not done yet, you first need to **install and activate** the [MQTT binding](http://docs.openhab.org/addons/bindings/mqtt1/readme.html), the [MQTT action](http://docs.openhab.org/addons/actions/mqtt/readme.html) and the [JsonPath transformation](http://docs.openhab.org/addons/transformations/jsonpath/readme.html), e.g. via the openHAB Paper UI Add-ons section.
+In the example configuration you can see a non-default **Full Topic** definition, which is **not** used in the following examples.
 
 ### Integration
 
