@@ -112,6 +112,9 @@ PulseTime\<x\>   | 112..64900   | Set PulseTime for relay\<x\> with 1 seconds in
 SetOption11      |              | Show current button single and double press swap state
 SetOption11      | 0 / off      | (default) Legacy button single and double press
 SetOption11      | 1 / on       | Button single and double press functionality swapped
+SetOption13      |              | Show current button single press only state
+SetOption13      | 0 / off      | (default) Enable button single, multi-press and hold
+SetOption13      | 1 / on       | Enable button single press only for immediate response. Disable by holding 4 x SetOption32
 SetOption32      |              | Show current key hold time in 0.1 seconds
 SetOption32      | 1..100       | Set key hold time from 0.1 to 10 seconds
 SwitchMode\<x\>  |              | Show current external switch mode
@@ -388,6 +391,9 @@ SetOption11 | 1 / on         | Button single and double press functionality swap
 SetOption12 |                | Show current configuration flash usage option
 SetOption12 | 0 / off        | (default) Use dynamic flash to save configuration lowering flash wear
 SetOption12 | 1 / on         | Legacy save configuration in eeprom flash location only
+SetOption13 |                | Show current button single press only state
+SetOption13 | 0 / off        | (default) Enable button single, multi-press and hold
+SetOption13 | 1 / on         | Enable button single press only for immediate response. Disable by holding 4 x SetOption32
 SetOption32 |                | Show current key hold time in 0.1 seconds
 SetOption32 | 1..100         | Set key hold time from 0.1 to 10 seconds
 SetOption33 |                | Show Sonoff Pow Max_Power_Retry value
