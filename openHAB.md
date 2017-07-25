@@ -39,7 +39,7 @@ MQTT messages published by a Sonoff Pow module are shown below (using [mosquitto
 The module reports its device state and energy readings periodically.
 In the second half of the example the module relay was switched into the OFF position.
 
-```json
+```java
 $ mosquitto_sub -h localhost -t "+/sonoff-E8A6E4/#" -v
 
 tele/sonoff-E8A6E4/LWT Online
@@ -70,7 +70,7 @@ This it the minimal set of items for the basic functionality of different Sonoff
   ```
 * Sonoff Pow (Read and switch on-state, read current wattage)
   ```java
-  // compare with example above!
+  // compare with example message stream above!
   Switch BA_Washingmachine "Washingmachine" <washer> (BA)
       { mqtt=">[broker:cmnd/sonoff-E8A6E4/POWER:command:*:default],
               <[broker:stat/sonoff-E8A6E4/POWER:state:default]" }
