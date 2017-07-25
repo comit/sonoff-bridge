@@ -32,7 +32,28 @@ In the example configuration you can see a non-default **Full Topic** definition
 
 Simply **set up items** for all Sonoff-Tasmota [MQTT topics](https://github.com/arendst/Sonoff-Tasmota/wiki/MQTT-Features) you are interested in. Examples for most needed topics are given below. Some Sonoff-Tasmota topics are JSON encoded, the `JSONPATH` transformation can be used to extract this data.
  
-Additional or further interesting topics are easily identified by reading up on the Sonoff-Tasmota wiki and by subscribing to the modules topics. Subscribe to all topics of one module with the MQTT wildcard topic string `+/sonoff-XYZ/#` (String might depend on your user-configured FullTopic). Configure items for the identified topics similar to the ones below.
+Additional or further interesting topics are easily identified by reading up on the Sonoff-Tasmota wiki and by subscribing to the modules topics. Subscribe to all topics of one module with the [MQTT wildcard](http://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices) topic string `+/sonoff-XYZ/#` (String might depend on your user-configured FullTopic). Configure items for the identified topics similar to the ones below.
+
+**Example:**
+MQTT messages published by a Sonoff Pow module are shown below (using [mosquitto_sub](https://mosquitto.org/man/mosquitto_sub-1.html)).
+The module reports its device state and energy readings periodically.
+In the second half of the example the module relay was switched into the OFF position.
+
+```json
+$ mosquitto_sub -h localhost -t "+/sonoff-E8A6E4/#" -v
+
+tele/sonoff-E8A6E4/LWT Online
+tele/sonoff-E8A6E4/UPTIME {"Time":"2017-07-25T12:02:00", "Uptime":68}
+tele/sonoff-E8A6E4/STATE {"Time":"2017-07-25T12:06:28", "Uptime":68, "Vcc":3.122, "POWER":"POWER", "Wifi":{"AP":1, "SSID":"HotelZurBirke", "RSSI":100, "APMac":"24:65:11:BF:12:D8"}}
+tele/sonoff-E8A6E4/ENERGY {"Time":"2017-07-25T12:06:28", "Total":0.640, "Yesterday":0.007, "Today":0.003, "Period":0, "Power":0, "Factor":0.00, "Voltage":0, "Current":0.000}
+tele/sonoff-E8A6E4/STATE {"Time":"2017-07-25T12:11:28", "Uptime":68, "Vcc":3.122, "POWER":"POWER", "Wifi":{"AP":1, "SSID":"HotelZurBirke", "RSSI":100, "APMac":"24:65:11:BF:12:D8"}}
+tele/sonoff-E8A6E4/ENERGY {"Time":"2017-07-25T12:11:28", "Total":0.640, "Yesterday":0.007, "Today":0.003, "Period":0, "Power":0, "Factor":0.00, "Voltage":0, "Current":0.000}
+cmnd/sonoff-E8A6E4/POWER OFF
+stat/sonoff-E8A6E4/RESULT {"POWER":"OFF"}
+stat/sonoff-E8A6E4/POWER OFF
+```
+
+Following this method, the behavior-linked messages can be identified and bound to openHAB items.
 
 ### Mandatory Topics / Items
 
@@ -41,14 +62,15 @@ This it the minimal set of items for the basic functionality of different Sonoff
 
 **sonoff.items:**
 
-* Sonoff Basic / Sonoff S20 Smart Socket (Read the current power state, switch power on and off)
+* Sonoff Basic / Sonoff S20 Smart Socket (Read and switch on-state)
   ```java
   Switch LivingRoom_Light "Living Room Light" <light> (LR,gLight)
       { mqtt=">[broker:cmnd/sonoff-A00EEA/POWER:command:*:default],
               <[broker:stat/sonoff-A00EEA/POWER:state:default]" }
   ```
-* Sonoff Pow (Read and switch power, read current wattage)
+* Sonoff Pow (Read and switch on-state, read current wattage)
   ```java
+  // compare with example above!
   Switch BA_Washingmachine "Washingmachine" <washer> (BA)
       { mqtt=">[broker:cmnd/sonoff-E8A6E4/POWER:command:*:default],
               <[broker:stat/sonoff-E8A6E4/POWER:state:default]" }
