@@ -12,6 +12,7 @@ The following devices are supported with Serial, Web and MQTT control:
 - [iTead Sonoff Dual](http://sonoff.itead.cc/en/products/sonoff/sonoff-dual)
 - [iTead Sonoff Pow](http://sonoff.itead.cc/en/products/sonoff/sonoff-pow)
 - [iTead Sonoff 4CH](http://sonoff.itead.cc/en/products/sonoff/sonoff-4ch)
+- [iTead Sonoff 4CH Pro](http://sonoff.itead.cc/en/products/sonoff/sonoff-4ch-pro)
 - [iTead S20 Smart Socket](http://sonoff.itead.cc/en/products/residential/s20-socket)
 - [iTead Slampher](http://sonoff.itead.cc/en/products/residential/slampher-rf)
 - [iTead Sonoff Touch](http://sonoff.itead.cc/en/products/residential/sonoff-touch)
