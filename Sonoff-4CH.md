@@ -5,6 +5,15 @@
 
 Other than most Sonoff modules (ESP8266) the Sonoff 4CH is based on the ESP8285.
 
+**4CH Pro**
+
+* Itead Product Page: http://sonoff.itead.cc/en/products/sonoff/sonoff-4ch-pro
+* Itead Shop: https://www.itead.cc/sonoff-4ch-pro.html
+* Itead Wiki: https://www.itead.cc/wiki/Sonoff_4CH_Pro
+
+The 4CH Pro is similar to the 4CH but different in some ways as well, please see below for instructions.
+
+
 ## Serial Connection
 
 Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
@@ -28,3 +37,26 @@ In the Arduino IDE select **Board** Generic ESP8285 Module as this contains the 
 After first restart make sure to select either module Sonoff Touch or Sonoff 4CH at least before any OTA or Upload action.
 
 Starting with version 3.9.12 the OTA or Upload code will now check if one of the above modules is selected and patch the uploaded default ESP8266 code with FlashChipMode DIO to the ESP8285 FlashChipMode DOUT before it is copied to it's final destination.
+
+# 4CH Pro
+
+The main differences between the 4CH and the 4CH Pro are:
+
+- Relays are isolated from mains and can each switch their own circuit (mains or low voltage).
+- With stock firmware special modes are supported (stand-alone schedules, inching, interlocking).
+- RF receiver (optional key fob required).
+- Dual microcontroller, both a ESP8285 and a STM32. 
+
+## Switch configuration
+
+A lot of the special modes are controlled by switched on board of the board, please refer to back of the board or Sonoff documentation for more details. For normal operation with Tasmota the following settings are recommended:
+
+- S6: 1
+- K5: all 1
+- K6: all 0
+
+(0 and 1 are printed onto the board next to the switch names.
+
+## Programming
+
+The 4CH Pro ESP cannot be programmed using the 4CH method. As the Firmware button (Switch 1) is not directly connected to the ESP GPIO0 pin, instead this pin is controlled from the STL32. To program the 4CH Pro refer to these instructions: https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation#4ch-pro
