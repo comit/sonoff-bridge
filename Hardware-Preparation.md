@@ -93,14 +93,17 @@ Programming the on-board 3.3V [PSA-B](https://www.itead.cc/psa-01.html) is possi
 Flashing the ESP8266
 
 Remove the 4 screws on the bottom.
-<img alt="SonoffSC" src="https://puu.sh/vZZRI/ff36ff9244.jpg" width="230" align="right"/> The button is connected to GPIO0.
+The button is connected to GPIO0.
 
 You will have to remove the TX jumper in the board to avoid the ATMega328P to interfere in the upload process.
-<img alt="SonoffScRemoveTX" src="https://puu.sh/vZZSi/43244f3cc1.jpg" width="230" align="right"/> 
+
 Press and hold the button while powering the board to set the ESP8266 into flashing mode.
 Note! After flashing you need to set the baudrate to 19200.
 Don't forget to reconnect the TX jumper after flashing ;)
-<img alt="SonoffSCButoom" src="https://puu.sh/vZZSC/aaa140afa3.jpg" width="130" align="right"/>
+
+<img alt="SonoffSC" src="https://puu.sh/vZZRI/ff36ff9244.jpg" width="230" />
+<img alt="SonoffScRemoveTX" src="https://puu.sh/vZZSi/43244f3cc1.jpg" width="230" /> 
+<img alt="SonoffSCButoom" src="https://puu.sh/vZZSC/aaa140afa3.jpg" width="130" />
 
 ### 4CH Pro
 
@@ -110,5 +113,4 @@ To program the ESP chip disconnect power from the board, connect a cable from an
 
 Use the ESP programming header as described in the picture to upload the firmware and follow regular programming procedure.
 
-<img title="Sonoff 4CH Pro programming" src="https://github.com/arendst/arendst.github.io/blob/master/media/4chpro_gpio0.JPG" width="50%" />
-
+<img title="Sonoff 4CH Pro programming" src="https://github.com/arendst/arendst.github.io/blob/master/media/4chpro_gpio0.JPG" width="50%"/>
