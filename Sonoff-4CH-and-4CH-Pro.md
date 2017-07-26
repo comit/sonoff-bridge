@@ -41,7 +41,7 @@ To program the ESP chip disconnect power from the board, connect a cable from an
 
 Use the ESP programming header as described in the picture to upload the firmware and follow regular programming procedure.
 
-<img title="Sonoff 4CH Pro programming" src="https://github.com/arendst/arendst.github.io/blob/master/media/4chpro_gpio0.JPG" width="50%"/>
+<img title="Sonoff 4CH Pro programming" src="https://github.com/arendst/arendst.github.io/blob/master/media/4chpro_gpio0.JPG" width="80%" align="middle" />
 
 
 ## Solving OTA and Upload Problems
