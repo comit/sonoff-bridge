@@ -35,7 +35,7 @@ For module specific instructions and restrictions of the individual devices, ple
 * [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
 * [Sonoff Pow](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Pow)
 * [Sonoff Touch](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Touch)
-* [Sonoff 4CH](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-4CH)
+* [Sonoff 4CH / 4CH Pro](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-4CH)
 
 ### Bringing the Module in Flash Mode
 
