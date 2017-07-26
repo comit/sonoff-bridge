@@ -12,14 +12,12 @@ Other than most Sonoff modules (ESP8266) the Sonoff 4CH is based on the ESP8285.
 * Itead Shop: https://www.itead.cc/sonoff-4ch-pro.html
 * Itead Wiki: https://www.itead.cc/wiki/Sonoff_4CH_Pro
 
-The 4CH Pro is similar to the 4CH but different in some ways as well, please see below for instructions.
+Compared to the 4CH the main differences/improvements of the 4CH Pro are:
 
-The main differences between the 4CH and the 4CH Pro are:
-
-- Relays are isolated from mains and can each switch their own circuit (mains or low voltage).
-- With stock firmware special modes are supported (stand-alone schedules, inching, interlocking).
-- RF receiver (optional key fob required).
-- Dual microcontroller, both a ESP8285 and a STM32.
+  - Relays are isolated from mains and can each switch their own circuit (mains or low voltage).
+  - With stock firmware special modes are supported (stand-alone schedules, inching, interlocking).
+  - RF receiver (optional key fob required).
+  - Dual microcontroller, both a ESP8285 and a STM32.
 
 ## Serial Connection
 
