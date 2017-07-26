@@ -25,6 +25,7 @@
 - [**Sonoff RF and Slampher**](Sonoff-RF)
 - [**Sonoff Touch**](Sonoff-Touch)
 - [**Sonoff 4CH**](Sonoff-4CH)
+- [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
