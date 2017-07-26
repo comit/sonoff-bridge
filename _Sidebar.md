@@ -24,7 +24,7 @@
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff RF and Slampher**](Sonoff-RF)
 - [**Sonoff Touch**](Sonoff-Touch)
-- [**Sonoff 4CH / 4CH Pro**](Sonoff-4CH)
+- [**Sonoff 4CH / 4CH Pro**](Sonoff-4CH-and-4CH-Pro)
 - [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
 
 **Home Automation Integration**
