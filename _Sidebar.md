@@ -19,7 +19,7 @@
 - [**Misc. Tips**](Tips)
 - [**Troubleshooting**](Troubleshooting)
 
-**Additional Device Info**
+**Devices - Additional Info**
 - [**Sonoff Dual**](Sonoff-Dual)
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff RF and Slampher**](Sonoff-RF)
