@@ -104,13 +104,3 @@ Don't forget to reconnect the TX jumper after flashing ;)
 <img alt="SonoffSC" src="https://puu.sh/vZZRI/ff36ff9244.jpg" width="230" />
 <img alt="SonoffScRemoveTX" src="https://puu.sh/vZZSi/43244f3cc1.jpg" width="230" /> 
 <img alt="SonoffSCButoom" src="https://puu.sh/vZZSC/aaa140afa3.jpg" width="130" />
-
-### 4CH Pro
-
-Because Firmware Button/Switch 1 is not directly connected to the GPIO0 of the ESP module a different method has to be used to program this board.
-
-To program the ESP chip disconnect power from the board, connect a cable from any Ground (GND) pin to the GPIO0 pin on the ESP (be careful not to touch any of the other pins). This is the second pin to the right on the top row of pins (see picture). While holding the pin connected power on the board. The board does not respond to any button pressed when in programming mode and LED 1, 2 and 3 are on (might differ per board). 
-
-Use the ESP programming header as described in the picture to upload the firmware and follow regular programming procedure.
-
-<img title="Sonoff 4CH Pro programming" src="https://github.com/arendst/arendst.github.io/blob/master/media/4chpro_gpio0.JPG" width="50%"/>
