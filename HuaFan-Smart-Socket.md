@@ -1,4 +1,4 @@
-# The Huafan Wi-Fi Wireless Smart Socket.
+# The Huafan Wi-Fi Wireless Smart Socket/Plug.
 ## Introduction
 <img src="https://github.com/jwrw/media/blob/master/huafan_outer_socket.jpg" width="250" align="right"> The HuaFan Wireless Wifi Smart Plug/Socket is a useful bit of kit that allows you to introduce home automation without getting into any mains re-wiring.  As an added bonus, the device also provides energy monitoring functions (voltage, current, power) in much the same way as the [Sonoff Pow](http://sonoff.itead.cc/en/products/sonoff/sonoff-pow) module does. 
 As you may have guessed, its 'smarts' come from an embedded ESP8266, which makes it a potential target for the excellent sonoff-tasmota code.
