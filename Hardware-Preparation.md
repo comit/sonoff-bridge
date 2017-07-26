@@ -56,7 +56,7 @@ If everything went well, you are now in Flash Mode and ready to continue with th
 
 <img alt="Connection diagram" src="https://github.com/arendst/arendst.github.io/blob/master/media/ProgramESP8266.jpg" height="260" /><br/>
 
-*Note:* newer version of the Sonoff module hold five pins below the button. Follow the image above and ignore the pin furthest to the Button (pin 5) if available.
+*Note:* newer version of the Sonoff module hold five pins below the button. Follow the image above and ignore the pin furthest away from the Button (pin 5) if available. The square pin is 3.3V.
 
 ### S20 Smart Socket
 
