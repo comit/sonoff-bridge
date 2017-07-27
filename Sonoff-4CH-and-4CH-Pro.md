@@ -68,3 +68,5 @@ For normal operation with Tasmota the following settings are recommended:
 - K6: all 0
 
 (0 and 1 are printed onto the board next to the switch names)
+
+Changing these switches for operations like inching and interlocking are also supported with Tasmota.
