@@ -52,10 +52,11 @@ It is important to initially flash these devices with the correct FlashChipMode 
 
 In the Arduino IDE select **Board** Generic ESP8285 Module as this contains the default DOUT option. You could still use the Generic ESP8266 module as long as you set parameter ``Flash Mode`` to **DOUT**.
 
-After first restart make sure to select either module Sonoff Touch or Sonoff 4CH at least before any OTA or Upload action.
+Starting with version 3.9.12 after first restart make sure to select either module Sonoff Touch or Sonoff 4CH at least before any OTA or Upload action.
 
-Starting with version 3.9.12 the OTA or Upload code will now check if one of the above modules is selected and patch the uploaded default ESP8266 code with FlashChipMode DIO to the ESP8285 FlashChipMode DOUT before it is copied to it's final destination.
+The OTA or Upload code will now check if one of the above modules is selected and patch the uploaded default ESP8266 code with FlashChipMode DIO to the ESP8285 FlashChipMode DOUT before it is copied to it's final destination.
 
+Starting with version 5.3.0 all OTA or Upload code will be patched for FlashChipMode DOUT whatever Module is selected.
 
 ## 4CH Pro DIPSwitch Configuration
 
