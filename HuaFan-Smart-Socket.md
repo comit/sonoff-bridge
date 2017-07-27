@@ -67,3 +67,10 @@ GPIO13 - HLW8012 I/V select  3 |A| 3  GPIO05 - Relay-
 GPIO00 - Blue LED-           4 |R| 4  GPIO03 (U0RxD) - Red LED-
 GPIO04 - Button-             5 |D| 5  Initially GND but ready for GPIO01 (U0TxD)
 ```
+## Hookup - Solder Free Option
+
+Adding to the great guide above ...
+
+So if soldering isn't your bag, there are a few connection points that you can get at with clip probes. There is a +5V and GND contact on the left side of the board and the right LED legs give access to the ESP's GPIO0 and RXD. The tricky bit is the ESP's TXD line which, as stated before, is only accessible on the daughter board via the chip's pin or an smd pad above and to the right. @jwrw, I am in awe of anyone that can solder onto this pad! As an alternative, try connecting an alligator clip to a sewing pin 8) to make a probe and holding it in place with your finger during firmware programming (hey, it only has to work once as from then on you use OTA). Powering via the pcb contacts requires more current than my FTDI was able to source so a seperate 5V power supply is required (a Raspberry Pi can provide the +5V/GND via it's GPIO header if you haven't got a dedicated power supply at hand).
+
+![](https://github.com/PeteBa/media/blob/master/huafan_connections.jpg)
