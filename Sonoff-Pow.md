@@ -36,6 +36,8 @@ I used the following procedure to calibrate.
 7. Verify the voltage reading with the multimeter and if needed change the voltage offset value with command `HLWUcal` starting from 1000. Default value is 1950
 8. Verify the current reading with the calculated value of P (step 6) / U (step 7) and if needed change the current offset with command `HLWIcal` starting from 2500. Default value is 3500
 
+As an alternative to steps 6-8, if you have a known load connected (e.g. a 60W bulb on a 240V supply with 250mA current) then you can use "HLWPset 60", "HLWUset 240" and "HLWIset 250" to have the Sonoff-Pow auto-calibrate to these values.
+
 ## Result explanation
 The Sonoff Pow can provide Energy, Power, Voltage and Current information in different ways.
 
