@@ -74,3 +74,19 @@ Adding to the great guide above ...
 So if soldering isn't your bag, there are a few connection points that you can get at with clip probes. There is a +5V and GND contact on the left side of the board and the right LED legs give access to the ESP's GPIO0 and RXD. The tricky bit is the ESP's TXD line which, as stated before, is only accessible on the daughter board via the chip's pin or an smd pad above and to the right. @jwrw, I am in awe of anyone that can solder onto this pad! As an alternative, try connecting an alligator clip to a sewing pin 8) to make a probe and holding it in place with your finger during firmware programming (hey, it only has to work once as from then on you use OTA). Powering via the pcb contacts requires more current than my FTDI was able to source so a seperate 5V power supply is required (a Raspberry Pi can provide the +5V/GND via it's GPIO header if you haven't got a dedicated power supply at hand).
 
 ![](https://github.com/PeteBa/media/blob/master/huafan_connections.jpg)
+
+## Building Firmware
+
+The process for building the firmware for the HuaFan is basically the same as for the Sonoff but with a few additional steps.
+
+Firstly. you should ensure that you have the latest versions of ESP8266/Arduino and Sonoff-Tasmota software downloaded:
+- support for the 40MHz crystal used by the HuaFan was added to the ESP8266/Arduino code in their release candidate version 2.4.0-rc1 (installation instructions [https://github.com/esp8266/Arduino/releases](here) )
+- support for the HuaFan device and calibration was added in release 5.5.0 of Sonoff-Tasmota
+
+Secondly, you need to edit the boards.txt file to allow selection of the 40MHz Crystal via the Arduino IDE Tools menu. Add the following lines into the section for the "Generic ESP8266 Module" and immediately after the "generic.menu.CpuFrequency" items:
+
+```
+generic.menu.CrystalFreq.26=26 MHz`
+generic.menu.CrystalFreq.40=40 MHz`
+generic.menu.CrystalFreq.40.build.extra_flags=-DF_CRYSTAL=40000000
+```
