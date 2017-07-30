@@ -450,13 +450,16 @@ EnergyReset     | 2             | Reset Energy Yesterday
 EnergyReset     | 3             | Reset Energy Total to value of Energy Today
 HlwIcal         |               | Show calibration value for Current
 HlwIcal         | 1             | Set default calibration value for Current to 3500
-HlwIcal         | \<value\>     | Set user calibration value for Current starting from 2500
+HlwIcal         | \<value\>     | Set user calibration value for Current starting from 1100
+HlwIset         | \<milliamps\> | Auto-calibrate current to a target value
 HlwPcal         |               | Show calibration value for Power
 HlwPcal         | 1             | Set default calibration value for Power to 12530
-HlwIcal         | \<value\>     | Set user calibration value for Power starting from 10000
+HlwPcal         | \<value\>     | Set user calibration value for Power starting from 4000
+HlwPset         | \<watts\>     | Auto-calibrate power to a target value
 HlwUcal         |               | Show calibration value for Voltage
 HlwUcal         | 1             | Set default calibration value for Voltage to 1950
-HlwIcal         | \<value\>     | Set user calibration value for Voltage starting from 1000
+HlwUcal         | \<value\>     | Set user calibration value for Voltage starting from 1000
+HlwUset         | \<volts\>     | Auto-calibrate voltage to a target value
 MaxPower        |               | Show current maximum power allowed setting
 MaxPower        | 0 / off       | Disable use maximum power monitoring
 MaxPower        | \<watt\>      | Set maximum allowed power
