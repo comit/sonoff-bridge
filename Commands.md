@@ -65,6 +65,7 @@ The following command tables are available:
 - [Logging](#logging)
 - [Sonoff Pow specific](#sonoff-pow)
 - [Sonoff Led specific](#sonoff-led)
+- [Sonoff RF Bridge 433](#sonoff-rf-bridge-433)
 - [Domoticz](#domoticz)
 - [WS2812 led string](#ws2812-led-string)
 - [IR remote control](#irremote)
@@ -502,6 +503,16 @@ Speed           | 1..8      | Select desired fade speed from 1 = fast to 8 = slo
 Wakeup          |           | Start wake up sequence from Off to Dimmer value
 WakeupDuration  |           | Show current wake up light duration in seconds
 WakeupDuration  | 1..3600   | Set wake up light duration in seconds
+
+
+### Sonoff RF Bridge 433
+
+Command      | Payload     | Description
+-------------|-------------|----------------------------------------------------------
+RfKey<x>     |             | Send learned or default RF data for RfKey1 until RfKey16
+RfKey<x>     | 1           | Send default RF data for RfKey1 until RfKey16
+RfKey<x>     | 2           | Learn RF data for RfKey1 until RfKey16
+RfKey<x>     | 3           | Unlearn RF data for RfKey1 until RfKey16
 
 
 ### Domoticz
