@@ -512,10 +512,10 @@ WakeupDuration  | 1..3600   | Set wake up light duration in seconds
 
 Command      | Payload     | Description
 -------------|-------------|----------------------------------------------------------
-RfKey<x>     |             | Send learned or default RF data for RfKey1 until RfKey16
-RfKey<x>     | 1           | Send default RF data for RfKey1 until RfKey16
-RfKey<x>     | 2           | Learn RF data for RfKey1 until RfKey16
-RfKey<x>     | 3           | Unlearn RF data for RfKey1 until RfKey16
+RfKey\<x\>   |             | Send learned or default RF data for RfKey1 to RfKey16
+RfKey\<x\>   | 1           | Send default RF data for RfKey1 to RfKey16
+RfKey\<x\>   | 2           | Learn RF data for RfKey1 to RfKey16
+RfKey\<x\>   | 3           | Unlearn RF data for RfKey1 to RfKey16
 
 
 ### Domoticz
