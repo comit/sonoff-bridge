@@ -43,4 +43,21 @@ Now you can see, if there are messages stored that Power ON/OFF and need to be d
 
 The -n sends an empty key and the -r store this change permanently
 
+## Enable relay always ON after power on
+
+To make sure the relay stays on after power on you will have to do a small workaround. After setting up your sonoff do the falling:
+
+1. Set PowerOnState to ON `http://<IP_Address_of_you_Sonoff>/cm?cmnd=PowerOnState%201`
+2. Set PowerRetain to ON `http://<IP_Address_of_you_Sonoff>/cm?cmnd=PowerRetain%201`
+3. Navigate to the web interface `http://<IP_Address_of_you_Sonoff>` and click **toggle** to turn the relay to ON. **If the relay is on toggle it OFF and back ON.**
+4. Set PowerRetain to OFF `http://<IP_Address_of_you_Sonoff>/cm?cmnd=PowerRetain%200`
+
+## Enable relay always OFF after power on
+
+To make sure the relay stays on after power on you will have to do a small workaround. After setting up your sonoff do the falling:
+
+1. Set PowerOnState to OFF `http://<IP_Address_of_you_Sonoff>/cm?cmnd=PowerOnState%200`
+2. Set PowerRetain to On `http://<IP_Address_of_you_Sonoff>/cm?cmnd=PowerRetain%201`
+3. Navigate to the web interface `http://<IP_Address_of_you_Sonoff>` and click **toggle** to turn the relay to OFF. **If the relay is on toggle it ON and back OFF.**
+4. Set PowerRetain to Off `http://<IP_Address_of_you_Sonoff>/cm?cmnd=PowerRetain%200`
 
