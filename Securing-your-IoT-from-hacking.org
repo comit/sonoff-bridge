@@ -41,7 +41,7 @@ In the world of IoT devices and more and more devices in a network, it is essent
 
 Now lets work on the MQTT configuration. Also here an attacker can get access to user and password. To minimize the impact EVERY and really EVERY device must have a unique USER and a unique password. If you don't follow this rule the attacker get one device he can control ALL devices. With the USER/PASSWORD he now can control the one device he already holds in his hands. ok, no big deal. How to configure Mosquitto?
 
-The TASMOTO in general store data in /status/<topic>/+. or /setting/<topic>/+ to control something. If we use the <topic> as username we can make some quite nice and straight forward configuration.
+The TASMOTO in general store data in  stat/<topic>/+ and  tele/<topic>/+. or cmnd/<topic>/+ to control something. If we use the <topic> as username we can make some quite nice and straight forward configuration.
 
 Example:
 Topic: ESP_123456
@@ -54,8 +54,9 @@ user root
 topic read #
 topic write #
 
-pattern read hm/setting/%u/#
-pattern write hm/status/%u/#
+pattern read cmnd/%u/#
+pattern write stat/%u/#
+pattern write tele/%u/#
 #+END_EXAMPLE
 
 My user root is allowed to do everything. This is used in my home-automation to control all devices and listen to all devices. The "pattern" is used for ALL other users and the %u is a substitute. The great thing is that the device can read its configuration but cannot write to it. And the status information it posts to the /status/ but is not able to read it afterward. With this minimal configuration, TASMOTO devices are running.
