@@ -9,7 +9,7 @@ There are following potential risk you have to mitigate:
 - Someone hacks your device and use it for different things like mail bot or DOS (Denial of Service) device or WLAN jammer (why is this a problem? 4)
 
 (1)
-If someone is able to get your WLAN key, he can login into your network, if he is nearby and scan for any traffic and for any devices. Many communication is not encrypted in your WLAN by default. Therefore be part of you WLAN gives you great opportunities to screw-up the rest of your infrastructure. Also be part of your WLAN does mean, that the attacker can use your IP-Adress and your traffic to do nasty things.
+If someone is able to get your WLAN key, he can login into your network, if he is nearby and scan for any traffic and for any devices. Many communication is not encrypted in your WLAN by default. Therefore be part of your WLAN gives the attacker a great opportunity to screw-up the rest of your infrastructure. Also be part of your WLAN does mean, that the attacker can use your IP-Adress and your traffic to do nasty things.
 
 (2)
 If you can hack a SONOFF you might get access to the keys stored in the device. For example, the MQTT password allows you to read ALL of your devices and change any device at any time. With the information of the MQTT-Server user/password, it might be not required anymore to physically be in your WLAN. Maybe your MQTT Server is publicly accessible. Then the attacker can control your home from any place.
