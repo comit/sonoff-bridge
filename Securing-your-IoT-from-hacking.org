@@ -30,11 +30,11 @@ At the FritzRouter you can configure "/network separation/". At Fritz this is do
 Normally a device in the "guest WLAN" can use any internet service. For our IoT devices and for any new device we can create a Router rule, that ONLY MQTT is allowed and any other traffic is blocked. This is a great configuration because it limits the options what a hacker can do. In this case, he can only attack other MQTT servers; not really interesting. And if you change the port of your MQTT server to something unused like Port:12345, you're done.
 
 Now you will probably ask two questions:
-1.) How can I communicate with my MQTT Server in my personal WLAN, if only traffic into the internet is allowed?
-2.) How can I access the WebConsole of my devices to upload new Firmware and/or make investigations?
+1. How can I communicate with my MQTT Server in my personal WLAN, if only traffic into the internet is allowed?
+1. How can I access the WebConsole of my devices to upload new Firmware and/or make investigations?
 
 The first topic will be solved by exposing your MQTT server to the Internet (no worries, can be done securely).
-The second topic has only a workaround. If you want access to your devices you need to change the configuration temporary on your router and ENABLE "/The wireless devices connected with the guest access can communicate with each other/". Secondly, you must login with your Laptop into the GuestWLAN to be able to communicate. If the Webserver is running you should be able to connect and upload e.g. a new firmware
+The second topic has only a workaround. If you want access to your devices you need to change the configuration temporary on your router and ENABLE "/The wireless devices connected with the guest access can communicate with each other/". Secondly, you must login with your Laptop into the GuestWLAN to be able to communicate. If the Webserver is running you should be able to connect and upload e.g. a new firmware.
 
 ## Securing your communication for IoT
 In the world of IoT devices and more and more devices in a network, it is essential to use encryption ALL the time. The TASMOTO project is able to enable encryption for MQTT. This is great. But it cannot enable encryption on the WebServer. This is bad. As a conclusion, the Webserver must be switched OFF all the time and only be switched ON for administrative purpose. This also disables the feature to change the Relay Status with an HTTP REST call. But this option is insecure anyway and should be avoided.
