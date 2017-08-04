@@ -32,7 +32,7 @@
 - [**Home Assistant**](Home-Assistant)
 - [**Domoticz**](Domoticz)
 - [**HomeBridge**](Homebridge)
-- [**Secure Setup**](Homebridge)
+- [**Secure Setup**](Securing your IoT from hacking)
 
 **Further Topics**
 - [**MQTT Overview**](MQTT-Overview)
