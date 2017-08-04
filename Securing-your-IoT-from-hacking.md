@@ -23,7 +23,10 @@ If someone uses your device to spam mail or do a DOS attack the impact at your h
 I hope these four typical scenarios ( the list is not complete) give you some idea, why you should take care, even if you're not a terrorist and normally nobody is interested into hacking you personally.
 
 ## Securing your WLAN for IoT
-TBD
+That you should have a long WLAN key and use WPA2 for encryption is a "no brainer". This is a minimum requirement. Now think about someone can extract the password from the device. E.g. because the device is in the garden and someone with a Laptop and some USB stuff can connect and extract information.
+
+The hacker will get the key. The ONLY possible preventive action to mitigate worst case scenario is to have a second WLAN, like the "FritzBox Guest WLAN". Many other routers offer similar things. This guest WLAN has no access to your private WLAN. Additionally, there are some interesting switched you can configure for the WLAN.
+At the FritzRouter you can configure "network separation"
 
 
 ## Securing your communication for IoT
