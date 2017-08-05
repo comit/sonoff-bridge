@@ -27,3 +27,9 @@ See [Wiki](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) how to i
 All Tasmota external libraries are available in the lib folder of the library.
 
 To save as much code space as possible only these library versions are supported by Tasmota. See [Wiki](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) for individual library installation.
+
+### 20170124 - Start Sonoff-Tasmota as spin-off from Sonoff-MQTT-OTA-Arduino
+
+The goal of Sonoff-Tasmota (Tasmota for short) is to provide one pre-compiled MQTT enabled, "Over the Air" firmware with support for as much (iTead Sonoff) devices as possible without the need to edit a user_config.h file. Configuration settings can be changed online without re-compilation.
+
+All this within the tight code space that 1MB flash allows. 
