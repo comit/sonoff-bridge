@@ -20,4 +20,4 @@ To reduce flash wear I started to use a number of rotating flash pages with vers
 
 Starting with version 5.x a new linker script is made available allowing for 32k more code space.
 
-See wiki how to implement it in your Arduino or platformIO IDE.
+See [Wiki](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) how to implement it in your Arduino or platformIO IDE.
