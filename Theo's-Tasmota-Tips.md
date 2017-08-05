@@ -24,7 +24,7 @@ See [Wiki](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) how to i
 
 ### 20170403 - Tasmota supported libraries in repository
 
-All Tasmota external libraries are available in the lib folder of the library.
+All Tasmota external libraries are available in the lib folder of the repository.
 
 To save as much code space as possible only these library versions are supported by Tasmota. See [Wiki](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) for individual library installation.
 
