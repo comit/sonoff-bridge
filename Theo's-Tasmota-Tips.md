@@ -4,7 +4,7 @@ An increasing number of devices is using the ESP8285. As this chip only supports
 
 This is documented in the wiki and the platformio.ini file.
 
-As this compile option works for the ESP8266 "legacy" chip too I only provide firmware compiled with Flash Mode DOUT which runs fine on all released hardware like Sonoff, Wemos etc. See also [#598](https://github.com/arendst/Sonoff-Tasmota/issues/598).
+As this compile option works for the ESP8266 "legacy" chip too I only provide released firmware compiled with Flash Mode DOUT which runs fine on all released hardware like Sonoff, Wemos etc. See also [#598](https://github.com/arendst/Sonoff-Tasmota/issues/598).
 
 Indications of selecting the wrong Flash Mode compile option (like DIO or QIO) on ESP8285 is a dead device while uploading just went fine [#683](https://github.com/arendst/Sonoff-Tasmota/issues/683).
 
