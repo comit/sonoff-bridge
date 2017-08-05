@@ -23,7 +23,7 @@ If someone uses your device to spam mail or do a DOS attack the impact at your h
 I hope these four typical scenarios ( the list is not complete) give you some idea, why you should take care, even if you're not a terrorist and normally nobody is interested into hacking you personally.
 
 * Securing your WLAN for IoT
-That you should have a long WLAN key and use WPA2 for encryption is a "no brainer". This is a minimum requirement. Now think about someone can extract the password from the device. E.g. because the device is in the garden and someone with a Laptop and some USB stuff can connect and extract information.
+That you should have a WLAN key and use WPA2 for encryption is a "no brainer". This is a minimum requirement. Now think about someone can extract the password from the device. E.g. because the device is in the garden and someone with a Laptop and some USB stuff can connect and extract information.
 
 The hacker will get the key. The ONLY possible preventive action to mitigate worst case scenario is to have a second WLAN, like the "FritzBox Guest WLAN". Many other routers offer similar things. This guest WLAN has no access to your private WLAN. Additionally, there are some interesting switched you can configure for the WLAN.
 At the FritzRouter you can configure "/*network separation*/". At Fritz this is done by DISABLE "/*The wireless devices connected with the guest access can communicate with each other*/". This does mean, that a device in the network can not interact with any other device in the WLAN. It can only communicate with the Internet. This simple configuration prevents any attacker to do nasty stuff on YOUR network. Now we have to take care, that the attacker is not creating a Bot-Net and sending e.g. Spam-Mails.
@@ -39,7 +39,7 @@ The second topic has only a workaround. If you want access to your devices you n
 * Securing your communication for IoT
 In the world of IoT devices and more and more devices in a network, it is essential to use encryption ALL the time. The TASMOTO project is able to enable encryption for MQTT. This is great. But it cannot enable encryption on the WebServer. This is bad. As a conclusion, the Webserver must be switched OFF all the time and only be switched ON for administrative purpose. This also disables the feature to change the Relay Status with an HTTP REST call. But this option is insecure anyway and should be avoided.
 
-Now lets work on the MQTT configuration. Also here an attacker can get access to user and password. To minimize the impact EVERY and really EVERY device must have a unique USER and a unique password. If you don't follow this rule the attacker get one device he can control ALL devices. With the USER/PASSWORD he now can control the one device he already holds in his hands. ok, no big deal. How to configure Mosquitto?
+Now let's work on the MQTT configuration. Also here an attacker can get access to user and password. To minimize the impact EVERY and really EVERY device must have a unique USER and a unique password. If you don't follow this rule the attacker get one device he can control ALL devices. With the USER/PASSWORD he now can control the one device he already holds in his hands. ok, no big deal. How to configure Mosquitto?
 
 The TASMOTO in general store data in  stat/<topic>/+ and  tele/<topic>/+. or cmnd/<topic>/+ to control something. If we use the <topic> as username we can make some quite nice and straight forward configuration.
 
@@ -68,7 +68,7 @@ sudo mosquitto_passwd -b /etc/mosquitto/conf.d/jp.pw ESP_123456 987654321
 sudo /etc/init.d/mosquitto restart
 #+END_EXAMPLE
 
-If this is running we switch the Mosquitto to secure communication on Port 8883 and disable all insecure options. I do not like the tls_Version tlsv1, but it looks like the libary can't work with other versions. 
+If this is running we switch the Mosquitto to secure communication on Port 8883 and disable all insecure options. I do not like the tls_Version tlsv1, but it looks like the library can't work with other versions. 
 
 /etc/mosquitto/conf.d/user.conf
 #+BEGIN_EXAMPLE
@@ -89,6 +89,8 @@ require_certificate false
 
 How to generate the certificates in mosquitto please look at:
 [[https://mosquitto.org/man/mosquitto-tls-7.html][https://mosquitto.org/man/mosquitto-tls-7.html]]
+
+At the TASMOTO configuration, you need to enable to use the TLS Version. This is done by enable USE_MQTT_TLS and change the port number to 8883. Additionally, you should change the MQTT_FINGERPRINT to the value you're getting from the mosquitto server. 
 
 * Prevent to become part of a botnet
 -TBD: Configure Firewall rules
