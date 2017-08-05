@@ -35,12 +35,12 @@ Internet -> Filters -> List -> "Add Network Application"
 
 "New Protocoll" (Add four rules, This will block all but UDP123 for Timeserver and 8883 for MQTT Server)
 
-* TCP from any to Port 1 to 8882
-* TCP from any to Port 8884 to 65636
-* UDP from any to Port 1 to 122
-* UDP from any to Port 124 to 65636
+- TCP from any to Port 1 to 8882
+- TCP from any to Port 8884 to 65636
+- UDP from any to Port 1 to 122
+- UDP from any to Port 124 to 65636
 
-2. Create a list ob "websites" your IoT devices are allowed to access.
+2. Create a list of "websites" your IoT devices are allowed to access.
 
 Internet -> Filters -> List -> "Permitted web sites" -> EDIT
 #+BEGIN_EXAMPLE
@@ -59,7 +59,7 @@ SELECT "Permit web sites (whitelist)
 
 ** Now you will probably ask two questions:
 1. How can I communicate with my MQTT Server in my personal WLAN, if only traffic into the internet is allowed?
-1. How can I access the WebConsole of my devices to upload new Firmware and/or make investigations?
+2. How can I access the WebConsole of my devices to upload new Firmware and/or make investigations?
 
 The first topic will be solved by exposing your MQTT server to the Internet (no worries, can be done securely).
 The second topic has only a workaround. If you want access to your devices you need to change the configuration temporary on your router and ENABLE "/The wireless devices connected with the guest access can communicate with each other/". Secondly, you must login with your Laptop into the GuestWLAN to be able to communicate. If the Webserver is running you should be able to connect and upload e.g. a new firmware.
@@ -122,6 +122,3 @@ At the TASMOTO configuration, you need to enable to use the TLS Version. This is
  #+BEGIN_EXAMPLE 
 openssl s_client -connect localhost:8883 < /dev/null 2>/dev/null | openssl x509 -fingerprint -noout -in /dev/stdin
 #+END_EXAMPLE
-
-* Prevent to become part of a botnet
--TBD: Configure Firewall rules
