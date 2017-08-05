@@ -485,6 +485,8 @@ VoltageHigh     | \<voltage\>   | Set voltage high threshold value
 VoltageLow      |               | Show current voltage low threshold value
 VoltageLow      | 0 / off       | (default) Disable voltage low threshold
 VoltageLow      | \<voltage\>   | Set voltage low threshold value
+VoltRes         |               | Show current Voltage Resolution
+VoltRes         | 0..1          | Set Voltage Resolution
 
 
 ### Sonoff Led
