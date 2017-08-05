@@ -2,7 +2,7 @@
 
 An increasing number of devices is using the ESP8285. As this chip only supports a subset of hardware connections to it's inbuilt 1MB flash the firmware needs to be compiled with Flash Mode option set for DOUT.
 
-This is documented in the wiki and the platformio.ini file.
+This is documented in the [Wiki](https://github.com/arendst/Sonoff-Tasmota/wiki/Upload) and the platformio.ini file in the repository.
 
 As this compile option works for the ESP8266 "legacy" chip too I only provide released firmware compiled with Flash Mode DOUT which runs fine on all released hardware like Sonoff, Wemos etc. See also [#598](https://github.com/arendst/Sonoff-Tasmota/issues/598).
 
