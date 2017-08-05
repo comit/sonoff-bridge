@@ -8,6 +8,14 @@ As this compile option works for the ESP8266 "legacy" chip too I only provide fi
 
 Indications of selecting the wrong Flash Mode compile option (like DIO or QIO) on ESP8285 is a dead device while uploading just went fine [#683](https://github.com/arendst/Sonoff-Tasmota/issues/683).
 
+### 20170619 - Configuration settings save locations in flash
+
+Configuration settings are saved in flash. Over time different areas of flash have been used as can be seen in the picture below.
+
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/memmap1.jpg" />
+
+To reduce flash wear I started to use a number of rotating flash pages with version 5.2. To still be able to use maximum program size during OTA or webpage upgrades I copy the latest config to the EEPROM area just before the upgrade starts.
+
 ### 20170425 - Tasmota version 5.x and up need linker script 1M with No SPIFFS
 
 Starting with version 5.x a new linker script is made available allowing for 32k more code space.
