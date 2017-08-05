@@ -1,4 +1,5 @@
-[**Home**](https://github.com/arendst/Sonoff-Tasmota/wiki) 
+[**Home**](https://github.com/arendst/Sonoff-Tasmota/wiki)  
+
 [**Theo's Tasmota Tips**](Theos-Tasmota_tips) 
 
 **Getting Started**
