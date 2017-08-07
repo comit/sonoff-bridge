@@ -86,7 +86,7 @@ Just like receiving the same command from any other MQTT source.
 > Set MQTT switch topic (32 chars max)
 
 This will send a MQTT message with a user-defined topic.
-Weather this message will trigger anything depends on the setup of the user.
+Whether this message will trigger anything depends on the setup of the user.
 For example, when setting the topic to `sonoff2` this could trigger the relay on the Sonoff device that listens to messages with this specific topic.
 
 ## Use case
