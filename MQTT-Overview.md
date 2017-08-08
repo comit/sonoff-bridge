@@ -2,7 +2,7 @@
 
 ## MQTT Message flow 
 
-Here is a diagram showing the connection phase and the 4 network transactions required to turn a sonoff device on.   
+Here is a diagram showing the connection phase and the network transactions required to turn a sonoff device on.   
 
 ![mqtt flow](http://alt.pbeirne.com/images/sonoff_cmnd_flow.jpg)
 
@@ -17,6 +17,8 @@ There are lots of ways to control your devices. One typically uses a laptop/desk
 |`cmnd`|devices shown on the right hand side|control the Sonoff; set configuration; ask for status|
 |`stat`|the Sonoffs|report back status or configuration message}
 |`tele`|some Sonoffs (like temperature measuring devices)|report unsolicited telemetry info at periodic intervals|
+
+[these are `prefix1`, `prefix2` & `prefix3` in the code] 
 
 <style type="text/css"> .codehilite {padding: 5px 15px;  background: #e0e0e0; } </style>
 
@@ -45,7 +47,7 @@ Once enabled MQTT can be configured at Configuration -> Configure MQTT. Note: th
 
 ### General
 
-See the wiki's [Command List](https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands)
+See the wiki's [Command List](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands)
 for the definitive list of operations that you can perform. The first word in the column marked
 `Command` is the text that
 you need to put at the end of a `cmnd` string when you issue a publication message. The 2nd word
