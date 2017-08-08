@@ -30,6 +30,7 @@ These are `prefix1`, `prefix2` & `prefix3` in the code
 
 ## Configuring MQTT
 MQTT settings can be initially setup in the web interface and thereafter configured by commands.
+
 ### Enable MQTT
 Enable MQTT with the tickbox under Configuration -> Configuration Other
 
