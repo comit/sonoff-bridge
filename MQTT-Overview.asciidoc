@@ -1,24 +1,32 @@
-# MQTT Overview
+= MQTT Overview
+:Author: Pat Beirne
+:toc: macro
+:toc-placement!: 
 
-## MQTT Message flow 
+toc::[]
+
+== MQTT Message flow 
 
 Here is a diagram showing the connection phase and the network transactions required to turn a sonoff device on.   
 
-![mqtt flow](http://alt.pbeirne.com/images/sonoff_cmnd_flow.jpg)
+image::http://alt.pbeirne.com/images/sonoff_cmnd_flow.jpg[flow diagram]
 
 In a typical setup, you'll have multiple Sonoff's (or other devices using this project's code) on the left hand side.  
-![mqtt flow multiple devices](http://alt.pbeirne.com/images/sonoff_cmnd_flow2.png)
+
+image::http://alt.pbeirne.com/images/sonoff_cmnd_flow2.png[multiple devices diagram]
 
 
 There are lots of ways to control your devices. One typically uses a laptop/desktop to configure and test your Sonoffs and perhaps a smartphone to keep track of what's happening. In the long run you might want to integrate your device in a home-automation system like node-RED, openHAB, HomeAssistant, HomeBridge, Domoticz, ...
 
+[options="header"]
+|===
 |Message|Issued by|Intent
-|---|---|---
-|`cmnd`|devices shown on the right hand side|control the Sonoff; set configuration; ask for status|
-|`stat`|the Sonoffs|report back status or configuration message}
-|`tele`|some Sonoffs (like temperature measuring devices)|report unsolicited telemetry info at periodic intervals|
+|`cmnd`|devices shown on the right hand side|control the Sonoff; set configuration; ask for status
+|`stat`|the Sonoffs|report back status or configuration message
+|`tele`|some Sonoffs (like temperature measuring devices)|report unsolicited telemetry info at periodic intervals
+|===
 
-[these are `prefix1`, `prefix2` & `prefix3` in the code] 
+These are `prefix1`, `prefix2` & `prefix3` in the code
 
 ## Configuring MQTT
 MQTT settings can be initially setup in the web interface and thereafter configured by commands.
@@ -28,8 +36,9 @@ Enable MQTT with the tickbox under Configuration -> Configuration Other
 ### Configure MQTT Settings
 Once enabled MQTT can be configured at Configuration -> Configure MQTT. 
 
+[options="header"]
+|===
 |Field|Size|Notes
-|---|---|---
 |Host name |32|URL or ip address. Note that without a special firmware build SSL is NOT supported. 
 |Port|uint|0-65535
 |Client Id|32|Unique ID of this device, should be unique for every device; logged by the MQTT server
@@ -37,6 +46,7 @@ Once enabled MQTT can be configured at Configuration -> Configure MQTT.
 |Password|32|Password for MQTT server authentication
 |Topic|32|User friendly topic name; ususally describes the location or use of this device; used in the MQTT commands and responses; should be unique
 |Full Topic|100|Format string used to assemble the MQTT commands; defaults to `%prefix%/%topic%/`
+|===
 
 Note: By default firmware will search for an MQTT broker using mDNS by searching for a tcp record mqtt.local.
 
@@ -48,18 +58,20 @@ Note: By default firmware will search for an MQTT broker using mDNS by searching
 
 ### General
 
-See the wiki's [Command List](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands)
+See the wiki's https://github.com/arendst/Sonoff-Tasmota/wiki/Commands[command list]
 for the definitive list of operations that you can perform. The first word in the column marked
 `Command` is the text that
 you need to put at the end of a `cmnd` string when you issue a publication message. The 2nd word
 is the contents of the payload. If there is no 2nd word, you
 can simply send an empty payload. For example, the first line on the Commands page reads
 
-Command|Version|Description
------|---|------
-Power | | Show current power state as On or Off
-Power on | | Turn power On
-Power off | | Turn power Off
+[options="header"]
+|===
+|Command|Version|Description
+|Power | | Show current power state as On or Off
+|Power on | | Turn power On
+|Power off | | Turn power Off
+|===
 
 To execute these, issue (publish) these MQTT requests
 
@@ -84,9 +96,9 @@ You'll need an MQTT server somewhere to communicate with your Sonoff. Some peopl
 Other people think the MQTT server should reside inside your private LAN. You could use a Raspberry/Orange Pi, or just about any Linux machine as the server/broker; you might even squeeze it into your router if you're using OpenWRT.
 
 #### Creating your own MQTT server/broker
-See these sites: [Rufio howto](https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands)
-[Wingsquare howto](https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands)
-[Instructables howto on Raspberry Pi](https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands)
+See these sites: https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands[Rufio howto] +
+https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands[Wingsquare howto] +
+https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands[Instructables howto on Raspberry Pi]
 
 
 ### Linux/Cygwin command line
@@ -141,7 +153,7 @@ Of course you can always call `system()` or `subprocess()` to run the `mosquitto
 
 Let's turn the lights on, wait a few seconds, turn them off, check the status and wait for a time stamp
 
-```
+```python
 import paho.mqtt.client as mqtt, time, sys
 
 last_topic = ""
@@ -195,8 +207,6 @@ while 1:
 
 client.loop_stop()
 client.disconnect()
-
-
 ```
 
 Ref: [Python MQTT](https://pypi.python.org/pypi/paho-mqtt/1.1)
@@ -204,7 +214,7 @@ Ref: [Python MQTT](https://pypi.python.org/pypi/paho-mqtt/1.1)
 ### JavaScript
 Using the node module MQTT.js you can connect to the MQTT broker, send messages and listen to topics. Example uses code compatible with Node v4 or later.
 
-```
+```javascript
 'use strict';
 const mqtt   = require('mqtt');
 
