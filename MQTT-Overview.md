@@ -20,24 +20,25 @@ There are lots of ways to control your devices. One typically uses a laptop/desk
 
 [these are `prefix1`, `prefix2` & `prefix3` in the code] 
 
-<style type="text/css"> .codehilite {padding: 5px 15px;  background: #e0e0e0; } </style>
-
 ## Configuring MQTT
 MQTT settings can be initially setup in the web interface and thereafter configured by commands.
 ### Enable MQTT
 Enable MQTT with the tickbox under Configuration -> Configuration Other
 
 ### Configure MQTT Settings
-Once enabled MQTT can be configured at Configuration -> Configure MQTT. Note: that by default firmware will search for an MQTT broker using mDNS by searching for a tcp record mqtt.local.
+Once enabled MQTT can be configured at Configuration -> Configure MQTT. 
 
 |Field|Size|Notes
 |---|---|---
 |Host name |32|URL or ip address. Note that without a special firmware build SSL is NOT supported. 
 |Port|uint|0-65535
-|Client Id|32|Unique ID of this device, should be unique for every device - allows device to be individually addressed
+|Client Id|32|Unique ID of this device, should be unique for every device; logged by the MQTT server
 |Username|32|Username for MQTT server authentication
 |Password|32|Password for MQTT server authentication
-|Topic|32|Group topic - should be the same for all devices or all similar devices
+|Topic|32|User friendly topic name; ususally describes the location or use of this device; used in the MQTT commands and responses; should be unique
+|Full Topic|100|Format string used to assemble the MQTT commands; defaults to `%prefix%/%topic%/`
+
+Note: By default firmware will search for an MQTT broker using mDNS by searching for a tcp record mqtt.local.
 
 ## Programming examples for the Sonoff-MQTT-OTA-Arduino
 
