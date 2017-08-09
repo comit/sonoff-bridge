@@ -20,6 +20,6 @@ During normal operation the serial interface is used at 19200 baud to communicat
 
 The bridge is able to learn up to 16 different remote control commands of fixed code 433 MHz frequency as provided by PT2260, PT2262, PT2264 and EV1527 Transmitters. It does not recognize Klik Aan Klik Uit (KaKu) remote control signals.
 
-Tasmota provides default remote control commands to all 16 keys so you can start using the bridge with a Sonoff 4CH Pro or Sonoff RF device without having it to learn remote control commands.
+Tasmota provides default remote control commands to all 16 keys so you can start using the bridge with a Sonoff 4CH Pro or Sonoff RF device without having the bridge to learn remote control commands.
 
 See [Supported Commands](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#sonoff-rf-bridge-433) for available specific Sonoff RF Bridge 433 commands.
