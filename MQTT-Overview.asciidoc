@@ -204,7 +204,7 @@ while 1:
     if last_topic.startswith("tele/") and last_topic.endswith("STATE"):
         locate_time = last_payload.find('"Time":')
         the_time = last_payload[locate_time+8:locate_time+8+19]
-        print("the sonoff thinks the time is: "+last_payload)
+        print("the sonoff thinks the time is: "+the_time)
         break
     time.sleep(5)
 
