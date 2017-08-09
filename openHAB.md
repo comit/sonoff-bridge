@@ -32,7 +32,7 @@ In the example configuration you can see a non-default **Full Topic** definition
 
 Simply **set up items** for all Sonoff-Tasmota [MQTT topics](https://github.com/arendst/Sonoff-Tasmota/wiki/MQTT-Features) you are interested in. Examples for most needed topics are given below. Some Sonoff-Tasmota topics are JSON encoded, the `JSONPATH` transformation can be used to extract this data.
  
-Additional or further interesting topics are easily identified by reading up on the Sonoff-Tasmota wiki and by subscribing to the modules topics. Subscribe to all topics of one module with the [MQTT wildcard](http://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices) topic string `+/sonoff-XYZ/#` (String might depend on your user-configured FullTopic). Configure items for the identified topics similar to the ones below.
+Additional or further interesting topics are easily identified by reading up on the Sonoff-Tasmota wiki and by subscribing to the modules topics. Subscribe to all topics of one module with the [MQTT wildcard](http://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices) topic string `+/sonoff-XYZ/#` (String depends on your user-configured Topic/FullTopic). Configure items for the identified topics similar to the ones below.
 
 **Example:**
 MQTT messages published by a Sonoff Pow module are shown below (using [mosquitto_sub](https://mosquitto.org/man/mosquitto_sub-1.html)).
