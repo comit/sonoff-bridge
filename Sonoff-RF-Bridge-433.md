@@ -4,7 +4,7 @@
 
 ## Serial Connection
 
-<img alt="picture of the Sonoff Pow PCB, the needed pin header can be seen on the top end" src="https://www.itead.cc/wiki/images/e/e3/Sonoff-Pow-00.JPG" width="40%" align="right" />
+<img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff_bridge_2.jpg" width="250" align="right" />
 
 Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
 
