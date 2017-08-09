@@ -26,7 +26,7 @@ Before continuing, please make sure you assigned **unique MQTT "Topics"** in the
 
 ![Example Sonoff-Tasmota MQTT settings](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/8/8fe9008fb24b0b70e6eddf7cf0f0c70c8ac21b92.png "Example Sonoff-Tasmota MQTT settings")
 
-In the example configuration you can see a non-default **Full Topic** definition, which is **not** used in the following examples.
+In the example configuration you can see a non-default **Full Topic** definition, which is **not** used in the following examples (but which can be recommended).
 
 ### Integration
 
