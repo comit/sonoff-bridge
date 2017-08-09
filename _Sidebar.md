@@ -34,7 +34,7 @@
 - [**Home Assistant**](Home-Assistant)
 - [**Domoticz**](Domoticz)
 - [**HomeBridge**](Homebridge)
-- [**SmartThings**](https://github.com/arendst/Sonoff-Tasmota/issues/656)
+- [**SmartThings**](https://github.com/BrettSheleski/SmartThingsPublic/blob/master/devicetypes/BrettSheleski/sonoff-tasmota.src/readme.md)
 - [**Secure Setup**](Securing-your-IoT-from-hacking)
 
 **Further Topics**
