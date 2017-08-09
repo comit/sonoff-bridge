@@ -41,7 +41,7 @@
 - [**Remote Button**](Control-a-Sonoff-using-a-remote-button)
 - [**Modified Kaku**](Modify-KaKu-to-WKaKu-Power-Socket)
 - [**IR Extension**](https://github.com/altelch/SonoffIR "IR extension")
-- [**S20 sensor**](#670)
+- [**S20 sensor**](https://github.com/arendst/Sonoff-Tasmota/issues/670)
 - [**Wiring additional things to a module**](Expanding-Sonoffs)
 - [**Defining new module types**](Adding-new-Module-types)
 - [**GPIO Locations**](https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations)
