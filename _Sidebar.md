@@ -24,6 +24,7 @@
 - [**Sonoff Dual**](Sonoff-Dual)
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff RF and Slampher**](Sonoff-RF)
+- [**Sonoff RF Bridge 433**](Sonoff-RF-Bridge-433)
 - [**Sonoff Touch**](Sonoff-Touch)
 - [**Sonoff 4CH / 4CH Pro**](Sonoff-4CH-and-4CH-Pro)
 - [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
