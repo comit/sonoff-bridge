@@ -221,7 +221,10 @@ Timezone          |            | Show current timezone
 Timezone          | -12..12    | Set timezone
 Timezone          | 99         | Use Daylight Saving parameters from `user_config.h` (`TIME_DST` and `TIME_STD`)
 Upgrade           | 1          | Download ota firmware from your web server and restart
+Upgrade           | \<version\> | Download ota firmware from web server if \<version\> is higher than device version
 Upload            | 1          | Download ota firmware from your web server and restart
+Upload            | \<version\> | Download ota firmware from web server if \<version\> is higher than device version
+
 
 ### Wifi
 
