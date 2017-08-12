@@ -3,7 +3,7 @@
 * Itead Shop: https://www.itead.cc/sonoff-touch.html
 * Itead Wiki: (na)
 
-Other than most Sonoff modules (ESP8266) the Sonoff Touch is based on the ESP8285.
+Other than most Sonoff modules (ESP8266) the Sonoff Touch is based on the ESP8285. Though the actual chip inside may be a [PSF-A85](https://www.itead.cc/wiki/PSF-A85).
 
 ## Serial Connection
 
@@ -18,6 +18,8 @@ Be careful while removing and reassembling the top PCB. The touch sensor should 
 
 The Sonoff Touch button is not connected to **GPIO0** and can hence not be used to bring the module into [Programming Mode](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation#bringing-the-module-in-flash-mode). A connection between GPIO0 and GND needs to be made manually. GPIO0 can be found on the right side of the ESP8285 and is the second pin from the bottom, as can be seen on the pictures.
 
+**Note:** Even if you have the PSF-A85 chip inside instead of a default ESP-8285, the GPIO0 pin is in the same location. Pay attention to the corner of the chip with three unused solder contacts. That is where the external antenna connector is located in the images above. The PSF-A85 in the Sonoff Touch does not have the external antenna connector soldered on.
+
 ### Arduino IDE Modifications
 
 As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have to make some changes to the [proposed](https://github.com/arendst/Sonoff-Tasmota/wiki/Prerequisite) Arduino IDE settings as follows:
@@ -26,17 +28,14 @@ As the Sonoff Touch is based on the ESP8285 using Flash Mode DOUT you will have 
 - Flash Size: 1M (64K SPIFFS) - version 4.x.x and before 
 - Flash Size: 1M (no SPIFFS) - version 5.x.x and following
 
+### PlatformIO
+
 Appropriate settings are available in the PlatformIO configuration file provided with this firmware.
+Even though the settings _seem_ to refer to the wrong chip, the upload script will detect the chip type and flash it in an appropriate manner, see [below](#Flashing_the_ESP-8285)
 
-----
-*The following can probably be deleted:*
-
-Where most Sonoff's are ESP8266 based the Sonoff Touch and Sonoff 4CH are based on the ESP8285.
-
-It is important to initially flash these devices with the correct FlashChipMode of DOUT as otherwise future OTA or Upload updates will fail.
-
-In the Arduino IDE select Board Generic ESP8285 Module as this contains the default DOUT option. You could still use the Generic ESP8266 module as long as you set parameter Flash Mode to DOUT.
-
-After first restart make sure to select either module Sonoff Touch or Sonoff 4CH at least before any OTA or Upload action.
+### Flashing the ESP-8285
+Where most Sonoffs are ESP8266 based the Sonoff Touch and Sonoff 4CH are based on the ESP8285.
 
 Starting with version 3.9.12 the OTA or Upload code will now check if one of the above modules is selected and patch the uploaded default ESP8266 code with FlashChipMode DIO to the ESP8285 FlashChipMode DOUT before it is copied to it's final destination.
+
+After first restart make sure to select either module Sonoff Touch or Sonoff 4CH **before any OTA or Upload** action.
