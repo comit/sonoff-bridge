@@ -48,7 +48,7 @@ yourserver
 01.de.pool.ntp.org
 #+END_EXAMPLE
 Please replace <yourserver> with the full qualified name of your router in the internet.
-ntp.org please use the one you have defined in TASMOTO to be the timeserver.
+ntp.org please use the one you have defined in TASMOTA to be the timeserver.
 
 3. Create a profile you can attach to your IoT devices.
 
@@ -65,11 +65,11 @@ The first topic will be solved by exposing your MQTT server to the Internet (no 
 The second topic has only a workaround. If you want access to your devices you need to change the configuration temporary on your router and ENABLE "/The wireless devices connected with the guest access can communicate with each other/". Secondly, you must login with your Laptop into the GuestWLAN to be able to communicate. If the Webserver is running you should be able to connect and upload e.g. a new firmware.
 
 * Securing your communication for IoT
-In the world of IoT devices and more and more devices in a network, it is essential to use encryption ALL the time. The TASMOTO project is able to enable encryption for MQTT. This is great. But it cannot enable encryption on the WebServer. This is bad. As a conclusion, the Webserver must be switched OFF all the time and only be switched ON for administrative purpose. This also disables the feature to change the Relay Status with an HTTP REST call. But this option is insecure anyway and should be avoided.
+In the world of IoT devices and more and more devices in a network, it is essential to use encryption ALL the time. The TASMOTA project is able to enable encryption for MQTT. This is great. But it cannot enable encryption on the WebServer. This is bad. As a conclusion, the Webserver must be switched OFF all the time and only be switched ON for administrative purpose. This also disables the feature to change the Relay Status with an HTTP REST call. But this option is insecure anyway and should be avoided.
 
 Now let's work on the MQTT configuration. Also here an attacker can get access to user and password. To minimize the impact EVERY and really EVERY device must have a unique USER and a unique password. If you don't follow this rule the attacker get one device he can control ALL devices. With the USER/PASSWORD he now can control the one device he already holds in his hands. ok, no big deal. How to configure Mosquitto?
 
-The TASMOTO in general store data in  stat/<topic>/+ and  tele/<topic>/+. or cmnd/<topic>/+ to control something. If we use the <topic> as username we can make some quite nice and straight forward configuration.
+The TASMOTA in general store data in  stat/<topic>/+ and  tele/<topic>/+. or cmnd/<topic>/+ to control something. If we use the <topic> as username we can make some quite nice and straight forward configuration.
 
 Example:
 Topic: ESP_123456
@@ -87,7 +87,7 @@ pattern write stat/%u/#
 pattern write tele/%u/#
 #+END_EXAMPLE
 
-My user root is allowed to do everything. This is used in my home-automation to control all devices and listen to all devices. The "pattern" is used for ALL other users and the %u is a substitute. The great thing is that the device can read its configuration but cannot write to it. And the status information it posts to the /status/ but is not able to read it afterward. With this minimal configuration, TASMOTO devices are running.
+My user root is allowed to do everything. This is used in my home-automation to control all devices and listen to all devices. The "pattern" is used for ALL other users and the %u is a substitute. The great thing is that the device can read its configuration but cannot write to it. And the status information it posts to the /status/ but is not able to read it afterward. With this minimal configuration, TASMOTA devices are running.
 
 To add the different user to Mosquitte the following two commands work fine. There is also a re-read available, but a restart works better for me.
 
@@ -117,7 +117,7 @@ require_certificate false
 How to generate the certificates in mosquitto please look at:
 [[http://www.steves-internet-guide.com/mosquitto-tls/][http://www.steves-internet-guide.com/mosquitto-tls/]]
 
-At the TASMOTO configuration, you need to enable to use the TLS Version. This is done by enable USE_MQTT_TLS and change the port number to 8883. Additionally, you should change the MQTT_FINGERPRINT to the value you're getting from the mosquitto server. To get the fingerprint you can use the following command on your MQTT server:
+At the TASMOTA configuration, you need to enable to use the TLS Version. This is done by enable USE_MQTT_TLS and change the port number to 8883. Additionally, you should change the MQTT_FINGERPRINT to the value you're getting from the mosquitto server. To get the fingerprint you can use the following command on your MQTT server:
 
  #+BEGIN_EXAMPLE 
 openssl s_client -connect localhost:8883 < /dev/null 2>/dev/null | openssl x509 -fingerprint -noout -in /dev/stdin
