@@ -38,7 +38,7 @@ In the Arduino IDE for sonoff select from `Tools Board Generic ESP8266 Module` (
 
 Verify and/or compile the project and upload to your sonoff using the serial connection established above.
 
-Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initital-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
+Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initial-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
 
 ## Sonoff factory OTA Mechanism (experimental)
 
