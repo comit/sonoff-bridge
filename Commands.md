@@ -64,7 +64,7 @@ The following command tables are available:
 - [SetOption Overview](#setoption-overview)
 - [Logging](#logging)
 - [Sonoff Pow specific](#sonoff-pow)
-- [Sonoff Led, B1 and BN-SZ01 specific](#sonoff-led,-b1-and-BN-SZ01)
+- [Sonoff Led, B1 and BN-SZ01 specific](#sonoff-led-b1-and-BN-SZ01)
 - [Sonoff RF Bridge 433](#sonoff-rf-bridge-433)
 - [Domoticz](#domoticz)
 - [WS2812 led string](#ws2812-led-string)
@@ -497,9 +497,9 @@ VoltRes         | 0..1          | Set Voltage Resolution
 Command         | Payload   | Description
 ----------------|-----------|--------------------------------------------------------
 Color           |           | Show current color setting as CCWW
-Color           | \<CCWW\>  | (Sonoff Led)Set color to CCWW hexadecimal value
+Color           | \<CCWW\>  | (Sonoff Led) Set color to CCWW hexadecimal value
 Color           | \<RRGGBBCCWW\> | (Sonoff B1) Set color to RRGGBBCCWW hexadecimal value
-CT              |           | Show current Color Temperature (153 = Cold, 500 = Warm)
+CT              |           | (Sonoff B1 and BN-SZ01) Show current Color Temperature (153 = Cold, 500 = Warm)
 CT              | 153..500  | (Sonoff B1 and BN-SZ01) Set color temperature from cold to warm
 Dimmer          |           | Show current dimmer setting from 0 to 100%
 Dimmer          | 0..100    | Set dimmer value from 0 to 100%
