@@ -116,6 +116,9 @@ SetOption11      | 1 / on       | Button single and double press functionality s
 SetOption13      |              | Show current button single press only state
 SetOption13      | 0 / off      | (default) Enable button single, multi-press and hold
 SetOption13      | 1 / on       | Enable button single press only for immediate response. Disable by holding 4 x SetOption32
+SetOption14      |              | Show current relay switch mode
+SetOption14      | 0 / off      | (default) Set self-locking mode for all relays
+SetOption14      | 1 / on       | Set interlock mode for all relays 
 SetOption32      |              | Show current key hold time in 0.1 seconds
 SetOption32      | 1..100       | Set key hold time from 0.1 to 10 seconds
 SwitchMode\<x\>  |              | Show current external switch mode
@@ -398,6 +401,9 @@ SetOption12 | 1 / on         | Legacy save configuration in eeprom flash locatio
 SetOption13 |                | Show current button single press only state
 SetOption13 | 0 / off        | (default) Enable button single, multi-press and hold
 SetOption13 | 1 / on         | Enable button single press only for immediate response. Disable by holding 4 x SetOption32
+SetOption14 |                | Show current relay switch mode
+SetOption14 | 0 / off        | (default) Set self-locking mode for all relays
+SetOption14 | 1 / on         | Set interlock mode for all relays 
 SetOption32 |                | Show current key hold time in 0.1 seconds
 SetOption32 | 1..100         | Set key hold time from 0.1 to 10 seconds
 SetOption33 |                | Show Sonoff Pow Max_Power_Retry value
