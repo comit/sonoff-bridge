@@ -1,4 +1,6 @@
-This is for the lazy people that don't want to open the device, don't want to install SDKs and don't want to compile stuff ;-). You need
+This is for the lazy people that don't want to open the device, don't want to install SDKs and don't want to compile stuff ;-). **Warning: Many of these components are very new, nothing is guaranteed to work, you might need to solder headers to recover from bugs here.**
+
+You need
 * A standard WiFi
 * A different WiFi (which I created with a smartphone hotspot)
 * A PC or similar with python3 that can run SonOTA
