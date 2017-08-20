@@ -1,7 +1,7 @@
 How to setup and configure PlatformIO with Tasmota.
 
-## Download tool
-
+## Download
+Download the tool from http://platformio.org/
 
 ## Install tool
 
