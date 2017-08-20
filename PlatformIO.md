@@ -1,1 +1,1 @@
-How to use PlatformIO with Tasmota.
+How to setup and configure PlatformIO with Tasmota.
