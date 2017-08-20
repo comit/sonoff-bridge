@@ -13,7 +13,7 @@
 - [**Esptool**](Esptool)
 - [**Arduino IDE**](Arduino-IDE)
 - [**PlatformIO**](PlatformIO)
-- [**Visual Studio**](Visual-Studio)
+- [**Visual Studio Code**](Visual-Studio-Code)
 
 **Usage**
 - [**Button Functionality**](Button-usage)
