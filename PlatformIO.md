@@ -1,15 +1,15 @@
 How to setup and configure PlatformIO with Tasmota.
 
-# Download tool
+## Download tool
 
 
-# Install tool
+## Install tool
 
 
-# Configure tool
+## Configure tool
 
 
-# Compile Tasmota
+## Compile Tasmota
 
 
-# Upload Tasmota
+## Upload Tasmota
