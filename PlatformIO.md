@@ -20,7 +20,7 @@ The default environment configuration generates multiple firmware variants. To b
 - *sonoff-ds18x20.bin* - is a version of *sonoff.bin* with the USE_DS18X20 define enabled and a larger MQTT buffer size to be used by people having more than 4 ds18x20 sensors connected.
 
 ## Compile Tasmota
-Select ``Compile`` from the menu.
+Select ``Build`` from the menu.
 
 ## Upload Tasmota
 PlatformIO uses the serial interface to upload the firmware to your device. On Windows these interfaces are named COM1, COM2 etc. On Linux these interfaces are called /dev/ttyUSB0, /dev/ttyUSB1 etc.
