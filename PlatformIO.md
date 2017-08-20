@@ -7,7 +7,7 @@ Download PlatformIO from http://platformio.org/
 Install PlatformIO to a known folder.
 
 ## Download Tasmota
-Download the latest Tasmota release from https://github.com/arendst/Sonoff-Tasmota/releases and unzip to another known folder.
+Download the latest Tasmota release Source code from https://github.com/arendst/Sonoff-Tasmota/releases and unzip to another known folder.
 
 ## Configure PlatformIO
 
