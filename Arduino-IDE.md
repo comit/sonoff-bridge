@@ -13,14 +13,14 @@ IMPORTANT: Before executing *arduino.exe* add an empty folder called *portable* 
 ## Download Tasmota
 Download the latest Tasmota release Source code from https://github.com/arendst/Sonoff-Tasmota/releases and unzip to another known folder.
 
-## Configure Arduino ide
-If not available copy from the Tasmota release Source code folder *arduino\version 2.3.0\tools\sdk\ld* file *eagle.flash.1m0.ld* to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld*
+## Configure Arduino IDE
+If not available copy from the Tasmota release Source code folder *arduino\version 2.3.0\tools\sdk\ld* file *eagle.flash.1m0.ld* to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld*.
 
 Replace in Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0* file *boards.txt* with the Tasmota Source code file *arduino\version 2.3.0\boards.txt*.
 
 Copy all files from the Tasmota release Source code folder *lib* into your *sketchbook\libraries* folder.
 
-Copy the Tasmota release Source code folder *sonoff* to your *sketchbook*
+Copy the Tasmota release Source code folder *sonoff* to your *sketchbook*.
 
 Open Arduino IDE and select ``File`` - ``Preferences`` and add the following text for field *Additional Boards Manager URLs:* ``http://arduino.esp8266.com/stable/package_esp8266com_index.json`` and select *OK*.
 
@@ -42,6 +42,30 @@ Port: Your COM port connected to sonoff
 ```
 
 ## Compile Tasmota
-Open Arduino IDE
+Open Arduino IDE and select file *sonoff.ino* from your *sketchbook\sonoff* folder.
+
+Compile Tasmota with ``Sketch`` - ``Verify/Compile``.
 
 ## Upload Tasmota
+Arduino IDE uses the serial interface to upload the firmware to your device. On Windows these interfaces are named COM1, COM2 etc. On Linux these interfaces are called /dev/ttyUSB0, /dev/ttyUSB1 etc.
+
+In the following commands I use COM5 as an example.
+
+Before using Arduino IDE upload make sure you know to which serial interface name your device is connected to. 
+
+### Put device in firmware upload mode
+When performing a firmware upload do **not connect the device to AC** but use the power supply provided by your (FTDI type) serial interface.
+
+Put the device in firmware upload mode by grounding pin GPIO00 while applying power.
+
+Grounding pin GPIO00 can often be achieved by pressing button 1 on the Sonoff device or using a wire between GPIO00 and Gnd if the button is not available. Deviations may apply.
+
+Connect the serial interface of your PC to the device while GPIO00 to Gnd.
+
+Make the correct serial interface selection in the Arduino IDE via ``Tools`` - ``Port: "COM5"``.
+
+Upload the compiled firmware with ``Sketch`` - ``Upload``.
+
+NOTE: For a proper device initialization after first firmware upload power down and power up the device.
+
+
