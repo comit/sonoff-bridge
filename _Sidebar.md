@@ -9,7 +9,8 @@
 - [**First Steps**](Initial-Configuration)
 - [**Tutorials**](Tutorials)
 
-**Development tools**
+**Upload tools**
+- [**EspTool**](Esptool)
 - [**Arduino IDE**](Arduino-IDE)
 - [**PlatformIO**](PlatformIO)
 - [**Visual Studio**](Visual-Studio)
