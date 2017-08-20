@@ -1,4 +1,4 @@
-How to setup and configure Arduino IDE with Tasmota.
+How to setup and configure Arduino IDE for Tasmota compilation and upload.
 
 
 ## Download
