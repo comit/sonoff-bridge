@@ -1,13 +1,13 @@
-How to setup and configure Visual Studio for Tasmota.
+How to setup and configure Visual Studio (VS) for Tasmota.
 
 ## Download
-Download the tool from https://code.visualstudio.com/
+Download VS from https://code.visualstudio.com/
 
 ## Install
-Install the tool after downloading
+Install VS after downloading
 
 ## Configure
-Configure Visual Studio for Arduino with ESP8266 support.
+Configure VS for Arduino with ESP8266 support.
 
 How? You tell me.
 
