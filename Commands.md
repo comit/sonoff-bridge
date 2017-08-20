@@ -496,6 +496,8 @@ VoltageLow      | 0 / off       | (default) Disable voltage low threshold
 VoltageLow      | \<voltage\>   | Set voltage low threshold value
 VoltRes         |               | Show current Voltage Resolution
 VoltRes         | 0..1          | Set Voltage Resolution
+WattRes         |               | Show current Power Resolution
+WattRes         | 0..1          | Set Power Resolution
 
 
 ### Sonoff Led, B1 and BN-SZ01
