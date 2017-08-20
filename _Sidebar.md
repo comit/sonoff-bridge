@@ -9,6 +9,11 @@
 - [**First Steps**](Initial-Configuration)
 - [**Tutorials**](Tutorials)
 
+**Development tools**
+- [**Arduino IDE**](Arduino-IDE)
+- [**PlatformIO**](PlatformIO)
+- [**Visual Studio**](Visual-Studio)
+
 **Usage**
 - [**Button Functionality**](Button-usage)
 - [**MQTT Features**](MQTT-Features)
