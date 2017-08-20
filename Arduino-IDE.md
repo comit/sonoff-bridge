@@ -59,13 +59,6 @@ Open Arduino IDE and select file *sonoff.ino* from your *sketchbook\sonoff* fold
 
 Compile Tasmota with ``Sketch`` - ``Verify/Compile``.
 
-## Upload Tasmota to OTA server
-If a webserver is available you can upload the compiled firmware using optional scripts and prepare it for OTA download by any Tasmota device using the MQTT ``upgrade 1`` or ``upgrade 5.1.2`` command.
-
-Make sure that ``Tools`` - ``Upload Using: "OTA_upload"`` is selected.
-
-Upload the compiled firmware to the OTA server with ``Sketch`` - ``Upload``.
-
 ## Upload Tasmota to device
 Arduino IDE uses the serial interface to upload the firmware to your device. On Windows these interfaces are named COM1, COM2 etc. On Linux these interfaces are called /dev/ttyUSB0, /dev/ttyUSB1 etc.
 
@@ -88,5 +81,12 @@ Make the correct serial interface selection in the Arduino IDE via ``Tools`` - `
 Upload the compiled firmware with ``Sketch`` - ``Upload``.
 
 NOTE: For a proper device initialization after first firmware upload power down and power up the device.
+
+## Upload Tasmota to OTA server
+If a webserver is available you can upload the compiled firmware using optional scripts and prepare it for OTA download by any Tasmota device using the MQTT ``upgrade 1`` or ``upgrade 5.1.2`` command.
+
+Make sure that ``Tools`` - ``Upload Using: "OTA_upload"`` is selected.
+
+Upload the compiled firmware to the OTA server with ``Sketch`` - ``Upload``.
 
 
