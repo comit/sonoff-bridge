@@ -12,7 +12,7 @@ Go to the known folder and install Esptool with command ``python setup.py instal
 Download the latest Tasmota release firmware file *sonoff.bin* from https://github.com/arendst/Sonoff-Tasmota/releases to a known folder.
 
 ## Upload Tasmota
-Esptool uses the serial interface to communicate with your device. On Windows these interfaces are named COM1, COM2 etc. On Linux these interfaces are called dev/ttyUSB0, dev/ttyUSB1 etc.
+Esptool uses the serial interface to communicate with your device. On Windows these interfaces are named COM1, COM2 etc. On Linux these interfaces are called /dev/ttyUSB0, /dev/ttyUSB1 etc.
 
 Before using Esptool make sure you know to which serial interface name your device is connected to.
 
