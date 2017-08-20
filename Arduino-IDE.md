@@ -73,6 +73,7 @@ Grounding pin GPIO00 can often be achieved by pressing button 1 on the Sonoff de
 
 Connect the serial interface of your PC to the device while GPIO00 to Gnd.
 
+### Perform serial upload
 Make the correct serial interface selection in the Arduino IDE via ``Tools`` - ``Port: "COM5"``.
 
 Upload the compiled firmware with ``Sketch`` - ``Upload``.
