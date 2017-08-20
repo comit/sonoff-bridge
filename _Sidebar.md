@@ -10,7 +10,7 @@
 - [**Tutorials**](Tutorials)
 
 **Upload tools**
-- [**EspTool**](Esptool)
+- [**Esptool**](Esptool)
 - [**Arduino IDE**](Arduino-IDE)
 - [**PlatformIO**](PlatformIO)
 - [**Visual Studio**](Visual-Studio)
