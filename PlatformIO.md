@@ -20,6 +20,21 @@ The default environment configuration generates multiple firmware variants. To b
 - *sonoff-ds18x20.bin* - is a version of *sonoff.bin* with the USE_DS18X20 define enabled and a larger MQTT buffer size to be used by people having more than 4 ds18x20 sensors connected.
 
 ## Compile Tasmota
-
+Select ``Compile`` from the menu.
 
 ## Upload Tasmota
+PlatformIO uses the serial interface to upload the firmware to your device. On Windows these interfaces are named COM1, COM2 etc. On Linux these interfaces are called /dev/ttyUSB0, /dev/ttyUSB1 etc.
+
+### Put device in firmware upload mode
+When performing a firmware upload do **not connect the device to AC** but use the power supply provided by your (FTDI type) serial interface.
+
+Put the device in firmware upload mode by grounding pin GPIO00 while applying power.
+
+Grounding pin GPIO00 can often be achieved by pressing button 1 on the Sonoff device or using a wire between GPIO00 and Gnd if the button is not available. Deviations may apply.
+
+Connect the serial interface of your PC to the device while GPIO00 to Gnd.
+
+### Perform serial upload
+Select ``Upload`` from the menu.
+
+NOTE: For a proper device initialization after first firmware upload power down and power up the device.
