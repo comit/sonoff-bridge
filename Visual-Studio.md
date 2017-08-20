@@ -2,16 +2,16 @@ How to setup and configure Visual Studio for Tasmota.
 
 You tell me
 
-# Download tool
+## Download tool
 
 
-# Install tool
+## Install tool
 
 
-# Configure tool
+## Configure tool
 
 
-# Compile Tasmota
+## Compile Tasmota
 
 
-# Upload Tasmota
+## Upload Tasmota
