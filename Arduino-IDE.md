@@ -26,7 +26,7 @@ Open Arduino IDE and select ``File`` - ``Preferences`` and add the following tex
 
 Open ``Tools`` - ``Boards ...`` - ``Boards Manager ...`` and scroll down and click on *esp8266 by ESP8266 Community*. Click the *Install* button to download and install the ESP8266 board software. Select *Close*.
 
-Select ``Tools`` and verify the following settings:
+Select ``Tools`` and verify the following settings for **All Tasmota devices**:
 ```
 Board: "Generic ESP8266 Module"
 Flash Mode: "DOUT"
