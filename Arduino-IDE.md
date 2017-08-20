@@ -11,11 +11,12 @@ Unzip the installation file to a known folder.
 IMPORTANT: Before executing *arduino.exe* add an empty folder called *portable* in the known folder.
 
 ## Download Tasmota
-Download the latest Tasmota release from https://github.com/arendst/Sonoff-Tasmota/releases and unzip to another known folder.
+Download the latest Tasmota release Source code from https://github.com/arendst/Sonoff-Tasmota/releases and unzip to another known folder.
 
 ## Configure Arduino ide
+If not available copy from the Tasmota repository file *arduino\version 2.3.0\tools\sdk\ld\eagle.flash.1m0.ld* to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld*
 
-If not available copy file *eagle.flash.1m0.ld* from the Tasmota repository arduino\version 2.3.0\tools\sdk\ld to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld*
+Replace file Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\boards.txt* with the Tasmota repository file *arduino\version 2.3.0\boards.txt*.
 
 
 ## Compile Tasmota
