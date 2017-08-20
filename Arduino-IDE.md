@@ -14,21 +14,32 @@ IMPORTANT: Before executing *arduino.exe* add an empty folder called *portable* 
 Download the latest Tasmota release Source code from https://github.com/arendst/Sonoff-Tasmota/releases and unzip to another known folder.
 
 ## Configure Arduino ide
-If not available copy from the Tasmota release Source code folder *arduino\version 2.3.0\tools\sdk\ld\ * file *eagle.flash.1m0.ld* to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld*
+If not available copy from the Tasmota release Source code folder *arduino\version 2.3.0\tools\sdk\ld* file *eagle.flash.1m0.ld* to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld*
 
-Replace in Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\ * file *boards.txt* with the Tasmota Source code file *arduino\version 2.3.0\boards.txt*.
+Replace in Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0* file *boards.txt* with the Tasmota Source code file *arduino\version 2.3.0\boards.txt*.
 
 Copy all files from the Tasmota release Source code folder *lib* into your *sketchbook\libraries* folder.
 
 Copy the Tasmota release Source code folder *sonoff* to your *sketchbook*
 
-Open Arduino IDE and select ``File`` - ``Preferences`` and add the following text for field *Additional Boards Manager URLs:* ``http://arduino.esp8266.com/stable/package_esp8266com_index.json`` and select OK.
+Open Arduino IDE and select ``File`` - ``Preferences`` and add the following text for field *Additional Boards Manager URLs:* ``http://arduino.esp8266.com/stable/package_esp8266com_index.json`` and select *OK*.
 
-In the IDE open ``Tools`` - ``Boards ...`` - ``Boards Manager ...`` and scroll down and click on *esp8266 by ESP8266 Community*. Click the *Install* button to download and install the ESP8266 board software.
+Open ``Tools`` - ``Boards ...`` - ``Boards Manager ...`` and scroll down and click on *esp8266 by ESP8266 Community*. Click the *Install* button to download and install the ESP8266 board software. Select *Close*.
 
-Open Arduino IDE and select ``Tools`` - ``Boards: "Generic ESP8266 Module"``.
-
-
+Select ``Tools`` and verify the following settings:
+```
+Board: "Generic ESP8266 Module"
+Flash Mode: "DOUT"
+Flash Frequency: "40MHz"
+Upload Using: "Serial"
+CPU Frequency: "80MHz"
+Flash Size: "1M (no SPIFFS)"
+Debug Port: "Disabled"
+Debug Level: "None"
+Reset Method: "ck"
+Upload Speed: "115200"
+Port: Your COM port connected to sonoff
+```
 
 ## Compile Tasmota
 Open Arduino IDE
