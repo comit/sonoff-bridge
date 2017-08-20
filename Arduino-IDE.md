@@ -14,6 +14,7 @@ IMPORTANT: Before executing *arduino.exe* add an empty folder called *portable* 
 Download the latest Tasmota release Source code from https://github.com/arendst/Sonoff-Tasmota/releases and unzip to another known folder.
 
 ## Configure Arduino IDE
+### Copy files
 If not available copy from the Tasmota release Source code folder *arduino\version 2.3.0\tools\sdk\ld* file *eagle.flash.1m0.ld* to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld*.
 
 Replace in Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0* file *boards.txt* with the Tasmota Source code file *arduino\version 2.3.0\boards.txt*.
@@ -22,6 +23,7 @@ Copy all files from the Tasmota release Source code folder *lib* into your *sket
 
 Copy the Tasmota release Source code folder *sonoff* to your *sketchbook*.
 
+### Change IDE parameters
 Open Arduino IDE and select ``File`` - ``Preferences`` and add the following text for field *Additional Boards Manager URLs:* ``http://arduino.esp8266.com/stable/package_esp8266com_index.json`` and select *OK*.
 
 Open ``Tools`` - ``Boards ...`` - ``Boards Manager ...`` and scroll down and click on *esp8266 by ESP8266 Community*. Click the *Install* button to download and install the ESP8266 board software. Select *Close*.
@@ -40,6 +42,15 @@ Reset Method: "ck"
 Upload Speed: "115200"
 Port: Your COM port connected to sonoff
 ```
+
+### Optional: Prepare for OTA upload
+Tasmota release Source code provides a script to be installed in the Arduino IDE to copy the compiled binary to your local webserver. This local webserver can then provide the firmware for MQTT command ``upgrade``.
+
+Replace in Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0* file *platform.txt* with the Tasmota Source code file *arduino\version 2.3.0\platform.txt*.
+
+Copy from the Tasmota release Source code folder *arduino* file *espupload.py* to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools* and change in the script HOST_ADDR to point to your local webserver ip address.
+
+After restarting your Arduino IDE you now have an extra option for ``Tools`` - ``Upload Using: "OTA_upload"``.
 
 ## Compile Tasmota
 Open Arduino IDE and select file *sonoff.ino* from your *sketchbook\sonoff* folder.
