@@ -1,12 +1,15 @@
 How to setup and configure Visual Studio for Tasmota compilation and upload.
 
-## Download
+## Download Visual Studio
 Download Visual Studio from https://code.visualstudio.com/
 
-## Install
+## Install Visual Studio
 Install Visual Studio after downloading
 
-## Configure
+## Download Tasmota
+Download the latest Tasmota release from https://github.com/arendst/Sonoff-Tasmota/releases and unzip to a known folder.
+
+## Configure Visual Studio
 Configure Visual Studio for Arduino with ESP8266 support.
 
 How? You tell me.
