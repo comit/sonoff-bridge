@@ -14,7 +14,7 @@ Download the latest Tasmota release firmware file *sonoff.bin* from https://gith
 ## Upload Tasmota
 Esptool uses the serial interface to communicate with your device. On Windows these interfaces are named COM1, COM2 etc. On Linux these interfaces are called dev/ttyUSB0, dev/ttyUSB1 etc.
 
-Before using Esptool make sure you know which serial interface name to use.
+Before using Esptool make sure you know to which serial interface name your device is connected to.
 
 In the following commands I use COM5 as an example.
 
