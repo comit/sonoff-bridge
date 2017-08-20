@@ -15,7 +15,7 @@ Download the latest Tasmota release from https://github.com/arendst/Sonoff-Tasmo
 
 ## Configure Arduino ide
 
-If not available copy file *eagle.flash.1m0.ld* from the Tasmota repository arduino\version 2.3.0\tools\sdk\ld to IDE Arduino directory portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld 
+If not available copy file *eagle.flash.1m0.ld* from the Tasmota repository arduino\version 2.3.0\tools\sdk\ld to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld*
 
 
 ## Compile Tasmota
