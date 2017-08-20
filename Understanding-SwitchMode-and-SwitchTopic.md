@@ -1,4 +1,4 @@
-The standard Sonoff device has a relay to turn on/off an external device and a button to toggle the state of the relay.
+The standard Sonoff device has a relay to turn on/off an external device and a button to toggle the state of the relay. Additionally a "Switch" can be configured using the [[Gpio Command|Commands#management]]. (See [[GPIO-Locations]] for how to connect to these GPIO's.)
 
 By default the configuration for the button looks like this:
 
