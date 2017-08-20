@@ -30,7 +30,7 @@ Connect the serial interface of your PC to the device while GPIO00 to Gnd.
 ### Optional: Backup firmware
 Ensure the device is in firmware upload mode.
 
-Backup the current firmware with the following command
+Backup the current firmware with the following command:
 ```
 esptool.py --port COM5 read_flash 0x00000 0x100000 image1M.bin
 ```
@@ -39,16 +39,17 @@ NOTE: When the command completes the device is out of firmware upload mode!
 ### Optional: Erase firmware
 Ensure the device is in firmware upload mode.
 
-Backup the current firmware with the following command
+Erase the complete flash memory holding the firmware with the following command:
 ```
 esptool.py --port COM5 erase_flash
 ```
-NOTE: When the command completes the device is out of firmware upload mode!
+NOTE1: When the command completes the device is out of firmware upload mode!
+NOTE2: It only takes a few seconds to erase 1M of flash.
 
 ### Upload firmware
 Ensure the device is in firmware upload mode.
 
-Load the downloaded Tasmota firmware file *sonoff.bin* with the following command
+Load the downloaded Tasmota firmware file *sonoff.bin* with the following command:
 ```
 esptool.py --port COM5 write_flash -fs 1MB -fm dout 0x0 sonoff.bin
 ```
