@@ -1,1 +1,1 @@
-How to use Arduino IDE with Tasmota
+How to setup and configure Arduino IDE with Tasmota.
