@@ -44,6 +44,7 @@ Erase the complete flash memory holding the firmware with the following command:
 esptool.py --port COM5 erase_flash
 ```
 NOTE1: When the command completes the device is out of firmware upload mode!
+
 NOTE2: It only takes a few seconds to erase 1M of flash.
 
 ### Upload firmware
@@ -54,5 +55,6 @@ Load the downloaded Tasmota firmware file *sonoff.bin* with the following comman
 esptool.py --port COM5 write_flash -fs 1MB -fm dout 0x0 sonoff.bin
 ```
 NOTE1: When the command completes the device is out of firmware upload mode!
+
 NOTE2: For a proper device initialisation after first firmware upload power down and power up the device.
 
