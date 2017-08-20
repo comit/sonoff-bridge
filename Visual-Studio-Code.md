@@ -16,16 +16,13 @@ Select ``View`` - ``Extensions`` and type PlatformIO in the search box.
 
 Be careful to select the official PlatformIO.org *PlatformIO IDE* extension and select *Install*. Accept to install dependencies.
 
-0. Open the folder where you checked out sonoff-tasmota in VSCode.
-0. Adapt `user_config.h` to your wishes.
-0. Use `Ctrl` + `Alt` + `U` to upload (will build if needed).
-
-**Note:** Press `Ctrl` + `Shift` + `P` and type `PlatformIO` to see all options.
-
 ### Copy files
 Copy all files from the Tasmota release Source code into your Virtual Studio base folder.
 
 ## Compile Tasmota
 Open the Visual Studio Code base folder and select the Sonoff-Tasmota folder.
 
+**Note:** Press `Ctrl` + `Shift` + `P` and type `PlatformIO` to see all options.
+
 ## Upload Tasmota
+Use `Ctrl` + `Alt` + `U` to upload (will build if needed).
