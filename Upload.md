@@ -46,6 +46,8 @@ There's now also a script with which you can flash your freshly bought unmodifie
 
 For further details see: https://github.com/mirko/SonOTA
 
+There is also a fork here that steps through the process with pre-compiled binary files: https://github.com/sillyfrog/SonOTA
+
 ----
 
 ## Preliminary Configuration
