@@ -61,7 +61,7 @@ If everything went well, you are now in Flash Mode and ready to continue with th
 ### S20 Smart Socket
 
 <img alt="S20 Smart Socket" src="https://github.com/arendst/arendst.github.io/blob/master/media/s20b.jpg" width="230" align="right" /> 
-The picture shows how to program the S20 Smart Socket powered by the FTDI USB converter.
+The picture shows how to program the S20 Smart Socket powered by the FTDI USB converter.  With newer US sockets, either use a right-angle header, or remove the header after flashing.  Otherwise, the pushbutton may rub against a pin and get stuck.
 <br />
 <br />
 <br />
