@@ -22,7 +22,7 @@ There are lots of ways to control your devices. One typically uses a laptop/desk
 |===
 |Message|Issued by|Intent
 |`cmnd`|devices shown on the right hand side|control the Sonoff; set configuration; ask for status
-|`stat`|the Sonoffs|report back status or configuration message
+|`stat`|the Sonoffs on the left hand side|report back status or configuration message
 |`tele`|some Sonoffs (like temperature measuring devices)|report unsolicited telemetry info at periodic intervals
 |===
 
