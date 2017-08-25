@@ -507,8 +507,8 @@ Command         | Payload   | Description
 Color           |           | Show current color setting as CCWW
 Color           | \<CCWW\>  | (Sonoff Led) Set color to CCWW hexadecimal value
 Color           | \<RRGGBBCCWW\> | (Sonoff B1) Set color to RRGGBBCCWW hexadecimal value
-CT              |           | (Sonoff B1 and BN-SZ01) Show current Color Temperature (153 = Cold, 500 = Warm)
-CT              | 153..500  | (Sonoff B1 and BN-SZ01) Set color temperature from cold to warm
+CT              |           | (Sonoff B1 and Led) Show current Color Temperature (153 = Cold, 500 = Warm)
+CT              | 153..500  | (Sonoff B1 and Led) Set color temperature from cold to warm
 Dimmer          |           | Show current dimmer setting from 0 to 100%
 Dimmer          | 0..100    | Set dimmer value from 0 to 100%
 Fade            |           | Show current fade state
