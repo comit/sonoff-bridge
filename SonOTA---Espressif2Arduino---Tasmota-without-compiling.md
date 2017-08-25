@@ -15,7 +15,7 @@ Steps:
 * configure Sonoff using ewlink for local wifi and update the firmware. It does not work with old firmware.
 * create wifi hotspot on smartphone for default indebuurt1/VnsqrtnrsddbrN. This needs internet connectivity.
 * on PC, extract sonota.py somwhere from the SonOTA project
-* extract http://cputoasters.com/ameyer/sonoff/ssl/sonota-e2a.zip in same dir, should create ssl and static dir (contains just a snakeoil ssl cert and the default compiled e2a binaries directly from the unmodified Espressif2Arduino source)
+* extract http://cputoasters.com/ameyer/sonoff/sonota-e2a.zip in same dir, should create ssl and static dir (contains just a snakeoil ssl cert and the default compiled e2a binaries directly from the unmodified Espressif2Arduino source)
 * start sonota.py with your standard wifi SSID/PW and PC IP (eg ./sonota.py --wifi-ssid asdfasdf --wifi-password fidjfidfjidjf 192.168.123.123)
 * connect Sonoff, press button for 5s or so until it blinks in blocks of 3, then again 5s or so until it blinks continuously
 * connect to ITEAD-xxxx with PC
