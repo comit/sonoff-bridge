@@ -39,14 +39,14 @@ Once enabled MQTT can be configured at Configuration -> Configure MQTT.
 
 [options="header"]
 |===
-|Field|Size|Notes
-|Host name |32|URL or ip address. Note that without a special firmware build SSL is NOT supported. 
-|Port|uint|0-65535
-|Client Id|32|Unique ID of this device, should be unique for every device; logged by the MQTT server
-|Username|32|Username for MQTT server authentication
-|Password|32|Password for MQTT server authentication
-|Topic|32|User friendly topic name; ususally describes the location or use of this device; used in the MQTT commands and responses; should be unique
-|Full Topic|100|Format string used to assemble the MQTT commands; defaults to `%prefix%/%topic%/`
+|Field|Size|Default(user_config.h)|Notes
+|Host name |32|MQTT_HOST=domus1|URL or ip address. Note that without a special firmware build SSL is NOT supported. 
+|Port|uint|MQTT_PORT=1883|0-65535
+|Client Id|32|MQTT_CLIENT_ID=DVES_%06X|Unique ID of this device, should be unique for every device; logged by the MQTT server
+|Username|32|MQTT_USER=DVES_USER|Username for MQTT server authentication
+|Password|32|MQTT_PASS=DVES_PASS|Password for MQTT server authentication
+|Topic|32|MQTT_TOPIC=sonoff|User friendly topic name; ususally describes the location or use of this device; used in the MQTT commands and responses; should be unique
+|Full Topic|100|%prefix%/%topic%|Format string used to assemble the MQTT commands
 |===
 
 Note: By default firmware will search for an MQTT broker using mDNS by searching for a tcp record mqtt.local.
@@ -212,7 +212,7 @@ client.loop_stop()
 client.disconnect()
 ```
 
-Ref: [Python MQTT](https://pypi.python.org/pypi/paho-mqtt/1.1)
+Ref: https://pypi.python.org/pypi/paho-mqtt/1.1[Python MQTT]
 
 ### JavaScript
 Using the node module MQTT.js you can connect to the MQTT broker, send messages and listen to topics. Example uses code compatible with Node v4 or later.
@@ -263,10 +263,10 @@ function loop() {
 }
 ```
 
-Ref: [Node MQTT.js](https://github.com/mqttjs/MQTT.js)
+Ref: https://github.com/mqttjs/MQTT.js[Node MQTT.js]
 
 ### Android phone MQTT Dashboard
-The [MQTT Dashboard](https://play.google.com/store/apps/details?id=com.thn.iotmqttdashboard)
+The https://play.google.com/store/apps/details?id=com.thn.iotmqttdashboard[MQTT Dashboard]
 provides the ability to connect and control Sonoff devices directly.
 
 On the first page, enter the details of how your phone should connect to the MQTT broker. On the SUBSCRIBE page, you
