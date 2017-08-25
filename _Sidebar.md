@@ -10,6 +10,7 @@
 - [**Tutorials**](Tutorials)
 
 **Upload tools**
+- [**SonOTA**](SonOTA)
 - [**Esptool**](Esptool)
 - [**Arduino IDE**](Arduino-IDE)
 - [**PlatformIO**](PlatformIO)
