@@ -10,9 +10,10 @@ It worked for me with these devices:
 * TH16
 * POW
 * T1 (use the left button to set the device to config mode)
+* Dual
 
 Steps:
-* configure Sonoff using ewlink for local wifi and update the firmware. It does not work with old firmware.
+* configure Sonoff using ewelink for local wifi and update the firmware. It does not work with old firmware.
 * create wifi hotspot on smartphone for default indebuurt1/VnsqrtnrsddbrN. This needs internet connectivity.
 * on PC, extract sonota.py somwhere from the SonOTA project
 * extract http://cputoasters.com/ameyer/sonoff/sonota-e2a.zip in same dir, should create ssl and static dir (contains just a snakeoil ssl cert and the default compiled e2a binaries directly from the unmodified Espressif2Arduino source)
