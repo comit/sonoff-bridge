@@ -7,7 +7,7 @@
 
 Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
 
-As always, you need to access the serial interface. The **four serial pins** (3V3, Rx, Tx, GND) are available at the short end of the PCB and can be seen on the left side of the first image and are labeled in red on the second image.
+As always, you need to access the serial interface. The **four serial pins** (3V3, Rx, Tx, GND) are available at the short end of the PCB and can be seen on the left side of the first image and are labeled in red on the second image. For the v2.0 version of the board you need to cross-over the serial interface, see [troubleshooting](https://github.com/arendst/Sonoff-Tasmota/wiki/Troubleshooting).
 
 <img alt="Sonoff Dual, GPIO0 grounded" src="https://github.com/arendst/arendst.github.io/blob/master/media/dual2a.jpg" width="48%" />
 <img alt="Alternate GPIO0 spot" src="http://tinkerman.cat/wp-content/uploads/2016/12/20161206_234331s.jpg" width="48%" align="right" />
