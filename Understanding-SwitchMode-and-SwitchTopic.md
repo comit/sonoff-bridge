@@ -102,7 +102,7 @@ Switch Sonoff01_Switch1 "Sonoff01 Switch1 [%s]" <switch> { mqtt="<[mosquitto:cmn
 
 ## Conclusion
 
-`SwitchMode=0` controls the relay directly.  
-`SwitchMode=1` sends a message with the default topic to MQTT. This message will get picked up by the device itself and sets the state of the relay accordingly.  
-While `SwitchMode=2` sends a command with a custom topic via MQTT. This will not get picked up unless you configure any device to subscribe to this topic.
+`SwitchTopic=0` controls the relay directly.  
+`SwitchTopic=1` sends a message with the default topic to MQTT. This message will get picked up by the device itself and sets the state of the relay accordingly.  
+While `SwitchTopic=2` sends a command with a custom topic via MQTT. This will not get picked up unless you configure any device to subscribe to this topic.
 
