@@ -3,7 +3,7 @@ This is for the lazy people that don't want to open the device, don't want to in
 You need
 * A standard WiFi
 * A different WiFi (which I created with a smartphone hotspot)
-* A PC or similar with python3 that can run SonOTA
+* A PC or similar with python3 that can run SonOTA. You probably have to install missing modules with `pip3 install tornado` or similar.
 
 It worked for me with these devices:
 * TH10
