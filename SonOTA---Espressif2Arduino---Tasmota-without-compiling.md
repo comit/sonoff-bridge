@@ -3,7 +3,12 @@ This is for the lazy people that don't want to open the device, don't want to in
 You need
 * A standard WiFi
 * A different WiFi (which I created with a smartphone hotspot)
-* A PC or similar with python3 that can run SonOTA. You probably have to install missing modules with `pip3 install tornado` or similar.
+* A PC or similar with python3 that can run SonOTA. On mac python3 etc can be installed like this:
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install python3
+pip3 install tornado httplib2 netifaces
+```
 
 It worked for me with these devices:
 * TH10
