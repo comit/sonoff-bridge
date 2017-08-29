@@ -30,7 +30,7 @@ By looking at the commands table below we can learn about the [Power](https://gi
   ```
   We've send the toggle command and received the new state confirmation.
 
-**NOTE** For many commands, an empty payload is a _query_. If you are using _mosquitto_pub_, you can issue an empty payload using the "-n" command line option. If your MQTT client cannot issue an empty payload, you can use the single character "?" instead.
+**Side Note:** For many commands, an empty payload is a *query*. If you are using *mosquitto_pub*, you can issue an empty payload using the `-n` command line option. If your MQTT client cannot issue an empty payload, you can use the single character "?" instead.
 
 ### Web 
 
