@@ -32,10 +32,10 @@ unzip sonota-e2a.zip
 # Compatibility
 
 It worked with these devices:
-* TH10 (reported by: )
-* TH16 (reported by: )
-* POW (reported by: )
-* T1 ((reported by: - use the left button to set the device to config mode)
+* TH10 (reported by: cputoaster)
+* TH16 (reported by: cputoaster)
+* POW (reported by: cputoaster)
+* T1 ((reported by: cputoaster - use the left button to set the device to config mode)
 * Dual (reported by: lgnd33)
 * 4CH (reported by: lgnd33)
 
