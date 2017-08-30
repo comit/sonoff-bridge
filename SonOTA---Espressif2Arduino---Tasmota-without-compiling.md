@@ -19,7 +19,7 @@ brew install python3
 mkdir ~/src/
 cd ~/src/
 git clone https://github.com/mirko/SonOTA.git
-pip3 -r requirements.txt
+pip3 install -r requirements.txt
 ```
 * You will also need prepackaged library of certificates and intermediate Espressif2Arduino firmwares:
 ```
