@@ -79,11 +79,14 @@ So if soldering isn't your bag, there are a few connection points that you can g
 
 The process for building the firmware for the HuaFan is basically the same as for the Sonoff but with a few additional steps.
 
-Firstly. you should ensure that you have the latest versions of ESP8266/Arduino and Sonoff-Tasmota software downloaded:
-- support for the 40MHz crystal used by the HuaFan was added to the ESP8266/Arduino code in their release candidate version 2.4.0-rc1 (installation instructions [https://github.com/esp8266/Arduino/releases](here) )
-- support for the HuaFan device and calibration was added in release 5.5.0 of Sonoff-Tasmota
+Firstly, make sure that you have installed release 5.5.0 of Sonoff-Tasmota or later and that you have completed all of the standard preparation tasks mentioned in the Wiki.
 
-Secondly, you need to edit the boards.txt file to allow selection of the 40MHz Crystal via the Arduino IDE Tools menu. Add the following lines into the section for the "Generic ESP8266 Module" and immediately after the "generic.menu.CpuFrequency" items:
+Next, you should ensure that you have installed version 2.4.0-rc1 or later of ESP8266/Arduino core that includes support for the 40MHz crystal used by the HuaFan. Installation instructions can be found [here](https://github.com/esp8266/Arduino/releases) but are essentially as follows:
+- Start Arduino and open Preferences window.
+- Swap the existing link for the stable ESP8266/Arduino core release with https://github.com/esp8266/Arduino/releases/download/2.4.0-rc1/package_esp8266com_index.json in Additional Board Manager URLs field..
+- Open Boards Manager from Tools > Board menu and update esp8266 platform (check that it is using the RC version).
+
+Lastly, you need to edit the boards.txt file to allow selection of the 40MHz Crystal via the Arduino IDE Tools menu. Add the following lines into the section for the "Generic ESP8266 Module" and immediately after the "generic.menu.CpuFrequency" items:
 
 ```
 generic.menu.CrystalFreq.26=26 MHz`
