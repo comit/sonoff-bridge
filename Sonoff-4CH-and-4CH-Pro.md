@@ -43,6 +43,16 @@ Use the ESP programming header as described in the picture to upload the firmwar
 
 <img title="Sonoff 4CH Pro programming" src="https://github.com/arendst/arendst.github.io/blob/master/media/4chpro_gpio0.JPG" width="100%" align="middle" />
 
+## Solving Sonoff 4CHpro programing issues
+If you have problems to program the 4CH-pro, you might find below tips useful:
+Step1) Ensure right port is set in the Arduino IDE. 
+Step1) TX/RX are printed correctly on the pro version => TX goes to RX PIN and RX to TX.
+Step2) If you use windows7+, check in the device manager if the port is not added/removed all 2 seconds.
+       => If yes then your USB port does not deliver enough ampere.
+       => Moving to a Laptop might do the trick. 
+Step2) Reduce upload speed to 57600 in Arduino IDE.
+Step3) Use an active USB HUB if your computer delivers not enough ampere 
+       => External power source will stabilize the 4CH-pro and you can increase upload speed back to 115200.
 
 ## Solving OTA and Upload Problems
 
