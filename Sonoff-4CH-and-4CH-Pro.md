@@ -47,7 +47,7 @@ Use the ESP programming header as described in the picture to upload the firmwar
 If you have problems to program the 4CH-pro, you might find below tips useful:
 * Basic) Use the ESP program header and ensure that the right port is set in the Arduino IDE. 
 * Basic) TX/RX are printed correctly on the pro version => TX goes to RX PIN and RX to TX.
-* Basic) GP0 need to have ground 3 second after reboot !!! If not you can not program it.
+* Basic) GP0 needs to be connected to ground 3 seconds after reboot !!! If not you can not program it.
 * Step1) If you use windows7+, check in the device manager if the port is not added/removed all 2 seconds.
        => If yes then your USB port does not deliver enough ampere.
 * Step1) Or/and reduce upload speed to 57600 in Arduino IDE.
