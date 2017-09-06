@@ -91,7 +91,7 @@ SonOTA should say something like:
 nmap 172.20.19.1-255 -p 80
 ``` 
 * Use a web browser to connect to a new firmware on your device (note, we're not done yet ;)
-* Update to Tasmota standard image, either by using OTA via internet, or uploading image. Device will restart once again.
+* Update to Tasmota standard image, either by using OTA via internet (http://sonoff.maddox.co.uk/tasmota/sonoff.bin), or uploading image. Device will restart once again. Not upgrading to the standard image will result in not being able to store config values and more, as this is just an intermediate image.
 * Still connected to *temporary*  Wifi, login and change Wifi settings to your *home* Wifi. Device will reset.
 * Connect the PC to your *home* Wifi and find your new device. 
 * You can now configure rest of the system, including correct device type, MQTT settings and everything else.
