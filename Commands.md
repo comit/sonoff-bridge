@@ -338,6 +338,9 @@ SensorRetain    | 1 / on         | Enable MQTT retain flag on message tele/sonof
 SetOption2      |                | Show current Units state
 SetOption2      | 0 / off        | (default) Do not show units to messages
 SetOption2      | 1 / on         | Add units to messages
+SetOption3      |                | Show current MQTT state
+SetOption3      | 0 / off        | Disable MQTT
+SetOption3      | 1 / on         | Enable MQTT
 SetOption4      |                | Show current MQTT response state
 SetOption4      | 0 / off        | Return response as RESULT topic
 SetOption4      | 1 / on         | Return response as Command topic
@@ -502,12 +505,13 @@ WattRes         |               | Show current Power Resolution
 WattRes         | 0..1          | Set Power Resolution
 
 
-### Sonoff Led, B1 and BN-SZ01
+### AiLight, Sonoff Led, B1 and BN-SZ01
 
 Command         | Payload   | Description
 ----------------|-----------|--------------------------------------------------------
-Color           |           | Show current color setting as CCWW
+Color           |           | Show current color setting as CCWW, RRGGBBWW or RRGGBBCCWW
 Color           | \<CCWW\>  | (Sonoff Led) Set color to CCWW hexadecimal value
+Color           | \<RRGGBBWW\> | (AiLight) Set color to RRGGBBWW hexadecimal value
 Color           | \<RRGGBBCCWW\> | (Sonoff B1) Set color to RRGGBBCCWW hexadecimal value
 CT              |           | (Sonoff B1 and Led) Show current Color Temperature (153 = Cold, 500 = Warm)
 CT              | 153..500  | (Sonoff B1 and Led) Set color temperature from cold to warm
