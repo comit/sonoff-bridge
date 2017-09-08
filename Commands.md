@@ -66,7 +66,7 @@ The following command tables are available:
 - [SetOption Overview](#setoption-overview)
 - [Logging](#logging)
 - [Sonoff Pow specific](#sonoff-pow)
-- [Sonoff Led, B1 and BN-SZ01 specific](#sonoff-led-b1-and-bn-sz01)
+- [AiLight, Sonoff Led, B1 and BN-SZ01 specific](#ailight-sonoff-led-b1-and-bn-sz01)
 - [Sonoff RF Bridge 433](#sonoff-rf-bridge-433)
 - [Domoticz](#domoticz)
 - [WS2812 led string](#ws2812-led-string)
