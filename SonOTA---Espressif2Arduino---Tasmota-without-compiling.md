@@ -86,7 +86,7 @@ SonOTA should say something like:
 ```
 * Now, the device is connecting to your *temporary* Wifi and downloading minimal Sonoff-Tasmota image. This can take some time (2 minutes), after which device will reset and connect back to temporary Wifi.
 * Connect your PC to the *temporary* Wifi
-* Use NMAP to find the device's IP:
+* Use NMAP to find the device's IP (or use Fing in Android):
 ```
 nmap 172.20.19.1-255 -p 80
 ``` 
