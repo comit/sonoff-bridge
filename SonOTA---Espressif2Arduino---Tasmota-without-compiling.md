@@ -58,7 +58,7 @@ SonOTA should say something like:
 ** This application can be kept running.
 .......
 ```
-* Sonnect Sonoff to mains, press button for 5s or so, until it blinks in blocks of 3, then again 5s or so until it blinks continuously. This will put Sonoff device in AP mode and will start ITEAD-xxxx wifi.
+* Sonnect Sonoff to mains, press button for 5s or so, until it blinks in blocks of 3, then again 5s or so until it blinks continuously. This will put Sonoff device in AP mode and will start ITEAD-10000xxxxx wifi.
 * Connect your PC to ITEAD-xxxx wifi (password is always: 12345678)
 * Device and SonOTA will chat for a bit and you should see something ending with: 
 ```
