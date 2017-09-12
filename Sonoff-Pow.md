@@ -44,13 +44,13 @@ The Sonoff Pow can provide Energy, Power, Voltage and Current information in dif
 ### Push result using Telemetry
 The preffered way is using the periodic telemetry data. Setting ```teleperiod 300``` will send telemetry data every 5 minutes.
 ```
-tele/pow1/ENERGY = {"Time":"2017-02-15T11:16:20", "Yesterday":0.012, "Today":0.000, "Period":0, "Power":4, "Factor":0.35, "Voltage":230, "Current":0.050}
+tele/pow1/ENERGY = {"Time":"2017-09-12T10:32:07", "Total":5.331, "Yesterday":0.152, "Today":0.067, "Period":0.5, "Power":6.1, "Factor":0.43, "Voltage":223.7, "Current":0.063}
 ```
 
 ### Pull result using status message 8
 To request information you can use command ```status 8```.
 ```
-stat/pow1/STATUS8 = {"StatusPWR":{"Yesterday":0.012, "Today":0.000, "Power":4, "Factor":0.36, "Voltage":228, "Current":0.054}}
+stat/pow1/STATUS8 = {"StatusPWR":{"Total":5.331, "Yesterday":0.152, "Today":0.068, "Power":5.8, "Factor":0.26, "Voltage":219.0, "Current":0.101}}
 ```
 
 ### Meaning
@@ -58,6 +58,7 @@ The presented information has the following meaning:
 ```
 Message   | Unit | Description
 ----------|------|-----------------------------------------------------
+Total     | kWh  | Total Energy usage including Today
 Yesterday | kWh  | Total Energy usage between 00:00 and 24:00 yesterday
 Today     | kWh  | Total Energy usage today from 00:00 until now
 Period    | Wh   | Energy usage between previous message and now
