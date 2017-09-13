@@ -28,7 +28,7 @@ Telemetry data will be sent by prefix ```tele``` like ```tele/sonoff/SENSOR {"Ti
 Until version 5.0.5 the MQTT topic was defined rigidly by using the commands ``Prefix<x>`` and ``Topic`` resulting in a command topic string like ``cmnd/sonoff/Power``.
 
 Starting with version 5.0.5 the MQTT topic is more flexible using command ``FullTopic`` and tokens to be placed within the user definable string up to 100 characters in size. The provided tokens are:
-- ``%prefix%`` to be dynamically substituted by one of three prefixes as defined by commands ``Prefix1``, ``Prefix2`` and ``Prefix3``.
+- ``%prefix%`` to be dynamically substituted by one of three prefixes as defined by commands ``Prefix1`` (default: "cmnd"), ``Prefix2`` (default: "stat") and ``Prefix3`` (default: "tele").
 - ``%topic%`` to be dynamically substituted by one of five topics as defined by commands ``Topic``, ``GroupTopic``, ``ButtonTopic``, ``SwitchTopic`` and ``MqttClient``. 
 
 Using the tokens the following example topics can be made:
