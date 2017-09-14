@@ -31,11 +31,11 @@ Open ``Tools`` - ``Boards ...`` - ``Boards Manager ...`` and scroll down and cli
 Select ``Tools`` and verify the following settings for **All Tasmota devices**:
 ```
 Board: "Generic ESP8266 Module"
-Flash Mode: "DOUT"
+Flash Mode: "DOUT"  <<<<!!!!
 Flash Frequency: "40MHz"
 Upload Using: "Serial"
 CPU Frequency: "80MHz"
-Flash Size: "1M (no SPIFFS)"
+Flash Size: "1M (no SPIFFS)"  <<<<!!!!
 Debug Port: "Disabled"
 Debug Level: "None"
 Reset Method: "ck"
