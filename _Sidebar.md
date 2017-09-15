@@ -34,6 +34,7 @@
 - [**Sonoff RF Bridge 433**](Sonoff-RF-Bridge-433)
 - [**Sonoff Touch**](Sonoff-Touch)
 - [**Sonoff 4CH / 4CH Pro**](Sonoff-4CH-and-4CH-Pro)
+- [**Sonoff B1**](Sonoff-B1)
 - [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
 
 **Home Automation Integration**
