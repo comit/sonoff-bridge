@@ -28,14 +28,16 @@ Some Sonoff modules expose a five pin header. The fifth pin is irrelevant for th
 
 Examples of the above preparations are shown in [Peter Scargill's blog](http://tech.scargill.net/itead-slampher-and-sonoff) or by [captain-slow.dk](http://captain-slow.dk/2016/05/22/replacing-the-itead-sonoff-firmware/).
 
-### Sonoff Module Specifics
+### Module Specific Articles
 
-For module specific instructions and restrictions of the individual devices, please see the respective articles:
+Check the module specific instructions and restrictions documented in the **device specific articles linked in the menu on the right** 🡺
 
+<!--
 * [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
 * [Sonoff Pow](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Pow)
 * [Sonoff Touch](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Touch)
 * [Sonoff 4CH / 4CH Pro](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-4CH-and-4CH-Pro)
+-->
 
 ### Bringing the Module in Flash Mode
 
@@ -50,6 +52,7 @@ To bring a Sonoff module into Flash Mode:
 
 If everything went well, you are now in Flash Mode and ready to continue with the Sonoff-Tasmota firmware [Upload](https://github.com/arendst/Sonoff-Tasmota/wiki/Upload). If the upload is not able to start, disconnect the module and start the hardware preparations from the beginning.
 
+----
 ----
 
 ### Sonoff Basic
