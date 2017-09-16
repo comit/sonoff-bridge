@@ -13,4 +13,4 @@ As always, you need to access the serial interface. First pop up the top part of
 
 The **four serial pins** (3V3, Rx, Tx, GND) as well as the GPIO0 signal line are available as test points and clearly marked. Solder wires to those or use pogo pins as you prefer.
 
-As with all ESP8266 modules pulling GPIO0 to GND is needed to put the chip in programming mode. You need to **connect GPIO0 and GND** during power up. An additional GND pad is available in the middle of the PCB.
+As with all modules pulling GPIO0 to GND is needed to put the chip in programming mode. You need to **connect GPIO0 and GND** during power up. An additional GND pad is available in the middle of the PCB.
