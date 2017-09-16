@@ -28,6 +28,7 @@
 - [**Troubleshooting**](Troubleshooting)
 
 **Devices - Additional Info**
+- [**Sonoff Basic**](Sonoff-Basic)
 - [**Sonoff Dual**](Sonoff-Dual)
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff RF and Slampher**](Sonoff-RF)
