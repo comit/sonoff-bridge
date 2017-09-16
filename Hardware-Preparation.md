@@ -51,12 +51,6 @@ Check the module specific instructions and restrictions documented in the **devi
 ----
 ----
 
-### Sonoff Basic
-
-<img alt="Connection diagram" src="https://github.com/arendst/arendst.github.io/blob/master/media/ProgramESP8266.jpg" height="260" /><br/>
-
-*Note:* newer version of the Sonoff module hold five pins below the button. Follow the image above and ignore the pin furthest away from the Button (pin 5) if available. The square pin is 3.3V.
-
 ### S20 Smart Socket
 
 <img alt="S20 Smart Socket" src="https://github.com/arendst/arendst.github.io/blob/master/media/s20b.jpg" width="230" align="right" /> 
