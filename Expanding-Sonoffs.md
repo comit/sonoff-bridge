@@ -37,6 +37,8 @@ If a pin is defined as GPIO_USER in the module template, you can assign it one o
 * GPIO_LED4_INV
 ```
 
+To make a link between the different naming schemes of pins, connectors and logical functions, the [Pin Definition overview] in the esp8266 wiki is quite helpful.
+
 # Examples
 ## Connect switch
 If you take a Sonoff Basic and connect a switch between pin4 (ground) and pin5 (GPIO14) of the 5 pin programming header you now have a second switch connected to the device. You can set this through the module config page as option ``09 Switch1`` or from the command line with ``gpio14 9``.
