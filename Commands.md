@@ -66,10 +66,10 @@ The following command tables are available:
 - [SetOption Overview](#setoption-overview)
 - [Logging](#logging)
 - [Sonoff Pow specific](#sonoff-pow)
-- [AiLight, Sonoff Led, B1 and BN-SZ01 specific](#ailight-sonoff-led-b1-and-bn-sz01)
+- [WS2812, AiLight, Sonoff Led, B1 and BN-SZ01](#ws2812-ailight-sonoff-led-b1-and-bn-sz01)
+- [WS2812 led string specific](#ws2812-led-string-specific)
 - [Sonoff RF Bridge 433](#sonoff-rf-bridge-433)
 - [Domoticz](#domoticz)
-- [WS2812 led string](#ws2812-led-string)
 - [IR remote control](#irremote)
 
 ### Main
@@ -278,6 +278,7 @@ WifiConfig       | 1           | Start smart config for 1 minute and set as curr
 WifiConfig       | 2           | Start wifi manager (web server at 192.168.4.1) and set as current config tool
 WifiConfig       | 3           | Start WPS config for 1 minute and set as current config tool
 WifiConfig       | 4           | Disable wifi config but retry other AP without restart
+WifiConfig       | 5           | Disable wifi config but retry same AP without restart and flash writes
 
 
 ### MQTT Specific
@@ -505,12 +506,14 @@ WattRes         |               | Show current Power Resolution
 WattRes         | 0..1          | Set Power Resolution
 
 
-### AiLight, Sonoff Led, B1 and BN-SZ01
+### WS2812, AiLight, Sonoff Led, B1 and BN-SZ01
 
 Command         | Payload   | Description
 ----------------|-----------|--------------------------------------------------------
-Color           |           | Show current color setting as CCWW, RRGGBBWW or RRGGBBCCWW
+Color           |           | Show current color setting as CCWW, RRGGBB, RRGGBBWW or RRGGBBCCWW
+Color           | #\<value\>   | Set color to hexadecimal value
 Color           | \<CCWW\>  | (Sonoff Led) Set color to CCWW hexadecimal value
+Color           | \<RRGGBB\>   | (WS2812) Set colot to RRGGBB hexadecimal value
 Color           | \<RRGGBBWW\> | (AiLight) Set color to RRGGBBWW hexadecimal value
 Color           | \<RRGGBBCCWW\> | (Sonoff B1) Set color to RRGGBBCCWW hexadecimal value
 CT              |           | (Sonoff B1 and Led) Show current Color Temperature (153 = Cold, 500 = Warm)
@@ -526,8 +529,32 @@ LedTable        | 1 / on    | Use Led table for intensity correction
 Speed           |           | Show current fade speed selection
 Speed           | 1..8      | Select desired fade speed from 1 = fast to 8 = slow
 Wakeup          |           | Start wake up sequence from Off to Dimmer value
+Wakeup          | 0..100    | Start wake up sequence from Off to provided Dimmer value
 WakeupDuration  |           | Show current wake up light duration in seconds
 WakeupDuration  | 1..3600   | Set wake up light duration in seconds
+
+
+### WS2812 Led string specific
+
+Command            | Payload    | Description
+-------------------|------------|------------------------------------------------------
+Led1..Led\<count\> |            | Show specific led current color as RRGGBB
+Led1..Led\<count\> | \<RRGGBB\> | Set specific led to desired color RRGGBB
+Pixels             |            | Show current pixel count
+Pixels             | \<count\>  | Set amount of pixels in strip or ring up to 512
+Scheme             |            | Show current selected scheme
+Scheme             | 0          | (default) Use single color for all leds in strip/ring
+Scheme             | 1          | Start wakeup light
+Scheme             | 2          | Show clock
+Scheme             | 3          | Show incandescent pattern
+Scheme             | 4          | Show RGB pattern
+Scheme             | 5          | Show Christmas pattern
+Scheme             | 6          | Show Hanukkah pattern
+Scheme             | 7          | Show Kwanzaa pattern
+Scheme             | 8          | Show rainbow pattern
+Scheme             | 9          | Show fire pattern
+Width              |            | Show current led group width
+Width              | 0..4       | Set led group width used by Schemes 3 - 9
 
 
 ### Sonoff RF Bridge 433
@@ -559,43 +586,6 @@ DomoticzSwitchIdx\<x\> | \<idx\> | Set Domoticz switch1 to switch4 index. To use
 DomoticzUpdateTimer    |         | Show current Domoticz update timer value in seconds
 DomoticzUpdateTimer    | 0 / off | (default) Disable sending interrim Domoticz status
 DomoticzUpdateTimer    | 1..3600 | Send status to Domoticz between every 1 and 3600 seconds
-
-
-### WS2812 Led string
-
-Command            | Payload    | Description
--------------------|------------|------------------------------------------------------
-Color              |            | Show current strip/ring color setting as RRGGBB
-Color              | \<RRGGBB\> | Set strip/ring color to RRGGBB hexadecimal value
-Dimmer             |            | Show current dimmer setting from 0 to 100%
-Dimmer             | 0..100     | Set dimmer value from 0 to 100%
-Fade               |            | Show current color fade state
-Fade               | 0 / off    | (default) Do not use fade while changing colors
-Fade               | 1 / on     | Use fade while changing colors
-Led1..Led\<count\> |            | Show specific led current color as RRGGBB
-Led1..Led\<count\> | \<RRGGBB\> | Set specific led to desired color RRGGBB
-LedTable           |            | Show current Led table color correction state
-LedTable           | 0 / off    | (default) Do not use Led table for color correction
-LedTable           | 1 / on     | Use Led table for color correction
-Pixels             |            | Show current pixel count
-Pixels             | \<count\>  | Set amount of pixels in strip or ring up to 256
-Scheme             |            | Show current selected scheme
-Scheme             | 0          | (default) Use single color for all leds in strip/ring
-Scheme             | 1          | Start wakeup light
-Scheme             | 2          | Show clock
-Scheme             | 3          | Show incandescent pattern
-Scheme             | 4          | Show rgb pattern
-Scheme             | 5          | Show Christmas pattern
-Scheme             | 6          | Show Hanukkah pattern
-Scheme             | 7          | Show Kwanzaa pattern
-Scheme             | 8          | Show rainbow pattern
-Scheme             | 9          | Show fire pattern
-Speed              |            | Show current fade speed selection
-Speed              | 1..5       | Select desired fade speed from 1 = fast to 5 = slow
-Wakeup             |            | Show current wake up light duration in seconds
-Wakeup             | 1..3600    | Set wake up light duration in seconds
-Width              |            | Show current led group width
-Width              | 0..4       | Set led group width used by Schemes 3 - 9
 
 
 ### IRremote
