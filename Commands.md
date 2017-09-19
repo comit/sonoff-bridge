@@ -157,6 +157,11 @@ SetOption8        | 1 / fahrenheit | Set Temperature to Fahrenheit
 TempRes           |                | Show current Temperature Resolution
 TempRes           | 0..3           | Set Temperature Resolution
 TempUnit          |                | Replaced by SetOption8
+VoltRes           |                | Show current Voltage Resolution
+VoltRes           | 0..1           | Set Voltage Resolution
+WattRes           |                | Show current Power Resolution
+WattRes           | 0..1           | Set Power Resolution
+
 
 ### Management
 
