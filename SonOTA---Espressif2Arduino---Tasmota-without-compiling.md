@@ -1,6 +1,6 @@
 This is for the lazy people that don't want to open the device, don't want to install SDKs and don't want to compile stuff ;-). **Warning: Many of these components are very new, nothing is guaranteed to work, you might need to solder headers to recover from bugs here.**
 
-A similar process (with things pre-built in the repo) is also available here: https://github.com/sillyfrog/SonOTA
+SonOTA has been updated to include pre-compiled binary files, see the home page for more information: https://github.com/mirko/SonOTA
 
 # Prerequisites
 
