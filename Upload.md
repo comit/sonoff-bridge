@@ -4,7 +4,7 @@
 2. Load the Sonoff-Tasmota base folder in [PlatformIO](https://github.com/platformio)
 3. Connect the Sonoff module in Flash Mode (see [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) section and device specific articles)
 4. Select a firmware variant to flash onto your module by uncommenting one of the `env_default` lines in [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini), see below for variant details
-5. Open user_config.h and configure your WiFi settings and optionally your MQTT, Syslog, WebServer, NTP, etc. settings
+5. Open `user_config.h` and configure your WiFi settings and optionally your MQTT, Syslog, WebServer, NTP, etc. settings
 6. Select "Upload" from the menu to flash the firmware 
 7. After successful transfer of the firmware disconnect the module
 
@@ -33,7 +33,7 @@ The default environment configuration generates multiple firmware variants. To b
 - Reset Method: ck
 - Upload Speed: 115200
 - Port: Your COM port connected to sonoff
-4. Open user_config.h and configure your WiFi settings and optionally your MQTT, Syslog, WebServer, NTP, etc. settings
+4. Open `user_config.h` and configure your WiFi settings and optionally your MQTT, Syslog, WebServer, NTP, etc. settings
 5. Verify and/or compile the project and upload to your sonoff using the serial connection established above.
 
 Continue at ["First Steps"](https://github.com/arendst/Sonoff-Tasmota/wiki/Initial-Configuration) and be sure to check out the instructions to [connect additional sensors](https://github.com/arendst/Sonoff-Tasmota/wiki/Sensor-Configuration).
