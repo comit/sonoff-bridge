@@ -32,3 +32,9 @@ For the above schematic, go into the Config Module menu and set
 - GPIO2: 03 DHT22
 
 That's all you need to do :)
+
+## Another Update
+#### 2017-09-22
+I have installed the above device at my cabin in the woods, and I'm using a cellular modem to connect to the internet for data. If I set the Tasmota-Sonoff software with a teleperiod=3600 (once per hour), the MQTT traffic is about 6kB/hour, which is about 4.2MB/month. That includes the TCP keep-alives and the telemetry messages. So two devices (the main sonoff power switch and the esp-01 button device) takes 8.4MB/month, just below my economy 10MB/month sim card. 
+
+Just FYI, I also have tried using a Raspberry PI at the cabin, and instructing it to SSH to my public-facing server, and creating a reverse tunnel back so that I can access my cabin from my public-facing server. The keep-alives on that connection is about 7.6MB/month. [The cellular phone company is probably using NAT, so I have to connect from cabin->server and not the other way around]
