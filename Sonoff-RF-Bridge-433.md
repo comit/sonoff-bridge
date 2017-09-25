@@ -18,7 +18,7 @@ After programming make sure to move the switch away from the 5-pin header to res
 
 During normal operation the serial interface is used at 19200 baud to communicate with the RF microcontroller. It is therefore wise to disable serial logging (``seriallog 0``).
 
-The bridge is able to learn up to 16 different remote control commands of fixed code 433 MHz frequency as provided by PT2260, PT2262, PT2264 and EV1527 Transmitters. It does **not** recognize Klik Aan Klik Uit (KaKu) remote control signals.
+The bridge is able to learn up to 16 different remote control commands of fixed code 433 MHz frequency as provided by PT2260, PT2262, PT2264 and EV1527 Transmitters. I was not able to recognize the latest Klik Aan Klik Uit (KaKu) remote control signals but some people managed to use the fixed code KaKu devices like PAR-1000 receiver and PAT-103 transmitter.
 
 Tasmota provides default remote control commands to all 16 keys so you can start using the bridge with a Sonoff 4CH Pro or Sonoff RF device without having the bridge to learn remote control commands.
 
