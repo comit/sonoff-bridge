@@ -37,6 +37,7 @@
 - [**Sonoff 4CH / 4CH Pro**](Sonoff-4CH-and-4CH-Pro)
 - [**Sonoff B1**](Sonoff-B1)
 - [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
+- [**MagicHome LED controller**](MagicHome-LED-strip-controller)
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
