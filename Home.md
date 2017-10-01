@@ -28,6 +28,7 @@ The following devices are supported with Serial, Web and MQTT control:
 - [Electrodragon IoT Relay Board](http://www.electrodragon.com/product/wifi-iot-relay-board-based-esp8266/)
 - [AI Light or any my9291 compatible RGBW LED](http://www.ebay.com/itm/172644855726)
 - [Supla device - Espablo-inCan mod. for electrical Installation box](https://forum.supla.org/viewtopic.php?f=33&t=2188)
+- [MagicHome LED controller (aka Flux-Light LED module)](MagicHome-LED-strip-controller)
 
 ## Features
 <img src="https://github.com/arendst/arendst.github.io/blob/master/media/sonoff4ch.jpg" width="250" align="right" />
