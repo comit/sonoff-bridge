@@ -121,6 +121,9 @@ SetOption13      | 1 / on       | Enable button single press only for immediate 
 SetOption14      |              | Show current relay switch mode
 SetOption14      | 0 / off      | (default) Set self-locking mode for all relays
 SetOption14      | 1 / on       | Set interlock mode for all relays 
+SetOption15      |              | Show current LED control
+SetOption15      | 0            | (default) command PWM control
+SetOption15      | 1            | command Color/Dimmer control to PWM RGB(CW) leds
 SetOption32      |              | Show current key hold time in 0.1 seconds
 SetOption32      | 1..100       | Set key hold time from 0.1 to 10 seconds
 SwitchMode\<x\>  |              | Show current external switch mode
