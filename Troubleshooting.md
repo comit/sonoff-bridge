@@ -31,7 +31,16 @@ The only fix for this is to recompile the firmware and disable features you don'
 Known large features are webserver and TLS, but other things to consider disabling if you don't need them are emulation support, domoticz support, ws8212 support
 
 ## Config problems (can cause boot loops, items set in user_config to not appear, etc)
+
 By default, this firmware tries to preserve the existing config (to support automated updates via OTA upgrades), but various things can happen that cause the existing config to be a problem.
+
+When you change the settings in the code, that doesn't directly change the
+settings on the running machine when you load it. What happens is that when it  
+boots up, the firmware looks to see if it has a valid config (is it an upgrade  
+to an older tasmota version), and if the CFG_HOLDER value is in the right 
+place,it assumes that the existing config is valid. If it doesn't find the right
+value, it assumes that this is not an upgrade and takes the compiled-in config  
+data and writes it out to the config area.
 
 There are multiple ways to force the config to what's set in user_config to recover a system.
 
