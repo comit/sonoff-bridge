@@ -318,6 +318,7 @@ MqttClient      | \<client\>     | Set MQTT client (32 chars max) and restart. M
 MqttFingerprint |                | (  TLS only) Show current fingerprint
 MqttFingerprint | \<print\>      |   (TLS only) Set current fingerprint as 20 space separated bytes (59 chars max)
 MqttHost        |                | Show current MQTT host
+MqttHost        | 0              | Clear MQTT host field and allow mDNS to find MQTT host
 MqttHost        | 1              | Reset MQTT host to `user_config.h` (`MQTT_HOST`) and restart
 MqttHost        | \<host\>       | Set MQTT host (32 chars max) and restart
 MqttPassword    |                | Show current MQTT password
