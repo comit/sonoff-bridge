@@ -222,6 +222,9 @@ SetOption1        | 1 / on     | Allow only single, double and hold press button
 SetOption12       |            | Show current configuration flash usage option
 SetOption12       | 0 / off    | (default) Use dynamic flash to save configuration lowering flash wear
 SetOption12       | 1 / on     | Legacy save configuration in eeprom flash location only
+SetOption15       |            | Show current PWM control mode
+SetOption15       | 0 / off    | (default) Allow Pwm command control
+SetOption15       | 1 / on     | Disable Pwm command and allow control by Dimmer or Color commands
 Sleep             |            | Show current sleep state as 0 (Off) or duration of up to 250 mSec
 Sleep             | 0 / off    | (default) Turn sleep off
 Sleep             | 1..250     | Set sleep duration from 1 to 250 mSec to enable energy saving
@@ -428,8 +431,8 @@ SetOption14 |                | Show current relay switch mode
 SetOption14 | 0 / off        | (default) Set self-locking mode for all relays
 SetOption14 | 1 / on         | Set interlock mode for all relays 
 SetOption15 |                | Show current PWM control mode
-SetOption15 | 0 / off        | (default) Allow PWM command control
-SetOption15 | 1 / on         | Disable PWM command and allow control by Dimmer or Color commands
+SetOption15 | 0 / off        | (default) Allow Pwm command control
+SetOption15 | 1 / on         | Disable Pwm command and allow control by Dimmer or Color commands
 SetOption32 |                | Show current key hold time in 0.1 seconds
 SetOption32 | 1..100         | Set key hold time from 0.1 to 10 seconds
 SetOption33 |                | Show Sonoff Pow Max_Power_Retry value
