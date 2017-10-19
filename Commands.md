@@ -536,8 +536,8 @@ Command         | Payload   | Description
 Color           |           | Show current color setting as CCWW, RRGGBB, RRGGBBWW or RRGGBBCCWW
 Color           | #\<value\>   | Set color to hexadecimal value
 Color           | \<CCWW\>  | (Sonoff Led) Set color to CCWW hexadecimal value
-Color           | \<RRGGBB\>   | (WS2812) Set colot to RRGGBB hexadecimal value
-Color           | \<RRGGBBWW\> | (AiLight) Set color to RRGGBBWW hexadecimal value
+Color           | \<RRGGBB\>   | (WS2812, H801, MagicHome) Set colot to RRGGBB hexadecimal value
+Color           | \<RRGGBBWW\> | (AiLight, H801, MagicHome) Set color to RRGGBBWW hexadecimal value
 Color           | \<RRGGBBCCWW\> | (Sonoff B1) Set color to RRGGBBCCWW hexadecimal value
 CT              |           | (Sonoff B1 and Led) Show current Color Temperature (153 = Cold, 500 = Warm)
 CT              | 153..500  | (Sonoff B1 and Led) Set color temperature from cold to warm
@@ -549,6 +549,9 @@ Fade            | 1 / on    | Use fade
 LedTable        |           | Show current Led table intensity correction state
 LedTable        | 0 / off   | (default) Do not use Led table for intensity correction
 LedTable        | 1 / on    | Use Led table for intensity correction
+SetOption15     |           | Show current PWM control mode
+SetOption15     | 0 / off   | (default) Allow Pwm command control
+SetOption15     | 1 / on    | Disable Pwm command and allow control by Dimmer or Color commands
 Speed           |           | Show current fade speed selection
 Speed           | 1..8      | Select desired fade speed from 1 = fast to 8 = slow
 Wakeup          |           | Start wake up sequence from Off to Dimmer value
