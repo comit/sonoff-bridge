@@ -531,6 +531,8 @@ WattRes         | 0..1          | Set Power Resolution
 
 ### WS2812, AiLight, Sonoff Led, B1, BN-SZ01, H801 and MagicHome
 
+MagicHome is also sold as Arilux.
+
 Command         | Payload   | Description
 ----------------|-----------|--------------------------------------------------------
 Color           |           | Show current color setting as CCWW, RRGGBB, RRGGBBWW or RRGGBBCCWW
