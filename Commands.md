@@ -427,6 +427,9 @@ SetOption13 | 1 / on         | Enable button single press only for immediate res
 SetOption14 |                | Show current relay switch mode
 SetOption14 | 0 / off        | (default) Set self-locking mode for all relays
 SetOption14 | 1 / on         | Set interlock mode for all relays 
+SetOption15 |                | Show current PWM control mode
+SetOption15 | 0 / off        | (default) Allow PWM command control
+SetOption15 | 1 / on         | Disable PWM command and allow control by Dimmer or Color commands
 SetOption32 |                | Show current key hold time in 0.1 seconds
 SetOption32 | 1..100         | Set key hold time from 0.1 to 10 seconds
 SetOption33 |                | Show Sonoff Pow Max_Power_Retry value
