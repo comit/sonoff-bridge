@@ -66,7 +66,7 @@ The following command tables are available:
 - [SetOption Overview](#setoption-overview)
 - [Logging](#logging)
 - [Sonoff Pow specific](#sonoff-pow)
-- [WS2812, AiLight, Sonoff Led, B1 and BN-SZ01](#ws2812-ailight-sonoff-led-b1-and-bn-sz01)
+- [WS2812, AiLight, Sonoff Led, B1, BN-SZ01, H801 and MagicHome](#ws2812-ailight-sonoff-led-b1-bn-sz01-h801-and-magichome)
 - [WS2812 led string specific](#ws2812-led-string-specific)
 - [Sonoff RF Bridge 433](#sonoff-rf-bridge-433)
 - [Domoticz](#domoticz)
@@ -529,7 +529,7 @@ WattRes         |               | Show current Power Resolution
 WattRes         | 0..1          | Set Power Resolution
 
 
-### WS2812, AiLight, Sonoff Led, B1 and BN-SZ01
+### WS2812, AiLight, Sonoff Led, B1, BN-SZ01, H801 and MagicHome
 
 Command         | Payload   | Description
 ----------------|-----------|--------------------------------------------------------
