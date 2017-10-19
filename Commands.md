@@ -196,6 +196,12 @@ OtaUrl            | 1          | Reset otaurl to `user_config.h` value (`OTA_URL
 OtaUrl            | \<url\>    | Set otaurl (100 chars max)
 Pwm               |            | Show current PWM setting for enabled channels
 Pwm\<x\>          | 0..1023    | Set Pwm channel x to value ranging from 0 to 1023
+PwmFrequency      |            | Show current PWM frequency in Hz
+PwmFrequency      | 1          | Reset PWM frequency to 880Hz
+PwmFrequency      | 100..4000  | Set PWM frequency from minimum 100Hz to maximum 4kHz
+PwmRange          |            | Show current maximum PWM range value
+PwmRange          | 1          | Reset maximum PWM range to 1023
+PwmRange          | 255..1023  | Set maximum PWM range
 Reset             | 1          | Reset sonoff parameters to `user_config.h` values and restart
 Reset             | 2          | Erase flash, reset sonoff parameters to `user_config.h` values and restart
 Restart           | 1          | Restart sonoff
