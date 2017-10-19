@@ -608,7 +608,7 @@ DomoticzUpdateTimer    | 1..3600 | Send status to Domoticz between every 1 and 3
 | Command | Payload                   | Description
 | --------|---------------------------|------------------------------------------------------
 | IRsend  |                           | Send IR remote control as JSON encapsulated command.
-|         | `{"Protocol": "<proto>",` | \<proto\> is NEC, SONY, RC5, RC6, DISH, JVC or SAMSUNG
+|         | `{"Protocol": "<proto>",` | \<proto\> is NEC, SONY, RC5, RC6, DISH, JVC, PANASONIC or SAMSUNG
 |         |  `"Bits": 1..32`          | bits are the required number of data bits.
 |         |  `"Data": 1..(2^32)-1}`   | data is the data frame as 32 bit unsigned integer.
 |         |                           | See http://www.lirc.org/ for more info.
