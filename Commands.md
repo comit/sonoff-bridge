@@ -138,7 +138,9 @@ SwitchMode\<x\>  | 6            | Set switch mode to inverted PUSHBUTTON (Normal
 ### Sensor
 
 Command           | Payload        | Description
-------------------|----------------|---------------------------------------------------------------
+------------------|----------------|-------------------------------------------------------------------
+Altitude          |                | Show current Altitude to be used by calculating Sea level Pressure
+Altitude          | -30000..30000  | Set local Altitude in meters
 Counter\<x\>      |                | Show current Counter 1..4 value
 Counter\<x\>      | 0              | Reset Counter 1..4
 Counter\<x\>      | 1..64900       | Preset Counter 1..4
