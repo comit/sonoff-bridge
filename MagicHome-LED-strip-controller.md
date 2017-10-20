@@ -47,5 +47,5 @@ Some GPIO are preconfigured with the board:
 - GPIO12 - Blue color on the LED strip, third pin from the GND
 
 Due to variants, you can configure:
-- GPIO04 - on non-IR boards, it's open pin you can use for Onewire, button or something else. On IR-enabled boards, IR receiver is connected to this pin. Today, Sonoff doesn't use this receiver, but support for it is being worked upon.
-- GPIO13  -  This pin is not used on RGB board (so you'll leave it as "None"), but on RGBW, it's driving another channel for LED strip. Depending on the strip type, you can set it to PWM4 (for RGB+Cold White) or PWM5 (for RGB+Warm White).
+- GPIO04 - on non-IR boards, it's an open pin you can use for Onewire, button or something else. It might have pull-down resistor and/or bypass capacitor, so please take that into consideration. On IR-enabled boards, IR receiver is connected to this pin, so you can use IRRecv as functionality.
+- GPIO13  -  This pin is not used on RGB board (so you'll leave it as "None"), but on RGBW, it's driving another channel (cold white or warm white) for LED strip.
