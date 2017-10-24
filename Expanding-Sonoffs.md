@@ -59,3 +59,20 @@ Instead of connecting a switch, you could connect a 4-pin 2.5mm jack, with the p
 * r3 pin4 (ground)
 
 You can then plug a sensor into the jack like you would to a Sonoff TH10/TH16 and define what sensor you have connected to GPIO14
+
+## Electrical considerations
+
+When you switch a GPIO pin to an input and hang a long wire off of it, that wire can pick up stray signals and cause the voltage on the GPIO pin to vary. This can cause the system to think the switch has changed.
+
+To fix this, there are several things you can do.
+
+1. add a pull-up resistor
+1. add a bypass capacitor
+1. shielding on the wire
+1. use twisted pair wiring
+
+A pull-up resistor is a resistor connected between the GPIO pin and 3.3v. The exact value of this is not critical, 4.7k is a common value to use, as is 10k. This ensures that when the switch it open, the GPIO pin will go high.
+
+A bypass capacitor is a small (pF range) capacitor that is connected between the GPIO and ground. This provides a path for any radio signals that are picked up by the wire to go to ground and not confuse the system.
+
+Shielding or using twisted pair wiring are other ways to reduce the effect of radio signals on the system.
