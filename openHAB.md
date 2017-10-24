@@ -20,6 +20,9 @@ By following the guide below you'll be able to observe, control and manage your 
 
 * (optional) Standalone [MQTT client](http://www.hivemq.com/blog/seven-best-mqtt-client-tools) (e.g. [mqtt-spy](https://kamilfb.github.io/mqtt-spy)) to observe and identify messages on the MQTT broker
 
+**Highly recommeded:** If you are new to openHAB+MQTT, go through the [MQTT Binding Getting Started 101 tutorial](https://community.openhab.org/t/mqtt-binding-v1-11-getting-started-101/33958)!
+
+
 If not done yet, you first need to **install and activate** the [MQTT binding](http://docs.openhab.org/addons/bindings/mqtt1/readme.html), the [MQTT action](http://docs.openhab.org/addons/actions/mqtt/readme.html) and the [JsonPath transformation](http://docs.openhab.org/addons/transformations/jsonpath/readme.html), e.g. via the openHAB Paper UI Add-ons section.
 
 Before continuing, please make sure you assigned **unique MQTT "Topics"** in the Sonoff-Tasmota configuration interface of each Sonoff module. The default MQTT topic is "sonoff", in the examples below we will use names like "sonoff-A00EEA".
