@@ -551,11 +551,17 @@ Fade            | 1 / on    | Use fade
 LedTable        |           | Show current Led table intensity correction state
 LedTable        | 0 / off   | (default) Do not use Led table for intensity correction
 LedTable        | 1 / on    | Use Led table for intensity correction
+Scheme          |           | Show current selected scheme
+Scheme          | 0         | (default) Use a single color for all pixels in light/strip/ring
+Scheme          | 1         | (= Wakeup) Start wake up sequence
+Scheme          | 2         | Cycle through RGB colors using speed option
+Scheme          | 3         | Cycle through RBG colors using speed option
+Scheme          | 4         | Random cycle through colors using speed and fade options
 SetOption15     |           | Show current PWM control mode
 SetOption15     | 0 / off   | (default) Allow Pwm command control
 SetOption15     | 1 / on    | Disable Pwm command and allow control by Dimmer or Color commands
 Speed           |           | Show current fade speed selection
-Speed           | 1..8      | Select desired fade speed from 1 = fast to 8 = slow
+Speed           | 1..20     | Select desired fade speed from 1 = fast to 20 = very slow
 Wakeup          |           | Start wake up sequence from Off to Dimmer value
 Wakeup          | 0..100    | Start wake up sequence from Off to provided Dimmer value
 WakeupDuration  |           | Show current wake up light duration in seconds
@@ -571,16 +577,19 @@ Led1..Led\<count\> | \<RRGGBB\> | Set specific led to desired color RRGGBB
 Pixels             |            | Show current pixel count
 Pixels             | \<count\>  | Set amount of pixels in strip or ring up to 512
 Scheme             |            | Show current selected scheme
-Scheme             | 0          | (default) Use single color for all leds in strip/ring
-Scheme             | 1          | Start wakeup light
-Scheme             | 2          | Show clock
-Scheme             | 3          | Show incandescent pattern
-Scheme             | 4          | Show RGB pattern
-Scheme             | 5          | Show Christmas pattern
-Scheme             | 6          | Show Hanukkah pattern
-Scheme             | 7          | Show Kwanzaa pattern
-Scheme             | 8          | Show rainbow pattern
-Scheme             | 9          | Show fire pattern
+Scheme             | 0          | (default) Use a single color for all pixels in light/strip/ring
+Scheme             | 1          | (= Wakeup) Start wake up sequence
+Scheme             | 2          | Cycle through RGB colors using speed option
+Scheme             | 3          | Cycle through RBG colors using speed option
+Scheme             | 4          | Random cycle through colors using speed and fade options
+Scheme             | 5          | Show clock
+Scheme             | 6          | Show incandescent pattern
+Scheme             | 7          | Show RGB pattern
+Scheme             | 8          | Show Christmas pattern
+Scheme             | 9          | Show Hanukkah pattern
+Scheme             | 10         | Show Kwanzaa pattern
+Scheme             | 11         | Show rainbow pattern
+Scheme             | 12         | Show fire pattern
 Width              |            | Show current led group width
 Width              | 0..4       | Set led group width used by Schemes 3 - 9
 
