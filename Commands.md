@@ -433,6 +433,9 @@ SetOption14 | 1 / on         | Set interlock mode for all relays
 SetOption15 |                | Show current PWM control mode
 SetOption15 | 0 / off        | (default) Allow Pwm command control
 SetOption15 | 1 / on         | Disable Pwm command and allow control by Dimmer or Color commands
+SetOption16 |                | Show LED reverse (clock Scheme)
+SetOption16 | 0              | (default) LED clock-wise mode
+SetOption16 | 1              | Set LED counter-clock-wise mode
 SetOption32 |                | Show current key hold time in 0.1 seconds
 SetOption32 | 1..100         | Set key hold time from 0.1 to 10 seconds
 SetOption33 |                | Show Sonoff Pow Max_Power_Retry value
@@ -538,7 +541,7 @@ Command         | Payload   | Description
 Color           |           | Show current color setting as CCWW, RRGGBB, RRGGBBWW or RRGGBBCCWW
 Color           | #\<value\>   | Set color to hexadecimal value
 Color           | \<CCWW\>  | (Sonoff Led) Set color to CCWW hexadecimal value
-Color           | \<RRGGBB\>   | (WS2812, H801, MagicHome) Set colot to RRGGBB hexadecimal value
+Color           | \<RRGGBB\>   | (WS2812, H801, MagicHome) Set color to RRGGBB hexadecimal value
 Color           | \<RRGGBBWW\> | (AiLight, H801, MagicHome) Set color to RRGGBBWW hexadecimal value
 Color           | \<RRGGBBCCWW\> | (Sonoff B1) Set color to RRGGBBCCWW hexadecimal value
 CT              |           | (Sonoff B1 and Led) Show current Color Temperature (153 = Cold, 500 = Warm)
@@ -572,6 +575,12 @@ WakeupDuration  | 1..3600   | Set wake up light duration in seconds
 
 Command            | Payload    | Description
 -------------------|------------|------------------------------------------------------
+Color2             |            | Show current seconds clock hand color setting as RRGGBB, 
+Color2             | \<RRGGBB\> | (WS2812, H801, MagicHome) Set seconds clock hand color to RRGGBB hexadecimal value
+Color3             |            | Show current minutes clock hand color setting as RRGGBB, 
+Color3             | \<RRGGBB\> | (WS2812, H801, MagicHome) Set minutes clock hand color to RRGGBB hexadecimal value
+Color4             |            | Show current hour clock hand color setting as RRGGBB, 
+Color4             | \<RRGGBB\> | (WS2812, H801, MagicHome) Set hour clock hand color to RRGGBB hexadecimal value
 Led1..Led\<count\> |            | Show specific led current color as RRGGBB
 Led1..Led\<count\> | \<RRGGBB\> | Set specific led to desired color RRGGBB
 Pixels             |            | Show current pixel count
@@ -590,8 +599,17 @@ Scheme             | 9          | Show Hanukkah pattern
 Scheme             | 10         | Show Kwanzaa pattern
 Scheme             | 11         | Show rainbow pattern
 Scheme             | 12         | Show fire pattern
-Width              |            | Show current led group width
-Width              | 0..4       | Set led group width used by Schemes 3 - 9
+SetOption16        |            | Show LED reverse (clock Scheme)
+SetOption16        | 0          | (default) LED clock-wise mode
+SetOption16        | 1          | Set LED counter-clock-wise mode
+Width(1)           |            | Show current led group width
+Width(1)           | 0..4       | Set led group width used by Schemes 3 - 9
+Width2             |            | Show current width of the seconds clock hand 
+Width2             | 0..30      | Set the width of the seconds clock hand 
+Width3             |            | Show current width of the minutes clock hand
+Width3             | 0..30      | Set the width of the minutes clock hand 
+Width4             |            | Show current width of the hour clock hand 
+Width4             | 0..30      | Set the width of the hour clock hand 
 
 
 ### Sonoff RF Bridge 433
