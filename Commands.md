@@ -615,7 +615,7 @@ Width4             | 0..30      | Set the width of the hour clock hand
 ### Sonoff RF Bridge 433
 
 Command      | Payload     | Description
--------------|-------------|------------------------------------------------------------------------
+-------------|-------------|---------------------------------------------------------------------------------------------
 RfCode       |             | Show last send 24-bit user code
 RfCode       | 1..8388607  | Send 24-bit user code using RfSync, RfLow and RfHigh timing
 RfCode       | #1..#7FFFFF | Send 24-bit hexadecimal user code using RfSync, RfLow and RfHigh timing
@@ -628,10 +628,10 @@ RfHost       | 1           | Reset 16-bit host part of user code to 11802 (#2E1A
 RfHost       | 2..32767    | Set 16-bit host part of user code
 RfHost       | #2..7FFF    | Set 16-bit host part of user code in hexadecimal
 RfKey\<x\>   |             | Send learned or default RF data for RfKey1 to RfKey16
-RfKey\<x\>   | 1           | Send default RF data for RfKey1 to RfKey16
+RfKey\<x\>   | 1           | Send default RF data for RfKey1 to RfKey16 using RfSync, RfLow, RfHigh and RfHost parameters
 RfKey\<x\>   | 2           | Learn RF data for RfKey1 to RfKey16
 RfKey\<x\>   | 3           | Unlearn RF data for RfKey1 to RfKey16
-RfKey\<x\>   | 4           | Save RF data stored with RfSync, RfLow, RfHigh and last RfCode
+RfKey\<x\>   | 4           | Save RF data using RfSync, RfLow, RfHigh and last RfCode parameters
 RfLow        |             | Show low pulse time in microseconds
 RfLow        | 1           | Reset low pulse time to 270 microseconds
 RfLow        | 2..32767    | Set low pulse time in microseconds
