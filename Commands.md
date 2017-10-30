@@ -615,24 +615,31 @@ Width4             | 0..30      | Set the width of the hour clock hand
 ### Sonoff RF Bridge 433
 
 Command      | Payload     | Description
--------------|-------------|---------------------------------------------------------------
-RfCode       |             | Show last send 23-bit user code
-RfCode       | 1..8388607  | Send 23-bit user code using RfSync, RfLow and RfHigh timing
-RfCode       | #1..#7FFFFF | Send 23-bit user code using RfSync, RfLow and RfHigh timing
-RfHigh       |             | Show default high pulse time in microseconds
+-------------|-------------|------------------------------------------------------------------------
+RfCode       |             | Show last send 24-bit user code
+RfCode       | 1..8388607  | Send 24-bit user code using RfSync, RfLow and RfHigh timing
+RfCode       | #1..#7FFFFF | Send 24-bit hexadecimal user code using RfSync, RfLow and RfHigh timing
+RfHigh       |             | Show high pulse time in microseconds
 RfHigh       | 1           | Reset high pulse time to 840 microseconds
 RfHigh       | 2..32767    | Set high pulse time in microseconds
+RfHigh       | #2..#7FFF   | Set high pulse time in hexadecimal microseconds
+RfHost       |             | Show 16-bit host part of user code
+RfHost       | 1           | Reset 16-bit host part of user code to 11802 (#2E1A)
+RfHost       | 2..32767    | Set 16-bit host part of user code
+RfHost       | #2..7FFF    | Set 16-bit host part of user code in hexadecimal
 RfKey\<x\>   |             | Send learned or default RF data for RfKey1 to RfKey16
 RfKey\<x\>   | 1           | Send default RF data for RfKey1 to RfKey16
 RfKey\<x\>   | 2           | Learn RF data for RfKey1 to RfKey16
 RfKey\<x\>   | 3           | Unlearn RF data for RfKey1 to RfKey16
 RfKey\<x\>   | 4           | Save RF data stored with RfSync, RfLow, RfHigh and last RfCode
-RfLow        |             | Show default low pulse time in microseconds
+RfLow        |             | Show low pulse time in microseconds
 RfLow        | 1           | Reset low pulse time to 270 microseconds
 RfLow        | 2..32767    | Set low pulse time in microseconds
-RfSync       |             | Show default start sync pulse time in microseconds
+RfLow        | #2..#7FFF   | Set low pulse time in hexadecimal microseconds
+RfSync       |             | Show start sync pulse time in microseconds
 RfSync       | 1           | Reset start sync pulse time to 8470 microseconds
 RfSync       | 2..32767    | Set start sync pulse time in microseconds
+RfSync       | #2..#7FFF   | Set start sync pulse time in hexadecimal microseconds
 
 
 ### Domoticz
