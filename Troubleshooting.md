@@ -62,6 +62,17 @@ Clearing the configuration flash area can also solve unbootable systems. Using t
 3. Optional Clear the complete flash with command<br/> ``esptool.py --port COM5 erase_flash``
 4. Optional Load Tasmota into a device with command<br/> ``esptool.py --port COM5 write_flash -fs 1MB -fm dout 0x0 sonoff.bin``
 
+### PlatformIO + esptool
+With the Command Prompt execute:
+1. cd %USERPROFILE%\.platformio\python27\Scripts\
+2. pip install pyserial
+3. pip install esptool
+
+After this you can use the same commands as above:
+1. esptool --port COM<number> erase_region 0x0F4000 0x008000
+2. esptool --port COM<number> erase_flash
+3. esptool --port COM<number> write_flash --flash_mode dout --flash_size 1MB 0x0 firmware.bin
+
 ## does not respond to button intermittently.
 The library that is being used to make the TCP connection to the MQTT server has a 5 second timeout, during which the firmware is stuck and can do nothing else (including switching the relay locally)
 
