@@ -69,9 +69,9 @@ With the Command Prompt execute:
 3. pip install esptool
 
 After this you can use the same commands as above:
-1. esptool --port COM<number> erase_region 0x0F4000 0x008000
-2. esptool --port COM<number> erase_flash
-3. esptool --port COM<number> write_flash --flash_mode dout --flash_size 1MB 0x0 firmware.bin
+1. esptool --port COM5 erase_region 0x0F4000 0x008000
+2. esptool --port COM5 erase_flash
+3. esptool --port COM5 write_flash --flash_mode dout --flash_size 1MB 0x0 firmware.bin
 
 ## does not respond to button intermittently.
 The library that is being used to make the TCP connection to the MQTT server has a 5 second timeout, during which the firmware is stuck and can do nothing else (including switching the relay locally)
@@ -127,3 +127,18 @@ Through either a terminal program or the android serial monitor, set the baud ra
 
 ## crashdumps
 If the ESP-8266 crashes, it frequently dumps information about the crash out the serial port, so the process listed above to see serial logs can provide extremely useful information
+
+## unknown issues
+    %USERPROFILE%.platformio\python27\Scripts>esptool --port COM12 write_flash --flash_mode dout --flash_size 1MB 0x0 
+    firmware.bin
+    esptool.py v2.1
+    Connecting....
+    Detecting chip type... ESP8266
+    Chip is ESP8266
+    Uploading stub...
+    Running stub...
+    Stub running...
+    Configuring flash size...
+    Compressed 475008 bytes to 327693...
+    Writing at 0x00008000... (14 %)
+    A fatal error occurred: Timed out waiting for packet header
