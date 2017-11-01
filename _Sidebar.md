@@ -38,6 +38,7 @@
 - [**Sonoff B1**](Sonoff-B1)
 - [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
 - [**MagicHome LED controller**](MagicHome-LED-strip-controller)
+- [**Sonoff-S20-Smart-Socket**](Sonoff-S20-Smart-Socket)
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
