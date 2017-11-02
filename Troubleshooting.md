@@ -142,3 +142,4 @@ If the ESP-8266 crashes, it frequently dumps information about the crash out the
     Compressed 475008 bytes to 327693...
     Writing at 0x00008000... (14 %)
     A fatal error occurred: Timed out waiting for packet header
+Maybe because off: https://vilimpoc.org/blog/2016/05/03/esptool-ck-esp8266-and-ftdi-bug-hunting/
