@@ -57,3 +57,4 @@
 - [**Wiring additional things to a module**](Expanding-Sonoffs)
 - [**Defining new module types**](Adding-new-Module-types)
 - [**GPIO Locations**](https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations)
+- [**Octoprint**](https://github.com/arendst/Sonoff-Tasmota/wiki/Octoprint)
