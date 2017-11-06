@@ -48,6 +48,9 @@
 - [**SmartThings**](https://github.com/BrettSheleski/SmartThingsPublic/blob/master/devicetypes/BrettSheleski/sonoff-tasmota.src/readme.md)
 - [**Secure Setup**](Securing-your-IoT-from-hacking)
 
+**Other Integrations**
+- [**Octoprint**](https://github.com/arendst/Sonoff-Tasmota/wiki/Octoprint)
+
 **Further Topics**
 - [**MQTT Overview**](MQTT-Overview)
 - [**Remote Button**](Control-a-Sonoff-using-a-remote-button)
@@ -57,4 +60,4 @@
 - [**Wiring additional things to a module**](Expanding-Sonoffs)
 - [**Defining new module types**](Adding-new-Module-types)
 - [**GPIO Locations**](https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations)
-- [**Octoprint**](https://github.com/arendst/Sonoff-Tasmota/wiki/Octoprint)
+
