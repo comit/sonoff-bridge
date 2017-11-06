@@ -49,7 +49,7 @@
 - [**Secure Setup**](Securing-your-IoT-from-hacking)
 
 **Other Integrations**
-- [**Octoprint**](https://github.com/arendst/Sonoff-Tasmota/wiki/Octoprint)
+- [**OctoPrint**](https://github.com/arendst/Sonoff-Tasmota/wiki/Octoprint)
 
 **Further Topics**
 - [**MQTT Overview**](MQTT-Overview)
