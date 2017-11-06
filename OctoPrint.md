@@ -4,7 +4,7 @@ OctoPrint provides a snappy web interface for controlling consumer 3D printers. 
 
 Its website can be found at http://www.octoprint.org.
 
-## Octoprint-Tasmota
+## OctoPrint-Tasmota
 
 Jneilliii wrote a plugin to control your Sonoff device with tasmota firmware via OctoPrint, for example shutdown the printer after a print has finished.
 
