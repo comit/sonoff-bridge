@@ -6,6 +6,6 @@ Its website can be found at http://www.octoprint.org.
 
 ## Octoprint-Tasmota
 
-Jneilliii wrote a plugin to control your Sonoff device with tasmota firmware via OctoPrint, for example shutdown the printer after a print is finished.
+Jneilliii wrote a plugin to control your Sonoff device with tasmota firmware via OctoPrint, for example shutdown the printer after a print has finished.
 
 Repository: https://github.com/jneilliii/OctoPrint-Tasmota
