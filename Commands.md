@@ -583,12 +583,12 @@ WakeupDuration  | 1..3600   | Set wake up light duration in seconds
 
 Command            | Payload    | Description
 -------------------|------------|------------------------------------------------------
-Color2             |            | Show current seconds clock hand color setting as RRGGBB, 
-Color2             | \<RRGGBB\> | (WS2812, H801, MagicHome) Set seconds clock hand color to RRGGBB hexadecimal value
-Color3             |            | Show current minutes clock hand color setting as RRGGBB, 
-Color3             | \<RRGGBB\> | (WS2812, H801, MagicHome) Set minutes clock hand color to RRGGBB hexadecimal value
-Color4             |            | Show current hour clock hand color setting as RRGGBB, 
-Color4             | \<RRGGBB\> | (WS2812, H801, MagicHome) Set hour clock hand color to RRGGBB hexadecimal value
+Color2             |            | Show current seconds clock hand color setting as RRGGBB
+Color2             | \<RRGGBB\> | Set seconds clock hand color to RRGGBB hexadecimal value
+Color3             |            | Show current minutes clock hand color setting as RRGGBB
+Color3             | \<RRGGBB\> | Set minutes clock hand color to RRGGBB hexadecimal value
+Color4             |            | Show current hour clock hand color setting as RRGGBB
+Color4             | \<RRGGBB\> | Set hour clock hand color to RRGGBB hexadecimal value
 Led1..Led\<count\> |            | Show specific led current color as RRGGBB
 Led1..Led\<count\> | \<RRGGBB\> | Set specific led to desired color RRGGBB
 Pixels             |            | Show current pixel count
@@ -611,7 +611,7 @@ SetOption16        |            | Show LED reverse (clock Scheme)
 SetOption16        | 0          | (default) LED clock-wise mode
 SetOption16        | 1          | Set LED counter-clock-wise mode
 Width(1)           |            | Show current led group width
-Width(1)           | 0..4       | Set led group width used by Schemes 3 - 9
+Width(1)           | 0..4       | Set led group width used by Schemes 6 - 12
 Width2             |            | Show current width of the seconds clock hand 
 Width2             | 0..30      | Set the width of the seconds clock hand 
 Width3             |            | Show current width of the minutes clock hand
