@@ -483,6 +483,8 @@ CfgDump         |           | Dump all configuration to log file
 
 Command         | Payload       | Description
 ----------------|---------------|----------------------------------------------------------
+AmpRes          |               | Show current Current Resolution
+AmpRes          | 0..3          | Set Current Resolution
 CurrentHigh     |               | Show current current high threshold value
 CurrentHigh     | 0 / off       | (default) Disable current high threshold
 CurrentHigh     | \<milliamps\> | Set current high threshold value
@@ -533,9 +535,9 @@ VoltageLow      |               | Show current voltage low threshold value
 VoltageLow      | 0 / off       | (default) Disable voltage low threshold
 VoltageLow      | \<voltage\>   | Set voltage low threshold value
 VoltRes         |               | Show current Voltage Resolution
-VoltRes         | 0..1          | Set Voltage Resolution
+VoltRes         | 0..3          | Set Voltage Resolution
 WattRes         |               | Show current Power Resolution
-WattRes         | 0..1          | Set Power Resolution
+WattRes         | 0..3          | Set Power Resolution
 
 
 ### WS2812, AiLight, Sonoff Led, B1, BN-SZ01, H801 and MagicHome
