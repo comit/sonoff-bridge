@@ -141,6 +141,8 @@ Command           | Payload        | Description
 ------------------|----------------|-------------------------------------------------------------------
 Altitude          |                | Show current Altitude to be used by calculating Sea level Pressure
 Altitude          | -30000..30000  | Set local Altitude in meters
+AmpRes            |                | Show current Current Resolution
+AmpRes            | 0..3           | Set Current Resolution
 Counter\<x\>      |                | Show current Counter 1..4 value
 Counter\<x\>      | 0              | Reset Counter 1..4
 Counter\<x\>      | 1..64900       | Preset Counter 1..4
@@ -154,6 +156,10 @@ EnergyRes         |                | Show current Energy Resolution
 EnergyRes         | 0..5           | Set Energy Resolution
 HumRes            |                | Show current Humidity Resolution
 HumRes            | 0..3           | Set Humidity Resolution
+Ina219Mode        |                | Show current Ina219 Calibration Mode
+Ina219Mode        | 0              | Set Ina219 Calibration to max 32V and 2A
+Ina219Mode        | 1              | Set Ina219 Calibration to max 32V and 1A
+Ina219Mode        | 2              | Set Ina219 Calibration to max 16V and 0.4A
 PressRes          |                | Show current Pressure Resolution
 PressRes          | 0..3           | Set Pressure Resolution
 SetOption8        |                | Show current Temperature as either Celsius or Fahrenheit
@@ -163,9 +169,9 @@ TempRes           |                | Show current Temperature Resolution
 TempRes           | 0..3           | Set Temperature Resolution
 TempUnit          |                | Replaced by SetOption8
 VoltRes           |                | Show current Voltage Resolution
-VoltRes           | 0..1           | Set Voltage Resolution
+VoltRes           | 0..3           | Set Voltage Resolution
 WattRes           |                | Show current Power Resolution
-WattRes           | 0..1           | Set Power Resolution
+WattRes           | 0..3           | Set Power Resolution
 
 
 ### Management
