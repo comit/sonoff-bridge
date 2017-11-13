@@ -23,15 +23,17 @@ This little device has two _inputs_ (DHT & button), and no _output_. You can use
 Pat B
 
 ## Update
-#### 2017-06-10
-This design still works with version 5.1.5 of the firmware. There's no need anymore to create a special build; the new design allows you to customize the code at runtime.
+#### 2017-11-12
+This design still works with version 5.5.2 of the firmware. There's no need anymore to create a special build; the new design allows you to customize the code at runtime.
 
 For the above schematic, go into the Config Module menu and set
 - Module: 18 WeMos D1 mini
-- GPIO0: 13 Button1
+- GPIO0: 09 Switch1
 - GPIO2: 03 DHT22
 
-That's all you need to do :)
+and set switchtopic1 to the topic for the device you want to control, and switchmode1 to 3 (toggle). That's all you need to do :)
+
+I also discovered that the button *must* be a momentary pushbutton; don't use a switch, because both GPIO0 and GPIO2 must be floating at boot time.
 
 ## Another Update
 #### 2017-09-22
