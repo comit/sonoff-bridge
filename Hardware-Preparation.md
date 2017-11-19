@@ -1,6 +1,6 @@
 ## Hardware Preparation
 
-You need to make the serial programming interface of the Sonoff module / the ESP8266 microchip available. In most cases the pins are available on the PCB but connectors need to be soldered or otherwise applied to allow interfacing. You'll furthermore need a **3.3V FTDI USB-to-Serial Converter/Programmer**.
+You need to make the serial programming interface of the Sonoff module / the ESP8266 microchip available. In most cases the pins are available on the PCB but connectors need to be soldered or otherwise applied to allow interfacing. You'll furthermore need a **USB UART TTL 3.3V Converter/Programmer** (e.g. CP2102, CH340G, FT232, PL2303).
 
 <img alt="Sonoff Pow Bricked" src="https://github.com/arendst/arendst.github.io/blob/master/media/pow1.jpg" width="40%" align="right" />
 
