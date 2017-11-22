@@ -564,10 +564,16 @@ Color           | 9         | Set color to Purple
 Color           | 10        | Set color to Yellow
 Color           | 11        | Set color to Pink
 Color           | 12        | Set color to White
+Color           | +         | Set next color out of 12
+Color           | -         | Set previous color out of 12
 CT              |           | (Sonoff B1 and Led) Show current Color Temperature (153 = Cold, 500 = Warm)
 CT              | 153..500  | (Sonoff B1 and Led) Set color temperature from cold to warm
+CT              | +         | Increment CT in 10 steps
+CT              | -         | Decrement CT in 10 steps
 Dimmer          |           | Show current dimmer setting from 0 to 100%
 Dimmer          | 0..100    | Set dimmer value from 0 to 100%
+Dimmer          | +         | Increment brightness in 10 steps
+Dimmer          | -         | Decrement brightness in 10 steps
 Fade            |           | Show current fade state
 Fade            | 0 / off   | (default) Do not use fade
 Fade            | 1 / on    | Use fade
@@ -580,11 +586,15 @@ Scheme          | 1         | (= Wakeup) Start wake up sequence
 Scheme          | 2         | Cycle through RGB colors using speed option
 Scheme          | 3         | Cycle through RBG colors using speed option
 Scheme          | 4         | Random cycle through colors using speed and fade options
+Scheme          | +         | Set next Scheme
+Scheme          | -         | Set previous Scheme
 SetOption15     |           | Show current PWM control mode
 SetOption15     | 0 / off   | (default) Allow Pwm command control
 SetOption15     | 1 / on    | Disable Pwm command and allow control by Dimmer or Color commands
 Speed           |           | Show current fade speed selection
 Speed           | 1..20     | Select desired fade speed from 1 = fast to 20 = very slow
+Speed           | +         | Increase Speed
+Speed           | -         | Decrease Speed
 Wakeup          |           | Start wake up sequence from Off to Dimmer value
 Wakeup          | 0..100    | Start wake up sequence from Off to provided Dimmer value
 WakeupDuration  |           | Show current wake up light duration in seconds
