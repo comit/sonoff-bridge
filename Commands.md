@@ -498,6 +498,9 @@ EnergyReset     |               | Show Energy Total, Yesterday and Today
 EnergyReset     | 1             | Reset Energy Today
 EnergyReset     | 2             | Reset Energy Yesterday
 EnergyReset     | 3             | Reset Energy Total to value of Energy Today
+EnergyReset1    | 0..42500      | ((P)Re)Set Energy Today in Wh
+EnergyReset2    | 0..42500      | ((P)Re)Set Energy Yesterday in Wh
+EnergyReset3    | 0..42500000   | ((P)Re)Set Energy Total in Wh
 HlwIcal         |               | Show calibration value for Current
 HlwIcal         | 1             | Set default calibration value for Current to 3500
 HlwIcal         | \<value\>     | Set user calibration value for Current starting from 1100
