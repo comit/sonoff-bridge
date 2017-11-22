@@ -134,6 +134,7 @@ SwitchMode\<x\>  | 3            | Set switch mode to PUSHBUTTON (Normally 1, 0 =
 SwitchMode\<x\>  | 4            | Set switch mode to inverted PUSHBUTTON (Normally 0, 1 = toggle)
 SwitchMode\<x\>  | 5            | Set switch mode to PUSHBUTTON (Normally 1, 0 = toggle, Hold = hold)
 SwitchMode\<x\>  | 6            | Set switch mode to inverted PUSHBUTTON (Normally 0, 1 = toggle, Hold = hold)
+SwitchMode\<x\>  | 7            | Set switch mode to PUSHBUTTON (0 = toggle, 1 = toggle)
 
 ### Sensor
 
