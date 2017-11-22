@@ -552,6 +552,18 @@ Color           | \<CCWW\>  | (Sonoff Led) Set color to CCWW hexadecimal value
 Color           | \<RRGGBB\>   | (WS2812, H801, MagicHome) Set color to RRGGBB hexadecimal value
 Color           | \<RRGGBBWW\> | (AiLight, H801, MagicHome) Set color to RRGGBBWW hexadecimal value
 Color           | \<RRGGBBCCWW\> | (Sonoff B1) Set color to RRGGBBCCWW hexadecimal value
+Color           | 1         | Set color to Red
+Color           | 2         | Set color to Green
+Color           | 3         | Set color to Blue
+Color           | 4         | Set color to Orange
+Color           | 5         | Set color to Light Green
+Color           | 6         | Set color to Light Blue
+Color           | 7         | Set color to Amber
+Color           | 8         | Set color to Cyan
+Color           | 9         | Set color to Purple
+Color           | 10        | Set color to Yellow
+Color           | 11        | Set color to Pink
+Color           | 12        | Set color to White
 CT              |           | (Sonoff B1 and Led) Show current Color Temperature (153 = Cold, 500 = Warm)
 CT              | 153..500  | (Sonoff B1 and Led) Set color temperature from cold to warm
 Dimmer          |           | Show current dimmer setting from 0 to 100%
