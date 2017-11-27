@@ -14,3 +14,16 @@ As always, you need to access the serial interface. First pop up the top part of
 The **four serial pins** (3V3, Rx, Tx, GND) as well as the GPIO0 signal line are available as test points and clearly marked. Solder wires to those or use pogo pins as you prefer.
 
 As with all modules pulling GPIO0 to GND is needed to put the chip in programming mode. You need to **connect GPIO0 and GND** during power up. An additional GND pad is available in the middle of the PCB.
+
+### LED HEX10 Color Codes
+The Sonoff B1 uses a TEN charter HEX code for all colors. 
+Colors tested with firmware 5.9.1 20171107:
+* 00000000A0 = WARM
+* 000000A000 = COOL
+* 0000A00000 = BLUE
+* FF14500000 = PURPLE
+* 551A8B0000 = DARK PURPLE
+* A300000000 = RED
+* 00ff000000 = GREEN
+
+
