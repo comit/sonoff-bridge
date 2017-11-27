@@ -29,16 +29,16 @@
 
 **Devices - Additional Info**
 - [**Sonoff Basic**](Sonoff-Basic)
+- [**Sonoff S20 Smart Socket**](Sonoff-S20-Smart-Socket)
 - [**Sonoff Dual**](Sonoff-Dual)
-- [**Sonoff Pow**](Sonoff-Pow)
+- [**Sonoff 4CH / 4CH Pro**](Sonoff-4CH-and-4CH-Pro)
 - [**Sonoff RF and Slampher**](Sonoff-RF)
 - [**Sonoff RF Bridge 433**](Sonoff-RF-Bridge-433)
+- [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff Touch**](Sonoff-Touch)
-- [**Sonoff 4CH / 4CH Pro**](Sonoff-4CH-and-4CH-Pro)
 - [**Sonoff B1**](Sonoff-B1)
 - [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
 - [**MagicHome LED controller**](MagicHome-LED-strip-controller)
-- [**Sonoff-S20-Smart-Socket**](Sonoff-S20-Smart-Socket)
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
