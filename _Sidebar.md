@@ -48,6 +48,7 @@
 - [**HomeSeer**](HomeSeer)
 - [**SmartThings**](https://github.com/BrettSheleski/SmartThingsPublic/blob/master/devicetypes/BrettSheleski/sonoff-tasmota.src/readme.md)
 - [**Secure Setup**](Securing-your-IoT-from-hacking)
+- [**IP-Symcon**](IP-Symcon)
 
 **Other Integrations**
 - [**OctoPrint**](https://github.com/arendst/Sonoff-Tasmota/wiki/Octoprint)
