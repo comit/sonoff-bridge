@@ -41,34 +41,11 @@ If everything went well, you are now in Flash Mode and ready to continue with th
 
 Check the module specific instructions and restrictions documented in the **device specific articles linked in the menu on the right** 🡺
 
-* [Sonoff Basic](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Basic#serial-connection)
-* [Sonoff Dual](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Dual)
-* [Sonoff RF](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-RF#serial-connection)
-* [Sonoff Pow](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Pow)
-* [Sonoff Touch](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-Touch)
-* [Sonoff 4CH / 4CH Pro](https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-4CH-and-4CH-Pro)
+* [Sonoff Basic](Sonoff-Basic#serial-connection)
+* [Sonoff Dual](Sonoff-Dual)
+* [Sonoff RF](Sonoff-RF#serial-connection)
+* [Sonoff Pow](Sonoff-Pow)
+* [Sonoff Touch](Sonoff-Touch)
+* [Sonoff 4CH / 4CH Pro](Sonoff-4CH-and-4CH-Pro)
+* ... (see menu on the right)
 
-
-### Motor Clockwise/Anticlockwise
-
-<img alt="MotorCAC" src="https://github.com/arendst/arendst.github.io/blob/master/media/motorcac1.jpg" width="230" align="right" /> 
-This USB powered or external powered board provides one GPIO controlling two alternating relays with Normally Open (NO) and Normally Closed (NC) contacts. It can be used for changing directions of a connected motor.
-
-Programming the on-board 3.3V [PSA-B](https://www.itead.cc/psa-01.html) is possible when Rx (Pin 7), Tx (Pin 8) and GND (Pin 9) are connected to the FTDI interface, the button is pressed and (USB) power is provided.
-
-### Sonoff SC
-
-Flashing the ESP8266
-
-Remove the 4 screws on the bottom.
-The button is connected to GPIO0.
-
-You will have to remove the TX jumper in the board to avoid the ATMega328P to interfere in the upload process.
-
-Press and hold the button while powering the board to set the ESP8266 into flashing mode.
-Note! After flashing you need to set the baudrate to 19200.
-Don't forget to reconnect the TX jumper after flashing ;)
-
-<img alt="SonoffSC" src="https://puu.sh/vZZRI/ff36ff9244.jpg" width="230" />
-<img alt="SonoffScRemoveTX" src="https://puu.sh/vZZSi/43244f3cc1.jpg" width="230" /> 
-<img alt="SonoffSCButoom" src="https://puu.sh/vZZSC/aaa140afa3.jpg" width="130" />
