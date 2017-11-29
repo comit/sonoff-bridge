@@ -37,8 +37,10 @@
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff Touch**](Sonoff-Touch)
 - [**Sonoff B1**](Sonoff-B1)
+- [**Sonoff SC**](Sonoff-SC)
 - [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
 - [**MagicHome LED controller**](MagicHome-LED-strip-controller)
+- [**Others**](others/retired)
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
@@ -62,4 +64,3 @@
 - [**Wiring additional things to a module**](Expanding-Sonoffs)
 - [**Defining new module types**](Adding-new-Module-types)
 - [**GPIO Locations**](https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations)
-
