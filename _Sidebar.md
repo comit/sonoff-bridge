@@ -41,7 +41,7 @@
 - [**Sonoff SC**](Sonoff-SC)
 - [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
 - [**MagicHome LED controller**](MagicHome-LED-strip-controller)
-- [**Others**](others/retired)
+- [**retired**](others)
 
 **Home Automation Integration**
 - [**openHAB**](openHAB)
