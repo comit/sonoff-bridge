@@ -5,6 +5,15 @@
 
 Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
 
+
+<img alt="S20 Smart Socket" src="https://github.com/arendst/arendst.github.io/blob/master/media/s20b.jpg" width="230" align="right" /> 
+The picture shows how to program the S20 Smart Socket powered by the FTDI USB converter.  With newer US sockets, either use a right-angle header, or remove the header after flashing.  Otherwise, the pushbutton may rub against a pin and get stuck.
+<br />
+<br />
+<br />
+<br />
+
+
 ### Step 1.
 
 Be sure it is **NOT** plugged in!
