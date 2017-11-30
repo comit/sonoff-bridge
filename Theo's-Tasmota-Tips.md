@@ -1,10 +1,10 @@
 ### 20170714 - Tasmota needs compile Flash Mode option DOUT on all devices
 
-An increasing number of devices is using the ESP8285. As this chip only supports a subset of hardware connections to it's inbuilt 1MB flash the firmware needs to be compiled with Flash Mode option set for DOUT.
+An increasing number of devices are using the ESP8285. As this chip only supports a subset of hardware connections to its inbuilt 1MB flash the firmware needs to be compiled with Flash Mode option set for DOUT.
 
 This is documented in the [Wiki](https://github.com/arendst/Sonoff-Tasmota/wiki/Upload) and the platformio.ini file in the repository.
 
-As this compile option works for the ESP8266 "legacy" chip too I only provide released firmware compiled with Flash Mode DOUT which runs fine on all released hardware like Sonoff, Wemos etc. See also [#598](https://github.com/arendst/Sonoff-Tasmota/issues/598).
+As this compile option works for the ESP8266 "legacy" chip too, I only provide released firmware compiled with Flash Mode DOUT which runs fine on all released hardware like Sonoff, Wemos etc. See also [#598](https://github.com/arendst/Sonoff-Tasmota/issues/598).
 
 Indications of selecting the wrong Flash Mode compile option (like DIO or QIO) on ESP8285 is a dead device while uploading just went fine [#683](https://github.com/arendst/Sonoff-Tasmota/issues/683).
 
