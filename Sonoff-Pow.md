@@ -11,7 +11,7 @@ The Gnd connection of the Pow has a 50% chance of being connected to the live AC
 **Also do not connect any additional sensors to serial pins until you are 100% sure.**
 It can at least destroy your Pow!
 
-**The Gpios on the Pow might be connected to AC power**, therefore it is not possible to add sensors to the Pow. 
+**The GPIOs on the Pow might be connected to AC power**, therefore it is not possible to add sensors to the Pow. 
 
 ## Serial Connection
 
