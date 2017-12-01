@@ -1,4 +1,5 @@
 <img alt="Sonoff" src="https://github.com/arendst/arendst.github.io/blob/master/media/domoticz2.jpg" width="250" align="right" /> 
+
 Sonoff supports [Domoticz](http://www.domoticz.com/) MQTT 'out of the box' for both relays and sensors.
 
 Find below the procedure to configure Domoticz and Sonoff-Tasmota.
