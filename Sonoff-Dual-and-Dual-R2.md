@@ -22,15 +22,15 @@ Programming the Sonoff Dual R2 is a breeze although the on-board-button is not c
 
 <img alt="Sonoff Dual R2" src="https://github.com/arendst/arendst.github.io/blob/master/media/dualr2d.jpg" width="40%" align="right" />
 
-Luckily both Gnd and GPIO0 (as Button 0) are available on the second header. A simple jumper between GND and the Button 0 pin will do while programming will do.
+Luckily both GND and GPIO0 (as BUTTON 0) are available on the second header. A simple jumper between GND and BUTTON 0  while programming will do.
 
 ### Use external switches
 
-The relays can be controlled by external push buttons or switches connected to the header at the designated positions. Button 0 connected to GND controls relay 1 and button 1 connected to GND controls relay 2.
+The relays can be controlled by external push buttons or switches connected to the header at the designated positions. BUTTON 0 connected to GND controls relay 1 and BUTTON 1 connected to GND controls relay 2.
 
-See the image on the right how to configure this functionality in Tasmota.
+See the image on the right how to configure this functionality in Tasmota as Switch1 and Switch2.
 
-**NOTE** Make sure not to use a switch that keeps the connection between GND and Button 0 active while power is re-applied as the device will start in programming mode.
+**NOTE** Make sure not to use a switch that keeps the connection between GND and BUTTON 0 active while power is re-applied as the device will start in programming mode.
 
 ## Sonoff Dual
 
