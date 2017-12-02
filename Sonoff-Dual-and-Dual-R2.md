@@ -26,7 +26,7 @@ Luckily both GND and GPIO0 (as BUTTON 0) are available on the second header. A s
 
 ### Use external switches
 
-The relays can be controlled by external push buttons or switches connected to the header at the designated positions. BUTTON 0 connected to GND controls relay 1 and BUTTON 1 connected to GND controls relay 2.
+The relays can be controlled by external push buttons or switches connected to the header at the designated positions. BUTTON 0 (= GPIO0) connected to GND controls relay 1 and BUTTON 1 (= GPIO9) connected to GND controls relay 2.
 
 See the image on the right how to configure this functionality in Tasmota as Switch1 and Switch2.
 
