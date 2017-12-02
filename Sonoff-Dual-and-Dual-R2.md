@@ -3,7 +3,21 @@
 * Itead Shop: https://www.itead.cc/sonoff-dual.html
 * Itead Wiki: https://www.itead.cc/wiki/Sonoff_Dual
 
-## Serial Connection
+Sonoff Dual R2 is the replacement for Sonoff Dual. Compared to the Dual the main differences/improvements for the Dual R2 are:
+* As the second microcontroller has been removed both relays are now controlled directly by an ESP8285
+* The button is now directly connected to the ESP8285
+* The header connector is now supported in Tasmota either as individual Switch for a relay or as any sensor
+
+## Sonoff Dual R2
+
+### Serial Connection
+
+Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
+
+
+## Sonoff Dual
+
+### Serial Connection
 
 Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
 
@@ -18,7 +32,7 @@ Programming the Sonoff Dual is more difficult because the on-board-button is not
 1. Unscrew the Sonoff Dual from the housing and access the underside of the PCB You can find GPIO0 on one side of a resistor as shown in the second image.
 2. GPIO0 can be found on the small inter layer [via](https://en.wikipedia.org/wiki/Via_(electronics)) pointed at in the first image. Attention: If the via is covered by silk screen (green) you need to expose the underlying conductive (copper) by careful scratching it off.
 
-## Restricted Button Functionality
+### Restricted Button Functionality
 
 Please be aware, that the button on the Sonoff Dual will initially not have any functionality!
 
@@ -28,7 +42,7 @@ Other than on most Sonoff module the button is not connected to the normal butto
 
 After configuring the device as a "Sonoff Dual", the button will regain normal functionality.
 
-## Solving intermittent relay switch errors
+### Solving intermittent relay switch errors
 
 Where most Sonoff's use GPIO to control one or more relays the Sonoff Dual and 4 Channel Inching Relay Assy do use the standard SERIAL interface to control the relays.
 
