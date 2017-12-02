@@ -31,7 +31,7 @@
 **Devices - Additional Info**
 - [**Sonoff Basic**](Sonoff-Basic)
 - [**Sonoff S20 Smart Socket**](Sonoff-S20-Smart-Socket)
-- [**Sonoff Dual**](Sonoff-Dual)
+- [**Sonoff Dual / Dual R2**](Sonoff-Dual-and-Dual-R2)
 - [**Sonoff 4CH / 4CH Pro**](Sonoff-4CH-and-4CH-Pro)
 - [**Sonoff RF and Slampher**](Sonoff-RF)
 - [**Sonoff RF Bridge 433**](Sonoff-RF-Bridge-433)
