@@ -24,7 +24,7 @@ Luckily both Gnd and GPIO0 (as Button 0) are available on the second header. A s
 
 ### Configure Dual R2
 
-<img alt="Sonoff Dual R2" src="https://github.com/arendst/arendst.github.io/blob/master/media/dualr2c.jpg" width="48%" align="right" />
+<img alt="Sonoff Dual R2" src="https://github.com/arendst/arendst.github.io/blob/master/media/dualr2d.jpg" width="48%" align="right" />
 
 To control relays by external switches connected the switch to the header at the designated positions. Button 0 connected to GND controls relay 1 and button 1 connected to GND controls relay 2.
 
