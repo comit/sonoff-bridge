@@ -9,7 +9,7 @@ The following devices are supported with Serial, Web and MQTT control:
 - [iTead Sonoff RF](http://sonoff.itead.cc/en/products/sonoff/sonoff-rf)
 - [iTead Sonoff SV](https://www.itead.cc/sonoff-sv.html)
 - [iTead Sonoff TH10/TH16 with temperature sensor](http://sonoff.itead.cc/en/products/sonoff/sonoff-th)
-- [iTead Sonoff Dual](http://sonoff.itead.cc/en/products/sonoff/sonoff-dual)
+- [iTead Sonoff Dual (R2)](http://sonoff.itead.cc/en/products/sonoff/sonoff-dual)
 - [iTead Sonoff Pow](http://sonoff.itead.cc/en/products/sonoff/sonoff-pow)
 - [iTead Sonoff 4CH](http://sonoff.itead.cc/en/products/sonoff/sonoff-4ch)
 - [iTead Sonoff 4CH Pro](http://sonoff.itead.cc/en/products/sonoff/sonoff-4ch-pro)
@@ -29,6 +29,7 @@ The following devices are supported with Serial, Web and MQTT control:
 - [AI Light or any my9291 compatible RGBW LED](http://www.ebay.com/itm/172644855726)
 - [Supla device - Espablo-inCan mod. for electrical Installation box](https://forum.supla.org/viewtopic.php?f=33&t=2188)
 - [MagicHome LED controller (aka Flux-Light LED module)](MagicHome-LED-strip-controller)
+- [AriLux LED controller](https://www.banggood.com/ARILUX-AL-LC01-Super-Mini-LED-WIFI-Smart-RGB-Controller-For-RGB-LED-Strip-Light-DC-9-12V-p-1058603.html)
 - [Luani HVIO board](https://luani.de/projekte/esp8266-hvio/)
 
 ## Features
