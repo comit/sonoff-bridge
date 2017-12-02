@@ -20,11 +20,11 @@ As always, you need to access the serial interface. The **four serial pins** (VC
 
 Programming the Sonoff Dual R2 is a breeze although the on-board-button is not connected to GPIO0. As with all ESP8266/ESP8285 modules pulling GPIO0 to GND is needed to put the chip in programming mode. You need to **connect GPIO0 and GND** during power up.
 
+<img alt="Sonoff Dual R2" src="https://github.com/arendst/arendst.github.io/blob/master/media/dualr2d.jpg" width="38%" align="right" />
+
 Luckily both Gnd and GPIO0 (as Button 0) are available on the second header. A simple jumper between GND and the Button 0 pin will do while programming will do.
 
 ### Configure Dual R2
-
-<img alt="Sonoff Dual R2" src="https://github.com/arendst/arendst.github.io/blob/master/media/dualr2d.jpg" width="48%" align="right" />
 
 To control relays by external switches connected the switch to the header at the designated positions. Button 0 connected to GND controls relay 1 and button 1 connected to GND controls relay 2.
 
