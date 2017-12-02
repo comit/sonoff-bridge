@@ -14,6 +14,10 @@ Sonoff Dual R2 is the replacement for Sonoff Dual. Compared to the Dual the main
 
 Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/wiki/Hardware-Preparation) page for general instructions.
 
+As always, you need to access the serial interface. The **four serial pins** (VCC, Rx, Tx, GND) are available at the short end of the PCB and can be seen on the left of the image below.
+
+<img alt="Sonoff Dual R2" src="https://github.com/arendst/arendst.github.io/blob/master/media/dualr2a.jpg" />
+
 
 ## Sonoff Dual
 
