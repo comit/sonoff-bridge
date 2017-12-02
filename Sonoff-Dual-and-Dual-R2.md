@@ -16,7 +16,7 @@ Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/
 
 As always, you need to access the serial interface. The **four serial pins** (VCC, Rx, Tx, GND) are available at the short end of the PCB and can be seen on the left of the image below.
 
-<img alt="Sonoff Dual R2" src="https://github.com/arendst/arendst.github.io/blob/master/media/dualr2a.jpg" />
+<img alt="Sonoff Dual R2" src="https://github.com/arendst/arendst.github.io/blob/master/media/dualr2c.jpg" />
 
 
 ## Sonoff Dual
