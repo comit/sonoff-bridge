@@ -49,7 +49,7 @@ It worked with these devices. The firmware version is the version after the upda
 * Start sonota.py with your **home** Wifi parameters and your PC IP (e.g. 192.168.1.10)
 ```
 cd ~/src/SonOTA
-./sonota.py --wifi-ssid myhomewifi --wifi-password supersecredpassword 192.168.1.10
+./sonota.py --wifi-ssid myhomewifi --wifi-password supersecredpassword --serving-host 192.168.1.10
 ```
 SonOTA should say something like: 
 ```
