@@ -249,7 +249,7 @@ Status            | 9          | (Sonoff Pow only) Show Power thresholds
 Status            | 10         | Show sensor information
 Status            | 11         | Show power information equal to teleperiod state message
 Timezone          |            | Show current timezone
-Timezone          | -12..12    | Set timezone
+Timezone          | -13..13    | Set timezone
 Timezone          | 99         | Use Daylight Saving parameters from `user_config.h` (`TIME_DST` and `TIME_STD`)
 Upgrade           | 1          | Download ota firmware from your web server and restart
 Upgrade           | \<version\> | Download ota firmware from web server if \<version\> is higher than device version
