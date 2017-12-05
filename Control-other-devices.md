@@ -2,7 +2,7 @@
 
 It is possible, to control another device from remote by using following options:
 
-From version 5.1.6 on hold button functionality for both the push button AND the external pushbutton was implemented. If a ButtonTopic (and if SetOption1 (=ButtonRestrict) is On) or SwitchTopic (and SwitchMode 5|6) has been defined and a button is pressed longer than define KEY_HOLD_TIME (in 0.1 seconds. default 4 seconds) a MQTT message like cmnd/sonoff/POWER HOLD will be send. The HOLD text can be changed with command StateText4.
+From version 5.1.6 on, hold button functionality for both the push button AND the external pushbutton was implemented. If a ButtonTopic (and if SetOption1 (=ButtonRestrict) is On) or SwitchTopic (and SwitchMode 5|6) has been defined and a button is pressed longer than define KEY_HOLD_TIME (in 0.1 seconds. default 4 seconds) a MQTT message like cmnd/sonoff/POWER HOLD will be send. The HOLD text can be changed with command StateText4.
 
 Another command (SetOption11 On|Off) allows for swapping the functionality of the push button.
 
