@@ -609,6 +609,8 @@ WakeupDuration  | 1..3600   | Set wake up light duration in seconds
 
 Command            | Payload    | Description
 -------------------|------------|------------------------------------------------------
+Color              | #RRGGBB    | (WS2812x) Set Color to hexadecimal value
+Color              | #RRGGBBWW  | (SK6812) Set Color to hexadecimal value
 Color2             |            | Show current seconds clock hand color setting as RRGGBB
 Color2             | \<RRGGBB\> | Set seconds clock hand color to RRGGBB hexadecimal value
 Color3             |            | Show current minutes clock hand color setting as RRGGBB
