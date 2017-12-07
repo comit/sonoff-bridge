@@ -1,6 +1,7 @@
 For those knowing more about HomeSeer please update this page.
 
 **About HomeSeer**
+``
 HS3 is the industry standard for flexible, powerful, home automation software. A wide selection of software drivers (plug-ins) is available for use with scores of home automation technologies and products.
 ``
 
