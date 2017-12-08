@@ -97,9 +97,9 @@ You'll need an MQTT server somewhere to communicate with your Sonoff. Some peopl
 Other people think the MQTT server should reside inside your private LAN. You could use a Raspberry/Orange Pi, or just about any Linux machine as the server/broker; you might even squeeze it into your router if you're using OpenWRT.
 
 #### Creating your own MQTT server/broker
-See these sites: https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands[Rufio howto] +
-https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands[Wingsquare howto] +
-https://github.com/arendst/Sonoff-MQTT-OTA-Arduino/wiki/Commands[Instructables howto on Raspberry Pi]
+See these sites: https://www.digitalocean.com/community/questions/how-to-setup-a-mosquitto-mqtt-server-and-receive-data-from-owntracks[Rufio howto] +
+http://wingsquare.com/blog/setting-up-mqtt-mosquitto-broker-in-ubuntu-linux/[Wingsquare howto] +
+http://www.instructables.com/id/Installing-MQTT-BrokerMosquitto-on-Raspberry-Pi/[Instructables howto on Raspberry Pi]
 
 
 ### Linux/Cygwin command line
