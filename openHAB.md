@@ -4,7 +4,7 @@ The "open Home Automation Bus" ([openHAB](http://www.openhab.org/)) is an open s
 
 By following the guide below you'll be able to observe, control and manage your Sonoff modules from your openHAB system. If you are new to openHAB, please learn about the basic concepts and the initial setup. The below article will not cover any basics which are out of scope to the Sonoff-Tasmota integration.
 
-![example openHAB sitemap](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/5/57750c6c7b6d9f18e75424fcb87ec093f70c6211.png "openHAB example of the end result shown in BasicUI")
+![example openHAB sitemap](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/c/c4c91610a96750bb3ee30c88c299884039f80172.png "openHAB example of the end result shown in BasicUI")
 
 ### Requirements
 
