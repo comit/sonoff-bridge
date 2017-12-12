@@ -4,7 +4,8 @@ The "open Home Automation Bus" ([openHAB](http://www.openhab.org/)) is an open s
 
 By following the guide below you'll be able to observe, control and manage your Sonoff modules from your openHAB system. If you are new to openHAB, please learn about the basic concepts and the initial setup. The below article will not cover any basics which are out of scope to the Sonoff-Tasmota integration.
 
-The following example openHAB Sitemap features a few S20 Sockets for lighting, a modified Sonoff Basic with temperature and humidity sensors and two Sonoff Pow for power measurements of a washing machine and dishwasher:
+**Example Result:**
+The screenshot of an openHAB Sitemap below features a few Sonoff modules for lighting, two modified Sonoff Basic with sensors for temperature and humidity readings and two Sonoff Pow for power measurements of a washing machine and dishwasher:
 
 ![example openHAB sitemap](https://community-openhab-org.s3-eu-central-1.amazonaws.com/original/2X/c/c4c91610a96750bb3ee30c88c299884039f80172.png "openHAB example of the end result shown in BasicUI")
 
