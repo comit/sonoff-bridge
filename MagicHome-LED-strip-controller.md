@@ -49,3 +49,7 @@ Some GPIO are preconfigured with the board:
 Due to variants, you can configure:
 - GPIO04 - on non-IR boards, it's an open pin you can use for Onewire, button or something else. It might have pull-down resistor and/or bypass capacitor, so please take that into consideration. On IR-enabled boards, IR receiver is connected to this pin, so you can use IRRecv as functionality.
 - GPIO13  -  This pin is not used on RGB board (so you'll leave it as "None"), but on RGBW, it's driving another channel (cold white or warm white) for LED strip.
+
+
+Variant without Rx/Tx pads:
+![](https://bytebucket.org/xoseperez/espurna/wiki/images/flashing/ledcontroller-20-flash.jpg?rev=d9ba29098b873a331c76b1b8c4ac2614e1b4022e)
