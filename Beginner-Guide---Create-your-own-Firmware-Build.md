@@ -1,5 +1,3 @@
-# Beginner Guide - Create your own Firmware Build
-
 In this guide i´ll show you how to build your own firmware .bin file
 
 ## Preparation
