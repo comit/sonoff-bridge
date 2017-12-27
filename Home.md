@@ -26,7 +26,7 @@ The following devices are supported with Serial, Web and MQTT control:
 - [iTead 1 Channel Switch 5V / 12V](https://www.itead.cc/smart-home/inching-self-locking-wifi-wireless-switch.html)
 - [iTead Motor Clockwise/Anticlockwise](https://www.itead.cc/smart-home/motor-reversing-wifi-wireless-switch.html)
 - [Electrodragon IoT Relay Board](http://www.electrodragon.com/product/wifi-iot-relay-board-based-esp8266/)
-- [AI Light or any my9291 compatible RGBW LED](http://www.ebay.com/itm/172644855726)
+- AI Light or any my9291 compatible RGBW LED
 - [Supla device - Espablo-inCan mod. for electrical Installation box](https://forum.supla.org/viewtopic.php?f=33&t=2188)
 - [MagicHome LED controller (aka Flux-Light LED module)](MagicHome-LED-strip-controller)
 - [AriLux LED controller](https://www.banggood.com/ARILUX-AL-LC01-Super-Mini-LED-WIFI-Smart-RGB-Controller-For-RGB-LED-Strip-Light-DC-9-12V-p-1058603.html)
