@@ -43,9 +43,9 @@ This will provide an additional option ``Tools - Flash Size: "1M (no SPIFFS)"``.
 
 #### Installing external libraries
 
-Some features of this software use external libraries to be installed in you sketchfolder library directory. T**he easiest way to do this is copying all directories from the Sonoff-Tasmota/lib directory to your sketchfolder library directory and restart you IDE.**
+Some features of this software use external libraries to be installed in you sketchfolder library directory. **The easiest way to do this is copying all directories from the Sonoff-Tasmota/lib directory to your sketchfolder library directory and restart you IDE.**
 
-If you want to install libraries yourself follow the steps below, but be aware you need to check in the sonoff-tasmota/lib directory the additional libararies, which are not mentionned below:
+If you want to install libraries yourself follow the steps below, but be aware you need to check/copy-from in the sonoff-tasmota/lib directory the additional libraries, which are not mentioned below:
 - Download and unzip the [pubsubclient](https://github.com/knolleary/pubsubclient/releases/tag/v2.6) MQTT library **version 2.6** into directory ``portable\sketchbook\libraries`` and rename to ``pubsubclient``. Update default value in file ``pubsubclient\src\PubSubClient.h``  
   - Change ``MQTT_MAX_PACKET_SIZE`` from 128 to at least 512  
 - Install the ArduinoJson library **version 5.8.3** via the library manager (Arduino IDE > Sketch > include Library > Manage Libraries) or download and unzip the [ArduinoJson](https://github.com/bblanchon/ArduinoJson/releases/tag/v5.8.3
