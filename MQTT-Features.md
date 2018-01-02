@@ -42,3 +42,11 @@ To solve possible MQTT topic loops I strongly suggest to use the ``%prefix%`` to
 The use of the ``%topic%`` token is also mandatory in case you want to use ``ButtonTopic`` and/or ``SwitchTopic``. It also provides for grouptopic and fallback topic functionality.
 
 Recommendation: **Use both tokens at all time within your FullTopic string**
+
+## Send multiple MQTT commands at once
+
+To change connectivity configuration over MQTT you can (should) use the [Backlog command](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#using-backlog) to send multiple commands to your Sonoff(s) at once and prevent reboot between the commands. For example you can change the wifi SSID and Password in one step by sending the following MQTT message to your sonoff's `Backlog` topic:
+
+```mosquitto_pub -t 'cmnd/yoursonoff/Backlog' -m 'ssid1 yournewssid; password1 yournewpassword'```
+
+Your Sonoff will be rebooted after both settings are written to the configuration, so your device will connect to the new network. You can also change the MQTT connection parameters the same way and of course any other settings.
