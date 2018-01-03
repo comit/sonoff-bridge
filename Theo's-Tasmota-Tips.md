@@ -1,3 +1,19 @@
+### 20180103 - Tasmota is ready for esp8266/Arduino version 2.4.0
+
+Tasmota is based on esp8266/Arduino.
+
+A few days ago **esp8266/Arduino version 2.4.0** was released. Tasmota and it's supporting libraries as available in the lib folder will compile and run just fine.
+
+Among many fixes this version also uses more flash space which makes it _almost_ impossible to easily OTA update Tasmota. A solution was developed months ago and involves an intermediate step using the sonoff-minimal.bin image available in all latest releases.
+
+Now that this step has _almost_ become mandatory it opens up the possibility to add some more functionality to Tasmota in the future.
+  
+**NOTE**: Selecting a different esp8266/Arduino version in (Visual Studio (Code)) PlatformIO is easy using the following defines in file platformio.ini:
+```
+platform = espressif8266@1.5.0 ; esp8266/Arduino version 2.3.0
+platform = espressif8266@1.6.0 ; esp8266/Arduino version 2.4.0 (+22k code)
+```
+
 ### 20170714 - Tasmota needs compile Flash Mode option DOUT on all devices
 
 An increasing number of devices are using the ESP8285. As this chip only supports a subset of hardware connections to its inbuilt 1MB flash the firmware needs to be compiled with Flash Mode option set for DOUT.
