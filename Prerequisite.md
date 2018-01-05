@@ -23,7 +23,7 @@ Use either of the following:
 
 ### Arduino IDE Preparation
 
-Install the ESP8266 Arduino development environment from [esp8266 Arduino](https://github.com/esp8266/Arduino). The software is supported with Arduino IDE starting with version 1.6.10 and esp8266 Arduino stable version 2.3.0.
+Install the ESP8266 Arduino development environment from [esp8266 Arduino](https://github.com/esp8266/Arduino). The software is supported with Arduino IDE starting with version 1.6.10 and esp8266 Arduino stable version 2.3.0. As of esp8266 Arduino stable version 2.4.0 this step is no longer required.
 
 - I prefer a **dedicated standalone version** of the IDE allowing easy ESP8266 file manipulation and library management. This can be achieved by downloading the Arduino IDE ZIP file for non admin install. After unzipping and before executing ``arduino.exe`` add an empty directory called ``portable``
 - Follow the procedure from the ESP8266 Arduino README.md to install the development environment using the Arduino IDE Board Manager
