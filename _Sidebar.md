@@ -37,6 +37,7 @@
 - [**Sonoff RF Bridge 433**](Sonoff-RF-Bridge-433)
 - [**Sonoff Pow**](Sonoff-Pow)
 - [**Sonoff Touch**](Sonoff-Touch)
+- [**Sonoff T1**](Sonoff-T1)
 - [**Sonoff B1**](Sonoff-B1)
 - [**Sonoff SC**](Sonoff-SC)
 - [**HuaFan Smart Socket**](HuaFan-Smart-Socket)
