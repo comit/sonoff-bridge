@@ -23,7 +23,7 @@ Use either of the following:
 
 ### Arduino IDE Preparation
 
-Install the ESP8266 Arduino development environment from [esp8266 Arduino](https://github.com/esp8266/Arduino). The software is supported with Arduino IDE starting with version 1.6.10 and esp8266 Arduino stable version 2.3.0. As of esp8266 Arduino stable version 2.4.0 this step is no longer required.
+Install the ESP8266 Arduino development environment from [esp8266 Arduino](https://github.com/esp8266/Arduino). The software is supported with Arduino IDE starting with version 1.6.10 and esp8266 Arduino stable version 2.3.0.
 
 - I prefer a **dedicated standalone version** of the IDE allowing easy ESP8266 file manipulation and library management. This can be achieved by downloading the Arduino IDE ZIP file for non admin install. After unzipping and before executing ``arduino.exe`` add an empty directory called ``portable``
 - Follow the procedure from the ESP8266 Arduino README.md to install the development environment using the Arduino IDE Board Manager
@@ -31,7 +31,7 @@ Install the ESP8266 Arduino development environment from [esp8266 Arduino](https
 
 #### Installing updated linker file for version 5.0.0 and up
 
-To gain as much code space as possible from the available 1M flash memory I provide a linker file without SPIFFS area. Follow the steps below to install and use it in your IDE:
+To gain as much code space as possible from the available 1M flash memory I provide a linker file without SPIFFS area (no logner required as of version 2.4.0!). Follow the steps below to install and use it in your IDE:
 
 Starting from where you extracted or cloned the git Sonoff-Tasmota repository:
 - Copy file ``eagle.flash.1m0.ld`` from ``arduino\version 2.3.0\tools\sdk\ld`` to IDE Arduino directory ``portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld``
