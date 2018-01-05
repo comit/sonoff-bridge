@@ -9,10 +9,12 @@
 
 Sonoff-T1 seems to be an evolution of Sonoff-Touch, and exists in one, two or three button variations and contains a 433MHz radio.
 
-Sonoff Touch is also based on the ESP8285, But are using a Silabs EFM8BB1 microcontroller to extend the number of IO:s needed to control 3 buttons, with separate relays and leds together with the radio.
+Sonoff Touch is also based on the ESP8285, But are using a Silabs EFM8BB1 microcontroller to extend the number of IO:s needed to control 3 buttons, with separate relays and leds together with the radio. SYN470R is used as 433Mhz Radio, and chip for touch is unlabeled
 
 
 [EFM8BB1 Data Sheet](https://www.silabs.com/documents/public/data-sheets/efm8bb1-datasheet.pdf)
+[ESP8385 Data Sheet](http://www.espressif.com/sites/default/files/documentation/0a-esp8285_datasheet_en.pdf)
+[SYN470R Data Sheet](https://www.birdandgua.net/bird/wp-content/uploads/2016/09/SYN470R-Synoxo.pdf)
 
 ## Serial Connection
 
@@ -48,7 +50,7 @@ GPIO01 EFM8BB1 P1,3?
 GPIO04 is connected to the small pairing button on the front.
 ```
 
-On the EFM8BB1
+On the EFM8BB1 (QFN20 package)
 ```
 P0,0 Relay 1
 P0,1 Relay 2
@@ -56,13 +58,13 @@ P0,2 Relay 3
 P0,3 Button 1
 P0,4 Button 2
 P0,5 Button 3
-P0,6
+P0,6 SYN470R Data Out
 P0,7 Relay protection?
 P1,0 Led button 1
 P1,1 Led button 2
 P1,2 Led button 3
-P1,3 ESP8285 GPIO 0?
-P1,4
-P1,5
-P1,6
+P1,3 ESP8285 GPIO0
+P1,4 ESP8285 GPIO09
+P1,5 ESP8285 GPIO10
+P1,6 ESP8285 EXT_RSTB (RESET)
 ```
