@@ -46,6 +46,10 @@ J3 is a serial pinout, with the same pins as sonoff basic:
 
 With standard firmware, i get a short print out with an non-standard board rate: 75 117bps (Meassured with logic analyzer) and then silence.
 
+JP - are you sure it’s not 74880 which is the ‘bootloader’ baud rate?
+Just got two of these after ordering yesterday. Could have sworn they were supported 48 hours ago!
+How can I contact you for working together?
+
 ```
  ets Jan  8 2013,rst cause:1, boot mode:(3,7)
 
