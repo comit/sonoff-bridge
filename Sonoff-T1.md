@@ -13,7 +13,9 @@ Sonoff Touch is also based on the ESP8285, But are using a Silabs EFM8BB1 microc
 
 
 [EFM8BB1 Data Sheet](https://www.silabs.com/documents/public/data-sheets/efm8bb1-datasheet.pdf)
+
 [ESP8385 Data Sheet](http://www.espressif.com/sites/default/files/documentation/0a-esp8285_datasheet_en.pdf)
+
 [SYN470R Data Sheet](https://www.birdandgua.net/bird/wp-content/uploads/2016/09/SYN470R-Synoxo.pdf)
 
 ## Serial Connection
@@ -46,8 +48,12 @@ I tried to reverse engineer the circuit and i noticed:
 
 ESP8285
 ```
-GPIO01 EFM8BB1 P1,3?
+
+GPIO0 EFM8BB1 P1,3
 GPIO04 is connected to the small pairing button on the front.
+GPIO09 EFM8BB1 P1,4
+GPIO10 EFM8BB1 P1,5
+GPIO13 is connected to status LED D3.
 ```
 
 On the EFM8BB1 (QFN20 package)
