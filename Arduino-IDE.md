@@ -51,6 +51,8 @@ Tasmota release Source code provides scripts to be installed in the Arduino IDE 
 
 If not available install PHP on your webserver and copy the Tasmota release Source code folder *api* to the root of your webserver.
 
+If not already done in the previous steps replace in Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0* file *boards.txt* with the Tasmota Source code file *arduino\version 2.3.0\boards.txt*.
+
 Replace in Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0* file *platform.txt* with the Tasmota Source code file *arduino\version 2.3.0\platform.txt*.
 
 Copy from the Tasmota release Source code folder *arduino* file *espupload.py* to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools* and change in the script HOST_ADDR to point to your webserver ip address.
