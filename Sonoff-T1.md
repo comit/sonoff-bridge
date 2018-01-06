@@ -41,7 +41,7 @@ J3 is a serial pinout, with the same pins as sonoff basic:
 5. GPIO02
 
 ## Flashing
-It is unknown how to flash, as GPIO0 is directly tied to pin P1,3 to EFM8BB1 there is no known way to let ESP8285 enter download mode.
+Pressing first touch button, will make GPIO0 go low.
 
 ## Circuit
 I tried to reverse engineer the circuit and i noticed:
@@ -49,7 +49,7 @@ I tried to reverse engineer the circuit and i noticed:
 ESP8285
 ```
 
-GPIO0 EFM8BB1 P1,3
+GPIO0 EFM8BB1 P1,3 (Goes low when first touch button is pressed)
 GPIO04 is connected to the small pairing button on the front.
 GPIO09 EFM8BB1 P1,4
 GPIO10 EFM8BB1 P1,5
