@@ -1,5 +1,6 @@
 
 **Sonoff T1 is currently unsupported by Tasmota**
+** EDIT: SupraJames - What makes you say this? I just flashed the FW with no issues, using the GPIO0 to ground method **
 
 This is the EU-Version
 
