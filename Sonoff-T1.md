@@ -100,3 +100,13 @@ P1,4 ESP8285 GPIO09
 P1,5 ESP8285 GPIO10
 P1,6 ESP8285 EXT_RSTB (RESET)
 ```
+
+## Known so far
+* It seems that the state of the 3 relays are saved inside the EFM8BB1, and not inside the ESP8285.
+* When pushing a button, the touch chip lift the power high to the EFM8BB1, and the EFM8BB1 chip ties the signal line for each button low, for the full duration of the keypress. There is no serial data, that i have seen at all.
+
+## Unknown so far
+
+* I have no way to put the chip into download mode.
+* Why is my chip using such a strange serial bitrate, is it broken?
+* How does the ESP8285 change and read the the state inside EFM8BB1. We only know that the ESP8285 can read if button is pressed or not, but now how the ESP8285 changes or reads the state.
