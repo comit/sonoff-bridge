@@ -1,6 +1,8 @@
 
 **Sonoff T1 is currently unsupported by Tasmota**
 
+This is the EU-Version
+
 * Itead Product Page: http://sonoff.itead.cc/en/products/residential/sonoff-t1
 * Itead Shop: https://www.itead.cc/sonoff-t1.html
 * Itead Wiki: (na)
