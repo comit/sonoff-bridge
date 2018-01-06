@@ -40,8 +40,34 @@ J3 is a serial pinout, with the same pins as sonoff basic:
 4. GND
 5. GPIO02
 
+With standard firmware, i get a short print out with an non-standard board rate: 75 117bps (Meassured with logic analyzer) and then silence.
+
+```
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x40100000, len 2408, room 16
+tail 8
+chksum 0xe5
+load 0x3ffe8000, len 776, room 0
+tail 8
+chksum 0x84
+load 0x3ffe8310, len 632, room 0
+tail 8
+chksum 0xd8
+csum 0xd8
+
+2nd boot version : 1.6
+  SPI Speed      : 40MHz
+  SPI Mode       : DOUT
+  SPI Flash Size & Map: 8Mbit(512KB+512KB)
+jump to run user1 @ 1000
+
+rf cal sector: 251
+rf[112]▒ector: 251@ 10008Mbit(512KB+512KB) mode:(3,7)
+```
+
 ## Flashing
-Pressing first touch button, will make GPIO0 go low.
+Pressing first touch button, will make GPIO0 go low. I Had no luck so fare get it to flash
 
 ## Circuit
 I tried to reverse engineer the circuit and i noticed:
