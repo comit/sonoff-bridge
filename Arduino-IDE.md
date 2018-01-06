@@ -19,10 +19,12 @@ Open ``Tools`` - ``Boards ...`` - ``Boards Manager ...`` and scroll down and cli
 Download the latest Tasmota release Source code from https://github.com/arendst/Sonoff-Tasmota/releases and unzip to another known folder.
 
 ### Copy files
+#### ESP8266 Board version **before** 2.4.0 only
 If not available copy from the Tasmota release Source code folder *arduino\version 2.3.0\tools\sdk\ld* file *eagle.flash.1m0.ld* to Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0\tools\sdk\ld*.
 
 Replace in Arduino IDE folder *portable\packages\esp8266\hardware\esp8266\2.3.0* file *boards.txt* with the Tasmota Source code file *arduino\version 2.3.0\boards.txt*.
 
+#### For all versions
 Copy all files from the Tasmota release Source code folder *lib* into your *sketchbook\libraries* folder.
 
 Copy the Tasmota release Source code folder *sonoff* to your *sketchbook*.
