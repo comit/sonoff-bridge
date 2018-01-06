@@ -22,6 +22,8 @@ Sonoff Touch is also based on the ESP8285, But are using a Silabs EFM8BB1 microc
 
 ## Serial Connection
 
+![Connections](https://user-images.githubusercontent.com/29403034/33187392-5a4902e4-d089-11e7-9522-ab7e70301c58.jpg)
+
 There is 3 connectors available on the top board J1 to J3.
 J1 is tied to EFM8BB1:
 1. VDD
@@ -69,7 +71,7 @@ rf[112]▒ector: 251@ 10008Mbit(512KB+512KB) mode:(3,7)
 ```
 
 ## Flashing
-Pressing first touch button, will make GPIO0 go low. I Had no luck so fare get it to flash
+Pressing first touch button, will make GPIO0 go low. I Had no luck so fare get it to flash, and it is unknown how this is done, unless you solder GIPO0 down on the picture above.
 
 ## Circuit
 I tried to reverse engineer the circuit and i noticed:
