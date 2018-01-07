@@ -54,9 +54,12 @@ switch:
     name: "Sonoff power"
     state_topic: "stat/sonoff/POWER"
     command_topic: "cmnd/sonoff/POWER"
+    availability_topic: "tele/sonoff/LWT"
     qos: 1
     payload_on: "ON"
     payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
     retain: true
 ```
 If you are using your Sonoff to control a light, you may want to use the `light` component. Simply replace `switch` with `light` in the above configuration. All other settings remain the same.
