@@ -8,9 +8,9 @@
 
 Use either of the following:
 
-1. [PlatformIO](http://platformio.org) (all needed libraries and settings are pre-configured in [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini))
+1. [PlatformIO](http://platformio.org) (all needed libraries and settings are pre-configured in [platformio.ini](https://github.com/arendst/Sonoff-Tasmota/blob/master/platformio.ini)) See the Platform IO or Visual Studio Code links in the right hand menu. 
 
-2. [Arduino IDE](https://www.arduino.cc/en/Main/Software) (needed preparation below)
+2. [Arduino IDE](https://www.arduino.cc/en/Main/Software) See the Arduino IDE link in the right hand menu.
 
 ## Other Requirements
 
