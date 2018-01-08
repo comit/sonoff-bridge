@@ -76,10 +76,10 @@ rf[112]▒ector: 251@ 10008Mbit(512KB+512KB) mode:(3,7)
 ```
 
 ## Flashing
-Pressing first touch button, will make GPIO0 go low. I Had no luck so fare get it to flash, and it is unknown how this is done, unless you solder GIPO0 down on the picture above.
+Pressing first touch button, will make GPIO0 go low. I had no luck so far get it to flash, and it is unknown how this is done, unless you solder GIPO0 down on the picture above.
 
 ## Circuit
-I tried to reverse engineer the circuit and i noticed:
+I tried to reverse engineer the circuit and I noticed:
 
 ESP8285
 ```
