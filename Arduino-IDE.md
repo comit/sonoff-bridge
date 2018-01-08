@@ -33,15 +33,17 @@ Copy the Tasmota release Source code folder *sonoff* to your *sketchbook*.
 
 Select ``Tools`` and verify the following settings for **All Tasmota devices**:
 ```
-Board: "Generic ESP8266 Module"
+Board: "Generic ESP8266 Module"  <<<<!!!!
 Flash Mode: "DOUT"  <<<<!!!!
-Flash Frequency: "40MHz"
-Upload Using: "Serial"
-CPU Frequency: "80MHz"
 Flash Size: "1M (no SPIFFS)"  <<<<!!!!
 Debug Port: "Disabled"
 Debug Level: "None"
+LwIP Variant: "v2 Prebuilt (MSS=536)"
 Reset Method: "ck"
+Crystal Frequency: "26 MHz"
+Flash Frequency: "40MHz"
+Upload Using: "Serial"
+CPU Frequency: "80 MHz"
 Upload Speed: "115200"
 Port: Your COM port connected to sonoff
 ```
