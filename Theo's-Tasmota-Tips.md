@@ -1,3 +1,9 @@
+### 20180110 - My preferred development environment
+
+After years of using the Arduino IDE I started using Visual Studio Code with integrated PlatformIO some months ago and I wonder what took me so long. It's great in editing as you may have noticed as changing global variables is a breeze.
+
+I only miss the Arduino IDE integrated ESP Exception Decoder used for yet another Exception analysis. 
+
 ### 20180103 - Tasmota is ready for esp8266/Arduino version 2.4.0
 
 Tasmota is based on esp8266/Arduino.
