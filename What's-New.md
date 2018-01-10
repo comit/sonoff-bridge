@@ -36,6 +36,20 @@ The introduction of Device function pointers should make future integration of n
 
 New libraries have been added:
 - Adafruit_BME680-1.0.5
-- Adafruit_Sensor-1.0.2.02
+- Adafruit_Sensor-1.0.2 + 2 commits
 - TasmotaSerial-1.0.0
 - TSL2561-Arduino-Library
+
+### 20171201 - 5.10.0 - Release 
+
+Command ``EnergyReset 1..3`` has been replaced by commands ``EnergyReset1``, ``EnergyReset2`` and ``EnergyReset3`` to allow more functonality.
+
+#### Under the hood
+
+Updated libraries
+- ArduinoJson 5.11.2
+- IRRemoteEsp8266 2.2.1 + 2 commits but disabled some protocols (code size reduction)
+- NeoPixelBus 2.2.9
+- OneWire 2.3.3 + 6 commits and disabled CRC lookup-table (#define ONEWIRE_CRC8_TABLE 0) (code size reduction)
+- PubSubClient 2.6 + 9 commits and additional delay (#790)
+- I2Cdevlib-Core patched for esp8266-core 2.4.0 compatibility
