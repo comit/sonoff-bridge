@@ -166,6 +166,9 @@ PressRes          | 0..3           | Set Pressure Resolution
 SetOption8        |                | Show current Temperature as either Celsius or Fahrenheit
 SetOption8        | 0 / celsius    | Set Temperature to Celsius
 SetOption8        | 1 / fahrenheit | Set Temperature to Fahrenheit
+SetOption18       |                | Show Signal Light state - currently used with CO2 sensors only
+SetOption18       | 0 / off        | (default) Disable signal light
+SetOption18       | 1 / on         | Enable signal light
 TempRes           |                | Show current Temperature Resolution
 TempRes           | 0..3           | Set Temperature Resolution
 TempUnit          |                | Replaced by SetOption8
@@ -443,6 +446,10 @@ SetOption15 | 1 / on         | Disable Pwm command and allow control by Dimmer o
 SetOption16 |                | Show LED reverse (clock Scheme)
 SetOption16 | 0              | (default) LED clock-wise mode
 SetOption16 | 1              | Set LED counter-clock-wise mode
+SetOption17 |                | Reserved
+SetOption18 |                | Show Signal Light state - currently used with CO2 sensors only
+SetOption18 | 0 / off        | (default) Disable signal light
+SetOption18 | 1 / on         | Enable signal light
 SetOption32 |                | Show current key hold time in 0.1 seconds
 SetOption32 | 1..100         | Set key hold time from 0.1 to 10 seconds
 SetOption33 |                | Show Sonoff Pow Max_Power_Retry value
