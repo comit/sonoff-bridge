@@ -1,6 +1,6 @@
 ### 20180110 - My preferred Tasmota development environment
 
-After years of using the Arduino IDE I started using Visual Studio Code with integrated PlatformIO some months ago and I wonder what took me so long. It's great in editing as you may have noticed as changing global variables is a breeze. Using my latest [OtaMagic](https://github.com/arendst/Sonoff-Tasmota/wiki/What's-New) integration makes it even more friendly.
+After years of using the Arduino IDE I started using Visual Studio Code with integrated PlatformIO some months ago and I wonder what took me so long. It's great in editing as you may have noticed as changing global variables is a breeze. Using my latest [OtaMagic](https://github.com/arendst/Sonoff-Tasmota/wiki/What's-New#20180110---5111a---otamagic)  integration makes it even more friendly.
 
 I only miss the Arduino IDE integrated ESP Exception Decoder used for yet another Exception analysis. 
 
