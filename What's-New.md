@@ -26,7 +26,7 @@ The use of a different language from English has been revisited due to incompati
 
 The response from a HTPP command request will now be in plain JSON only. This allows for better integration with external tools. As a result the special Energy status message has been abandoned and is now provided as a Sensor status message. Useres may have to update their tools monitoring Energy values. 
 
-The ''Color2'', ''Color3'' and ''Color4'' commands have been renamed to respectively ''Color3'', ''Color4'' and ''Color5'' to make room for the new ''Color2'' command.
+The ``Color2``, ``Color3`` and ``Color4`` commands have been renamed to respectively ``Color3``, ``Color4`` and ``Color5`` to make room for the new ``Color2`` command.
 
 #### Under the hood
 
