@@ -34,15 +34,11 @@ upload_port = COM5
 ;upload_speed = 512000
 upload_speed = 115200
 ;upload_resetmethod = nodemcu
-``
-
+```
 Enable desired options in _patformio.ini_ for upload to your local OTA server like:
 ```
 ; *** Upload file to OTA server using HTTP
 upload_port = domus1:80/api/upload-arduino.php
 extra_scripts = pio/http-uploader.py
 ```
-
-Easy compilation and upload can be performed from the icons at the bottom of the VSC screen. 
-
-Use `Ctrl` + `Alt` + `U` to upload (will build if needed).
+Easy compilation and upload can be performed from the icons at the bottom of the VSC screen or use `Ctrl` + `Alt` + `U` to upload (will build if needed).
