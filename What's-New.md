@@ -9,7 +9,7 @@ This worked kind of fine until version 2.4.0 of the ESP8266/Arduino board manage
 Luckily the ESP8266/Arduino board manager software adjusts it's free flash space based on the current program space. This means that a small program has more OTA flash space to use than a large program. I used this feature by providing the sonoff-minimal.bin firmware image containing only MQTT and a webserver which allows for larger Tasmota images by using a two step OTA approach.
 
 - First OTA upload the sonoff-minimal.bin image in the small free space area
-- Then upload the final sonoff.bin image in the larger free space area
+- Then OTA upload the final sonoff.bin image in the larger free space area
 
 With the pre-release version of Tasmota development branch v5.11.1a this process is now automated if used with an external OTA server.
 
