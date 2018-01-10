@@ -1,4 +1,4 @@
-### 20180110 - 5.11.1a - Automagic OTA functionality
+### 20180110 - 5.11.1a - OtaMagic
 
 Tasmota is build to install on devices with 1MB usable flash. To easily use Over The Air (OTA) firmware updates only half of this flash space can be used by Tasmota as the other half is needed to store the OTA firmware image before it can be installed.
 
@@ -13,11 +13,11 @@ Luckily the ESP8266/Arduino board manager software adjusts it's free flash space
 
 With the pre-release version of **Tasmota development branch v5.11.1a** this process is now automated if used with an external OTA server.
 
-Tasmota now tries to load the requested image and if it notices that the image won't fit it will load the minimal version first which in turn will load the requested final image.
+Tasmota now tries to load the requested image and if it notices that the image won't fit it will load the minimal version first which in turn will load the requested final image. This is OtaMagic.
 
 #### Under the hood
 
-To add in OTA automagic the file pio/espupload.py has been updated to rename the generated firmware.bin filename to the released firmware filename.
+To ade in OtaMagic the file _pio/espupload.py_ has been updated to rename the generated ``firmware.bin`` filename to the released firmware filename.
 
 Updated libraries
 - TasmotaSerial-1.0.1
