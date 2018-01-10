@@ -14,3 +14,26 @@ Luckily the ESP8266/Arduino board manager software adjusts it's free flash space
 With the pre-release version of **Tasmota development branch v5.11.1a** this process is now automated if used with an external OTA server.
 
 Tasmota now tries to load the requested image and if it notices that the image won't fit it will load the minimal version first which in turn will load the requested final image.
+
+#### Under the hood
+
+Updated libraries
+- TasmotaSerial-1.0.1
+
+### 20180107 - 5.11.1 - Release 
+
+The use of a different language from English has been revisited due to incompatible JSON messages between Tasmota and external tools (#1473). This has resulted in major changes to the language files which now only translate the Web GUI and Logging messages. All JSON messages will now be in English. 
+
+The response from a HTPP request will now be in plain JSON only. This allows for better integration with external tools. As a result the special Energy status message has been abandoned and is now provided as a Sensor status message. Useres may have to update their tools monitoring Energy values. 
+
+The ''Color2'', ''Color3'' and ''Color4'' commands have been renamed to respectively ''Color3'', ''Color4'' and ''Color5'' to make room for the new ''Color2'' command.
+
+#### Under the hood
+
+The introduction of Device function pointers should make future integration of new devices easier. 
+
+New libraries have been added:
+- Adafruit_BME680-1.0.5
+- Adafruit_Sensor-1.0.2.02
+- TasmotaSerial-1.0.0
+- TSL2561-Arduino-Library
