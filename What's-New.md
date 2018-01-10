@@ -22,7 +22,7 @@ Updated libraries
 
 ### 20180107 - 5.11.1 - Release 
 
-The use of a different language from English has been revisited due to incompatible JSON messages between Tasmota and external tools #1473. This has resulted in major changes to the language files which now only translate the Web GUI and Logging messages. All JSON messages will now be in English. 
+The use of a different language from English has been revisited due to incompatible JSON messages between Tasmota and external tools [(#1473)](https://github.com/arendst/Sonoff-Tasmota/issues/1473). This has resulted in major changes to the language files which now only translate the Web GUI and Logging messages. All JSON messages will now be in English. 
 
 The response from a HTPP command request will now be in plain JSON only. This allows for better integration with external tools. As a result the special Energy status message has been abandoned and is now provided as a Sensor status message. Useres may have to update their tools monitoring Energy values. 
 
