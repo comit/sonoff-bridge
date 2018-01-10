@@ -17,6 +17,8 @@ Tasmota now tries to load the requested image and if it notices that the image w
 
 #### Under the hood
 
+To add in OTA automagic the file pio/espupload.py has been updated to rename the generated firmware.bin filename to the released firmware filename.
+
 Updated libraries
 - TasmotaSerial-1.0.1
 
