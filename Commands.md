@@ -570,6 +570,7 @@ Color           | 11        | Set color to Pink
 Color           | 12        | Set color to White
 Color           | +         | Set next color out of 12
 Color           | -         | Set previous color out of 12
+Color2          | #\<value\>   | Set color to hexadecimal value but adjust to current Dimmer value
 CT              |           | (Sonoff B1 and Led) Show current Color Temperature (153 = Cold, 500 = Warm)
 CT              | 153..500  | (Sonoff B1 and Led) Set color temperature from cold to warm
 CT              | +         | Increment CT in 10 steps
@@ -611,12 +612,13 @@ Command            | Payload    | Description
 -------------------|------------|------------------------------------------------------
 Color              | #RRGGBB    | (WS2812x) Set Color to hexadecimal value
 Color              | #RRGGBBWW  | (SK6812) Set Color to hexadecimal value
-Color2             |            | Show current seconds clock hand color setting as RRGGBB
-Color2             | \<RRGGBB\> | Set seconds clock hand color to RRGGBB hexadecimal value
-Color3             |            | Show current minutes clock hand color setting as RRGGBB
-Color3             | \<RRGGBB\> | Set minutes clock hand color to RRGGBB hexadecimal value
-Color4             |            | Show current hour clock hand color setting as RRGGBB
-Color4             | \<RRGGBB\> | Set hour clock hand color to RRGGBB hexadecimal value
+Color2             | #\<value\> | Set color to hexadecimal value but adjust to current Dimmer value
+Color3             |            | Show current seconds clock hand color setting as RRGGBB
+Color3             | \<RRGGBB\> | Set seconds clock hand color to RRGGBB hexadecimal value
+Color4             |            | Show current minutes clock hand color setting as RRGGBB
+Color4             | \<RRGGBB\> | Set minutes clock hand color to RRGGBB hexadecimal value
+Color5             |            | Show current hour clock hand color setting as RRGGBB
+Color5             | \<RRGGBB\> | Set hour clock hand color to RRGGBB hexadecimal value
 Led1..Led\<count\> |            | Show specific led current color as RRGGBB
 Led1..Led\<count\> | \<RRGGBB\> | Set specific led to desired color RRGGBB
 Pixels             |            | Show current pixel count
