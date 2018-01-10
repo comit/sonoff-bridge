@@ -2,7 +2,7 @@
 
 Tasmota is based on esp8266/Arduino.
 
-A few days ago [**esp8266/Arduino version 2.4.0**](https://github.com/esp8266/Arduino) was released. Tasmota and it's supporting libraries as available in the lib folder will compile and run just fine.
+A few days ago [esp8266/Arduino version 2.4.0](https://github.com/esp8266/Arduino) was released. Tasmota and it's supporting libraries as available in the lib folder will compile and run just fine.
 
 Among many fixes this version also uses more flash space which makes it _almost_ impossible to easily OTA update Tasmota. A solution was developed months ago and involves an intermediate step using the sonoff-minimal.bin image available in all latest releases.
 
