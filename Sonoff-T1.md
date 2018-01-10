@@ -1,6 +1,7 @@
 
 **Sonoff T1 is currently unsupported by Tasmota**
-** EDIT: SupraJames - What makes you say this? I just flashed the FW with no issues, using the GPIO0 to ground method **
+** EDIT: SupraJames - What makes you say this? I just flashed the FW with no issues, using the GPIO0 to ground method
+GP: Ive just tried two boards, both flashed fine but neither are responding after flashing. Can you confirm yours function correctly? **
 
 This is the EU-Version
 
