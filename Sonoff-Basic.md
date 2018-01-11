@@ -14,3 +14,4 @@ You need to access the serial interface. The **four serial pins** (3V3, Rx, Tx, 
 more Info about the GIOS Pins here:
 [https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations](https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations)
 
+For flashing the sonoff basic V1.1, please hold the button while connecting the Plus Pole. The LED remains off until the flashing process is done and the board is rebooted.
