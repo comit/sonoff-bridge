@@ -1,10 +1,10 @@
 How to setup and configure "OTA over SCP" upload for PlatformIO. The uploader pushes .bin files to remote OTA server using SCP. Images can be served to Sonoff-Tasmotas from there.
 
 # Configuration
-To upload .bin images to OTA server using SCP, one has to edit following lines under target environment:
+To upload .bin images to OTA server using SCP, edit the following lines under target environment:
 ```
 ; *** Upload file to OTA server using SCP
-upload_port = pi@192.168.2.11:/var/www/html/Updates
+upload_port = user@host:/path
 extra_scripts = pio/sftp-uploader.py
 ```
 upload_port should be modified to reflect user, host and path on the host where images should be uploaded.
