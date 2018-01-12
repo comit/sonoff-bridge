@@ -14,7 +14,7 @@ Newer versions of the hardware are currently not supported.
 * Itead Shop: https://www.itead.cc/smart-home/sonoff-t1-eu.html
 * Itead Wiki: (na)
 
-The Sonoff T1 EU version is currently not supported in Tasmota.
+The Sonoff T1 EU version is currently not supported.
 
 ** Follow support progress in this issue: https://github.com/arendst/Sonoff-Tasmota/issues/1424
 
