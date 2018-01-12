@@ -1,14 +1,20 @@
-
-**Sonoff T1 is not confirmed supported by Tasmota**
-
-** Follow support progress in this issue: https://github.com/arendst/Sonoff-Tasmota/issues/1424
-
-
-This is the EU-Version
+**Sonoff T1 UK**
 
 * Itead Product Page: http://sonoff.itead.cc/en/products/residential/sonoff-t1
 * Itead Shop: https://www.itead.cc/sonoff-t1.html
 * Itead Wiki: (na)
+
+The Sonoff T1 UK with 1 to 3 gang is fully supported in Tasmota starting with version 5.6.1.
+
+**Sonoff T1 EU**
+
+* Itead Product Page: http://sonoff.itead.cc/en/products/residential/sonoff-t1-eu
+* Itead Shop: https://www.itead.cc/smart-home/sonoff-t1-eu.html
+* Itead Wiki: (na)
+
+The Sonoff T1 EU version is currently not supported in Tasmota.
+
+** Follow support progress in this issue: https://github.com/arendst/Sonoff-Tasmota/issues/1424
 
 ![Sonoff T1 Image](https://cdn.itead.cc/media/catalog/product/cache/1/thumbnail/160x160/9df78eab33525d08d6e5fb8d27136e95/s/o/sonoff_t1_000.jpg)
 
