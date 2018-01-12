@@ -18,13 +18,17 @@ On a linux client machine type the following to generate the key:
 ssh-keygen -t rsa -C "YOUR OWN KEY INFO"
 ```
 Press enter three times (without any input).
+
 Copy the key to your ssh server:
-``
+```
 ssh-copy-id -i ~/.ssh/id_rsa.pub USER@HOST
-``
+```
 You need to confirm this action. Use your server ssh password (one last time).
+
 _Optional reload the ssh service:_
-`sudo /etc/init.d/ssh restart`
+```
+sudo /etc/init.d/ssh restart
+```
 
 Easy compilation and upload can be performed from the icons at the laft side of the PlatformIO screen or use Ctrl + Alt + U to upload (will build if needed).
 
