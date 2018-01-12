@@ -21,7 +21,8 @@ Copy the key to your ssh server. You need to confirm this action. Use your serve
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub USER@HOST
 ```
-_Optional reload the ssh service:_
+
+### Optional reload the ssh service
 ```
 sudo /etc/init.d/ssh restart
 ```
