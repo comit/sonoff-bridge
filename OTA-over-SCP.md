@@ -17,12 +17,10 @@ On a linux client machine type the following to generate the key. Press enter th
 ```
 ssh-keygen -t rsa -C "YOUR OWN KEY INFO"
 ```
-Copy the key to your ssh server:
+Copy the key to your ssh server. You need to confirm this action. Use your server ssh password (one last time):
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub USER@HOST
 ```
-You need to confirm this action. Use your server ssh password (one last time).
-
 _Optional reload the ssh service:_
 ```
 sudo /etc/init.d/ssh restart
