@@ -126,3 +126,7 @@ P1,6 ESP8285 EXT_RSTB (RESET)
 * I have no way to put the chip into download mode.
 * Why is my chip using such a strange serial bitrate, is it broken?
 * How does the ESP8285 change and read the the state inside EFM8BB1. We only know that the ESP8285 can read if button is pressed or not, but now how the ESP8285 changes or reads the state.
+
+## The serial connection picture in here (https://github.com/arendst/Sonoff-Tasmota/wiki/Sonoff-T1-UK-and-T1-EU) is incorrect.
+
+This one is correct (https://user-images.githubusercontent.com/25724469/33124356-89e19e78-cf74-11e7-8e8b-c0a946d58884.j
