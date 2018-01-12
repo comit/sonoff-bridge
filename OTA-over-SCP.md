@@ -14,10 +14,14 @@ SSH communication between the build server and OTA server should be pre-configur
 
 ## Add the pre-shared key
 On a linux client machine type the following to generate the key:
-```ssh-keygen -t rsa -C "YOUR OWN KEY INFO"```
+```
+ssh-keygen -t rsa -C "YOUR OWN KEY INFO"
+```
 Press enter three times (without any input).
 Copy the key to your ssh server:
-``ssh-copy-id -i ~/.ssh/id_rsa.pub USER@HOST``
+``
+ssh-copy-id -i ~/.ssh/id_rsa.pub USER@HOST
+``
 You need to confirm this action. Use your server ssh password (one last time).
 _Optional reload the ssh service:_
 `sudo /etc/init.d/ssh restart`
