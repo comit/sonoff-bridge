@@ -2,12 +2,11 @@ How to setup and configure "OTA over SCP" upload for PlatformIO. The uploader pu
 
 # Configuration
 To upload .bin images to OTA server using SCP, one has to edit following lines under target environment:
-
-`[env:sonoff]`
-`...`
-`extra_scripts = pio/sftp-uploader.py`
-`upload_port = user@host:/path`
-
+```
+; *** Upload file to OTA server using SCP
+upload_port = pi@192.168.2.11:/var/www/html/Updates
+extra_scripts = pio/sftp-uploader.py
+```
 upload_port should be modified to reflect user, host and path on the host where images should be uploaded.
 
 # Requirements
