@@ -4,7 +4,8 @@
 * Itead Shop: https://www.itead.cc/sonoff-t1.html
 * Itead Wiki: (na)
 
-The Sonoff T1 UK with 1 to 3 gang is fully supported in Tasmota starting with version 5.6.1.
+The Sonoff T1 UK with 1 to 3 gang dated 2017-6-18 is fully supported in Tasmota starting with version 5.6.1.
+Newer versions of the hardware are currently not supported.
 
 **Sonoff T1 EU**
 
