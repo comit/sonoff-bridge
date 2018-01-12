@@ -14,7 +14,7 @@ Newer versions of the hardware may or may not work as has been noted in issue #1
 * Itead Shop: https://www.itead.cc/smart-home/sonoff-t1-eu.html
 * Itead Wiki: (na)
 
-The Sonoff T1 EU version has not been tested by me (Theo) but may or may not work.
+The Sonoff T1 EU version has not been verified by me (Theo) but may or may not work.
 
 ## State of implementation
 ** Follow support progress in this issue: https://github.com/arendst/Sonoff-Tasmota/issues/1424
