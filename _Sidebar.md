@@ -12,6 +12,7 @@
 
 **Upload tools**
 - [**SonOTA**](SonOTA)
+- [**OTA over SCP**](OTA-over-SCP)
 - [**Esptool**](Esptool)
 - [**Arduino IDE**](Arduino-IDE)
 - [**PlatformIO**](PlatformIO)
