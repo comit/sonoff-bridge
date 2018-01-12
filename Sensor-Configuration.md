@@ -76,7 +76,3 @@ You can add a device using the following (MQTT) commands:
 
 For some devices a power cycle of Sonoff is needed to reset the interface to the devices just configured.
 
-## additional Ressources
-
-A good summary and comparsion for available sensors:
-[https://www.kandrsmith.org/RJS/Misc/Hygrometers/calib_many.html](https://www.kandrsmith.org/RJS/Misc/Hygrometers/calib_many.html)
