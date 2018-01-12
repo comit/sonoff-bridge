@@ -117,6 +117,9 @@ require_certificate false
 How to generate the certificates in mosquitto please look at:
 [[http://www.steves-internet-guide.com/mosquitto-tls/][http://www.steves-internet-guide.com/mosquitto-tls/]]
 
+Also a good tutorial for generating the certificates in mosquitto:
+[[https://mcuoneclipse.com/2017/04/14/enable-secure-communication-with-tls-and-the-mosquitto-broker/][https://mcuoneclipse.com/2017/04/14/enable-secure-communication-with-tls-and-the-mosquitto-broker/]]
+
 At the TASMOTA configuration, you need to enable to use the TLS Version. This is done by enable USE_MQTT_TLS and change the port number to 8883. Additionally, you should change the MQTT_FINGERPRINT to the value you're getting from the mosquitto server. To get the fingerprint you can use the following command on your MQTT server:
 
  #+BEGIN_EXAMPLE 
