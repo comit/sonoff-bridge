@@ -13,12 +13,10 @@ upload_port should be modified to reflect user, host and path on the host where 
 SSH communication between the build server and OTA server should be pre-configured so that it doesn't require password (pre-shared keys).
 
 ## Add the pre-shared key
-On a linux client machine type the following to generate the key:
+On a linux client machine type the following to generate the key. Press enter three times (without any input):
 ```
 ssh-keygen -t rsa -C "YOUR OWN KEY INFO"
 ```
-Press enter three times (without any input).
-
 Copy the key to your ssh server:
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub USER@HOST
