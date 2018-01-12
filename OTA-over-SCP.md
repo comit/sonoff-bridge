@@ -28,5 +28,3 @@ sudo /etc/init.d/ssh restart
 
 # Upload Tasmota
 Easy compilation and upload can be performed from the icons at the left side of the PlatformIO screen or use `Ctrl` + `Alt` + `U` to upload (will build if needed).
-
-More: https://github.com/arendst/Sonoff-Tasmota/pull/934
