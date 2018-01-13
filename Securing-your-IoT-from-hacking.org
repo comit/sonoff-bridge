@@ -117,7 +117,7 @@ require_certificate false
 How to generate the certificates in mosquitto please look at:
 [[http://www.steves-internet-guide.com/mosquitto-tls/][http://www.steves-internet-guide.com/mosquitto-tls/]]
 or:
-http://lukse.lt/uzrasai/2015-02-internet-of-things-messaging-mqtt-1-installing-mosquitto-server/
+[[http://lukse.lt/uzrasai/2015-02-internet-of-things-messaging-mqtt-1-installing-mosquitto-server/][http://lukse.lt/uzrasai/2015-02-internet-of-things-messaging-mqtt-1-installing-mosquitto-server/]]
 or:
 [[https://mcuoneclipse.com/2017/04/14/enable-secure-communication-with-tls-and-the-mosquitto-broker/][https://mcuoneclipse.com/2017/04/14/enable-secure-communication-with-tls-and-the-mosquitto-broker/]]
 
