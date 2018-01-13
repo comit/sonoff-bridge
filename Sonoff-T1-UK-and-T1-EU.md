@@ -6,7 +6,7 @@
 
 The Sonoff T1 UK with 1 to 3 gang dated 2017-6-18 is fully supported by Tasmota starting with version 5.6.1.
 
-Newer versions of the hardware may or may not work as has been noted in issue #1424 below.
+Newer versions of the hardware may or may not work as has been noted in issue #1424 below. The community has proven the most recent UK versions supplied with 1.6.2 firmware are working with Tasmota v5.11.1 and possibly earlier versions too.
 
 ## Sonoff T1 EU
 
@@ -83,7 +83,19 @@ rf[112]▒ector: 251@ 10008Mbit(512KB+512KB) mode:(3,7)
 ```
 
 ## Flashing
-Pressing first touch button, will make GPIO0 go low. I had no luck so far get it to flash, and it is unknown how this is done, unless you solder GIPO0 down on the picture above.
+
+The following board layouts are from the 3 variants of the Sonoff T1 UK variant and are marked Sonoff T1 R2 UK Touch Board, Ver 1.0. These are the currently supplied versions shipping with firmware version 1.6.2.  
+This version of the stock firmware makes them unsuitable for flashing with SonOTA which only works on versions up to 1.6. Version 1.6 onwards removed the broadcast WiFi network for configuration.
+
+![img_20180113_094236](https://user-images.githubusercontent.com/10469147/34905168-6128981a-f84b-11e7-9cf0-e0e4c3b0bd55.jpg)
+
+Entering Flashing mode varies between the 1 2 and 3 channel versions. See the above picture for button nomenclature used.
+  (The variations between the 3 versions appear to be managed by the touch IC rather than in the ESP).  
+To enter flashing mode the unit should be powered and connected to the programmer of choice. Touch Button 1 should then be held while the reset button (4) is pressed. This will cause the unit to reboot into flash mode. This is confirmed on a serial console (74880 baud) by the boot mode displaying (1,x) indicating that we are booted to the bootloader and not the flash.
+
+The front circuit board should be disconnected from the rear relay board to prevent power draw upsetting the flashing process. The unit must be powered up before attempting to enter programming mode, as per the above instructions. The ESP will not go into programming mode if touch button 1 is held while power is connected. The touch IC does not have time to recognise the key-press before the ESP boots. 
+
+Tasmota can then be flashed and configured as usual. Once booted, the module type will need to be configured to a T1 1/2/3CH.
 
 ## Circuit
 I tried to reverse engineer the circuit and I noticed:
@@ -92,7 +104,7 @@ ESP8285
 ```
 
 GPIO0 EFM8BB1 P1,3 (Goes low when first touch button is pressed)
-GPIO04 is connected to the small pairing button on the front.
+GPIO04 is connected to the small (soft) reset button on the front.
 GPIO09 EFM8BB1 P1,4
 GPIO10 EFM8BB1 P1,5
 GPIO13 is connected to status LED D3.
@@ -123,8 +135,6 @@ P1,6 ESP8285 EXT_RSTB (RESET)
 
 ## Unknown so far
 
-* I have no way to put the chip into download mode.
-* Why is my chip using such a strange serial bitrate, is it broken?
-* How does the ESP8285 change and read the the state inside EFM8BB1. We only know that the ESP8285 can read if button is pressed or not, but now how the ESP8285 changes or reads the state.
+* How does the ESP8285 change and read the the state inside EFM8BB1. We only know that the ESP8285 can read if button is pressed or not, but now how the ESP8285 changes or reads the state.  
+* Is the 433MHz remote function supported? I suspect it is as it is not managed by the ESP
 
-## The serial connection picture in here is incorrect. This one is correct (https://user-images.githubusercontent.com/25724469/33124356-89e19e78-cf74-11e7-8e8b-c0a946d58884.jpg)  I was able to successfully flash 8 x T1 one gang and 2 x T1 two gang.
