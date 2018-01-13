@@ -59,6 +59,7 @@ To speed up the compiling, you can uncomment your preferred language in the plat
 ![](https://raw.githubusercontent.com/reloxx13/reloxx13.github.io/master/media/tasmota-wiki-beginner-guide/11.jpg)
 
 After its done, you can find the firmware in the .pioenvs directory in the unzipped folder.
+Attetion: .pioenvs is a hidden folder on unix systems.
 ![](https://raw.githubusercontent.com/reloxx13/reloxx13.github.io/master/media/tasmota-wiki-beginner-guide/12.jpg)
 
 
