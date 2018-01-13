@@ -115,7 +115,7 @@ require_certificate false
 #+END_EXAMPLE
 
 How to generate the certificates in mosquitto please look at:
-[[Mosquitto SSL Configuration -MQTT TLS Security][http://www.steves-internet-guide.com/mosquitto-tls/]]
+[[http://www.steves-internet-guide.com/mosquitto-tls/][Mosquitto SSL Configuration -MQTT TLS Security]]
 or:
 [[http://lukse.lt/uzrasai/2015-02-internet-of-things-messaging-mqtt-1-installing-mosquitto-server/][http://lukse.lt/uzrasai/2015-02-internet-of-things-messaging-mqtt-1-installing-mosquitto-server/]]
 or:
