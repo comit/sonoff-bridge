@@ -91,7 +91,7 @@ This version of the stock firmware makes them unsuitable for flashing with SonOT
 
 Entering Flashing mode varies between the 1 2 and 3 channel versions. See the above picture for button nomenclature used.
   (The variations between the 3 versions appear to be managed by the touch IC rather than in the ESP).  
-To enter flashing mode the unit should be powered and connected to the programmer of choice. Touch Button 1 should then be held while the reset button (4) is pressed. This will cause the unit to reboot into flash mode. This is confirmed on a serial console (74880 baud) by the boot mode displaying (1,x) indicating that we are booted to the bootloader and not the flash.
+To enter flashing mode the unit should be powered and connected to the programmer of choice. Touch Button 1 should then be held while the reset button (4) is pressed. This will cause the unit to reboot into flash mode. This is confirmed on a serial console (74880 baud) by the boot mode displaying (1,x) indicating that we are booted to the bootloader and not the flash. Button 1 can then be released. You can also confirm booted to flash without a serial console, the main led should be off and the backlight LEDs lit dimly.
 
 The front circuit board should be disconnected from the rear relay board to prevent power draw upsetting the flashing process. The unit must be powered up before attempting to enter programming mode, as per the above instructions. The ESP will not go into programming mode if touch button 1 is held while power is connected. The touch IC does not have time to recognise the key-press before the ESP boots. 
 
