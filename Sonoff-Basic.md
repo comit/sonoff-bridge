@@ -15,3 +15,13 @@ more Info about the GIOS Pins here:
 [https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations](https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations)
 
 For flashing the sonoff basic V1.1, please hold the button while connecting the Plus Pole. The LED remains off until the flashing process is done and the board is rebooted.
+
+# GPIO Locations
+
+<img alt="GPIO 01,03 and 14" src="https://bytebucket.org/xoseperez/espurna/wiki/images/flashing/sonoff-flash.jpg"/><br/>
+<img alt="GPIO 04" src="http://evertdekker.com/wp/wp-content/gallery/sonoff/p1010285.jpg"/><br/>
+
+* GPIO 03 - RX PIN
+* GPIO 01 - TX PIN
+* GPIO 04 - Second image (must solder wire to pin on ESP chip)
+* GPIO 14 - Below GND PIN~
