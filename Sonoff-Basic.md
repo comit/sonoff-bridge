@@ -24,4 +24,4 @@ For flashing the sonoff basic V1.1, please hold the button while connecting the 
 * GPIO 03 - RX PIN
 * GPIO 01 - TX PIN
 * GPIO 04 - Second image (must solder wire to pin on ESP chip)
-* GPIO 14 - Below GND PIN~
+* GPIO 14 - Below GND PIN
