@@ -59,6 +59,11 @@ Other than on most Sonoff module the button is not connected to the normal butto
 
 After configuring the device as a "Sonoff Dual", the button will regain normal functionality.
 
+### GPIO Locations
+
+GPIO4 => red, GPIO14 => orange
+<img alt="DUAL GPIOs" src="https://user-images.githubusercontent.com/659660/29748261-f01f466e-8b12-11e7-9280-cc81f876405d.jpeg"/><br/>
+
 ### Solving intermittent relay switch errors
 
 Where most Sonoff's use GPIO to control one or more relays the Sonoff Dual and 4 Channel Inching Relay Assy do use the standard SERIAL interface to control the relays.
