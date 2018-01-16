@@ -11,9 +11,6 @@ Please see the [Hardware Preparation](https://github.com/arendst/Sonoff-Tasmota/
 
 You need to access the serial interface. The **four serial pins** (3V3, Rx, Tx, GND) are available in the middle of the PCB, right next to the on-board button. Newer version of the Sonoff module provide five pins below the button, ignore the pin furthest away from the Button (GPIO14) if available. The square pin right next to the button is the 3.3V line.
 
-more Info about the GIOS Pins here:
-[https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations](https://github.com/arendst/Sonoff-Tasmota/wiki/GPIO-Locations)
-
 For flashing the sonoff basic V1.1, please hold the button while connecting the Plus Pole. The LED remains off until the flashing process is done and the board is rebooted.
 
 ## GPIO Locations
